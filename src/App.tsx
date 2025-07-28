@@ -1,34 +1,46 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import {useState} from "react";
+import classes from "./App.module.css";
+import {
+  ActionIcon,
+  Center,
+  SegmentedControl,
+  Stack,
+  useComputedColorScheme,
+  useMantineColorScheme,
+} from "@mantine/core";
+import { IconSun, IconMoon } from "@tabler/icons-react";
+import {SwipeExperiment} from "./SwipeExperiment";
+import {FlipExperiment} from "./FlipExperiement";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const { setColorScheme } = useMantineColorScheme();
+  const computedColorScheme = useComputedColorScheme("light", {
+    getInitialValueInEffect: true,
+  });
+
+  const [mode, setMode] = useState("Swipe")
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Stack p="sm" h="100vh" style={{ overflow: "hidden" }}>
+      <ActionIcon
+        ml="auto"
+        size="xl"
+        aria-aria-label="Toggle color scheme"
+        variant="transparent"
+        onClick={() =>
+          setColorScheme(computedColorScheme === "light" ? "dark" : "light")
+        }
+      >
+        <IconSun className={classes.light} />
+        <IconMoon className={classes.dark} />
+      </ActionIcon>
+      <Center flex={1} pos='relative'>
+        {mode === 'Swipe' ? <SwipeExperiment /> : <FlipExperiment />}
+      </Center>
+      <Center>
+        <SegmentedControl data={["Swipe", "Flip"]} value={mode} onChange={setMode}></SegmentedControl>
+      </Center>
+    </Stack>
   );
 }
 

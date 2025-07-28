@@ -1,0 +1,9 @@
+.root {
+  cursor: pointer;
+}
+
+.card {
+  width: 90%;
+  height: 70%;
+  position: absolute;
+}
