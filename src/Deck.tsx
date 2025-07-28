@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const words: string[] = _words;
 
-export function SwipeExperiment() {
+export function Deck() {
   const [cardIdx, setCardIdx] = useState(0);
 
   const handleSwipe = () => setCardIdx((d) => d + 1);
