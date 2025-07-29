@@ -63,7 +63,7 @@ function rebuildGroups(wordStat: Record<string, WordStat>): Array<Set<Word>> {
   return groups;
 }
 
-function getWord(words: Word[], wordStat: Record<string, WordStat>): Word {
+function getWord(wordStat: Record<string, WordStat>): Word {
   console.time("next word");
   const groups = rebuildGroups(wordStat);
   const rndIdx = Math.floor(Math.random() * ALMOST_ONE * 10);
@@ -97,7 +97,7 @@ function App() {
     getInitialValueInEffect: true,
   });
 
-  const [step, setStep] = useState(0);
+  const [_, setStep] = useState(0);
 
   const handleSwipeLeft = (word: string) => {
     wordStat[word].rejects += 1;
@@ -108,18 +108,18 @@ function App() {
     setStep((d) => d + 1);
   };
 
-  const word = getWord(words, wordStat);
+  const word = getWord(wordStat);
 
   const globalStat = words.reduce(
     (m, d) => {
       const stat = wordStat[d];
-      const rate = getRate(stat)
+      const rate = getRate(stat);
 
       if (stat.accepts + stat.rejects >= 3) {
         if (rate > 0.8) {
-          m.good += 1
+          m.good += 1;
         } else {
-          m.bad += 1
+          m.bad += 1;
         }
       }
 
@@ -132,8 +132,14 @@ function App() {
     <Stack p="sm" h="100vh" style={{ overflow: "hidden" }}>
       <Group gap={0}>
         <Progress.Root size="xl" flex={1}>
-          <Progress.Section value={100 * globalStat.good / words.length} color="green"></Progress.Section>
-          <Progress.Section value={100 * globalStat.bad / words.length} color="red"></Progress.Section>
+          <Progress.Section
+            value={(100 * globalStat.good) / words.length}
+            color="green"
+          ></Progress.Section>
+          <Progress.Section
+            value={(100 * globalStat.bad) / words.length}
+            color="red"
+          ></Progress.Section>
         </Progress.Root>
         <ActionIcon
           ml="auto"
