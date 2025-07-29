@@ -97,18 +97,16 @@ function App() {
     getInitialValueInEffect: true,
   });
 
-  const [_, setStep] = useState(0);
+  const [currentWord, setCurrentWord] = useState(() => getWord(wordStat));
 
   const handleSwipeLeft = (word: string) => {
     wordStat[word].rejects += 1;
-    setStep((d) => d + 1);
+    setCurrentWord(getWord(wordStat));
   };
   const handleSwipeRight = (word: string) => {
     wordStat[word].accepts += 1;
-    setStep((d) => d + 1);
+    setCurrentWord(getWord(wordStat));
   };
-
-  const word = getWord(wordStat);
 
   const globalStat = words.reduce(
     (m, d) => {
@@ -164,9 +162,9 @@ function App() {
         <AnimatedCard
           onSwipeLeft={handleSwipeLeft}
           onSwipeRight={handleSwipeRight}
-          word={word}
-          key={word}
-          stat={wordStat[word]}
+          word={currentWord}
+          key={currentWord}
+          stat={wordStat[currentWord]}
         />
       </Center>
     </Stack>
