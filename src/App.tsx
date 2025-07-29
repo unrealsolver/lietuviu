@@ -121,17 +121,23 @@ function App() {
         } else {
           m.bad += 1;
         }
+      } else if (stat.accepts + stat.rejects != 0) {
+        m.seen += 1;
       }
 
       return m;
     },
-    { good: 0, bad: 0 },
+    { good: 0, bad: 0, seen: 0 },
   );
 
   return (
     <Stack p="sm" h="100vh" style={{ overflow: "hidden" }}>
       <Group gap={0}>
         <Progress.Root size="xl" flex={1}>
+          <Progress.Section
+            value={(100 * globalStat.seen) / words.length}
+            color="blue"
+          ></Progress.Section>
           <Progress.Section
             value={(100 * globalStat.good) / words.length}
             color="green"
