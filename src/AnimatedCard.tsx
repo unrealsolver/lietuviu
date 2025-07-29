@@ -98,6 +98,9 @@ export function AnimatedCard({
         }
       }
     },
+    {
+      preventDefault: true,
+    },
   );
 
   return (
