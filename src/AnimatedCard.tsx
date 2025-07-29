@@ -54,7 +54,7 @@ export function AnimatedCard({
   };
 
   const bind = useDrag(
-    ({ down, movement: [mx, my], velocity: [vx], direction: [dx] }) => {
+    ({ down, movement: [mx, my], velocity: [vx, vy], direction: [dx] }) => {
       if (down) {
         api.start({
           x: mx,
@@ -89,7 +89,7 @@ export function AnimatedCard({
             },
           });
         } else {
-          if (my > 100) {
+          if (my > 100 || vy > 0.35) {
             // vertical swipe → flip
             toggle();
           }
