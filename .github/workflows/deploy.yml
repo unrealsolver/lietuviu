@@ -1,17 +1,33 @@
-name: my-workflow
+name: Deploy
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "v*"
 
 jobs:
   build:
-    name: my-job
+    name: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
+
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Read package.json version
+        run: echo "PACKAGE_VERSION=$(jq -r .version package.json)" >> $GITHUB_ENV
+
+      - name: Verify version matches tag
+        run: |
+          TAG_VERSION=${GITHUB_REF#refs/tags/v}
+          if [ "$TAG_VERSION" != "$PACKAGE_VERSION" ]; then
+            echo "❌ Tag ($TAG_VERSION) does not match package.json version ($PACKAGE_VERSION)"
+            exit 1
+          else
+            echo "✅ Tag matches package.json version"
+          fi
 
       - run: bun install
       - run: bun run build
