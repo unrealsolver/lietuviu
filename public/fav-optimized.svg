@@ -1,0 +1,10 @@
+<svg width="512" height="512" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="a">
+            <stop style="stop-color:#748ffc;stop-opacity:1" offset="0"/>
+            <stop style="stop-color:#cc5de8;stop-opacity:1" offset="1"/>
+        </linearGradient>
+        <linearGradient xlink:href="#a" id="b" x1="70" y1="420" x2="350" y2="170" gradientUnits="userSpaceOnUse"/>
+    </defs>
+    <text xml:space="preserve" style="font-size:580px;font-family:'Arial Black';-inkscape-font-specification:'Arial Black, ';fill:url(#b);fill-opacity:1;stroke-width:.944882;stroke-opacity:.603497" x="6.904" y="457.588"><tspan x="6.904" y="457.588" style="font-size:580px;fill:url(#b);fill-opacity:1">K</tspan></text>
+</svg>
