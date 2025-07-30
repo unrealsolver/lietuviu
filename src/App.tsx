@@ -1,3 +1,4 @@
+import { version, homepage } from "../package.json";
 import { AnimatedCard } from "./AnimatedCard";
 import classes from "./App.module.css";
 import type { WordStat } from "./util";
@@ -10,6 +11,7 @@ import {
   Stack,
   useComputedColorScheme,
   useMantineColorScheme,
+  Anchor,
 } from "@mantine/core";
 import { IconSun, IconMoon } from "@tabler/icons-react";
 import { useState } from "react";
@@ -31,7 +33,20 @@ const wordStat = words.reduce(
   {} as Record<Word, WordStat>,
 );
 
-// TODO type bank = words + stats
+type WordBank = {
+  name: string;
+  version: string;
+  words: Word[];
+};
+
+type WordInfo = {
+  name: string;
+  stressed: string;
+  translations: Array<{
+    locale: string;
+    content: string;
+  }>;
+};
 
 function getRate(stat: WordStat) {
   return stat.rejects > 0
@@ -129,7 +144,7 @@ function App() {
   );
 
   return (
-    <Stack p="sm" h="100vh" style={{ overflow: "hidden" }}>
+    <Stack p="sm" pb="4px" h="100vh" style={{ overflow: "hidden" }}>
       <Group gap={0}>
         <Progress.Root size="xl" flex={1}>
           <Progress.Section
@@ -166,6 +181,15 @@ function App() {
           key={currentWord}
           stat={wordStat[currentWord]}
         />
+      </Center>
+      <Center>
+        <Anchor
+          size="sm"
+          underline="not-hover"
+          href={`${homepage}/deployments`}
+        >
+          v{version}
+        </Anchor>
       </Center>
     </Stack>
   );
