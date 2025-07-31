@@ -44,9 +44,6 @@
     "typescript-eslint": "^8.35.1",
     "vite": "^7.0.4"
   },
-  "lint-staged": {
-    "*.{json,js,ts,jsx,tsx,md,yml,yaml}": "prettier --write"
-  },
   "engines": {
     "node": "~22"
   },

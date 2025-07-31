@@ -33,20 +33,20 @@ const wordStat = words.reduce(
   {} as Record<Word, WordStat>,
 );
 
-type WordBank = {
-  name: string;
-  version: string;
-  words: Word[];
-};
-
-type WordInfo = {
-  name: string;
-  stressed: string;
-  translations: Array<{
-    locale: string;
-    content: string;
-  }>;
-};
+//type WordBank = {
+//  name: string;
+//  version: string;
+//  words: Word[];
+//};
+//
+//type WordInfo = {
+//  name: string;
+//  stressed: string;
+//  translations: Array<{
+//    locale: string;
+//    content: string;
+//  }>;
+//};
 
 function getRate(stat: WordStat) {
   return stat.rejects > 0
