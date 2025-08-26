@@ -1,0 +1,2272 @@
+{
+  "schema_version": "0.0.0",
+  "title": "A1 lygis",
+  "description": "",
+  "author": "System",
+  "lang": "lit",
+  "modes": [
+    {
+      "name": "translate",
+      "lang": "rus"
+    },
+    {
+      "name": "stresses"
+    }
+  ],
+  "data": [
+    {
+      "word": "ačiū",
+      "accent": "ãčiū",
+      "translate": {
+        "rus": "спасибо"
+      }
+    },
+    {
+      "word": "administratorius",
+      "accent": "administrãtorius",
+      "translate": {
+        "rus": "администратор"
+      }
+    },
+    {
+      "word": "agurkas",
+      "accent": "agur̃kas",
+      "translate": {
+        "rus": "огурец"
+      }
+    },
+    {
+      "word": "aikštelė",
+      "accent": "aikštẽlė",
+      "translate": {
+        "rus": "сайт"
+      }
+    },
+    {
+      "word": "aikštė",
+      "accent": "aikštė̃",
+      "translate": {
+        "rus": "квадрат"
+      }
+    },
+    {
+      "word": "aišku",
+      "accent": "áišku",
+      "translate": {
+        "rus": "ясный"
+      }
+    },
+    {
+      "word": "akademija",
+      "accent": "akadèmija",
+      "translate": {
+        "rus": "академия"
+      }
+    },
+    {
+      "word": "akcija",
+      "accent": "ãkcija",
+      "translate": {
+        "rus": "доля"
+      }
+    },
+    {
+      "word": "akis",
+      "accent": "akìs",
+      "translate": {
+        "rus": "глаз"
+      }
+    },
+    {
+      "word": "alergija",
+      "accent": "aler̃gija",
+      "translate": {
+        "rus": "аллергия"
+      }
+    },
+    {
+      "word": "alga",
+      "accent": "algà",
+      "translate": {
+        "rus": "зарплата"
+      }
+    },
+    {
+      "word": "alkanas",
+      "accent": "álkanas",
+      "translate": {
+        "rus": "парафиновый"
+      }
+    },
+    {
+      "word": "alkoholiniai gėrimai",
+      "accent": "alkohòliniai",
+      "translate": {
+        "rus": "алкогольные напитки"
+      }
+    },
+    {
+      "word": "alus",
+      "accent": "alùs",
+      "translate": {
+        "rus": "пиво"
+      }
+    },
+    {
+      "word": "anglų kalba",
+      "accent": "ánglų",
+      "translate": {
+        "rus": "на английском языке"
+      }
+    },
+    {
+      "word": "anksti",
+      "accent": "ankstì",
+      "translate": {
+        "rus": "ранний"
+      }
+    },
+    {
+      "word": "antradienis",
+      "accent": "antrãdienis",
+      "translate": {
+        "rus": "вторник"
+      }
+    },
+    {
+      "word": "apelsinas",
+      "accent": "apelsìnas",
+      "translate": {
+        "rus": "аплизин"
+      }
+    },
+    {
+      "word": "aplankas",
+      "accent": "ãplankas",
+      "translate": {
+        "rus": "папка"
+      }
+    },
+    {
+      "word": "apsauginiai akiniai",
+      "accent": "apsaugìniai",
+      "translate": {
+        "rus": "защитные очки"
+      }
+    },
+    {
+      "word": "apsipirkti",
+      "accent": "apsipir̃kti",
+      "translate": {
+        "rus": "покупка"
+      }
+    },
+    {
+      "word": "arbata",
+      "accent": "arbatà",
+      "translate": {
+        "rus": "чай"
+      }
+    },
+    {
+      "word": "arbatpinigiai",
+      "accent": "arbãtpinigiai",
+      "translate": {
+        "rus": "чаевые"
+      }
+    },
+    {
+      "word": "arti",
+      "accent": "artì",
+      "translate": {
+        "rus": "близко"
+      }
+    },
+    {
+      "word": "asmens tapatybės kortelė",
+      "accent": "asmeñs",
+      "translate": {
+        "rus": "удостоверение личности"
+      }
+    },
+    {
+      "word": "aštrus",
+      "accent": "aštrùs",
+      "translate": {
+        "rus": "острый"
+      }
+    },
+    {
+      "word": "ateiti",
+      "accent": "ateĩti",
+      "translate": {
+        "rus": "приходить"
+      }
+    },
+    {
+      "word": "atidaryta",
+      "accent": "atidarýta",
+      "translate": {
+        "rus": "открытый"
+      }
+    },
+    {
+      "word": "atidaryti",
+      "accent": "atidarýti",
+      "translate": {
+        "rus": "открытый"
+      }
+    },
+    {
+      "word": "atidėti",
+      "accent": "atidė́ti",
+      "translate": {
+        "rus": "откладывать"
+      }
+    },
+    {
+      "word": "atleisti iš darbo",
+      "accent": "atléisti",
+      "translate": {
+        "rus": "избыточность"
+      }
+    },
+    {
+      "word": "atostogauti",
+      "accent": "atostogáuti",
+      "translate": {
+        "rus": "отпуск"
+      }
+    },
+    {
+      "word": "atostogos",
+      "accent": "atóstogos",
+      "translate": {
+        "rus": "праздники"
+      }
+    },
+    {
+      "word": "atsikelti",
+      "accent": "atsikélti",
+      "translate": {
+        "rus": "вверх"
+      }
+    },
+    {
+      "word": "atsiprašau",
+      "accent": "atsiprašaũ",
+      "translate": {
+        "rus": "извините"
+      }
+    },
+    {
+      "word": "atvažiuoti",
+      "accent": "atvažiúoti",
+      "translate": {
+        "rus": "приходить"
+      }
+    },
+    {
+      "word": "atvykti",
+      "accent": "atvỹkti",
+      "translate": {
+        "rus": "приходить"
+      }
+    },
+    {
+      "word": "auditorija",
+      "accent": "auditòrija",
+      "translate": {
+        "rus": "зрители"
+      }
+    },
+    {
+      "word": "auksas",
+      "accent": "áuksas",
+      "translate": {
+        "rus": "золото"
+      }
+    },
+    {
+      "word": "aukščiau",
+      "accent": "aukščiaũ",
+      "translate": {
+        "rus": "выше"
+      }
+    },
+    {
+      "word": "aukštas",
+      "accent": "áukštas",
+      "translate": {
+        "rus": "высокий"
+      }
+    },
+    {
+      "word": "aukštyn",
+      "accent": "aukštỹn",
+      "translate": {
+        "rus": "вверх"
+      }
+    },
+    {
+      "word": "ausinės",
+      "accent": "ausìnės",
+      "translate": {
+        "rus": "наушники"
+      }
+    },
+    {
+      "word": "ausis",
+      "accent": "ausìs",
+      "translate": {
+        "rus": "слух"
+      }
+    },
+    {
+      "word": "autobusas",
+      "accent": "autobùsas",
+      "translate": {
+        "rus": "автобус"
+      }
+    },
+    {
+      "word": "autobusų stotelė",
+      "accent": "autobùsų",
+      "translate": {
+        "rus": "автобусная остановка"
+      }
+    },
+    {
+      "word": "autobusų stotis",
+      "accent": "autobùsų",
+      "translate": {
+        "rus": "автобусная станция"
+      }
+    },
+    {
+      "word": "automobilis",
+      "accent": "automobìlis",
+      "translate": {
+        "rus": "автомобиль"
+      }
+    },
+    {
+      "word": "automobilių stovėjimo aikštelė",
+      "accent": "automobìlių",
+      "translate": {
+        "rus": "стоянка"
+      }
+    },
+    {
+      "word": "autoservisas",
+      "accent": "autoser̃visas",
+      "translate": {
+        "rus": "автосервис"
+      }
+    },
+    {
+      "word": "avalynė",
+      "accent": "ãvalynė",
+      "translate": {
+        "rus": "обувь"
+      }
+    },
+    {
+      "word": "avarija",
+      "accent": "avãrija",
+      "translate": {
+        "rus": "несчастный случай"
+      }
+    },
+    {
+      "word": "avarinis išėjimas",
+      "accent": "avãrinis",
+      "translate": {
+        "rus": "аварийный выход"
+      }
+    },
+    {
+      "word": "baigti",
+      "accent": "baĩgti",
+      "translate": {
+        "rus": "полный"
+      }
+    },
+    {
+      "word": "balandėliai",
+      "accent": "balandė̃liai",
+      "translate": {
+        "rus": "голуби"
+      }
+    },
+    {
+      "word": "balandis",
+      "accent": "balañdis",
+      "translate": {
+        "rus": "апрель"
+      }
+    },
+    {
+      "word": "balkonas",
+      "accent": "balkònas",
+      "translate": {
+        "rus": "балкон"
+      }
+    },
+    {
+      "word": "baltas",
+      "accent": "báltas",
+      "translate": {
+        "rus": "белый"
+      }
+    },
+    {
+      "word": "bananas",
+      "accent": "banãnas",
+      "translate": {
+        "rus": "банан"
+      }
+    },
+    {
+      "word": "bandelė",
+      "accent": "bandẽlė",
+      "translate": {
+        "rus": "образец"
+      }
+    },
+    {
+      "word": "bankas",
+      "accent": "bánkas",
+      "translate": {
+        "rus": "банк"
+      }
+    },
+    {
+      "word": "baras",
+      "accent": "bãras",
+      "translate": {
+        "rus": "бар"
+      }
+    },
+    {
+      "word": "baseinas",
+      "accent": "baseĩnas",
+      "translate": {
+        "rus": "бассейн"
+      }
+    },
+    {
+      "word": "basutės",
+      "accent": "basùtės",
+      "translate": {
+        "rus": "ванны"
+      }
+    },
+    {
+      "word": "batai",
+      "accent": "bãtai",
+      "translate": {
+        "rus": "обувь"
+      }
+    },
+    {
+      "word": "batonas",
+      "accent": "batònas",
+      "translate": {
+        "rus": "бамон"
+      }
+    },
+    {
+      "word": "bedarbis",
+      "accent": "bedar̃bis",
+      "translate": {
+        "rus": "безработный"
+      }
+    },
+    {
+      "word": "belaidis internetas",
+      "accent": "belaĩdis",
+      "translate": {
+        "rus": "беспроводной интернет"
+      }
+    },
+    {
+      "word": "bėgioti",
+      "accent": "bėgióti",
+      "translate": {
+        "rus": "бегать"
+      }
+    },
+    {
+      "word": "biblioteka",
+      "accent": "bibliotekà",
+      "translate": {
+        "rus": "библиотека"
+      }
+    },
+    {
+      "word": "bilietas",
+      "accent": "bìlietas",
+      "translate": {
+        "rus": "билет"
+      }
+    },
+    {
+      "word": "biologija",
+      "accent": "biològija",
+      "translate": {
+        "rus": "биология"
+      }
+    },
+    {
+      "word": "birželis",
+      "accent": "biržẽlis",
+      "translate": {
+        "rus": "июнь"
+      }
+    },
+    {
+      "word": "biuras",
+      "accent": "biùras",
+      "translate": {
+        "rus": "офис"
+      }
+    },
+    {
+      "word": "blynai",
+      "accent": "blỹnai",
+      "translate": {
+        "rus": "блинчики"
+      }
+    },
+    {
+      "word": "blyneliai",
+      "accent": "blynẽliai",
+      "translate": {
+        "rus": "блинчики"
+      }
+    },
+    {
+      "word": "blogai",
+      "accent": "blogaĩ",
+      "translate": {
+        "rus": "плохой"
+      }
+    },
+    {
+      "word": "blogas",
+      "accent": "blõgas",
+      "translate": {
+        "rus": "плохой"
+      }
+    },
+    {
+      "word": "braškės",
+      "accent": "brãškės",
+      "translate": {
+        "rus": "клубника"
+      }
+    },
+    {
+      "word": "brendis",
+      "accent": "breñdis",
+      "translate": {
+        "rus": "бренди"
+      }
+    },
+    {
+      "word": "brolis",
+      "accent": "brólis",
+      "translate": {
+        "rus": "брат"
+      }
+    },
+    {
+      "word": "bulvė",
+      "accent": "bùlvė",
+      "translate": {
+        "rus": "картофель"
+      }
+    },
+    {
+      "word": "burokėlis",
+      "accent": "burokė̃lis",
+      "translate": {
+        "rus": "бурокель"
+      }
+    },
+    {
+      "word": "butas",
+      "accent": "bùtas",
+      "translate": {
+        "rus": "квартира"
+      }
+    },
+    {
+      "word": "butelis",
+      "accent": "bùtelis",
+      "translate": {
+        "rus": "бутылка"
+      }
+    },
+    {
+      "word": "būti",
+      "accent": "bū́ti",
+      "translate": {
+        "rus": "быть"
+      }
+    },
+    {
+      "word": "centas",
+      "accent": "ceñtas",
+      "translate": {
+        "rus": "цент"
+      }
+    },
+    {
+      "word": "centras",
+      "accent": "ceñtras",
+      "translate": {
+        "rus": "центр"
+      }
+    },
+    {
+      "word": "cepelinai",
+      "accent": "cepelìnai",
+      "translate": {
+        "rus": "цефелины"
+      }
+    },
+    {
+      "word": "chemija",
+      "accent": "chèmija",
+      "translate": {
+        "rus": "химия"
+      }
+    },
+    {
+      "word": "čekis",
+      "accent": "čèkis",
+      "translate": {
+        "rus": "чек"
+      }
+    },
+    {
+      "word": "česnakas",
+      "accent": "česnãkas",
+      "translate": {
+        "rus": "чеснок"
+      }
+    },
+    {
+      "word": "čia",
+      "accent": "čià",
+      "translate": {
+        "rus": "где"
+      }
+    },
+    {
+      "word": "čiuožinėti",
+      "accent": "čiuožinė́ti",
+      "translate": {
+        "rus": "катание на коньках"
+      }
+    },
+    {
+      "word": "dailininkas",
+      "accent": "daĩlininkas",
+      "translate": {
+        "rus": "художник"
+      }
+    },
+    {
+      "word": "dainininkas",
+      "accent": "daininiñkas",
+      "translate": {
+        "rus": "певец"
+      }
+    },
+    {
+      "word": "dainuoti",
+      "accent": "dainúoti",
+      "translate": {
+        "rus": "петь"
+      }
+    },
+    {
+      "word": "dantis",
+      "accent": "dantìs",
+      "translate": {
+        "rus": "зуб"
+      }
+    },
+    {
+      "word": "darbas",
+      "accent": "dárbas",
+      "translate": {
+        "rus": "работа"
+      }
+    },
+    {
+      "word": "darbininkas",
+      "accent": "darbiniñkas",
+      "translate": {
+        "rus": "работодатель"
+      }
+    },
+    {
+      "word": "darbo drabužiai",
+      "accent": "dárbo",
+      "translate": {
+        "rus": "рабочая одежда"
+      }
+    },
+    {
+      "word": "darbo valandos",
+      "accent": "dárbo",
+      "translate": {
+        "rus": "рабочее время"
+      }
+    },
+    {
+      "word": "darbo vieta",
+      "accent": "dárbo",
+      "translate": {
+        "rus": "место работы"
+      }
+    },
+    {
+      "word": "darbuotojai",
+      "accent": "darbúotojai",
+      "translate": {
+        "rus": "работники"
+      }
+    },
+    {
+      "word": "daržovės",
+      "accent": "daržóvės",
+      "translate": {
+        "rus": "овощи"
+      }
+    },
+    {
+      "word": "daugiabutis",
+      "accent": "daugiabùtis",
+      "translate": {
+        "rus": "многоквартирный"
+      }
+    },
+    {
+      "word": "dažai",
+      "accent": "dažaĩ",
+      "translate": {
+        "rus": "чернила"
+      }
+    },
+    {
+      "word": "dažyti",
+      "accent": "dažýti",
+      "translate": {
+        "rus": "окрашенный"
+      }
+    },
+    {
+      "word": "dažnai",
+      "accent": "dažnaĩ",
+      "translate": {
+        "rus": "общий"
+      }
+    },
+    {
+      "word": "degtinė",
+      "accent": "degtìnė",
+      "translate": {
+        "rus": "водка"
+      }
+    },
+    {
+      "word": "dekanas",
+      "accent": "dekãnas",
+      "translate": {
+        "rus": "декан"
+      }
+    },
+    {
+      "word": "dešinė",
+      "accent": "dẽšinė",
+      "translate": {
+        "rus": "правильно"
+      }
+    },
+    {
+      "word": "dešinėje",
+      "accent": "dešinėjè",
+      "translate": {
+        "rus": "правильно"
+      }
+    },
+    {
+      "word": "dešrelės",
+      "accent": "dešrẽlės",
+      "translate": {
+        "rus": "колбаса"
+      }
+    },
+    {
+      "word": "dėdė",
+      "accent": "dė̃dė",
+      "translate": {
+        "rus": "дядя"
+      }
+    },
+    {
+      "word": "dėstytojas",
+      "accent": "dė́stytojas",
+      "translate": {
+        "rus": "учитель"
+      }
+    },
+    {
+      "word": "dėžė",
+      "accent": "dėžė̃",
+      "translate": {
+        "rus": "коробка"
+      }
+    },
+    {
+      "word": "dėžutė",
+      "accent": "dėžùtė",
+      "translate": {
+        "rus": "коробка"
+      }
+    },
+    {
+      "word": "didelis",
+      "accent": "dìdelis",
+      "translate": {
+        "rus": "высокий"
+      }
+    },
+    {
+      "word": "didžkukuliai",
+      "accent": "dìdžkukuliai",
+      "translate": {
+        "rus": "перхоть"
+      }
+    },
+    {
+      "word": "diena",
+      "accent": "dienà",
+      "translate": {
+        "rus": "день"
+      }
+    },
+    {
+      "word": "dingo elektra",
+      "accent": "diñgo",
+      "translate": {
+        "rus": "электрический"
+      }
+    },
+    {
+      "word": "diplomas",
+      "accent": "diplòmas",
+      "translate": {
+        "rus": "диплом"
+      }
+    },
+    {
+      "word": "dirbti",
+      "accent": "dìrbti",
+      "translate": {
+        "rus": "работа"
+      }
+    },
+    {
+      "word": "direktorius",
+      "accent": "dirèktorius",
+      "translate": {
+        "rus": "директор"
+      }
+    },
+    {
+      "word": "dydis",
+      "accent": "dỹdis",
+      "translate": {
+        "rus": "размер"
+      }
+    },
+    {
+      "word": "dokumentai",
+      "accent": "dokumeñtai",
+      "translate": {
+        "rus": "документы"
+      }
+    },
+    {
+      "word": "drabužiai moterims",
+      "accent": "drabùžiai",
+      "translate": {
+        "rus": "одежда для женщин"
+      }
+    },
+    {
+      "word": "drabužiai vaikams",
+      "accent": "drabùžiai",
+      "translate": {
+        "rus": "одежда для детей"
+      }
+    },
+    {
+      "word": "drabužiai vyrams",
+      "accent": "drabùžiai",
+      "translate": {
+        "rus": "одежда для мужчин"
+      }
+    },
+    {
+      "word": "drabužinė",
+      "accent": "drabužìnė",
+      "translate": {
+        "rus": "одежда"
+      }
+    },
+    {
+      "word": "draudimas",
+      "accent": "draudìmas",
+      "translate": {
+        "rus": "страховка"
+      }
+    },
+    {
+      "word": "drožtukas",
+      "accent": "drožtùkas",
+      "translate": {
+        "rus": "плотник"
+      }
+    },
+    {
+      "word": "dujokaukė",
+      "accent": "dujókaukė",
+      "translate": {
+        "rus": "противогазы"
+      }
+    },
+    {
+      "word": "duktė",
+      "accent": "duktė̃",
+      "translate": {
+        "rus": "дочь"
+      }
+    },
+    {
+      "word": "dulkių siurblys",
+      "accent": "dùlkių",
+      "translate": {
+        "rus": "пылесос"
+      }
+    },
+    {
+      "word": "duona",
+      "accent": "dúona",
+      "translate": {
+        "rus": "хлеб"
+      }
+    },
+    {
+      "word": "duoti",
+      "accent": "dúoti",
+      "translate": {
+        "rus": "давать"
+      }
+    },
+    {
+      "word": "durys",
+      "accent": "dùrys",
+      "translate": {
+        "rus": "дверь"
+      }
+    },
+    {
+      "word": "dušas",
+      "accent": "dùšas",
+      "translate": {
+        "rus": "душ"
+      }
+    },
+    {
+      "word": "dviratis",
+      "accent": "dvìratis",
+      "translate": {
+        "rus": "велосипед"
+      }
+    },
+    {
+      "word": "džinsai",
+      "accent": "džìnsai",
+      "translate": {
+        "rus": "джинсы"
+      }
+    },
+    {
+      "word": "džiovyklė",
+      "accent": "džiovỹklė",
+      "translate": {
+        "rus": "сушилка"
+      }
+    },
+    {
+      "word": "egzaminas",
+      "accent": "egzãminas",
+      "translate": {
+        "rus": "экзамен"
+      }
+    },
+    {
+      "word": "eilė",
+      "accent": "eilė̃",
+      "translate": {
+        "rus": "очередь"
+      }
+    },
+    {
+      "word": "eiti",
+      "accent": "eĩti",
+      "translate": {
+        "rus": "идти"
+      }
+    },
+    {
+      "word": "eiti miegoti",
+      "accent": "eĩti",
+      "translate": {
+        "rus": "ложиться спать"
+      }
+    },
+    {
+      "word": "elektra",
+      "accent": "elektrà",
+      "translate": {
+        "rus": "электричество"
+      }
+    },
+    {
+      "word": "elektrikas",
+      "accent": "elèktrikas",
+      "translate": {
+        "rus": "элдрик"
+      }
+    },
+    {
+      "word": "elektroninis receptas",
+      "accent": "elektròninis",
+      "translate": {
+        "rus": "электронный рецепт"
+      }
+    },
+    {
+      "word": "euras",
+      "accent": "eũras",
+      "translate": {
+        "rus": "евро"
+      }
+    },
+    {
+      "word": "ežeras",
+      "accent": "ẽžeras",
+      "translate": {
+        "rus": "озеро"
+      }
+    },
+    {
+      "word": "filmas",
+      "accent": "fìlmas",
+      "translate": {
+        "rus": "фильм"
+      }
+    },
+    {
+      "word": "fizika",
+      "accent": "fìzika",
+      "translate": {
+        "rus": "физика"
+      }
+    },
+    {
+      "word": "futbolas",
+      "accent": "fùtbolas",
+      "translate": {
+        "rus": "пафабол"
+      }
+    },
+    {
+      "word": "gabaliukas",
+      "accent": "gabaliùkas",
+      "translate": {
+        "rus": "кусок"
+      }
+    },
+    {
+      "word": "gaila",
+      "accent": "gaĩla",
+      "translate": {
+        "rus": "жалость"
+      }
+    },
+    {
+      "word": "gaisras",
+      "accent": "gaĩsras",
+      "translate": {
+        "rus": "огонь"
+      }
+    },
+    {
+      "word": "gaisrinė",
+      "accent": "gaĩsrinė",
+      "translate": {
+        "rus": "пожарная станция"
+      }
+    },
+    {
+      "word": "gal",
+      "accent": "gál",
+      "translate": {
+        "rus": "или"
+      }
+    },
+    {
+      "word": "galva",
+      "accent": "galvà",
+      "translate": {
+        "rus": "голова"
+      }
+    },
+    {
+      "word": "galvos skausmas",
+      "accent": "galvõs",
+      "translate": {
+        "rus": "головная боль"
+      }
+    },
+    {
+      "word": "gamykla",
+      "accent": "gamyklà",
+      "translate": {
+        "rus": "растение"
+      }
+    },
+    {
+      "word": "garantija",
+      "accent": "garántija",
+      "translate": {
+        "rus": "гарантия"
+      }
+    },
+    {
+      "word": "garažas",
+      "accent": "garãžas",
+      "translate": {
+        "rus": "гараж"
+      }
+    },
+    {
+      "word": "gatvė",
+      "accent": "gãtvė",
+      "translate": {
+        "rus": "улица"
+      }
+    },
+    {
+      "word": "gauti",
+      "accent": "gáuti",
+      "translate": {
+        "rus": "получать"
+      }
+    },
+    {
+      "word": "gazuotas vanduo",
+      "accent": "gazúotas",
+      "translate": {
+        "rus": "газированная вода"
+      }
+    },
+    {
+      "word": "gegužė",
+      "accent": "gegužė̃",
+      "translate": {
+        "rus": "май"
+      }
+    },
+    {
+      "word": "geležinkelio stotis",
+      "accent": "geležìnkelio",
+      "translate": {
+        "rus": "железнодорожный вокзал"
+      }
+    },
+    {
+      "word": "geltonas",
+      "accent": "geltónas",
+      "translate": {
+        "rus": "желтый"
+      }
+    },
+    {
+      "word": "gelbėkit!",
+      "accent": "gélbėkit",
+      "translate": {
+        "rus": "помогите!"
+      }
+    },
+    {
+      "word": "gerai",
+      "accent": "geraĩ",
+      "translate": {
+        "rus": "хорошо"
+      }
+    },
+    {
+      "word": "gerklė",
+      "accent": "gerklė̃",
+      "translate": {
+        "rus": "горло"
+      }
+    },
+    {
+      "word": "gerti",
+      "accent": "gérti",
+      "translate": {
+        "rus": "устный"
+      }
+    },
+    {
+      "word": "gėlė",
+      "accent": "gėlė̃",
+      "translate": {
+        "rus": "цветок"
+      }
+    },
+    {
+      "word": "gėlynas",
+      "accent": "gėlýnas",
+      "translate": {
+        "rus": "цветок"
+      }
+    },
+    {
+      "word": "gėrimai",
+      "accent": "gėrìmai",
+      "translate": {
+        "rus": "напитки"
+      }
+    },
+    {
+      "word": "gėrimas",
+      "accent": "gėrìmas",
+      "translate": {
+        "rus": "напиток"
+      }
+    },
+    {
+      "word": "gimnazija",
+      "accent": "gimnãzija",
+      "translate": {
+        "rus": "гимнастика"
+      }
+    },
+    {
+      "word": "gimtoji kalba",
+      "accent": "gimtóji",
+      "translate": {
+        "rus": "родной язык"
+      }
+    },
+    {
+      "word": "gintaras",
+      "accent": "giñtaras",
+      "translate": {
+        "rus": "гинтары"
+      }
+    },
+    {
+      "word": "gydytojas",
+      "accent": "gýdytojas",
+      "translate": {
+        "rus": "врач"
+      }
+    },
+    {
+      "word": "gyventi",
+      "accent": "gyvénti",
+      "translate": {
+        "rus": "жить"
+      }
+    },
+    {
+      "word": "gyvenimo aprašymas",
+      "accent": "gyvẽnimo",
+      "translate": {
+        "rus": "живое описание"
+      }
+    },
+    {
+      "word": "golfas",
+      "accent": "gòlfas",
+      "translate": {
+        "rus": "гольф"
+      }
+    },
+    {
+      "word": "gramas",
+      "accent": "grãmas",
+      "translate": {
+        "rus": "грамм"
+      }
+    },
+    {
+      "word": "grąža",
+      "accent": "grąžà",
+      "translate": {
+        "rus": "возвращение"
+      }
+    },
+    {
+      "word": "greitoji pagalba",
+      "accent": "greitóji",
+      "translate": {
+        "rus": "экстренная помощь"
+      }
+    },
+    {
+      "word": "grėblys",
+      "accent": "grėblỹs",
+      "translate": {
+        "rus": "рейк"
+      }
+    },
+    {
+      "word": "grietinė",
+      "accent": "grietìnė",
+      "translate": {
+        "rus": "сметана"
+      }
+    },
+    {
+      "word": "grietinėlė",
+      "accent": "grietinė̃lė",
+      "translate": {
+        "rus": "крем"
+      }
+    },
+    {
+      "word": "gripas",
+      "accent": "grìpas",
+      "translate": {
+        "rus": "грипп"
+      }
+    },
+    {
+      "word": "grįžti",
+      "accent": "grį̃žti",
+      "translate": {
+        "rus": "возвращение"
+      }
+    },
+    {
+      "word": "grįžti namo",
+      "accent": "grį̃žti",
+      "translate": {
+        "rus": "возвращение домой"
+      }
+    },
+    {
+      "word": "grynieji pinigai",
+      "accent": "gryníeji",
+      "translate": {
+        "rus": "наличные"
+      }
+    },
+    {
+      "word": "groti",
+      "accent": "gróti",
+      "translate": {
+        "rus": "играть"
+      }
+    },
+    {
+      "word": "gruodis",
+      "accent": "grúodis",
+      "translate": {
+        "rus": "декабрь"
+      }
+    },
+    {
+      "word": "gulėti ligoninėje",
+      "accent": "gulė́ti",
+      "translate": {
+        "rus": "оставаться в больнице"
+      }
+    },
+    {
+      "word": "gultis",
+      "accent": "gul̃tis",
+      "translate": {
+        "rus": "отдыхать"
+      }
+    },
+    {
+      "word": "gultis į ligoninę",
+      "accent": "gul̃tis",
+      "translate": {
+        "rus": "оставаться в больнице"
+      }
+    },
+    {
+      "word": "iki",
+      "accent": "ikì",
+      "translate": {
+        "rus": "до"
+      }
+    },
+    {
+      "word": "ilgai",
+      "accent": "ilgaĩ",
+      "translate": {
+        "rus": "длинный"
+      }
+    },
+    {
+      "word": "imti",
+      "accent": "im̃ti",
+      "translate": {
+        "rus": "брать"
+      }
+    },
+    {
+      "word": "indaplovė",
+      "accent": "indãplovė",
+      "translate": {
+        "rus": "несгибаемый"
+      }
+    },
+    {
+      "word": "indelis",
+      "accent": "indẽlis",
+      "translate": {
+        "rus": "банку"
+      }
+    },
+    {
+      "word": "injekcija",
+      "accent": "injèkcija",
+      "translate": {
+        "rus": "инъекция"
+      }
+    },
+    {
+      "word": "institutas",
+      "accent": "institùtas",
+      "translate": {
+        "rus": "институт"
+      }
+    },
+    {
+      "word": "internetas",
+      "accent": "internètas",
+      "translate": {
+        "rus": "интернет"
+      }
+    },
+    {
+      "word": "interneto svetainė",
+      "accent": "internèto",
+      "translate": {
+        "rus": "сайт"
+      }
+    },
+    {
+      "word": "istorija",
+      "accent": "istòrija",
+      "translate": {
+        "rus": "история"
+      }
+    },
+    {
+      "word": "iš",
+      "accent": "ìš",
+      "translate": {
+        "rus": "из"
+      }
+    },
+    {
+      "word": "išėjimas",
+      "accent": "išėjìmas",
+      "translate": {
+        "rus": "выход"
+      }
+    },
+    {
+      "word": "išjungtas",
+      "accent": "išjùngtas",
+      "translate": {
+        "rus": "инвалид"
+      }
+    },
+    {
+      "word": "išjungti",
+      "accent": "išjùngti",
+      "translate": {
+        "rus": "отключать"
+      }
+    },
+    {
+      "word": "išmanusis telefonas",
+      "accent": "išmanùsis",
+      "translate": {
+        "rus": "смартфон"
+      }
+    },
+    {
+      "word": "išrašyti",
+      "accent": "išrašýti",
+      "translate": {
+        "rus": "писать"
+      }
+    },
+    {
+      "word": "išvežti šiukšles",
+      "accent": "išvèžti",
+      "translate": {
+        "rus": "удалить мусор"
+      }
+    },
+    {
+      "word": "išvykti",
+      "accent": "išvỹkti",
+      "translate": {
+        "rus": "идти"
+      }
+    },
+    {
+      "word": "įėjimas",
+      "accent": "įėjìmas",
+      "translate": {
+        "rus": "вход"
+      }
+    },
+    {
+      "word": "įjungtas",
+      "accent": "įjùngtas",
+      "translate": {
+        "rus": "включенный"
+      }
+    },
+    {
+      "word": "įjungti",
+      "accent": "įjùngti",
+      "translate": {
+        "rus": "включенный"
+      }
+    },
+    {
+      "word": "įvertinimas",
+      "accent": "įvértinimas",
+      "translate": {
+        "rus": "рейтинг"
+      }
+    },
+    {
+      "word": "jautiena",
+      "accent": "jáutiena",
+      "translate": {
+        "rus": "говядина"
+      }
+    },
+    {
+      "word": "jogurtas",
+      "accent": "jogùrtas",
+      "translate": {
+        "rus": "иогурт"
+      }
+    },
+    {
+      "word": "juodas",
+      "accent": "júodas",
+      "translate": {
+        "rus": "черный"
+      }
+    },
+    {
+      "word": "juoda kava",
+      "accent": "juodà",
+      "translate": {
+        "rus": "черный кофе"
+      }
+    },
+    {
+      "word": "kabinetas",
+      "accent": "kabinètas",
+      "translate": {
+        "rus": "кабинет"
+      }
+    },
+    {
+      "word": "kaina",
+      "accent": "káina",
+      "translate": {
+        "rus": "цена"
+      }
+    },
+    {
+      "word": "kaip",
+      "accent": "kaĩp",
+      "translate": {
+        "rus": "как"
+      }
+    },
+    {
+      "word": "kaip sekasi?",
+      "accent": "kaĩp",
+      "translate": {
+        "rus": "как дела?"
+      }
+    },
+    {
+      "word": "kairė",
+      "accent": "kairė̃",
+      "translate": {
+        "rus": "левый"
+      }
+    },
+    {
+      "word": "kairėje",
+      "accent": "kairėjè",
+      "translate": {
+        "rus": "левый"
+      }
+    },
+    {
+      "word": "kalnas",
+      "accent": "kálnas",
+      "translate": {
+        "rus": "холм"
+      }
+    },
+    {
+      "word": "kambarys",
+      "accent": "kambarỹs",
+      "translate": {
+        "rus": "комната"
+      }
+    },
+    {
+      "word": "karpis",
+      "accent": "kárpis",
+      "translate": {
+        "rus": "карп"
+      }
+    },
+    {
+      "word": "karštas",
+      "accent": "kárštas",
+      "translate": {
+        "rus": "горячий"
+      }
+    },
+    {
+      "word": "kartais",
+      "accent": "kar̃tais",
+      "translate": {
+        "rus": "иногда"
+      }
+    },
+    {
+      "word": "kas",
+      "accent": "kàs",
+      "translate": {
+        "rus": "каждый"
+      }
+    },
+    {
+      "word": "kasa",
+      "accent": "kasà",
+      "translate": {
+        "rus": "дом"
+      }
+    },
+    {
+      "word": "kasdien",
+      "accent": "kasdiẽn",
+      "translate": {
+        "rus": "ежедневно"
+      }
+    },
+    {
+      "word": "kastuvas",
+      "accent": "kastùvas",
+      "translate": {
+        "rus": "лопата"
+      }
+    },
+    {
+      "word": "katedra",
+      "accent": "kãtedra",
+      "translate": {
+        "rus": "собор"
+      }
+    },
+    {
+      "word": "kava",
+      "accent": "kavà",
+      "translate": {
+        "rus": "кофе"
+      }
+    },
+    {
+      "word": "kava su pienu",
+      "accent": "kavà",
+      "translate": {
+        "rus": "кофе, содержащий молоко"
+      }
+    },
+    {
+      "word": "kavinė",
+      "accent": "kavìnė",
+      "translate": {
+        "rus": "кафе"
+      }
+    },
+    {
+      "word": "kefyras",
+      "accent": "kefỹras",
+      "translate": {
+        "rus": "тирозин"
+      }
+    },
+    {
+      "word": "kelias",
+      "accent": "keliàs",
+      "translate": {
+        "rus": "путь"
+      }
+    },
+    {
+      "word": "kelintas",
+      "accent": "keliñtas",
+      "translate": {
+        "rus": "цементированный"
+      }
+    },
+    {
+      "word": "kelnės",
+      "accent": "kélnės",
+      "translate": {
+        "rus": "брюки"
+      }
+    },
+    {
+      "word": "keltas",
+      "accent": "kel̃tas",
+      "translate": {
+        "rus": "паром"
+      }
+    },
+    {
+      "word": "kepsnys",
+      "accent": "kepsnỹs",
+      "translate": {
+        "rus": "жарить"
+      }
+    },
+    {
+      "word": "kepurė",
+      "accent": "kepùrė",
+      "translate": {
+        "rus": "крышка"
+      }
+    },
+    {
+      "word": "ketvirtadienis",
+      "accent": "ketvirtãdienis",
+      "translate": {
+        "rus": "четверг"
+      }
+    },
+    {
+      "word": "kėdė",
+      "accent": "kėdė̃",
+      "translate": {
+        "rus": "стул"
+      }
+    },
+    {
+      "word": "kiauliena",
+      "accent": "kiaulíena",
+      "translate": {
+        "rus": "свинина"
+      }
+    },
+    {
+      "word": "kiaušinienė",
+      "accent": "kiaušiniẽnė",
+      "translate": {
+        "rus": "яйцо"
+      }
+    },
+    {
+      "word": "kibiras",
+      "accent": "kìbiras",
+      "translate": {
+        "rus": "ведро"
+      }
+    },
+    {
+      "word": "kiekis",
+      "accent": "kiẽkis",
+      "translate": {
+        "rus": "количество"
+      }
+    },
+    {
+      "word": "kiemas",
+      "accent": "kiẽmas",
+      "translate": {
+        "rus": "двор"
+      }
+    },
+    {
+      "word": "kilimas",
+      "accent": "kilìmas",
+      "translate": {
+        "rus": "взлет"
+      }
+    },
+    {
+      "word": "kilogramas",
+      "accent": "kilogrãmas",
+      "translate": {
+        "rus": "килограмм"
+      }
+    },
+    {
+      "word": "kioskas",
+      "accent": "kiòskas",
+      "translate": {
+        "rus": "киоск"
+      }
+    },
+    {
+      "word": "kirpėjas",
+      "accent": "kirpė́jas",
+      "translate": {
+        "rus": "парикмахер"
+      }
+    },
+    {
+      "word": "kirpykla",
+      "accent": "kirpyklà",
+      "translate": {
+        "rus": "парикмахер"
+      }
+    },
+    {
+      "word": "klasė",
+      "accent": "klãsė",
+      "translate": {
+        "rus": "класс 1.6"
+      }
+    },
+    {
+      "word": "klausytis",
+      "accent": "klausýtis",
+      "translate": {
+        "rus": "слушать"
+      }
+    },
+    {
+      "word": "klinika",
+      "accent": "klìnika",
+      "translate": {
+        "rus": "клиники"
+      }
+    },
+    {
+      "word": "knyga",
+      "accent": "knygà",
+      "translate": {
+        "rus": "книга"
+      }
+    },
+    {
+      "word": "koja",
+      "accent": "kója",
+      "translate": {
+        "rus": "нога"
+      }
+    },
+    {
+      "word": "kojinės",
+      "accent": "kójinės",
+      "translate": {
+        "rus": "носки"
+      }
+    },
+    {
+      "word": "kokybė",
+      "accent": "kokýbė",
+      "translate": {
+        "rus": "качество"
+      }
+    },
+    {
+      "word": "koks",
+      "accent": "kóks",
+      "translate": {
+        "rus": "что"
+      }
+    },
+    {
+      "word": "kolegija",
+      "accent": "kolègija",
+      "translate": {
+        "rus": "колледж"
+      }
+    },
+    {
+      "word": "kombinezonas",
+      "accent": "kombinezònas",
+      "translate": {
+        "rus": "диметиамин"
+      }
+    },
+    {
+      "word": "kompiuteris",
+      "accent": "kompiùteris",
+      "translate": {
+        "rus": "компьютер"
+      }
+    },
+    {
+      "word": "koncertas",
+      "accent": "koncer̃tas",
+      "translate": {
+        "rus": "концерт"
+      }
+    },
+    {
+      "word": "konkursas",
+      "accent": "konkùrsas",
+      "translate": {
+        "rus": "процедура торгов"
+      }
+    },
+    {
+      "word": "konteineris",
+      "accent": "konteĩneris",
+      "translate": {
+        "rus": "контейнер"
+      }
+    },
+    {
+      "word": "kopijuoti",
+      "accent": "kopijúoti",
+      "translate": {
+        "rus": "копия"
+      }
+    },
+    {
+      "word": "kopūstas",
+      "accent": "kopū̃stas",
+      "translate": {
+        "rus": "капуста"
+      }
+    },
+    {
+      "word": "koridorius",
+      "accent": "korìdorius",
+      "translate": {
+        "rus": "коридор"
+      }
+    },
+    {
+      "word": "kortelė",
+      "accent": "kortẽlė",
+      "translate": {
+        "rus": "карточка"
+      }
+    },
+    {
+      "word": "kosulys",
+      "accent": "kosulỹs",
+      "translate": {
+        "rus": "кашель"
+      }
+    },
+    {
+      "word": "košė",
+      "accent": "kõšė",
+      "translate": {
+        "rus": "кошмар"
+      }
+    },
+    {
+      "word": "kovas",
+      "accent": "kovàs",
+      "translate": {
+        "rus": "март"
+      }
+    },
+    {
+      "word": "kraujo tyrimai",
+      "accent": "kraũjo",
+      "translate": {
+        "rus": "анализ крови"
+      }
+    },
+    {
+      "word": "krepšelis",
+      "accent": "krepšẽlis",
+      "translate": {
+        "rus": "корзина"
+      }
+    },
+    {
+      "word": "krepšinis",
+      "accent": "krepšìnis",
+      "translate": {
+        "rus": "баскетбол"
+      }
+    },
+    {
+      "word": "krepšys",
+      "accent": "krepšỹs",
+      "translate": {
+        "rus": "корзина"
+      }
+    },
+    {
+      "word": "kriaušė",
+      "accent": "kriáušė",
+      "translate": {
+        "rus": "груша"
+      }
+    },
+    {
+      "word": "kryptis",
+      "accent": "kryptìs",
+      "translate": {
+        "rus": "направление"
+      }
+    },
+    {
+      "word": "kuprinė",
+      "accent": "kuprìnė",
+      "translate": {
+        "rus": "рюкзак"
+      }
+    },
+    {
+      "word": "kur",
+      "accent": "kur̃",
+      "translate": {
+        "rus": "где"
+      }
+    },
+    {
+      "word": "kvalifikacija",
+      "accent": "kvalifikãcija",
+      "translate": {
+        "rus": "рейтинг"
+      }
+    },
+    {
+      "word": "labanakt",
+      "accent": "labãnakt",
+      "translate": {
+        "rus": "доброй ночи"
+      }
+    },
+    {
+      "word": "labas rytas",
+      "accent": "lãbas",
+      "translate": {
+        "rus": "доброе утро"
+      }
+    },
+    {
+      "word": "labas vakaras",
+      "accent": "lãbas",
+      "translate": {
+        "rus": "добрый вечер"
+      }
+    },
+    {
+      "word": "laba diena",
+      "accent": "labà",
+      "translate": {
+        "rus": "добрый день"
+      }
+    },
+    {
+      "word": "labai",
+      "accent": "labaĩ",
+      "translate": {
+        "rus": "очень"
+      }
+    },
+    {
+      "word": "labai sunku",
+      "accent": "labaĩ",
+      "translate": {
+        "rus": "очень трудно"
+      }
+    },
+    {
+      "word": "laboratorija",
+      "accent": "laboratòrija",
+      "translate": {
+        "rus": "лаборатория"
+      }
+    },
+    {
+      "word": "laikyti egzaminą",
+      "accent": "laikýti",
+      "translate": {
+        "rus": "сдать экзамен"
+      }
+    },
+    {
+      "word": "laipsnis",
+      "accent": "láipsnis",
+      "translate": {
+        "rus": "класс"
+      }
+    },
+    {
+      "word": "laiptai",
+      "accent": "láiptai",
+      "translate": {
+        "rus": "лестница"
+      }
+    },
+    {
+      "word": "laisvalaikio prekės",
+      "accent": "laisvãlaikio",
+      "translate": {
+        "rus": "товары для отдыха"
+      }
+    },
+    {
+      "word": "laisva diena",
+      "accent": "laisvà",
+      "translate": {
+        "rus": "свободный день"
+      }
+    },
+    {
+      "word": "laivas",
+      "accent": "laĩvas",
+      "translate": {
+        "rus": "судно"
+      }
+    },
+    {
+      "word": "langas",
+      "accent": "lángas",
+      "translate": {
+        "rus": "окно"
+      }
+    },
+    {
+      "word": "lapkritis",
+      "accent": "lãpkritis",
+      "translate": {
+        "rus": "ноябрь"
+      }
+    },
+    {
+      "word": "lašai",
+      "accent": "lašaĩ",
+      "translate": {
+        "rus": "капли"
+      }
+    },
+    {
+      "word": "lašiša",
+      "accent": "lašišà",
+      "translate": {
+        "rus": "лосось"
+      }
+    },
+    {
+      "word": "lauke",
+      "accent": "laukè",
+      "translate": {
+        "rus": "снаружи"
+      }
+    },
+    {
+      "word": "ledai",
+      "accent": "ledaĩ",
+      "translate": {
+        "rus": "мороженое"
+      }
+    },
+    {
+      "word": "lempa",
+      "accent": "lémpa",
+      "translate": {
+        "rus": "лампа"
+      }
+    },
+    {
+      "word": "lentyna",
+      "accent": "lentýna",
+      "translate": {
+        "rus": "полка"
+      }
+    },
+    {
+      "word": "lėktuvas",
+      "accent": "lėktùvas",
+      "translate": {
+        "rus": "самолет"
+      }
+    },
+    {
+      "word": "liepa",
+      "accent": "líepa",
+      "translate": {
+        "rus": "июль"
+      }
+    },
+    {
+      "word": "lietuvių kalba",
+      "accent": "lietùvių",
+      "translate": {
+        "rus": "на литовском"
+      }
+    },
+    {
+      "word": "liftas",
+      "accent": "lìftas",
+      "translate": {
+        "rus": "лифт"
+      }
+    },
+    {
+      "word": "žmona",
+      "accent": "žmonà",
+      "translate": {
+        "rus": "жена"
+      }
+    },
+    {
+      "word": "žuvis",
+      "accent": "žuvìs",
+      "translate": {
+        "rus": "рыба"
+      }
+    }
+  ]
+}

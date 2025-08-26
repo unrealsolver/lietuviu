@@ -1,0 +1,25 @@
+{
+  "name": "@ltk/processing",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun src/index.ts",
+    "gentypes": "bun json2ts -i 'src/schemas/*.json' -o src/types"
+  },
+  "devDependencies": {
+    "@types/async": "^3.2.25",
+    "@types/bun": "latest",
+    "json-schema-to-typescript": "^15.0.4",
+    "msw": "^2.10.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@zhangfuxing/multi-progress": "/home/ruslan/dev/multiProgressBar",
+    "async-es": "^3.2.6",
+    "json-schema-library": "^10.1.2",
+    "ky": "^1.8.2",
+    "nok": "^0.1.0"
+  }
+}

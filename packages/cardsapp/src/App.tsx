@@ -1,8 +1,9 @@
 import { version, homepage } from "../package.json";
 import { AnimatedCard } from "./AnimatedCard";
 import classes from "./App.module.css";
+import { db } from "./db";
 import type { WordStat } from "./util";
-import _words from "./words.json";
+//import { BankPrototype } from "@ltk/processing";
 import {
   ActionIcon,
   Center,
@@ -14,9 +15,10 @@ import {
   Anchor,
 } from "@mantine/core";
 import { IconSun, IconMoon } from "@tabler/icons-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const words: string[] = _words;
+const bank = { data: [] };
+const words = bank.data;
 
 type Word = string;
 
@@ -24,7 +26,7 @@ const ALMOST_ONE = 0.999999;
 
 const wordStat = words.reduce(
   (m, d) => {
-    m[d] = {
+    m[d.word] = {
       accepts: 0,
       rejects: 0,
     };
@@ -107,6 +109,16 @@ function getWord(wordStat: Record<string, WordStat>): Word {
 }
 
 function App() {
+  useEffect(() => {
+    async function setUpDb() {
+      console.log("hook");
+      if ((await db.system.count()) > 0) return;
+      console.log(await db.system.get({ isInit: true }));
+      db.system.add({ isInit: true });
+    }
+
+    setUpDb();
+  }, []);
   const { setColorScheme } = useMantineColorScheme();
   const computedColorScheme = useComputedColorScheme("light", {
     getInitialValueInEffect: true,
@@ -123,26 +135,27 @@ function App() {
     setCurrentWord(getWord(wordStat));
   };
 
-  const globalStat = words.reduce(
-    (m, d) => {
-      const stat = wordStat[d];
-      const rate = getRate(stat);
+  //const globalStat = words.reduce(
+  //  (m, d) => {
+  //    const stat = wordStat[d];
+  //    const rate = getRate(stat);
 
-      if (stat.accepts + stat.rejects >= 3) {
-        if (rate > 0.8) {
-          m.good += 1;
-        } else {
-          m.bad += 1;
-        }
-      } else if (stat.accepts + stat.rejects != 0) {
-        m.seen += 1;
-      }
+  //    if (stat.accepts + stat.rejects >= 3) {
+  //      if (rate > 0.8) {
+  //        m.good += 1;
+  //      } else {
+  //        m.bad += 1;
+  //      }
+  //    } else if (stat.accepts + stat.rejects != 0) {
+  //      m.seen += 1;
+  //    }
 
-      return m;
-    },
-    { good: 0, bad: 0, seen: 0 },
-  );
+  //    return m;
+  //  },
+  //  { good: 0, bad: 0, seen: 0 },
+  //);
 
+  return "ok";
   return (
     <Stack p="sm" pb="4px" h="100vh" style={{ overflow: "hidden" }}>
       <Group gap={0}>

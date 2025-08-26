@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "0.0.0",
+  "customName": "BankSchema",
+  "type": "object",
+  "$defs": {
+    "ModeTranslate": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "translate"
+        },
+        "lang": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["name", "lang"]
+    },
+    "ModeStress": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "stresses"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["name"]
+    },
+    "EnhancedDataItem": {
+      "type": "object",
+      "properties": {
+        "word": {
+          "type": "string"
+        },
+        "data": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": {
+        "type": "object"
+      },
+      "required": ["word"]
+    }
+  },
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "lang": {
+      "type": "string"
+    },
+    "modes": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "$ref": "#/$defs/ModeTranslate" },
+          { "$ref": "#/$defs/ModeStress" }
+        ]
+      }
+    },
+    "data": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/EnhancedDataItem" }]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "title",
+    "description",
+    "author",
+    "lang",
+    "modes",
+    "data"
+  ]
+}
