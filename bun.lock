@@ -9,6 +9,7 @@
       "version": "0.0.1",
       "dependencies": {
         "@fontsource/nunito": "^5.2.6",
+        "@ltk/databanks": "workspace:*",
         "@mantine/core": "^8.1.3",
         "@mantine/hooks": "^8.1.3",
         "@react-spring/web": "^10.0.1",
@@ -41,7 +42,7 @@
       },
     },
     "packages/databanks": {
-      "name": "databanks",
+      "name": "@ltk/databanks",
     },
     "packages/processing": {
       "name": "@ltk/processing",
@@ -221,6 +222,8 @@
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.29", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-uw6guiW/gcAGPDhLmd77/6lW8QLeiV5RUTsAX46Db6oLhGaVj4lhnPwb184s1bkc8kdVg/+h988dro8GRDpmYQ=="],
 
     "@jsdevtools/ono": ["@jsdevtools/ono@7.1.3", "", {}, "sha512-4JQNk+3mVzK3xh2rqd6RB4J46qUR19azEHBneZyTZM+c456qOrbbM/5xcR8huNCCcbVt7+UmizG6GuUvPvKUYg=="],
+
+    "@ltk/databanks": ["@ltk/databanks@workspace:packages/databanks"],
 
     "@ltk/processing": ["@ltk/processing@workspace:packages/processing"],
 
@@ -431,8 +434,6 @@
     "cssesc": ["cssesc@3.0.0", "", { "bin": "bin/cssesc" }, "sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg=="],
 
     "csstype": ["csstype@3.1.3", "", {}, "sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw=="],
-
-    "databanks": ["databanks@workspace:packages/databanks"],
 
     "debug": ["debug@4.4.1", "", { "dependencies": { "ms": "^2.1.3" } }, "sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ=="],
 

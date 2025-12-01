@@ -1,3 +1,10 @@
 {
-  "name": "databanks"
+  "name": "@ltk/databanks",
+  "module": "index.ts",
+  "type": "module",
+  "description": "Generated data banks for the app",
+  "exports": {
+    ".": "./dist/a1.bank.json",
+    "*": "./dist/*"
+  }
 }

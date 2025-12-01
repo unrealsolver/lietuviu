@@ -1,13 +1,14 @@
 import cardClasses from "./Card.module.css";
 import { MyCard } from "./MyCard";
 import type { WordStat } from "./util";
-import { Title } from "@mantine/core";
+import { Stack, Title } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useSpring, animated, to, config } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
 
 type AnimatedCardProps = {
   word: string;
+  wordObj: { word: string; accent: string };
   onSwipeLeft: (word: string) => void;
   onSwipeRight: (word: string) => void;
   stat: WordStat;
@@ -15,6 +16,7 @@ type AnimatedCardProps = {
 
 export function AnimatedCard({
   word,
+  wordObj,
   onSwipeLeft,
   onSwipeRight,
   stat,
@@ -122,9 +124,12 @@ export function AnimatedCard({
         className={cardClasses.card}
       >
         <MyCard>
-          <Title order={1}>
-            {stat.accepts} / {stat.rejects}
-          </Title>
+          <Stack>
+            <Title order={1}>{wordObj.accent}</Title>
+            <Title order={1}>
+              {stat.accepts} / {stat.rejects}
+            </Title>
+          </Stack>
         </MyCard>
       </animated.div>
     </>

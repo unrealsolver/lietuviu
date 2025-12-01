@@ -5,7 +5,7 @@ const db = new Dexie("ltkdb") as Dexie & {
 };
 
 db.version(1).stores({
-  system: "isInit",
+  system: "++pk,isInit",
 });
 
 export { db };

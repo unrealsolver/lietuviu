@@ -3,7 +3,7 @@ import { AnimatedCard } from "./AnimatedCard";
 import classes from "./App.module.css";
 import { db } from "./db";
 import type { WordStat } from "./util";
-//import { BankPrototype } from "@ltk/processing";
+import { type BankPrototype } from "@ltk/processing";
 import {
   ActionIcon,
   Center,
@@ -15,10 +15,12 @@ import {
   Anchor,
 } from "@mantine/core";
 import { IconSun, IconMoon } from "@tabler/icons-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const _bank = await import("@ltk/databanks");
 
 const bank = { data: [] };
-const words = bank.data;
+const words = _bank.data;
 
 type Word = string;
 
@@ -62,7 +64,7 @@ function rebuildGroups(wordStat: Record<string, WordStat>): Array<Set<Word>> {
   const groups = [...Array(10)].map(() => new Set<Word>());
 
   Object.entries(wordStat).map(([word, stat]) => {
-    // syccess rate of 0.0..1.0
+    // success rate of 0.0..1.0
     const rawRate = getRate(stat);
 
     // We need >=0 and < 1.0 range for proper 0-9 categories mapping
@@ -109,22 +111,29 @@ function getWord(wordStat: Record<string, WordStat>): Word {
 }
 
 function App() {
-  useEffect(() => {
-    async function setUpDb() {
-      console.log("hook");
-      if ((await db.system.count()) > 0) return;
-      console.log(await db.system.get({ isInit: true }));
-      db.system.add({ isInit: true });
-    }
-
-    setUpDb();
-  }, []);
   const { setColorScheme } = useMantineColorScheme();
   const computedColorScheme = useComputedColorScheme("light", {
     getInitialValueInEffect: true,
   });
 
+  const lock = useRef(false);
+
+  useEffect(() => {
+    if (lock.current === true) return;
+    async function setUpDb() {
+      console.log("hook");
+      lock.current = true;
+      if ((await db.system.count()) > 0) return;
+      await db.system.add({ isInit: true });
+      console.log(await db.system.toArray());
+    }
+
+    setUpDb();
+  }, []);
+
   const [currentWord, setCurrentWord] = useState(() => getWord(wordStat));
+
+  const wordObj = words.find((d) => d.word === currentWord)!;
 
   const handleSwipeLeft = (word: string) => {
     wordStat[word].rejects += 1;
@@ -135,27 +144,26 @@ function App() {
     setCurrentWord(getWord(wordStat));
   };
 
-  //const globalStat = words.reduce(
-  //  (m, d) => {
-  //    const stat = wordStat[d];
-  //    const rate = getRate(stat);
+  const globalStat = words.reduce(
+    (m, d) => {
+      const stat = wordStat[d.word];
+      const rate = getRate(stat);
 
-  //    if (stat.accepts + stat.rejects >= 3) {
-  //      if (rate > 0.8) {
-  //        m.good += 1;
-  //      } else {
-  //        m.bad += 1;
-  //      }
-  //    } else if (stat.accepts + stat.rejects != 0) {
-  //      m.seen += 1;
-  //    }
+      if (stat.accepts + stat.rejects >= 3) {
+        if (rate > 0.8) {
+          m.good += 1;
+        } else {
+          m.bad += 1;
+        }
+      } else if (stat.accepts + stat.rejects != 0) {
+        m.seen += 1;
+      }
 
-  //    return m;
-  //  },
-  //  { good: 0, bad: 0, seen: 0 },
-  //);
+      return m;
+    },
+    { good: 0, bad: 0, seen: 0 },
+  );
 
-  return "ok";
   return (
     <Stack p="sm" pb="4px" h="100vh" style={{ overflow: "hidden" }}>
       <Group gap={0}>
@@ -191,6 +199,7 @@ function App() {
           onSwipeLeft={handleSwipeLeft}
           onSwipeRight={handleSwipeRight}
           word={currentWord}
+          wordObj={wordObj}
           key={currentWord}
           stat={wordStat[currentWord]}
         />
