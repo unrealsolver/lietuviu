@@ -30,7 +30,7 @@ jobs:
           fi
 
       - run: bun install
-      - run: bun run build
+      - run: bun run --filter=cardsapp build
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3

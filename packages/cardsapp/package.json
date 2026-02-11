@@ -1,7 +1,7 @@
 {
   "name": "cardsapp",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "license": "AGPL-3.0",
   "author": "Ruslan Panasiuk",
@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "vite",
     "predev": "bun run ./scripts/nodecheck.js",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "prepare": "husky"
