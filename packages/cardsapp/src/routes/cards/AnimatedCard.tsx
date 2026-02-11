@@ -8,7 +8,7 @@ import { useDrag } from "@use-gesture/react";
 
 type AnimatedCardProps = {
   word: string;
-  wordObj: { word: string; accent: string };
+  wordObj: { word: string; accent: string; translate: { rus: string } };
   onSwipeLeft: (word: string) => void;
   onSwipeRight: (word: string) => void;
   stat: WordStat;
@@ -22,6 +22,7 @@ export function AnimatedCard({
   stat,
 }: AnimatedCardProps) {
   const [isFlipped, { toggle }] = useDisclosure(false);
+  console.log(wordObj);
 
   const [{ opacity, rot, ...style }, api] = useSpring(() => ({
     from: { opacity: 0, scale: 0.5, y: 0, x: 0, rot: 0 },
@@ -124,8 +125,9 @@ export function AnimatedCard({
         className={cardClasses.card}
       >
         <MyCard>
-          <Stack>
+          <Stack align="center">
             <Title order={1}>{wordObj.accent}</Title>
+            <Title order={2}>{wordObj.translate.rus}</Title>
             <Title order={1}>
               {stat.accepts} / {stat.rejects}
             </Title>

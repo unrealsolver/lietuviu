@@ -3,5 +3,11 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "prettier": "^3.7.4"
+  },
+  "devDependencies": {
+    "parse5": "^8.0.0"
+  }
 }

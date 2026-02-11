@@ -1,4 +1,4 @@
-import { CardsPage } from "./routes";
+import { CardsPage, TablesPage } from "./routes";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router";
 
 export default function App() {
@@ -7,6 +7,7 @@ export default function App() {
       <Routes>
         <Route index element={<Navigate to="/cards/" />} />
         <Route path="/cards" element={<CardsPage />} />
+        <Route path="/table" element={<TablesPage />} />
       </Routes>
     </BrowserRouter>
   );
