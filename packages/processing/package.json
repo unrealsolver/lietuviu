@@ -16,7 +16,7 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@zhangfuxing/multi-progress": "/home/ruslan/dev/multiProgressBar",
+    "@zhangfuxing/multi-progress": "1.0.3",
     "async-es": "^3.2.6",
     "json-schema-library": "^10.1.2",
     "ky": "^1.8.2",
