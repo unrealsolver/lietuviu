@@ -2,33 +2,63 @@ name: Deploy
 
 on:
   push:
-    tags:
-      - "v*"
+    branches:
+      - main
+    paths:
+      - "packages/cardsapp/package.json"
+  workflow_dispatch:
 
 jobs:
+  prepare-release:
+    name: prepare-release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      package_version: ${{ steps.version.outputs.package_version }}
+      tag_name: ${{ steps.version.outputs.tag_name }}
+      should_deploy: ${{ steps.tag_check.outputs.should_deploy }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: oven-sh/setup-bun@v2
+
+      - name: Read package.json version
+        id: version
+        run: |
+          PACKAGE_VERSION=$(jq -r .version packages/cardsapp/package.json)
+          TAG_NAME="v${PACKAGE_VERSION}"
+          echo "package_version=${PACKAGE_VERSION}" >> "$GITHUB_OUTPUT"
+          echo "tag_name=${TAG_NAME}" >> "$GITHUB_OUTPUT"
+
+      - name: Check if release tag exists
+        id: tag_check
+        run: |
+          TAG_NAME="${{ steps.version.outputs.tag_name }}"
+          if git rev-parse -q --verify "refs/tags/${TAG_NAME}" >/dev/null; then
+            echo "Tag ${TAG_NAME} already exists. Skipping deploy."
+            echo "should_deploy=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Tag ${TAG_NAME} does not exist. Will create and deploy."
+            echo "should_deploy=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create and push release tag
+        if: steps.tag_check.outputs.should_deploy == 'true'
+        run: |
+          TAG_NAME="${{ steps.version.outputs.tag_name }}"
+          git tag "${TAG_NAME}"
+          git push origin "${TAG_NAME}"
+
   build:
     name: build
+    needs: prepare-release
+    if: needs.prepare-release.outputs.should_deploy == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
-
-      - name: Install jq
-        run: sudo apt-get install -y jq
-
-      - name: Read package.json version
-        run: echo "PACKAGE_VERSION=$(jq -r .version packages/cardsapp/package.json)" >> $GITHUB_ENV
-
-      - name: Verify version matches tag
-        run: |
-          TAG_VERSION=${GITHUB_REF#refs/tags/v}
-          if [ "$TAG_VERSION" != "$PACKAGE_VERSION" ]; then
-            echo "❌ Tag ($TAG_VERSION) does not match package.json version ($PACKAGE_VERSION)"
-            exit 1
-          else
-            echo "✅ Tag matches package.json version"
-          fi
-
       - run: bun install
       - run: bun run --filter=cardsapp build
       - name: Upload static files as artifact
@@ -38,7 +68,8 @@ jobs:
           path: packages/cardsapp/dist/
 
   deploy:
-    needs: build
+    needs: [prepare-release, build]
+    if: needs.prepare-release.outputs.should_deploy == 'true'
     permissions:
       pages: write
       id-token: write
