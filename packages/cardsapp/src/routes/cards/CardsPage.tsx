@@ -3,7 +3,7 @@ import { db } from "../../db";
 import { AnimatedCard } from "./AnimatedCard";
 import classes from "./CardsPage.module.css";
 import type { WordStat } from "./util";
-import { type BankPrototype } from "@ltk/processing";
+import type { OutputBank, OutputBankItem } from "@ltk/processing";
 import {
   ActionIcon,
   Center,
@@ -18,17 +18,21 @@ import { IconSun, IconMoon } from "@tabler/icons-react";
 import { useEffect, useRef, useState } from "react";
 
 const _bank = await import("@ltk/databanks");
-
-const bank = { data: [] };
-const words = _bank.data;
+const bank = _bank as OutputBank;
 
 type Word = string;
 
+const translationFeatureId =
+  bank.features.find((f) => f.type === "TRANSLATION")?.id ?? "";
+const phoneticsFeatureId =
+  bank.features.find((f) => f.type === "PHONETICS")?.id ?? "";
+const items: OutputBankItem[] = bank.data;
+
 const ALMOST_ONE = 0.999999;
 
-const wordStat = words.reduce(
+const wordStat = items.reduce(
   (m, d) => {
-    m[d.word] = {
+    m[d.input] = {
       accepts: 0,
       rejects: 0,
     };
@@ -133,7 +137,7 @@ export function CardsPage() {
 
   const [currentWord, setCurrentWord] = useState(() => getWord(wordStat));
 
-  const wordObj = words.find((d) => d.word === currentWord)!;
+  const currentItem = items.find((d) => d.input === currentWord)!;
 
   const handleSwipeLeft = (word: string) => {
     wordStat[word].rejects += 1;
@@ -144,9 +148,9 @@ export function CardsPage() {
     setCurrentWord(getWord(wordStat));
   };
 
-  const globalStat = words.reduce(
+  const globalStat = items.reduce(
     (m, d) => {
-      const stat = wordStat[d.word];
+      const stat = wordStat[d.input];
       const rate = getRate(stat);
 
       if (stat.accepts + stat.rejects >= 3) {
@@ -169,15 +173,15 @@ export function CardsPage() {
       <Group gap={0}>
         <Progress.Root size="xl" flex={1}>
           <Progress.Section
-            value={(100 * globalStat.seen) / words.length}
+            value={(100 * globalStat.seen) / items.length}
             color="blue"
           ></Progress.Section>
           <Progress.Section
-            value={(100 * globalStat.good) / words.length}
+            value={(100 * globalStat.good) / items.length}
             color="green"
           ></Progress.Section>
           <Progress.Section
-            value={(100 * globalStat.bad) / words.length}
+            value={(100 * globalStat.bad) / items.length}
             color="red"
           ></Progress.Section>
         </Progress.Root>
@@ -199,7 +203,9 @@ export function CardsPage() {
           onSwipeLeft={handleSwipeLeft}
           onSwipeRight={handleSwipeRight}
           word={currentWord}
-          wordObj={wordObj}
+          item={currentItem}
+          translationFeatureId={translationFeatureId}
+          phoneticsFeatureId={phoneticsFeatureId}
           key={currentWord}
           stat={wordStat[currentWord]}
         />

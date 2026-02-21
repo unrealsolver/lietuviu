@@ -1,3 +1,4 @@
+import type { PhoneticsOutput } from "../models";
 import type { Plugin } from "../plugin";
 
 export type VduKirciuoklisOptions = {
@@ -6,14 +7,7 @@ export type VduKirciuoklisOptions = {
 
 export type AccentType = "ONE" | "MULTIPLE_MEANING" | "MULTIPLE_VARIANT";
 
-export type PhoneticToken =
-  | string
-  | {
-      accented: string;
-      accentType: Exclude<AccentType, "ONE">;
-    };
-
-export type VduKirciuoklisOutput = PhoneticToken[];
+export type VduKirciuoklisOutput = PhoneticsOutput;
 
 export type VduKirciuoklisPluginConfig = {
   endpoint?: string;

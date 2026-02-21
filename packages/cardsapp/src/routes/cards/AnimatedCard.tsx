@@ -1,6 +1,11 @@
 import cardClasses from "./Card.module.css";
 import { MyCard } from "./MyCard";
 import type { WordStat } from "./util";
+import type {
+  OutputBankItem,
+  PhoneticsOutput,
+  TranslationOutput,
+} from "@ltk/processing";
 import { Stack, Title } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useSpring, animated, to, config } from "@react-spring/web";
@@ -8,7 +13,9 @@ import { useDrag } from "@use-gesture/react";
 
 type AnimatedCardProps = {
   word: string;
-  wordObj: { word: string; accent: string; translate: { rus: string } };
+  item: OutputBankItem;
+  translationFeatureId: string;
+  phoneticsFeatureId: string;
   onSwipeLeft: (word: string) => void;
   onSwipeRight: (word: string) => void;
   stat: WordStat;
@@ -16,13 +23,16 @@ type AnimatedCardProps = {
 
 export function AnimatedCard({
   word,
-  wordObj,
+  item,
+  translationFeatureId,
+  phoneticsFeatureId,
   onSwipeLeft,
   onSwipeRight,
   stat,
 }: AnimatedCardProps) {
   const [isFlipped, { toggle }] = useDisclosure(false);
-  console.log(wordObj);
+  const accent = readAccent(item, phoneticsFeatureId);
+  const translation = readTranslation(item, translationFeatureId);
 
   const [{ opacity, rot, ...style }, api] = useSpring(() => ({
     from: { opacity: 0, scale: 0.5, y: 0, x: 0, rot: 0 },
@@ -126,8 +136,10 @@ export function AnimatedCard({
       >
         <MyCard>
           <Stack align="center">
-            <Title order={1}>{wordObj.accent}</Title>
-            <Title order={2}>{wordObj.translate.rus}</Title>
+            <Title order={1} ff="serif">
+              {accent}
+            </Title>
+            <Title order={2}>{translation}</Title>
             <Title order={1}>
               {stat.accepts} / {stat.rejects}
             </Title>
@@ -136,4 +148,38 @@ export function AnimatedCard({
       </animated.div>
     </>
   );
+}
+
+function readAccent(item: OutputBankItem, featureId: string): string {
+  if (featureId === "") {
+    return item.input;
+  }
+  const output = item.features[featureId]?.output as
+    | PhoneticsOutput
+    | undefined;
+  if (!Array.isArray(output) || output.length === 0) {
+    return item.input;
+  }
+  const pieces = output
+    .map((piece) => {
+      return typeof piece === "string" ? piece : piece.accented;
+    })
+    .filter((piece) => piece.length > 0);
+  return pieces.length > 0 ? pieces.join(" ") : item.input;
+}
+
+function readTranslation(item: OutputBankItem, featureId: string): string {
+  if (featureId === "") {
+    return "";
+  }
+  const output = item.features[featureId]?.output as
+    | TranslationOutput
+    | undefined;
+  if (typeof output === "string") {
+    return output;
+  }
+  if (output != null && typeof output.translatedText === "string") {
+    return output.translatedText;
+  }
+  return "";
 }

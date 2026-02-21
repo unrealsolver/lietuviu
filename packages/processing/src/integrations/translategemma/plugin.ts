@@ -1,3 +1,4 @@
+import type { TranslationOutput } from "../models";
 import type { Plugin } from "../plugin";
 import { renderPrompt, sha256, validateLanguageTag } from "./utils";
 
@@ -13,12 +14,7 @@ export type TranslateGemmaOptions = {
   outputMode?: "compact" | "full";
 };
 
-export type TranslateGemmaOutput =
-  | string
-  | {
-      translatedText: string;
-      alternatives?: string[];
-    };
+export type TranslateGemmaOutput = TranslationOutput;
 
 export type TranslateGemmaPluginConfig = {
   baseUrl?: string;
