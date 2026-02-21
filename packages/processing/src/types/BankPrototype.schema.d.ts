@@ -5,6 +5,24 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+type s = {
+  schemaVersion: string;
+  title: string;
+  description: string;
+  author: string;
+  sourceLanguage: string;
+  features: Array<{
+    version: string;
+    name: string;
+    type: "TRANSLATION" | "PHONETICS" | "MORFOLOGY";
+    max_rpm: number; // max requests per minute
+    options: {
+      // depends on type
+    };
+  }>;
+  data: Array<string>;
+};
+
 export interface BankPrototypeSchema {
   schema_version: string;
   title: string;
@@ -15,7 +33,7 @@ export interface BankPrototypeSchema {
   /**
    * @minItems 1
    */
-  data: [EnhancedDataItem, ...(EnhancedDataItem)[]];
+  data: [EnhancedDataItem, ...EnhancedDataItem[]];
 }
 export interface ModeTranslate {
   name: "translate";

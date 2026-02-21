@@ -1,16 +1,23 @@
 {
-  "schema_version": "0.0.0",
+  "schemaVersion": "0.0.0",
   "title": "A1 lygis",
   "description": "",
   "author": "System",
-  "lang": "lit",
-  "modes": [
+  "sourceLanguage": "lit",
+  "features": [
     {
-      "name": "translate",
-      "lang": "rus"
+      "provider": "translategemma",
+      "options": {
+        "sourceLanguage": "lt-lt",
+        "targetLanguage": "ru-ru",
+        "extraPrompt": "All inputs are intended to be used as a memo flashcards. Language vocab level is A1"
+      }
     },
     {
-      "name": "stresses"
+      "provider": "vdu_kirciuoklis",
+      "options": {
+        "mode": "auto"
+      }
     }
   ],
   "data": [

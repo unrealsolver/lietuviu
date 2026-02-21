@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Golden Bank",
+  "sourceLanguage": "lit",
+  "generatedAt": "<timestamp>",
+  "features": [
+    {
+      "id": "replay-stub-1",
+      "type": "TRANSLATION",
+      "provider": "replay-stub",
+      "version": "1.0.0"
+    }
+  ],
+  "data": [
+    {
+      "input": "ačiū",
+      "features": {
+        "replay-stub-1": {
+          "output": {
+            "translatedText": "спасибо"
+          }
+        }
+      }
+    },
+    {
+      "input": "labas",
+      "features": {
+        "replay-stub-1": {
+          "output": {
+            "translatedText": "привет"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,2271 +1,4053 @@
 {
-  "schema_version": "0.0.0",
+  "schemaVersion": "0.0.0",
   "title": "A1 lygis",
   "description": "",
   "author": "System",
-  "lang": "lit",
-  "modes": [
+  "sourceLanguage": "lit",
+  "generatedAt": "2026-02-21T22:38:01.925Z",
+  "features": [
     {
-      "name": "translate",
-      "lang": "rus"
+      "id": "translategemma-1",
+      "type": "TRANSLATION",
+      "provider": "translategemma",
+      "version": "0.1.0"
     },
     {
-      "name": "stresses"
+      "id": "vdu-kirciuoklis-1",
+      "type": "PHONETICS",
+      "provider": "vdu_kirciuoklis",
+      "version": "0.3.0"
     }
   ],
   "data": [
     {
-      "word": "ačiū",
-      "accent": "ãčiū",
-      "translate": {
-        "rus": "спасибо"
+      "input": "ačiū",
+      "features": {
+        "translategemma-1": {
+          "output": "спасибо"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["ãčiū"]
+        }
       }
+    },
+    {
+      "input": "administratorius",
+      "features": {
+        "translategemma-1": {
+          "output": "администратор"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["administrãtorius"]
+        }
+      }
     },
-    {
-      "word": "administratorius",
-      "accent": "administrãtorius",
-      "translate": {
-        "rus": "администратор"
-      }
-    },
-    {
-      "word": "agurkas",
-      "accent": "agur̃kas",
-      "translate": {
-        "rus": "огурец"
-      }
-    },
-    {
-      "word": "aikštelė",
-      "accent": "aikštẽlė",
-      "translate": {
-        "rus": "сайт"
-      }
-    },
-    {
-      "word": "aikštė",
-      "accent": "aikštė̃",
-      "translate": {
-        "rus": "квадрат"
-      }
-    },
-    {
-      "word": "aišku",
-      "accent": "áišku",
-      "translate": {
-        "rus": "ясный"
-      }
-    },
-    {
-      "word": "akademija",
-      "accent": "akadèmija",
-      "translate": {
-        "rus": "академия"
-      }
-    },
-    {
-      "word": "akcija",
-      "accent": "ãkcija",
-      "translate": {
-        "rus": "доля"
-      }
-    },
-    {
-      "word": "akis",
-      "accent": "akìs",
-      "translate": {
-        "rus": "глаз"
-      }
-    },
-    {
-      "word": "alergija",
-      "accent": "aler̃gija",
-      "translate": {
-        "rus": "аллергия"
-      }
-    },
-    {
-      "word": "alga",
-      "accent": "algà",
-      "translate": {
-        "rus": "зарплата"
-      }
-    },
-    {
-      "word": "alkanas",
-      "accent": "álkanas",
-      "translate": {
-        "rus": "парафиновый"
-      }
-    },
-    {
-      "word": "alkoholiniai gėrimai",
-      "accent": "alkohòliniai",
-      "translate": {
-        "rus": "алкогольные напитки"
-      }
-    },
-    {
-      "word": "alus",
-      "accent": "alùs",
-      "translate": {
-        "rus": "пиво"
-      }
-    },
-    {
-      "word": "anglų kalba",
-      "accent": "ánglų",
-      "translate": {
-        "rus": "на английском языке"
-      }
-    },
-    {
-      "word": "anksti",
-      "accent": "ankstì",
-      "translate": {
-        "rus": "ранний"
-      }
-    },
-    {
-      "word": "antradienis",
-      "accent": "antrãdienis",
-      "translate": {
-        "rus": "вторник"
-      }
-    },
-    {
-      "word": "apelsinas",
-      "accent": "apelsìnas",
-      "translate": {
-        "rus": "аплизин"
-      }
-    },
-    {
-      "word": "aplankas",
-      "accent": "ãplankas",
-      "translate": {
-        "rus": "папка"
-      }
-    },
-    {
-      "word": "apsauginiai akiniai",
-      "accent": "apsaugìniai",
-      "translate": {
-        "rus": "защитные очки"
-      }
-    },
-    {
-      "word": "apsipirkti",
-      "accent": "apsipir̃kti",
-      "translate": {
-        "rus": "покупка"
-      }
-    },
-    {
-      "word": "arbata",
-      "accent": "arbatà",
-      "translate": {
-        "rus": "чай"
-      }
-    },
-    {
-      "word": "arbatpinigiai",
-      "accent": "arbãtpinigiai",
-      "translate": {
-        "rus": "чаевые"
-      }
-    },
-    {
-      "word": "arti",
-      "accent": "artì",
-      "translate": {
-        "rus": "близко"
-      }
-    },
-    {
-      "word": "asmens tapatybės kortelė",
-      "accent": "asmeñs",
-      "translate": {
-        "rus": "удостоверение личности"
-      }
-    },
-    {
-      "word": "aštrus",
-      "accent": "aštrùs",
-      "translate": {
-        "rus": "острый"
-      }
-    },
-    {
-      "word": "ateiti",
-      "accent": "ateĩti",
-      "translate": {
-        "rus": "приходить"
-      }
-    },
-    {
-      "word": "atidaryta",
-      "accent": "atidarýta",
-      "translate": {
-        "rus": "открытый"
-      }
-    },
-    {
-      "word": "atidaryti",
-      "accent": "atidarýti",
-      "translate": {
-        "rus": "открытый"
-      }
-    },
-    {
-      "word": "atidėti",
-      "accent": "atidė́ti",
-      "translate": {
-        "rus": "откладывать"
-      }
-    },
-    {
-      "word": "atleisti iš darbo",
-      "accent": "atléisti",
-      "translate": {
-        "rus": "избыточность"
-      }
-    },
-    {
-      "word": "atostogauti",
-      "accent": "atostogáuti",
-      "translate": {
-        "rus": "отпуск"
-      }
-    },
-    {
-      "word": "atostogos",
-      "accent": "atóstogos",
-      "translate": {
-        "rus": "праздники"
-      }
-    },
-    {
-      "word": "atsikelti",
-      "accent": "atsikélti",
-      "translate": {
-        "rus": "вверх"
-      }
-    },
-    {
-      "word": "atsiprašau",
-      "accent": "atsiprašaũ",
-      "translate": {
-        "rus": "извините"
-      }
-    },
-    {
-      "word": "atvažiuoti",
-      "accent": "atvažiúoti",
-      "translate": {
-        "rus": "приходить"
-      }
-    },
-    {
-      "word": "atvykti",
-      "accent": "atvỹkti",
-      "translate": {
-        "rus": "приходить"
-      }
-    },
-    {
-      "word": "auditorija",
-      "accent": "auditòrija",
-      "translate": {
-        "rus": "зрители"
-      }
-    },
-    {
-      "word": "auksas",
-      "accent": "áuksas",
-      "translate": {
-        "rus": "золото"
-      }
-    },
-    {
-      "word": "aukščiau",
-      "accent": "aukščiaũ",
-      "translate": {
-        "rus": "выше"
-      }
-    },
-    {
-      "word": "aukštas",
-      "accent": "áukštas",
-      "translate": {
-        "rus": "высокий"
-      }
-    },
-    {
-      "word": "aukštyn",
-      "accent": "aukštỹn",
-      "translate": {
-        "rus": "вверх"
-      }
-    },
-    {
-      "word": "ausinės",
-      "accent": "ausìnės",
-      "translate": {
-        "rus": "наушники"
-      }
-    },
-    {
-      "word": "ausis",
-      "accent": "ausìs",
-      "translate": {
-        "rus": "слух"
-      }
-    },
-    {
-      "word": "autobusas",
-      "accent": "autobùsas",
-      "translate": {
-        "rus": "автобус"
-      }
-    },
-    {
-      "word": "autobusų stotelė",
-      "accent": "autobùsų",
-      "translate": {
-        "rus": "автобусная остановка"
-      }
-    },
-    {
-      "word": "autobusų stotis",
-      "accent": "autobùsų",
-      "translate": {
-        "rus": "автобусная станция"
-      }
-    },
-    {
-      "word": "automobilis",
-      "accent": "automobìlis",
-      "translate": {
-        "rus": "автомобиль"
-      }
-    },
-    {
-      "word": "automobilių stovėjimo aikštelė",
-      "accent": "automobìlių",
-      "translate": {
-        "rus": "стоянка"
-      }
-    },
-    {
-      "word": "autoservisas",
-      "accent": "autoser̃visas",
-      "translate": {
-        "rus": "автосервис"
-      }
-    },
-    {
-      "word": "avalynė",
-      "accent": "ãvalynė",
-      "translate": {
-        "rus": "обувь"
-      }
-    },
-    {
-      "word": "avarija",
-      "accent": "avãrija",
-      "translate": {
-        "rus": "несчастный случай"
-      }
-    },
-    {
-      "word": "avarinis išėjimas",
-      "accent": "avãrinis",
-      "translate": {
-        "rus": "аварийный выход"
-      }
-    },
-    {
-      "word": "baigti",
-      "accent": "baĩgti",
-      "translate": {
-        "rus": "полный"
-      }
-    },
-    {
-      "word": "balandėliai",
-      "accent": "balandė̃liai",
-      "translate": {
-        "rus": "голуби"
-      }
-    },
-    {
-      "word": "balandis",
-      "accent": "balañdis",
-      "translate": {
-        "rus": "апрель"
-      }
-    },
-    {
-      "word": "balkonas",
-      "accent": "balkònas",
-      "translate": {
-        "rus": "балкон"
-      }
-    },
-    {
-      "word": "baltas",
-      "accent": "báltas",
-      "translate": {
-        "rus": "белый"
-      }
-    },
-    {
-      "word": "bananas",
-      "accent": "banãnas",
-      "translate": {
-        "rus": "банан"
-      }
-    },
-    {
-      "word": "bandelė",
-      "accent": "bandẽlė",
-      "translate": {
-        "rus": "образец"
-      }
-    },
-    {
-      "word": "bankas",
-      "accent": "bánkas",
-      "translate": {
-        "rus": "банк"
-      }
-    },
-    {
-      "word": "baras",
-      "accent": "bãras",
-      "translate": {
-        "rus": "бар"
-      }
-    },
-    {
-      "word": "baseinas",
-      "accent": "baseĩnas",
-      "translate": {
-        "rus": "бассейн"
-      }
-    },
-    {
-      "word": "basutės",
-      "accent": "basùtės",
-      "translate": {
-        "rus": "ванны"
-      }
-    },
-    {
-      "word": "batai",
-      "accent": "bãtai",
-      "translate": {
-        "rus": "обувь"
-      }
-    },
-    {
-      "word": "batonas",
-      "accent": "batònas",
-      "translate": {
-        "rus": "бамон"
-      }
-    },
-    {
-      "word": "bedarbis",
-      "accent": "bedar̃bis",
-      "translate": {
-        "rus": "безработный"
-      }
-    },
-    {
-      "word": "belaidis internetas",
-      "accent": "belaĩdis",
-      "translate": {
-        "rus": "беспроводной интернет"
-      }
-    },
-    {
-      "word": "bėgioti",
-      "accent": "bėgióti",
-      "translate": {
-        "rus": "бегать"
-      }
-    },
-    {
-      "word": "biblioteka",
-      "accent": "bibliotekà",
-      "translate": {
-        "rus": "библиотека"
-      }
-    },
-    {
-      "word": "bilietas",
-      "accent": "bìlietas",
-      "translate": {
-        "rus": "билет"
-      }
-    },
-    {
-      "word": "biologija",
-      "accent": "biològija",
-      "translate": {
-        "rus": "биология"
-      }
-    },
-    {
-      "word": "birželis",
-      "accent": "biržẽlis",
-      "translate": {
-        "rus": "июнь"
-      }
-    },
-    {
-      "word": "biuras",
-      "accent": "biùras",
-      "translate": {
-        "rus": "офис"
-      }
-    },
-    {
-      "word": "blynai",
-      "accent": "blỹnai",
-      "translate": {
-        "rus": "блинчики"
-      }
-    },
-    {
-      "word": "blyneliai",
-      "accent": "blynẽliai",
-      "translate": {
-        "rus": "блинчики"
-      }
-    },
-    {
-      "word": "blogai",
-      "accent": "blogaĩ",
-      "translate": {
-        "rus": "плохой"
-      }
-    },
-    {
-      "word": "blogas",
-      "accent": "blõgas",
-      "translate": {
-        "rus": "плохой"
-      }
-    },
-    {
-      "word": "braškės",
-      "accent": "brãškės",
-      "translate": {
-        "rus": "клубника"
-      }
-    },
-    {
-      "word": "brendis",
-      "accent": "breñdis",
-      "translate": {
-        "rus": "бренди"
-      }
-    },
-    {
-      "word": "brolis",
-      "accent": "brólis",
-      "translate": {
-        "rus": "брат"
-      }
-    },
-    {
-      "word": "bulvė",
-      "accent": "bùlvė",
-      "translate": {
-        "rus": "картофель"
-      }
-    },
-    {
-      "word": "burokėlis",
-      "accent": "burokė̃lis",
-      "translate": {
-        "rus": "бурокель"
-      }
-    },
-    {
-      "word": "butas",
-      "accent": "bùtas",
-      "translate": {
-        "rus": "квартира"
-      }
-    },
-    {
-      "word": "butelis",
-      "accent": "bùtelis",
-      "translate": {
-        "rus": "бутылка"
-      }
-    },
-    {
-      "word": "būti",
-      "accent": "bū́ti",
-      "translate": {
-        "rus": "быть"
-      }
-    },
-    {
-      "word": "centas",
-      "accent": "ceñtas",
-      "translate": {
-        "rus": "цент"
-      }
-    },
-    {
-      "word": "centras",
-      "accent": "ceñtras",
-      "translate": {
-        "rus": "центр"
-      }
-    },
-    {
-      "word": "cepelinai",
-      "accent": "cepelìnai",
-      "translate": {
-        "rus": "цефелины"
-      }
-    },
-    {
-      "word": "chemija",
-      "accent": "chèmija",
-      "translate": {
-        "rus": "химия"
-      }
-    },
-    {
-      "word": "čekis",
-      "accent": "čèkis",
-      "translate": {
-        "rus": "чек"
-      }
-    },
-    {
-      "word": "česnakas",
-      "accent": "česnãkas",
-      "translate": {
-        "rus": "чеснок"
-      }
-    },
-    {
-      "word": "čia",
-      "accent": "čià",
-      "translate": {
-        "rus": "где"
-      }
-    },
-    {
-      "word": "čiuožinėti",
-      "accent": "čiuožinė́ti",
-      "translate": {
-        "rus": "катание на коньках"
-      }
-    },
-    {
-      "word": "dailininkas",
-      "accent": "daĩlininkas",
-      "translate": {
-        "rus": "художник"
-      }
-    },
-    {
-      "word": "dainininkas",
-      "accent": "daininiñkas",
-      "translate": {
-        "rus": "певец"
-      }
-    },
-    {
-      "word": "dainuoti",
-      "accent": "dainúoti",
-      "translate": {
-        "rus": "петь"
-      }
-    },
-    {
-      "word": "dantis",
-      "accent": "dantìs",
-      "translate": {
-        "rus": "зуб"
-      }
-    },
-    {
-      "word": "darbas",
-      "accent": "dárbas",
-      "translate": {
-        "rus": "работа"
-      }
-    },
-    {
-      "word": "darbininkas",
-      "accent": "darbiniñkas",
-      "translate": {
-        "rus": "работодатель"
-      }
-    },
-    {
-      "word": "darbo drabužiai",
-      "accent": "dárbo",
-      "translate": {
-        "rus": "рабочая одежда"
-      }
-    },
-    {
-      "word": "darbo valandos",
-      "accent": "dárbo",
-      "translate": {
-        "rus": "рабочее время"
-      }
-    },
-    {
-      "word": "darbo vieta",
-      "accent": "dárbo",
-      "translate": {
-        "rus": "место работы"
-      }
-    },
-    {
-      "word": "darbuotojai",
-      "accent": "darbúotojai",
-      "translate": {
-        "rus": "работники"
-      }
-    },
-    {
-      "word": "daržovės",
-      "accent": "daržóvės",
-      "translate": {
-        "rus": "овощи"
-      }
-    },
-    {
-      "word": "daugiabutis",
-      "accent": "daugiabùtis",
-      "translate": {
-        "rus": "многоквартирный"
-      }
-    },
-    {
-      "word": "dažai",
-      "accent": "dažaĩ",
-      "translate": {
-        "rus": "чернила"
-      }
-    },
-    {
-      "word": "dažyti",
-      "accent": "dažýti",
-      "translate": {
-        "rus": "окрашенный"
-      }
-    },
-    {
-      "word": "dažnai",
-      "accent": "dažnaĩ",
-      "translate": {
-        "rus": "общий"
-      }
-    },
-    {
-      "word": "degtinė",
-      "accent": "degtìnė",
-      "translate": {
-        "rus": "водка"
-      }
-    },
-    {
-      "word": "dekanas",
-      "accent": "dekãnas",
-      "translate": {
-        "rus": "декан"
-      }
-    },
-    {
-      "word": "dešinė",
-      "accent": "dẽšinė",
-      "translate": {
-        "rus": "правильно"
-      }
-    },
-    {
-      "word": "dešinėje",
-      "accent": "dešinėjè",
-      "translate": {
-        "rus": "правильно"
-      }
-    },
-    {
-      "word": "dešrelės",
-      "accent": "dešrẽlės",
-      "translate": {
-        "rus": "колбаса"
-      }
-    },
-    {
-      "word": "dėdė",
-      "accent": "dė̃dė",
-      "translate": {
-        "rus": "дядя"
-      }
-    },
-    {
-      "word": "dėstytojas",
-      "accent": "dė́stytojas",
-      "translate": {
-        "rus": "учитель"
-      }
-    },
-    {
-      "word": "dėžė",
-      "accent": "dėžė̃",
-      "translate": {
-        "rus": "коробка"
-      }
-    },
-    {
-      "word": "dėžutė",
-      "accent": "dėžùtė",
-      "translate": {
-        "rus": "коробка"
-      }
-    },
-    {
-      "word": "didelis",
-      "accent": "dìdelis",
-      "translate": {
-        "rus": "высокий"
-      }
-    },
-    {
-      "word": "didžkukuliai",
-      "accent": "dìdžkukuliai",
-      "translate": {
-        "rus": "перхоть"
-      }
-    },
-    {
-      "word": "diena",
-      "accent": "dienà",
-      "translate": {
-        "rus": "день"
-      }
-    },
-    {
-      "word": "dingo elektra",
-      "accent": "diñgo",
-      "translate": {
-        "rus": "электрический"
-      }
-    },
-    {
-      "word": "diplomas",
-      "accent": "diplòmas",
-      "translate": {
-        "rus": "диплом"
-      }
-    },
-    {
-      "word": "dirbti",
-      "accent": "dìrbti",
-      "translate": {
-        "rus": "работа"
-      }
-    },
-    {
-      "word": "direktorius",
-      "accent": "dirèktorius",
-      "translate": {
-        "rus": "директор"
-      }
-    },
-    {
-      "word": "dydis",
-      "accent": "dỹdis",
-      "translate": {
-        "rus": "размер"
-      }
-    },
-    {
-      "word": "dokumentai",
-      "accent": "dokumeñtai",
-      "translate": {
-        "rus": "документы"
-      }
-    },
-    {
-      "word": "drabužiai moterims",
-      "accent": "drabùžiai",
-      "translate": {
-        "rus": "одежда для женщин"
-      }
-    },
-    {
-      "word": "drabužiai vaikams",
-      "accent": "drabùžiai",
-      "translate": {
-        "rus": "одежда для детей"
-      }
-    },
-    {
-      "word": "drabužiai vyrams",
-      "accent": "drabùžiai",
-      "translate": {
-        "rus": "одежда для мужчин"
-      }
-    },
-    {
-      "word": "drabužinė",
-      "accent": "drabužìnė",
-      "translate": {
-        "rus": "одежда"
-      }
-    },
-    {
-      "word": "draudimas",
-      "accent": "draudìmas",
-      "translate": {
-        "rus": "страховка"
-      }
-    },
-    {
-      "word": "drožtukas",
-      "accent": "drožtùkas",
-      "translate": {
-        "rus": "плотник"
-      }
-    },
-    {
-      "word": "dujokaukė",
-      "accent": "dujókaukė",
-      "translate": {
-        "rus": "противогазы"
-      }
-    },
-    {
-      "word": "duktė",
-      "accent": "duktė̃",
-      "translate": {
-        "rus": "дочь"
-      }
-    },
-    {
-      "word": "dulkių siurblys",
-      "accent": "dùlkių",
-      "translate": {
-        "rus": "пылесос"
-      }
-    },
-    {
-      "word": "duona",
-      "accent": "dúona",
-      "translate": {
-        "rus": "хлеб"
-      }
-    },
-    {
-      "word": "duoti",
-      "accent": "dúoti",
-      "translate": {
-        "rus": "давать"
-      }
-    },
-    {
-      "word": "durys",
-      "accent": "dùrys",
-      "translate": {
-        "rus": "дверь"
-      }
-    },
-    {
-      "word": "dušas",
-      "accent": "dùšas",
-      "translate": {
-        "rus": "душ"
-      }
-    },
-    {
-      "word": "dviratis",
-      "accent": "dvìratis",
-      "translate": {
-        "rus": "велосипед"
-      }
-    },
-    {
-      "word": "džinsai",
-      "accent": "džìnsai",
-      "translate": {
-        "rus": "джинсы"
-      }
-    },
-    {
-      "word": "džiovyklė",
-      "accent": "džiovỹklė",
-      "translate": {
-        "rus": "сушилка"
-      }
-    },
-    {
-      "word": "egzaminas",
-      "accent": "egzãminas",
-      "translate": {
-        "rus": "экзамен"
-      }
-    },
-    {
-      "word": "eilė",
-      "accent": "eilė̃",
-      "translate": {
-        "rus": "очередь"
-      }
-    },
-    {
-      "word": "eiti",
-      "accent": "eĩti",
-      "translate": {
-        "rus": "идти"
-      }
-    },
-    {
-      "word": "eiti miegoti",
-      "accent": "eĩti",
-      "translate": {
-        "rus": "ложиться спать"
-      }
-    },
-    {
-      "word": "elektra",
-      "accent": "elektrà",
-      "translate": {
-        "rus": "электричество"
-      }
-    },
-    {
-      "word": "elektrikas",
-      "accent": "elèktrikas",
-      "translate": {
-        "rus": "элдрик"
-      }
-    },
-    {
-      "word": "elektroninis receptas",
-      "accent": "elektròninis",
-      "translate": {
-        "rus": "электронный рецепт"
-      }
-    },
-    {
-      "word": "euras",
-      "accent": "eũras",
-      "translate": {
-        "rus": "евро"
-      }
-    },
-    {
-      "word": "ežeras",
-      "accent": "ẽžeras",
-      "translate": {
-        "rus": "озеро"
-      }
-    },
-    {
-      "word": "filmas",
-      "accent": "fìlmas",
-      "translate": {
-        "rus": "фильм"
-      }
-    },
-    {
-      "word": "fizika",
-      "accent": "fìzika",
-      "translate": {
-        "rus": "физика"
-      }
-    },
-    {
-      "word": "futbolas",
-      "accent": "fùtbolas",
-      "translate": {
-        "rus": "пафабол"
-      }
-    },
-    {
-      "word": "gabaliukas",
-      "accent": "gabaliùkas",
-      "translate": {
-        "rus": "кусок"
-      }
-    },
-    {
-      "word": "gaila",
-      "accent": "gaĩla",
-      "translate": {
-        "rus": "жалость"
-      }
-    },
-    {
-      "word": "gaisras",
-      "accent": "gaĩsras",
-      "translate": {
-        "rus": "огонь"
-      }
-    },
-    {
-      "word": "gaisrinė",
-      "accent": "gaĩsrinė",
-      "translate": {
-        "rus": "пожарная станция"
-      }
-    },
-    {
-      "word": "gal",
-      "accent": "gál",
-      "translate": {
-        "rus": "или"
-      }
-    },
-    {
-      "word": "galva",
-      "accent": "galvà",
-      "translate": {
-        "rus": "голова"
-      }
-    },
-    {
-      "word": "galvos skausmas",
-      "accent": "galvõs",
-      "translate": {
-        "rus": "головная боль"
-      }
-    },
-    {
-      "word": "gamykla",
-      "accent": "gamyklà",
-      "translate": {
-        "rus": "растение"
-      }
-    },
-    {
-      "word": "garantija",
-      "accent": "garántija",
-      "translate": {
-        "rus": "гарантия"
-      }
-    },
-    {
-      "word": "garažas",
-      "accent": "garãžas",
-      "translate": {
-        "rus": "гараж"
-      }
-    },
-    {
-      "word": "gatvė",
-      "accent": "gãtvė",
-      "translate": {
-        "rus": "улица"
-      }
-    },
-    {
-      "word": "gauti",
-      "accent": "gáuti",
-      "translate": {
-        "rus": "получать"
-      }
-    },
-    {
-      "word": "gazuotas vanduo",
-      "accent": "gazúotas",
-      "translate": {
-        "rus": "газированная вода"
-      }
-    },
-    {
-      "word": "gegužė",
-      "accent": "gegužė̃",
-      "translate": {
-        "rus": "май"
-      }
-    },
-    {
-      "word": "geležinkelio stotis",
-      "accent": "geležìnkelio",
-      "translate": {
-        "rus": "железнодорожный вокзал"
-      }
-    },
-    {
-      "word": "geltonas",
-      "accent": "geltónas",
-      "translate": {
-        "rus": "желтый"
-      }
-    },
-    {
-      "word": "gelbėkit!",
-      "accent": "gélbėkit",
-      "translate": {
-        "rus": "помогите!"
-      }
-    },
-    {
-      "word": "gerai",
-      "accent": "geraĩ",
-      "translate": {
-        "rus": "хорошо"
-      }
-    },
-    {
-      "word": "gerklė",
-      "accent": "gerklė̃",
-      "translate": {
-        "rus": "горло"
-      }
-    },
-    {
-      "word": "gerti",
-      "accent": "gérti",
-      "translate": {
-        "rus": "устный"
-      }
-    },
-    {
-      "word": "gėlė",
-      "accent": "gėlė̃",
-      "translate": {
-        "rus": "цветок"
-      }
-    },
-    {
-      "word": "gėlynas",
-      "accent": "gėlýnas",
-      "translate": {
-        "rus": "цветок"
-      }
-    },
-    {
-      "word": "gėrimai",
-      "accent": "gėrìmai",
-      "translate": {
-        "rus": "напитки"
-      }
-    },
-    {
-      "word": "gėrimas",
-      "accent": "gėrìmas",
-      "translate": {
-        "rus": "напиток"
-      }
-    },
-    {
-      "word": "gimnazija",
-      "accent": "gimnãzija",
-      "translate": {
-        "rus": "гимнастика"
-      }
-    },
-    {
-      "word": "gimtoji kalba",
-      "accent": "gimtóji",
-      "translate": {
-        "rus": "родной язык"
-      }
-    },
-    {
-      "word": "gintaras",
-      "accent": "giñtaras",
-      "translate": {
-        "rus": "гинтары"
-      }
-    },
-    {
-      "word": "gydytojas",
-      "accent": "gýdytojas",
-      "translate": {
-        "rus": "врач"
-      }
-    },
-    {
-      "word": "gyventi",
-      "accent": "gyvénti",
-      "translate": {
-        "rus": "жить"
-      }
-    },
-    {
-      "word": "gyvenimo aprašymas",
-      "accent": "gyvẽnimo",
-      "translate": {
-        "rus": "живое описание"
-      }
-    },
-    {
-      "word": "golfas",
-      "accent": "gòlfas",
-      "translate": {
-        "rus": "гольф"
-      }
-    },
-    {
-      "word": "gramas",
-      "accent": "grãmas",
-      "translate": {
-        "rus": "грамм"
-      }
-    },
-    {
-      "word": "grąža",
-      "accent": "grąžà",
-      "translate": {
-        "rus": "возвращение"
-      }
-    },
-    {
-      "word": "greitoji pagalba",
-      "accent": "greitóji",
-      "translate": {
-        "rus": "экстренная помощь"
-      }
-    },
-    {
-      "word": "grėblys",
-      "accent": "grėblỹs",
-      "translate": {
-        "rus": "рейк"
-      }
-    },
-    {
-      "word": "grietinė",
-      "accent": "grietìnė",
-      "translate": {
-        "rus": "сметана"
-      }
-    },
-    {
-      "word": "grietinėlė",
-      "accent": "grietinė̃lė",
-      "translate": {
-        "rus": "крем"
-      }
-    },
-    {
-      "word": "gripas",
-      "accent": "grìpas",
-      "translate": {
-        "rus": "грипп"
-      }
-    },
-    {
-      "word": "grįžti",
-      "accent": "grį̃žti",
-      "translate": {
-        "rus": "возвращение"
-      }
-    },
-    {
-      "word": "grįžti namo",
-      "accent": "grį̃žti",
-      "translate": {
-        "rus": "возвращение домой"
-      }
-    },
-    {
-      "word": "grynieji pinigai",
-      "accent": "gryníeji",
-      "translate": {
-        "rus": "наличные"
-      }
-    },
-    {
-      "word": "groti",
-      "accent": "gróti",
-      "translate": {
-        "rus": "играть"
-      }
-    },
-    {
-      "word": "gruodis",
-      "accent": "grúodis",
-      "translate": {
-        "rus": "декабрь"
-      }
-    },
-    {
-      "word": "gulėti ligoninėje",
-      "accent": "gulė́ti",
-      "translate": {
-        "rus": "оставаться в больнице"
-      }
-    },
-    {
-      "word": "gultis",
-      "accent": "gul̃tis",
-      "translate": {
-        "rus": "отдыхать"
-      }
-    },
-    {
-      "word": "gultis į ligoninę",
-      "accent": "gul̃tis",
-      "translate": {
-        "rus": "оставаться в больнице"
-      }
-    },
-    {
-      "word": "iki",
-      "accent": "ikì",
-      "translate": {
-        "rus": "до"
-      }
-    },
-    {
-      "word": "ilgai",
-      "accent": "ilgaĩ",
-      "translate": {
-        "rus": "длинный"
-      }
-    },
-    {
-      "word": "imti",
-      "accent": "im̃ti",
-      "translate": {
-        "rus": "брать"
-      }
-    },
-    {
-      "word": "indaplovė",
-      "accent": "indãplovė",
-      "translate": {
-        "rus": "несгибаемый"
-      }
-    },
-    {
-      "word": "indelis",
-      "accent": "indẽlis",
-      "translate": {
-        "rus": "банку"
-      }
-    },
-    {
-      "word": "injekcija",
-      "accent": "injèkcija",
-      "translate": {
-        "rus": "инъекция"
-      }
-    },
-    {
-      "word": "institutas",
-      "accent": "institùtas",
-      "translate": {
-        "rus": "институт"
-      }
-    },
-    {
-      "word": "internetas",
-      "accent": "internètas",
-      "translate": {
-        "rus": "интернет"
-      }
-    },
-    {
-      "word": "interneto svetainė",
-      "accent": "internèto",
-      "translate": {
-        "rus": "сайт"
-      }
-    },
-    {
-      "word": "istorija",
-      "accent": "istòrija",
-      "translate": {
-        "rus": "история"
-      }
-    },
-    {
-      "word": "iš",
-      "accent": "ìš",
-      "translate": {
-        "rus": "из"
-      }
-    },
-    {
-      "word": "išėjimas",
-      "accent": "išėjìmas",
-      "translate": {
-        "rus": "выход"
-      }
-    },
-    {
-      "word": "išjungtas",
-      "accent": "išjùngtas",
-      "translate": {
-        "rus": "инвалид"
-      }
-    },
-    {
-      "word": "išjungti",
-      "accent": "išjùngti",
-      "translate": {
-        "rus": "отключать"
-      }
-    },
-    {
-      "word": "išmanusis telefonas",
-      "accent": "išmanùsis",
-      "translate": {
-        "rus": "смартфон"
-      }
-    },
-    {
-      "word": "išrašyti",
-      "accent": "išrašýti",
-      "translate": {
-        "rus": "писать"
-      }
-    },
-    {
-      "word": "išvežti šiukšles",
-      "accent": "išvèžti",
-      "translate": {
-        "rus": "удалить мусор"
-      }
-    },
-    {
-      "word": "išvykti",
-      "accent": "išvỹkti",
-      "translate": {
-        "rus": "идти"
-      }
-    },
-    {
-      "word": "įėjimas",
-      "accent": "įėjìmas",
-      "translate": {
-        "rus": "вход"
-      }
-    },
-    {
-      "word": "įjungtas",
-      "accent": "įjùngtas",
-      "translate": {
-        "rus": "включенный"
-      }
-    },
-    {
-      "word": "įjungti",
-      "accent": "įjùngti",
-      "translate": {
-        "rus": "включенный"
-      }
-    },
-    {
-      "word": "įvertinimas",
-      "accent": "įvértinimas",
-      "translate": {
-        "rus": "рейтинг"
-      }
-    },
-    {
-      "word": "jautiena",
-      "accent": "jáutiena",
-      "translate": {
-        "rus": "говядина"
-      }
-    },
-    {
-      "word": "jogurtas",
-      "accent": "jogùrtas",
-      "translate": {
-        "rus": "иогурт"
-      }
-    },
-    {
-      "word": "juodas",
-      "accent": "júodas",
-      "translate": {
-        "rus": "черный"
-      }
-    },
-    {
-      "word": "juoda kava",
-      "accent": "juodà",
-      "translate": {
-        "rus": "черный кофе"
-      }
-    },
-    {
-      "word": "kabinetas",
-      "accent": "kabinètas",
-      "translate": {
-        "rus": "кабинет"
-      }
-    },
-    {
-      "word": "kaina",
-      "accent": "káina",
-      "translate": {
-        "rus": "цена"
-      }
-    },
-    {
-      "word": "kaip",
-      "accent": "kaĩp",
-      "translate": {
-        "rus": "как"
-      }
-    },
-    {
-      "word": "kaip sekasi?",
-      "accent": "kaĩp",
-      "translate": {
-        "rus": "как дела?"
-      }
-    },
-    {
-      "word": "kairė",
-      "accent": "kairė̃",
-      "translate": {
-        "rus": "левый"
-      }
-    },
-    {
-      "word": "kairėje",
-      "accent": "kairėjè",
-      "translate": {
-        "rus": "левый"
-      }
-    },
-    {
-      "word": "kalnas",
-      "accent": "kálnas",
-      "translate": {
-        "rus": "холм"
-      }
-    },
-    {
-      "word": "kambarys",
-      "accent": "kambarỹs",
-      "translate": {
-        "rus": "комната"
-      }
-    },
-    {
-      "word": "karpis",
-      "accent": "kárpis",
-      "translate": {
-        "rus": "карп"
-      }
-    },
-    {
-      "word": "karštas",
-      "accent": "kárštas",
-      "translate": {
-        "rus": "горячий"
-      }
-    },
-    {
-      "word": "kartais",
-      "accent": "kar̃tais",
-      "translate": {
-        "rus": "иногда"
-      }
-    },
-    {
-      "word": "kas",
-      "accent": "kàs",
-      "translate": {
-        "rus": "каждый"
-      }
-    },
-    {
-      "word": "kasa",
-      "accent": "kasà",
-      "translate": {
-        "rus": "дом"
-      }
-    },
-    {
-      "word": "kasdien",
-      "accent": "kasdiẽn",
-      "translate": {
-        "rus": "ежедневно"
-      }
-    },
-    {
-      "word": "kastuvas",
-      "accent": "kastùvas",
-      "translate": {
-        "rus": "лопата"
-      }
-    },
-    {
-      "word": "katedra",
-      "accent": "kãtedra",
-      "translate": {
-        "rus": "собор"
-      }
-    },
-    {
-      "word": "kava",
-      "accent": "kavà",
-      "translate": {
-        "rus": "кофе"
-      }
-    },
-    {
-      "word": "kava su pienu",
-      "accent": "kavà",
-      "translate": {
-        "rus": "кофе, содержащий молоко"
-      }
-    },
-    {
-      "word": "kavinė",
-      "accent": "kavìnė",
-      "translate": {
-        "rus": "кафе"
-      }
-    },
-    {
-      "word": "kefyras",
-      "accent": "kefỹras",
-      "translate": {
-        "rus": "тирозин"
-      }
-    },
-    {
-      "word": "kelias",
-      "accent": "keliàs",
-      "translate": {
-        "rus": "путь"
-      }
-    },
-    {
-      "word": "kelintas",
-      "accent": "keliñtas",
-      "translate": {
-        "rus": "цементированный"
-      }
-    },
-    {
-      "word": "kelnės",
-      "accent": "kélnės",
-      "translate": {
-        "rus": "брюки"
-      }
-    },
-    {
-      "word": "keltas",
-      "accent": "kel̃tas",
-      "translate": {
-        "rus": "паром"
-      }
-    },
-    {
-      "word": "kepsnys",
-      "accent": "kepsnỹs",
-      "translate": {
-        "rus": "жарить"
-      }
-    },
-    {
-      "word": "kepurė",
-      "accent": "kepùrė",
-      "translate": {
-        "rus": "крышка"
-      }
-    },
-    {
-      "word": "ketvirtadienis",
-      "accent": "ketvirtãdienis",
-      "translate": {
-        "rus": "четверг"
-      }
-    },
-    {
-      "word": "kėdė",
-      "accent": "kėdė̃",
-      "translate": {
-        "rus": "стул"
-      }
-    },
-    {
-      "word": "kiauliena",
-      "accent": "kiaulíena",
-      "translate": {
-        "rus": "свинина"
-      }
-    },
-    {
-      "word": "kiaušinienė",
-      "accent": "kiaušiniẽnė",
-      "translate": {
-        "rus": "яйцо"
-      }
-    },
-    {
-      "word": "kibiras",
-      "accent": "kìbiras",
-      "translate": {
-        "rus": "ведро"
-      }
-    },
-    {
-      "word": "kiekis",
-      "accent": "kiẽkis",
-      "translate": {
-        "rus": "количество"
-      }
-    },
-    {
-      "word": "kiemas",
-      "accent": "kiẽmas",
-      "translate": {
-        "rus": "двор"
-      }
-    },
-    {
-      "word": "kilimas",
-      "accent": "kilìmas",
-      "translate": {
-        "rus": "взлет"
-      }
-    },
-    {
-      "word": "kilogramas",
-      "accent": "kilogrãmas",
-      "translate": {
-        "rus": "килограмм"
-      }
-    },
-    {
-      "word": "kioskas",
-      "accent": "kiòskas",
-      "translate": {
-        "rus": "киоск"
-      }
-    },
-    {
-      "word": "kirpėjas",
-      "accent": "kirpė́jas",
-      "translate": {
-        "rus": "парикмахер"
-      }
-    },
-    {
-      "word": "kirpykla",
-      "accent": "kirpyklà",
-      "translate": {
-        "rus": "парикмахер"
-      }
-    },
-    {
-      "word": "klasė",
-      "accent": "klãsė",
-      "translate": {
-        "rus": "класс 1.6"
-      }
-    },
-    {
-      "word": "klausytis",
-      "accent": "klausýtis",
-      "translate": {
-        "rus": "слушать"
-      }
-    },
-    {
-      "word": "klinika",
-      "accent": "klìnika",
-      "translate": {
-        "rus": "клиники"
-      }
-    },
-    {
-      "word": "knyga",
-      "accent": "knygà",
-      "translate": {
-        "rus": "книга"
-      }
-    },
-    {
-      "word": "koja",
-      "accent": "kója",
-      "translate": {
-        "rus": "нога"
-      }
-    },
-    {
-      "word": "kojinės",
-      "accent": "kójinės",
-      "translate": {
-        "rus": "носки"
-      }
-    },
-    {
-      "word": "kokybė",
-      "accent": "kokýbė",
-      "translate": {
-        "rus": "качество"
-      }
-    },
-    {
-      "word": "koks",
-      "accent": "kóks",
-      "translate": {
-        "rus": "что"
-      }
-    },
-    {
-      "word": "kolegija",
-      "accent": "kolègija",
-      "translate": {
-        "rus": "колледж"
-      }
-    },
-    {
-      "word": "kombinezonas",
-      "accent": "kombinezònas",
-      "translate": {
-        "rus": "диметиамин"
-      }
-    },
-    {
-      "word": "kompiuteris",
-      "accent": "kompiùteris",
-      "translate": {
-        "rus": "компьютер"
-      }
-    },
-    {
-      "word": "koncertas",
-      "accent": "koncer̃tas",
-      "translate": {
-        "rus": "концерт"
-      }
-    },
-    {
-      "word": "konkursas",
-      "accent": "konkùrsas",
-      "translate": {
-        "rus": "процедура торгов"
-      }
-    },
-    {
-      "word": "konteineris",
-      "accent": "konteĩneris",
-      "translate": {
-        "rus": "контейнер"
-      }
-    },
-    {
-      "word": "kopijuoti",
-      "accent": "kopijúoti",
-      "translate": {
-        "rus": "копия"
-      }
-    },
-    {
-      "word": "kopūstas",
-      "accent": "kopū̃stas",
-      "translate": {
-        "rus": "капуста"
-      }
-    },
-    {
-      "word": "koridorius",
-      "accent": "korìdorius",
-      "translate": {
-        "rus": "коридор"
-      }
-    },
-    {
-      "word": "kortelė",
-      "accent": "kortẽlė",
-      "translate": {
-        "rus": "карточка"
-      }
-    },
-    {
-      "word": "kosulys",
-      "accent": "kosulỹs",
-      "translate": {
-        "rus": "кашель"
-      }
-    },
-    {
-      "word": "košė",
-      "accent": "kõšė",
-      "translate": {
-        "rus": "кошмар"
-      }
-    },
-    {
-      "word": "kovas",
-      "accent": "kovàs",
-      "translate": {
-        "rus": "март"
-      }
-    },
-    {
-      "word": "kraujo tyrimai",
-      "accent": "kraũjo",
-      "translate": {
-        "rus": "анализ крови"
-      }
-    },
-    {
-      "word": "krepšelis",
-      "accent": "krepšẽlis",
-      "translate": {
-        "rus": "корзина"
-      }
-    },
-    {
-      "word": "krepšinis",
-      "accent": "krepšìnis",
-      "translate": {
-        "rus": "баскетбол"
-      }
-    },
-    {
-      "word": "krepšys",
-      "accent": "krepšỹs",
-      "translate": {
-        "rus": "корзина"
-      }
-    },
-    {
-      "word": "kriaušė",
-      "accent": "kriáušė",
-      "translate": {
-        "rus": "груша"
-      }
-    },
-    {
-      "word": "kryptis",
-      "accent": "kryptìs",
-      "translate": {
-        "rus": "направление"
-      }
-    },
-    {
-      "word": "kuprinė",
-      "accent": "kuprìnė",
-      "translate": {
-        "rus": "рюкзак"
-      }
-    },
-    {
-      "word": "kur",
-      "accent": "kur̃",
-      "translate": {
-        "rus": "где"
-      }
-    },
-    {
-      "word": "kvalifikacija",
-      "accent": "kvalifikãcija",
-      "translate": {
-        "rus": "рейтинг"
-      }
-    },
-    {
-      "word": "labanakt",
-      "accent": "labãnakt",
-      "translate": {
-        "rus": "доброй ночи"
-      }
-    },
-    {
-      "word": "labas rytas",
-      "accent": "lãbas",
-      "translate": {
-        "rus": "доброе утро"
-      }
-    },
-    {
-      "word": "labas vakaras",
-      "accent": "lãbas",
-      "translate": {
-        "rus": "добрый вечер"
-      }
-    },
-    {
-      "word": "laba diena",
-      "accent": "labà",
-      "translate": {
-        "rus": "добрый день"
-      }
-    },
-    {
-      "word": "labai",
-      "accent": "labaĩ",
-      "translate": {
-        "rus": "очень"
-      }
-    },
-    {
-      "word": "labai sunku",
-      "accent": "labaĩ",
-      "translate": {
-        "rus": "очень трудно"
-      }
-    },
-    {
-      "word": "laboratorija",
-      "accent": "laboratòrija",
-      "translate": {
-        "rus": "лаборатория"
-      }
-    },
-    {
-      "word": "laikyti egzaminą",
-      "accent": "laikýti",
-      "translate": {
-        "rus": "сдать экзамен"
-      }
-    },
-    {
-      "word": "laipsnis",
-      "accent": "láipsnis",
-      "translate": {
-        "rus": "класс"
-      }
-    },
-    {
-      "word": "laiptai",
-      "accent": "láiptai",
-      "translate": {
-        "rus": "лестница"
-      }
-    },
-    {
-      "word": "laisvalaikio prekės",
-      "accent": "laisvãlaikio",
-      "translate": {
-        "rus": "товары для отдыха"
-      }
-    },
-    {
-      "word": "laisva diena",
-      "accent": "laisvà",
-      "translate": {
-        "rus": "свободный день"
-      }
-    },
-    {
-      "word": "laivas",
-      "accent": "laĩvas",
-      "translate": {
-        "rus": "судно"
-      }
-    },
-    {
-      "word": "langas",
-      "accent": "lángas",
-      "translate": {
-        "rus": "окно"
-      }
-    },
-    {
-      "word": "lapkritis",
-      "accent": "lãpkritis",
-      "translate": {
-        "rus": "ноябрь"
-      }
-    },
-    {
-      "word": "lašai",
-      "accent": "lašaĩ",
-      "translate": {
-        "rus": "капли"
-      }
-    },
-    {
-      "word": "lašiša",
-      "accent": "lašišà",
-      "translate": {
-        "rus": "лосось"
-      }
-    },
-    {
-      "word": "lauke",
-      "accent": "laukè",
-      "translate": {
-        "rus": "снаружи"
-      }
-    },
-    {
-      "word": "ledai",
-      "accent": "ledaĩ",
-      "translate": {
-        "rus": "мороженое"
-      }
-    },
-    {
-      "word": "lempa",
-      "accent": "lémpa",
-      "translate": {
-        "rus": "лампа"
-      }
-    },
-    {
-      "word": "lentyna",
-      "accent": "lentýna",
-      "translate": {
-        "rus": "полка"
-      }
-    },
-    {
-      "word": "lėktuvas",
-      "accent": "lėktùvas",
-      "translate": {
-        "rus": "самолет"
-      }
-    },
-    {
-      "word": "liepa",
-      "accent": "líepa",
-      "translate": {
-        "rus": "июль"
-      }
-    },
-    {
-      "word": "lietuvių kalba",
-      "accent": "lietùvių",
-      "translate": {
-        "rus": "на литовском"
-      }
-    },
-    {
-      "word": "liftas",
-      "accent": "lìftas",
-      "translate": {
-        "rus": "лифт"
-      }
-    },
-    {
-      "word": "žmona",
-      "accent": "žmonà",
-      "translate": {
-        "rus": "жена"
-      }
-    },
-    {
-      "word": "žuvis",
-      "accent": "žuvìs",
-      "translate": {
-        "rus": "рыба"
+    {
+      "input": "agurkas",
+      "features": {
+        "translategemma-1": {
+          "output": "огурец"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["agur̃kas"]
+        }
+      }
+    },
+    {
+      "input": "aikštelė",
+      "features": {
+        "translategemma-1": {
+          "output": "площадка."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["aikštẽlė"]
+        }
+      }
+    },
+    {
+      "input": "aikštė",
+      "features": {
+        "translategemma-1": {
+          "output": "площадь."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "aikštė̃",
+              "accentType": "MULTIPLE_VARIANT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "aišku",
+      "features": {
+        "translategemma-1": {
+          "output": "понятно."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["áišku"]
+        }
+      }
+    },
+    {
+      "input": "akademija",
+      "features": {
+        "translategemma-1": {
+          "output": "академия."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["akadèmija"]
+        }
+      }
+    },
+    {
+      "input": "akcija",
+      "features": {
+        "translategemma-1": {
+          "output": "акция"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["ãkcija"]
+        }
+      }
+    },
+    {
+      "input": "akis",
+      "features": {
+        "translategemma-1": {
+          "output": "глаз"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["akìs"]
+        }
+      }
+    },
+    {
+      "input": "alergija",
+      "features": {
+        "translategemma-1": {
+          "output": "аллергия"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "aler̃gija",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "alga",
+      "features": {
+        "translategemma-1": {
+          "output": "зарплата"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "algà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "alkanas",
+      "features": {
+        "translategemma-1": {
+          "output": "алкан."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["álkanas"]
+        }
+      }
+    },
+    {
+      "input": "alkoholiniai gėrimai",
+      "features": {
+        "translategemma-1": {
+          "output": "алкогольные напитки."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            "alkohòliniai",
+            {
+              "accented": "gėrìmai",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "alus",
+      "features": {
+        "translategemma-1": {
+          "output": "пиво"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["alùs"]
+        }
+      }
+    },
+    {
+      "input": "anglų kalba",
+      "features": {
+        "translategemma-1": {
+          "output": "английский язык."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            "ánglų",
+            {
+              "accented": "kalbà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "anksti",
+      "features": {
+        "translategemma-1": {
+          "output": "рано"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["ankstì"]
+        }
+      }
+    },
+    {
+      "input": "antradienis",
+      "features": {
+        "translategemma-1": {
+          "output": "вторник"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["antrãdienis"]
+        }
+      }
+    },
+    {
+      "input": "apelsinas",
+      "features": {
+        "translategemma-1": {
+          "output": "апельсин."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["apelsìnas"]
+        }
+      }
+    },
+    {
+      "input": "aplankas",
+      "features": {
+        "translategemma-1": {
+          "output": "папка"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["ãplankas"]
+        }
+      }
+    },
+    {
+      "input": "apsauginiai akiniai",
+      "features": {
+        "translategemma-1": {
+          "output": "защитные очки."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["apsaugìniai", "akiniaĩ"]
+        }
+      }
+    },
+    {
+      "input": "apsipirkti",
+      "features": {
+        "translategemma-1": {
+          "output": "покупать."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "apsipir̃kti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "arbata",
+      "features": {
+        "translategemma-1": {
+          "output": "работа"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "arbatà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "arbatpinigiai",
+      "features": {
+        "translategemma-1": {
+          "output": "чайные ложки."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["arbãtpinigiai"]
+        }
+      }
+    },
+    {
+      "input": "arti",
+      "features": {
+        "translategemma-1": {
+          "output": "близко"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "artì",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "asmens tapatybės kortelė",
+      "features": {
+        "translategemma-1": {
+          "output": "удостоверение личности."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["asmeñs", "tapatýbės", "kortẽlė"]
+        }
+      }
+    },
+    {
+      "input": "aštrus",
+      "features": {
+        "translategemma-1": {
+          "output": "острый"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["aštrùs"]
+        }
+      }
+    },
+    {
+      "input": "ateiti",
+      "features": {
+        "translategemma-1": {
+          "output": "прийти"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "ateĩti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "atidaryta",
+      "features": {
+        "translategemma-1": {
+          "output": "открыто."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["atidarýta"]
+        }
+      }
+    },
+    {
+      "input": "atidaryti",
+      "features": {
+        "translategemma-1": {
+          "output": "открыть."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["atidarýti"]
+        }
+      }
+    },
+    {
+      "input": "atidėti",
+      "features": {
+        "translategemma-1": {
+          "output": "отложить."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "atidė́ti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "atleisti iš darbo",
+      "features": {
+        "translategemma-1": {
+          "output": "уволить с работы"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "atléisti",
+              "accentType": "MULTIPLE_MEANING"
+            },
+            "ìš",
+            "dárbo"
+          ]
+        }
+      }
+    },
+    {
+      "input": "atostogauti",
+      "features": {
+        "translategemma-1": {
+          "output": "отдыхать, проводить отпуск."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["atostogáuti"]
+        }
+      }
+    },
+    {
+      "input": "atostogos",
+      "features": {
+        "translategemma-1": {
+          "output": "отпуск"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["atóstogos"]
+        }
+      }
+    },
+    {
+      "input": "atsikelti",
+      "features": {
+        "translategemma-1": {
+          "output": "встать с постели."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "atsikélti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "atsiprašau",
+      "features": {
+        "translategemma-1": {
+          "output": "извините."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["atsiprašaũ"]
+        }
+      }
+    },
+    {
+      "input": "atvažiuoti",
+      "features": {
+        "translategemma-1": {
+          "output": "приезжать."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["atvažiúoti"]
+        }
+      }
+    },
+    {
+      "input": "atvykti",
+      "features": {
+        "translategemma-1": {
+          "output": "прибыть."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "atvỹkti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "auditorija",
+      "features": {
+        "translategemma-1": {
+          "output": "аудитория."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["auditòrija"]
+        }
+      }
+    },
+    {
+      "input": "auksas",
+      "features": {
+        "translategemma-1": {
+          "output": "золото."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["áuksas"]
+        }
+      }
+    },
+    {
+      "input": "aukščiau",
+      "features": {
+        "translategemma-1": {
+          "output": "выше."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["aukščiaũ"]
+        }
+      }
+    },
+    {
+      "input": "aukštas",
+      "features": {
+        "translategemma-1": {
+          "output": "высокий"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "áukštas",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "aukštyn",
+      "features": {
+        "translategemma-1": {
+          "output": "вверх"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["aukštỹn"]
+        }
+      }
+    },
+    {
+      "input": "ausinės",
+      "features": {
+        "translategemma-1": {
+          "output": "Наушники."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["ausìnės"]
+        }
+      }
+    },
+    {
+      "input": "ausis",
+      "features": {
+        "translategemma-1": {
+          "output": "уши"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "ausìs",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "autobusas",
+      "features": {
+        "translategemma-1": {
+          "output": "автобус."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["autobùsas"]
+        }
+      }
+    },
+    {
+      "input": "autobusų stotelė",
+      "features": {
+        "translategemma-1": {
+          "output": "автобусная остановка"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["autobùsų", "stotẽlė"]
+        }
+      }
+    },
+    {
+      "input": "autobusų stotis",
+      "features": {
+        "translategemma-1": {
+          "output": "Автовокзал."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            "autobùsų",
+            {
+              "accented": "stotìs",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "automobilis",
+      "features": {
+        "translategemma-1": {
+          "output": "автомобиль"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["automobìlis"]
+        }
+      }
+    },
+    {
+      "input": "automobilių stovėjimo aikštelė",
+      "features": {
+        "translategemma-1": {
+          "output": "автомобильная парковка."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["automobìlių", "stovė́jimo", "aikštẽlė"]
+        }
+      }
+    },
+    {
+      "input": "autoservisas",
+      "features": {
+        "translategemma-1": {
+          "output": "автосервис."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "autoser̃visas",
+              "accentType": "MULTIPLE_VARIANT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "avalynė",
+      "features": {
+        "translategemma-1": {
+          "output": "обувь"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "ãvalynė",
+              "accentType": "MULTIPLE_VARIANT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "avarija",
+      "features": {
+        "translategemma-1": {
+          "output": "авария"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["avãrija"]
+        }
+      }
+    },
+    {
+      "input": "avarinis išėjimas",
+      "features": {
+        "translategemma-1": {
+          "output": "аварийный выход."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["avãrinis", "išėjìmas"]
+        }
+      }
+    },
+    {
+      "input": "baigti",
+      "features": {
+        "translategemma-1": {
+          "output": "закончить."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "baĩgti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "balandėliai",
+      "features": {
+        "translategemma-1": {
+          "output": "журавлики."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["balandė̃liai"]
+        }
+      }
+    },
+    {
+      "input": "balandis",
+      "features": {
+        "translategemma-1": {
+          "output": "апрель"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["balañdis"]
+        }
+      }
+    },
+    {
+      "input": "balkonas",
+      "features": {
+        "translategemma-1": {
+          "output": "балкон"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["balkònas"]
+        }
+      }
+    },
+    {
+      "input": "baltas",
+      "features": {
+        "translategemma-1": {
+          "output": "белый"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["báltas"]
+        }
+      }
+    },
+    {
+      "input": "bananas",
+      "features": {
+        "translategemma-1": {
+          "output": "бананы"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["banãnas"]
+        }
+      }
+    },
+    {
+      "input": "bandelė",
+      "features": {
+        "translategemma-1": {
+          "output": "бант (для волос)"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["bandẽlė"]
+        }
+      }
+    },
+    {
+      "input": "bankas",
+      "features": {
+        "translategemma-1": {
+          "output": "банк."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["bánkas"]
+        }
+      }
+    },
+    {
+      "input": "baras",
+      "features": {
+        "translategemma-1": {
+          "output": "бар"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["bãras"]
+        }
+      }
+    },
+    {
+      "input": "baseinas",
+      "features": {
+        "translategemma-1": {
+          "output": "бассейн"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["baseĩnas"]
+        }
+      }
+    },
+    {
+      "input": "basutės",
+      "features": {
+        "translategemma-1": {
+          "output": "тапочки"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["basùtės"]
+        }
+      }
+    },
+    {
+      "input": "batai",
+      "features": {
+        "translategemma-1": {
+          "output": "обувь."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["bãtai"]
+        }
+      }
+    },
+    {
+      "input": "batonas",
+      "features": {
+        "translategemma-1": {
+          "output": "батон."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["batònas"]
+        }
+      }
+    },
+    {
+      "input": "bedarbis",
+      "features": {
+        "translategemma-1": {
+          "output": "безработный"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["bedar̃bis"]
+        }
+      }
+    },
+    {
+      "input": "belaidis internetas",
+      "features": {
+        "translategemma-1": {
+          "output": "беспроводной интернет."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["belaĩdis", "internètas"]
+        }
+      }
+    },
+    {
+      "input": "bėgioti",
+      "features": {
+        "translategemma-1": {
+          "output": "бегать"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["bėgióti"]
+        }
+      }
+    },
+    {
+      "input": "biblioteka",
+      "features": {
+        "translategemma-1": {
+          "output": "библиотека"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "bibliotekà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "bilietas",
+      "features": {
+        "translategemma-1": {
+          "output": "билет."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["bìlietas"]
+        }
+      }
+    },
+    {
+      "input": "biologija",
+      "features": {
+        "translategemma-1": {
+          "output": "биология."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["biològija"]
+        }
+      }
+    },
+    {
+      "input": "birželis",
+      "features": {
+        "translategemma-1": {
+          "output": "июнь"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["biržẽlis"]
+        }
+      }
+    },
+    {
+      "input": "biuras",
+      "features": {
+        "translategemma-1": {
+          "output": "офис."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["biùras"]
+        }
+      }
+    },
+    {
+      "input": "blynai",
+      "features": {
+        "translategemma-1": {
+          "output": "блины"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["blỹnai"]
+        }
+      }
+    },
+    {
+      "input": "blyneliai",
+      "features": {
+        "translategemma-1": {
+          "output": "блины."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["blynẽliai"]
+        }
+      }
+    },
+    {
+      "input": "blogai",
+      "features": {
+        "translategemma-1": {
+          "output": "плохо"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "blogaĩ",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "blogas",
+      "features": {
+        "translategemma-1": {
+          "output": "плохо"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "blõgas",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "braškės",
+      "features": {
+        "translategemma-1": {
+          "output": "клубника"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "brãškės",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "brendis",
+      "features": {
+        "translategemma-1": {
+          "output": "виски."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["breñdis"]
+        }
+      }
+    },
+    {
+      "input": "brolis",
+      "features": {
+        "translategemma-1": {
+          "output": "брат"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["brólis"]
+        }
+      }
+    },
+    {
+      "input": "bulvė",
+      "features": {
+        "translategemma-1": {
+          "output": "картофель"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["bùlvė"]
+        }
+      }
+    },
+    {
+      "input": "burokėlis",
+      "features": {
+        "translategemma-1": {
+          "output": "маленькая свекла."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["burokė̃lis"]
+        }
+      }
+    },
+    {
+      "input": "butas",
+      "features": {
+        "translategemma-1": {
+          "output": "квартира"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["bùtas"]
+        }
+      }
+    },
+    {
+      "input": "butelis",
+      "features": {
+        "translategemma-1": {
+          "output": "бутылка"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["bùtelis"]
+        }
+      }
+    },
+    {
+      "input": "būti",
+      "features": {
+        "translategemma-1": {
+          "output": "быть"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "bū́ti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "centas",
+      "features": {
+        "translategemma-1": {
+          "output": "цент"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["ceñtas"]
+        }
+      }
+    },
+    {
+      "input": "centras",
+      "features": {
+        "translategemma-1": {
+          "output": "центр"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["ceñtras"]
+        }
+      }
+    },
+    {
+      "input": "cepelinai",
+      "features": {
+        "translategemma-1": {
+          "output": "цеппелины."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["cepelìnai"]
+        }
+      }
+    },
+    {
+      "input": "chemija",
+      "features": {
+        "translategemma-1": {
+          "output": "химия"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["chèmija"]
+        }
+      }
+    },
+    {
+      "input": "čekis",
+      "features": {
+        "translategemma-1": {
+          "output": "чек"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["čèkis"]
+        }
+      }
+    },
+    {
+      "input": "česnakas",
+      "features": {
+        "translategemma-1": {
+          "output": "чеснок."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["česnãkas"]
+        }
+      }
+    },
+    {
+      "input": "čia",
+      "features": {
+        "translategemma-1": {
+          "output": "здесь"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["čià"]
+        }
+      }
+    },
+    {
+      "input": "čiuožinėti",
+      "features": {
+        "translategemma-1": {
+          "output": "кататься на лыжах/санках."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["čiuožinė́ti"]
+        }
+      }
+    },
+    {
+      "input": "dailininkas",
+      "features": {
+        "translategemma-1": {
+          "output": "художник."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["daĩlininkas"]
+        }
+      }
+    },
+    {
+      "input": "dainininkas",
+      "features": {
+        "translategemma-1": {
+          "output": "певец."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["daininiñkas"]
+        }
+      }
+    },
+    {
+      "input": "dainuoti",
+      "features": {
+        "translategemma-1": {
+          "output": "петь."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dainúoti"]
+        }
+      }
+    },
+    {
+      "input": "dantis",
+      "features": {
+        "translategemma-1": {
+          "output": "зуб"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dantìs"]
+        }
+      }
+    },
+    {
+      "input": "darbas",
+      "features": {
+        "translategemma-1": {
+          "output": "работа."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dárbas"]
+        }
+      }
+    },
+    {
+      "input": "darbininkas",
+      "features": {
+        "translategemma-1": {
+          "output": "рабочий"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["darbiniñkas"]
+        }
+      }
+    },
+    {
+      "input": "darbo drabužiai",
+      "features": {
+        "translategemma-1": {
+          "output": "рабочая одежда."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dárbo", "drabùžiai"]
+        }
+      }
+    },
+    {
+      "input": "darbo valandos",
+      "features": {
+        "translategemma-1": {
+          "output": "часы работы"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            "dárbo",
+            {
+              "accented": "valandõs",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "darbo vieta",
+      "features": {
+        "translategemma-1": {
+          "output": "место работы."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            "dárbo",
+            {
+              "accented": "vietà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "darbuotojai",
+      "features": {
+        "translategemma-1": {
+          "output": "сотрудники"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["darbúotojai"]
+        }
+      }
+    },
+    {
+      "input": "daržovės",
+      "features": {
+        "translategemma-1": {
+          "output": "овощи"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["daržóvės"]
+        }
+      }
+    },
+    {
+      "input": "daugiabutis",
+      "features": {
+        "translategemma-1": {
+          "output": "многоквартирный дом."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["daugiabùtis"]
+        }
+      }
+    },
+    {
+      "input": "dažai",
+      "features": {
+        "translategemma-1": {
+          "output": "краски"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "dažaĩ",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "dažyti",
+      "features": {
+        "translategemma-1": {
+          "output": "красить"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dažýti"]
+        }
+      }
+    },
+    {
+      "input": "dažnai",
+      "features": {
+        "translategemma-1": {
+          "output": "часто"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "dažnaĩ",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "degtinė",
+      "features": {
+        "translategemma-1": {
+          "output": "коньяк"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["degtìnė"]
+        }
+      }
+    },
+    {
+      "input": "dekanas",
+      "features": {
+        "translategemma-1": {
+          "output": "декан."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dekãnas"]
+        }
+      }
+    },
+    {
+      "input": "dešinė",
+      "features": {
+        "translategemma-1": {
+          "output": "правый."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "dẽšinė",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "dešinėje",
+      "features": {
+        "translategemma-1": {
+          "output": "справа."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dešinėjè"]
+        }
+      }
+    },
+    {
+      "input": "dešrelės",
+      "features": {
+        "translategemma-1": {
+          "output": "колбаски"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dešrẽlės"]
+        }
+      }
+    },
+    {
+      "input": "dėdė",
+      "features": {
+        "translategemma-1": {
+          "output": "дядя."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dė̃dė"]
+        }
+      }
+    },
+    {
+      "input": "dėstytojas",
+      "features": {
+        "translategemma-1": {
+          "output": "преподаватель."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dė́stytojas"]
+        }
+      }
+    },
+    {
+      "input": "dėžė",
+      "features": {
+        "translategemma-1": {
+          "output": "коробка"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dėžė̃"]
+        }
+      }
+    },
+    {
+      "input": "dėžutė",
+      "features": {
+        "translategemma-1": {
+          "output": "коробка."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dėžùtė"]
+        }
+      }
+    },
+    {
+      "input": "didelis",
+      "features": {
+        "translategemma-1": {
+          "output": "большой"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dìdelis"]
+        }
+      }
+    },
+    {
+      "input": "didžkukuliai",
+      "features": {
+        "translategemma-1": {
+          "output": "большие печеньки."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dìdžkukuliai"]
+        }
+      }
+    },
+    {
+      "input": "diena",
+      "features": {
+        "translategemma-1": {
+          "output": "день."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "dienà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "dingo elektra",
+      "features": {
+        "translategemma-1": {
+          "output": "выключили электричество."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "diñgo",
+              "accentType": "MULTIPLE_MEANING"
+            },
+            {
+              "accented": "elektrà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "diplomas",
+      "features": {
+        "translategemma-1": {
+          "output": "дипломы"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["diplòmas"]
+        }
+      }
+    },
+    {
+      "input": "dirbti",
+      "features": {
+        "translategemma-1": {
+          "output": "работать"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "dìrbti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "direktorius",
+      "features": {
+        "translategemma-1": {
+          "output": "директор."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dirèktorius"]
+        }
+      }
+    },
+    {
+      "input": "dydis",
+      "features": {
+        "translategemma-1": {
+          "output": "размер"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dỹdis"]
+        }
+      }
+    },
+    {
+      "input": "dokumentai",
+      "features": {
+        "translategemma-1": {
+          "output": "документы"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dokumeñtai"]
+        }
+      }
+    },
+    {
+      "input": "drabužiai moterims",
+      "features": {
+        "translategemma-1": {
+          "output": "одежда для женщин."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["drabùžiai", "móterims"]
+        }
+      }
+    },
+    {
+      "input": "drabužiai vaikams",
+      "features": {
+        "translategemma-1": {
+          "output": "одежда для детей."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["drabùžiai", "vaikáms"]
+        }
+      }
+    },
+    {
+      "input": "drabužiai vyrams",
+      "features": {
+        "translategemma-1": {
+          "output": "одежда для мужчин."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["drabùžiai", "výrams"]
+        }
+      }
+    },
+    {
+      "input": "drabužinė",
+      "features": {
+        "translategemma-1": {
+          "output": "гардеробная."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["drabužìnė"]
+        }
+      }
+    },
+    {
+      "input": "draudimas",
+      "features": {
+        "translategemma-1": {
+          "output": "страховка"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["draudìmas"]
+        }
+      }
+    },
+    {
+      "input": "drožtukas",
+      "features": {
+        "translategemma-1": {
+          "output": "дразнилка"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["drožtùkas"]
+        }
+      }
+    },
+    {
+      "input": "dujokaukė",
+      "features": {
+        "translategemma-1": {
+          "output": "газовый респиратор."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dujókaukė"]
+        }
+      }
+    },
+    {
+      "input": "duktė",
+      "features": {
+        "translategemma-1": {
+          "output": "дыхание"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["duktė̃"]
+        }
+      }
+    },
+    {
+      "input": "dulkių siurblys",
+      "features": {
+        "translategemma-1": {
+          "output": "пылесос"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dùlkių", "siurblỹs"]
+        }
+      }
+    },
+    {
+      "input": "duona",
+      "features": {
+        "translategemma-1": {
+          "output": "хлеб"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dúona"]
+        }
+      }
+    },
+    {
+      "input": "duoti",
+      "features": {
+        "translategemma-1": {
+          "output": "давать"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "dúoti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "durys",
+      "features": {
+        "translategemma-1": {
+          "output": "двери"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dùrys"]
+        }
+      }
+    },
+    {
+      "input": "dušas",
+      "features": {
+        "translategemma-1": {
+          "output": "душ."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["dùšas"]
+        }
+      }
+    },
+    {
+      "input": "dviratis",
+      "features": {
+        "translategemma-1": {
+          "output": "велосипед"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "dvìratis",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "džinsai",
+      "features": {
+        "translategemma-1": {
+          "output": "джинсы"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["džìnsai"]
+        }
+      }
+    },
+    {
+      "input": "džiovyklė",
+      "features": {
+        "translategemma-1": {
+          "output": "сушилка"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["džiovỹklė"]
+        }
+      }
+    },
+    {
+      "input": "egzaminas",
+      "features": {
+        "translategemma-1": {
+          "output": "экзамен"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["egzãminas"]
+        }
+      }
+    },
+    {
+      "input": "eilė",
+      "features": {
+        "translategemma-1": {
+          "output": "очередь"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["eilė̃"]
+        }
+      }
+    },
+    {
+      "input": "eiti",
+      "features": {
+        "translategemma-1": {
+          "output": "идти"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "eĩti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "eiti miegoti",
+      "features": {
+        "translategemma-1": {
+          "output": "Ложиться спать."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "eĩti",
+              "accentType": "MULTIPLE_MEANING"
+            },
+            "miegóti"
+          ]
+        }
+      }
+    },
+    {
+      "input": "elektra",
+      "features": {
+        "translategemma-1": {
+          "output": "электричество."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "elektrà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "elektrikas",
+      "features": {
+        "translategemma-1": {
+          "output": "электрик"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["elèktrikas"]
+        }
+      }
+    },
+    {
+      "input": "elektroninis receptas",
+      "features": {
+        "translategemma-1": {
+          "output": "электронный рецепт."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["elektròninis", "recèptas"]
+        }
+      }
+    },
+    {
+      "input": "euras",
+      "features": {
+        "translategemma-1": {
+          "output": "евро."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["eũras"]
+        }
+      }
+    },
+    {
+      "input": "ežeras",
+      "features": {
+        "translategemma-1": {
+          "output": "озеро"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["ẽžeras"]
+        }
+      }
+    },
+    {
+      "input": "filmas",
+      "features": {
+        "translategemma-1": {
+          "output": "фильм."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["fìlmas"]
+        }
+      }
+    },
+    {
+      "input": "fizika",
+      "features": {
+        "translategemma-1": {
+          "output": "физика"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["fìzika"]
+        }
+      }
+    },
+    {
+      "input": "futbolas",
+      "features": {
+        "translategemma-1": {
+          "output": "футбол"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["fùtbolas"]
+        }
+      }
+    },
+    {
+      "input": "gabaliukas",
+      "features": {
+        "translategemma-1": {
+          "output": "кусочек."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gabaliùkas"]
+        }
+      }
+    },
+    {
+      "input": "gaila",
+      "features": {
+        "translategemma-1": {
+          "output": "Жаль."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gaĩla"]
+        }
+      }
+    },
+    {
+      "input": "gaisras",
+      "features": {
+        "translategemma-1": {
+          "output": "пожар"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gaĩsras"]
+        }
+      }
+    },
+    {
+      "input": "gaisrinė",
+      "features": {
+        "translategemma-1": {
+          "output": "пожарная станция."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "gaĩsrinė",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "gal",
+      "features": {
+        "translategemma-1": {
+          "output": "возможно."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gál"]
+        }
+      }
+    },
+    {
+      "input": "galva",
+      "features": {
+        "translategemma-1": {
+          "output": "голова"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "galvà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "galvos skausmas",
+      "features": {
+        "translategemma-1": {
+          "output": "головная боль"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "galvõs",
+              "accentType": "MULTIPLE_MEANING"
+            },
+            "skaũsmas"
+          ]
+        }
+      }
+    },
+    {
+      "input": "gamykla",
+      "features": {
+        "translategemma-1": {
+          "output": "фабрика."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "gamyklà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "garantija",
+      "features": {
+        "translategemma-1": {
+          "output": "гарантия"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["garántija"]
+        }
+      }
+    },
+    {
+      "input": "garažas",
+      "features": {
+        "translategemma-1": {
+          "output": "гараж"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["garãžas"]
+        }
+      }
+    },
+    {
+      "input": "gatvė",
+      "features": {
+        "translategemma-1": {
+          "output": "улица"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gãtvė"]
+        }
+      }
+    },
+    {
+      "input": "gauti",
+      "features": {
+        "translategemma-1": {
+          "output": "получить"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "gáuti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "gazuotas vanduo",
+      "features": {
+        "translategemma-1": {
+          "output": "газированная вода."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gazúotas", "vanduõ"]
+        }
+      }
+    },
+    {
+      "input": "gegužė",
+      "features": {
+        "translategemma-1": {
+          "output": "май."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "gegužė̃",
+              "accentType": "MULTIPLE_VARIANT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "geležinkelio stotis",
+      "features": {
+        "translategemma-1": {
+          "output": "железнодорожный вокзал."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            "geležìnkelio",
+            {
+              "accented": "stotìs",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "geltonas",
+      "features": {
+        "translategemma-1": {
+          "output": "желтый"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["geltónas"]
+        }
+      }
+    },
+    {
+      "input": "gelbėkit!",
+      "features": {
+        "translategemma-1": {
+          "output": "Помогите!"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gélbėkit"]
+        }
+      }
+    },
+    {
+      "input": "gerai",
+      "features": {
+        "translategemma-1": {
+          "output": "хорошо"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "geraĩ",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "gerklė",
+      "features": {
+        "translategemma-1": {
+          "output": "горло"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gerklė̃"]
+        }
+      }
+    },
+    {
+      "input": "gerti",
+      "features": {
+        "translategemma-1": {
+          "output": "пить."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "gérti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "gėlė",
+      "features": {
+        "translategemma-1": {
+          "output": "цветок"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "gėlė̃",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "gėlynas",
+      "features": {
+        "translategemma-1": {
+          "output": "луг, поляна."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gėlýnas"]
+        }
+      }
+    },
+    {
+      "input": "gėrimai",
+      "features": {
+        "translategemma-1": {
+          "output": "напитки"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "gėrìmai",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "gėrimas",
+      "features": {
+        "translategemma-1": {
+          "output": "напиток"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "gėrìmas",
+              "accentType": "MULTIPLE_VARIANT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "gimnazija",
+      "features": {
+        "translategemma-1": {
+          "output": "гимназия."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gimnãzija"]
+        }
+      }
+    },
+    {
+      "input": "gimtoji kalba",
+      "features": {
+        "translategemma-1": {
+          "output": "родной язык."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            "gimtóji",
+            {
+              "accented": "kalbà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "gintaras",
+      "features": {
+        "translategemma-1": {
+          "output": "янтарь."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["giñtaras"]
+        }
+      }
+    },
+    {
+      "input": "gydytojas",
+      "features": {
+        "translategemma-1": {
+          "output": "врач"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gýdytojas"]
+        }
+      }
+    },
+    {
+      "input": "gyventi",
+      "features": {
+        "translategemma-1": {
+          "output": "жить."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gyvénti"]
+        }
+      }
+    },
+    {
+      "input": "gyvenimo aprašymas",
+      "features": {
+        "translategemma-1": {
+          "output": "резюме."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gyvẽnimo", "aprãšymas"]
+        }
+      }
+    },
+    {
+      "input": "golfas",
+      "features": {
+        "translategemma-1": {
+          "output": "гольф"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gòlfas"]
+        }
+      }
+    },
+    {
+      "input": "gramas",
+      "features": {
+        "translategemma-1": {
+          "output": "граммы."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["grãmas"]
+        }
+      }
+    },
+    {
+      "input": "grąža",
+      "features": {
+        "translategemma-1": {
+          "output": "возврат"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "grąžà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "greitoji pagalba",
+      "features": {
+        "translategemma-1": {
+          "output": "скорая помощь"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["greitóji", "pagálba"]
+        }
+      }
+    },
+    {
+      "input": "grėblys",
+      "features": {
+        "translategemma-1": {
+          "output": "берег, откос."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["grėblỹs"]
+        }
+      }
+    },
+    {
+      "input": "grietinė",
+      "features": {
+        "translategemma-1": {
+          "output": "сливки"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["grietìnė"]
+        }
+      }
+    },
+    {
+      "input": "grietinėlė",
+      "features": {
+        "translategemma-1": {
+          "output": "сметана"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["grietinė̃lė"]
+        }
+      }
+    },
+    {
+      "input": "gripas",
+      "features": {
+        "translategemma-1": {
+          "output": "грипп"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["grìpas"]
+        }
+      }
+    },
+    {
+      "input": "grįžti",
+      "features": {
+        "translategemma-1": {
+          "output": "возвращаться"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "grį̃žti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "grįžti namo",
+      "features": {
+        "translategemma-1": {
+          "output": "вернуться домой"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "grį̃žti",
+              "accentType": "MULTIPLE_MEANING"
+            },
+            {
+              "accented": "namõ",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "grynieji pinigai",
+      "features": {
+        "translategemma-1": {
+          "output": "наличные деньги."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gryníeji", "pinigaĩ"]
+        }
+      }
+    },
+    {
+      "input": "groti",
+      "features": {
+        "translategemma-1": {
+          "output": "играть."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "gróti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "gruodis",
+      "features": {
+        "translategemma-1": {
+          "output": "декабрь."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["grúodis"]
+        }
+      }
+    },
+    {
+      "input": "gulėti ligoninėje",
+      "features": {
+        "translategemma-1": {
+          "output": "лежать в больнице."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gulė́ti", "ligóninėje"]
+        }
+      }
+    },
+    {
+      "input": "gultis",
+      "features": {
+        "translategemma-1": {
+          "output": "лежать."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gul̃tis"]
+        }
+      }
+    },
+    {
+      "input": "gultis į ligoninę",
+      "features": {
+        "translategemma-1": {
+          "output": "ложиться в больницу."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["gul̃tis", "į̃", "ligóninę"]
+        }
+      }
+    },
+    {
+      "input": "iki",
+      "features": {
+        "translategemma-1": {
+          "output": "до."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "ikì",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "ilgai",
+      "features": {
+        "translategemma-1": {
+          "output": "долго."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "ilgaĩ",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "imti",
+      "features": {
+        "translategemma-1": {
+          "output": "брать."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "im̃ti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "indaplovė",
+      "features": {
+        "translategemma-1": {
+          "output": "посудомоечная машина"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["indãplovė"]
+        }
+      }
+    },
+    {
+      "input": "indelis",
+      "features": {
+        "translategemma-1": {
+          "output": "вставка"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["indẽlis"]
+        }
+      }
+    },
+    {
+      "input": "injekcija",
+      "features": {
+        "translategemma-1": {
+          "output": "инъекция."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["injèkcija"]
+        }
+      }
+    },
+    {
+      "input": "institutas",
+      "features": {
+        "translategemma-1": {
+          "output": "институт."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["institùtas"]
+        }
+      }
+    },
+    {
+      "input": "internetas",
+      "features": {
+        "translategemma-1": {
+          "output": "интернет"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["internètas"]
+        }
+      }
+    },
+    {
+      "input": "interneto svetainė",
+      "features": {
+        "translategemma-1": {
+          "output": "веб-сайт."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["internèto", "svetaĩnė"]
+        }
+      }
+    },
+    {
+      "input": "istorija",
+      "features": {
+        "translategemma-1": {
+          "output": "история"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["istòrija"]
+        }
+      }
+    },
+    {
+      "input": "iš",
+      "features": {
+        "translategemma-1": {
+          "output": "из"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["ìš"]
+        }
+      }
+    },
+    {
+      "input": "išėjimas",
+      "features": {
+        "translategemma-1": {
+          "output": "выход."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["išėjìmas"]
+        }
+      }
+    },
+    {
+      "input": "išjungtas",
+      "features": {
+        "translategemma-1": {
+          "output": "выключен."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["išjùngtas"]
+        }
+      }
+    },
+    {
+      "input": "išjungti",
+      "features": {
+        "translategemma-1": {
+          "output": "выключить."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "išjùngti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "išmanusis telefonas",
+      "features": {
+        "translategemma-1": {
+          "output": "умный телефон"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["išmanùsis", "telefònas"]
+        }
+      }
+    },
+    {
+      "input": "išrašyti",
+      "features": {
+        "translategemma-1": {
+          "output": "выписать."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["išrašýti"]
+        }
+      }
+    },
+    {
+      "input": "išvežti šiukšles",
+      "features": {
+        "translategemma-1": {
+          "output": "вывезти мусор."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "išvèžti",
+              "accentType": "MULTIPLE_MEANING"
+            },
+            "šiukšlès"
+          ]
+        }
+      }
+    },
+    {
+      "input": "išvykti",
+      "features": {
+        "translategemma-1": {
+          "output": "уехать, отъехать."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "išvỹkti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "įėjimas",
+      "features": {
+        "translategemma-1": {
+          "output": "вход."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["įėjìmas"]
+        }
+      }
+    },
+    {
+      "input": "įjungtas",
+      "features": {
+        "translategemma-1": {
+          "output": "включен."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["įjùngtas"]
+        }
+      }
+    },
+    {
+      "input": "įjungti",
+      "features": {
+        "translategemma-1": {
+          "output": "включить"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "įjùngti",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "įvertinimas",
+      "features": {
+        "translategemma-1": {
+          "output": "оценка."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["įvértinimas"]
+        }
+      }
+    },
+    {
+      "input": "jautiena",
+      "features": {
+        "translategemma-1": {
+          "output": "говядина"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "jáutiena",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "jogurtas",
+      "features": {
+        "translategemma-1": {
+          "output": "йогурт."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["jogùrtas"]
+        }
+      }
+    },
+    {
+      "input": "juodas",
+      "features": {
+        "translategemma-1": {
+          "output": "черный"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["júodas"]
+        }
+      }
+    },
+    {
+      "input": "juoda kava",
+      "features": {
+        "translategemma-1": {
+          "output": "черный кофе."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "juodà",
+              "accentType": "MULTIPLE_MEANING"
+            },
+            {
+              "accented": "kavà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "kabinetas",
+      "features": {
+        "translategemma-1": {
+          "output": "кабинет."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kabinètas"]
+        }
+      }
+    },
+    {
+      "input": "kaina",
+      "features": {
+        "translategemma-1": {
+          "output": "цена"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["káina"]
+        }
+      }
+    },
+    {
+      "input": "kaip",
+      "features": {
+        "translategemma-1": {
+          "output": "как"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kaĩp"]
+        }
+      }
+    },
+    {
+      "input": "kaip sekasi?",
+      "features": {
+        "translategemma-1": {
+          "output": "Как дела?"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kaĩp", "sẽkasi"]
+        }
+      }
+    },
+    {
+      "input": "kairė",
+      "features": {
+        "translategemma-1": {
+          "output": "левый."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kairė̃"]
+        }
+      }
+    },
+    {
+      "input": "kairėje",
+      "features": {
+        "translategemma-1": {
+          "output": "слева"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kairėjè"]
+        }
+      }
+    },
+    {
+      "input": "kalnas",
+      "features": {
+        "translategemma-1": {
+          "output": "гора."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kálnas"]
+        }
+      }
+    },
+    {
+      "input": "kambarys",
+      "features": {
+        "translategemma-1": {
+          "output": "комната"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kambarỹs"]
+        }
+      }
+    },
+    {
+      "input": "karpis",
+      "features": {
+        "translategemma-1": {
+          "output": "карп."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kárpis"]
+        }
+      }
+    },
+    {
+      "input": "karštas",
+      "features": {
+        "translategemma-1": {
+          "output": "горячий"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "kárštas",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "kartais",
+      "features": {
+        "translategemma-1": {
+          "output": "иногда"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "kar̃tais",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "kas",
+      "features": {
+        "translategemma-1": {
+          "output": "что/кто"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kàs"]
+        }
+      }
+    },
+    {
+      "input": "kasa",
+      "features": {
+        "translategemma-1": {
+          "output": "касса."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "kasà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "kasdien",
+      "features": {
+        "translategemma-1": {
+          "output": "ежедневно."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kasdiẽn"]
+        }
+      }
+    },
+    {
+      "input": "kastuvas",
+      "features": {
+        "translategemma-1": {
+          "output": "ящик"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kastùvas"]
+        }
+      }
+    },
+    {
+      "input": "katedra",
+      "features": {
+        "translategemma-1": {
+          "output": "кафедра."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kãtedra"]
+        }
+      }
+    },
+    {
+      "input": "kava",
+      "features": {
+        "translategemma-1": {
+          "output": "кофе"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "kavà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "kava su pienu",
+      "features": {
+        "translategemma-1": {
+          "output": "Кофе с молоком."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "kavà",
+              "accentType": "MULTIPLE_MEANING"
+            },
+            "sù",
+            "píenu"
+          ]
+        }
+      }
+    },
+    {
+      "input": "kavinė",
+      "features": {
+        "translategemma-1": {
+          "output": "кафе."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kavìnė"]
+        }
+      }
+    },
+    {
+      "input": "kefyras",
+      "features": {
+        "translategemma-1": {
+          "output": "кефир"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kefỹras"]
+        }
+      }
+    },
+    {
+      "input": "kelias",
+      "features": {
+        "translategemma-1": {
+          "output": "путь, дорога"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "keliàs",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "kelintas",
+      "features": {
+        "translategemma-1": {
+          "output": "сколько."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "keliñtas",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "kelnės",
+      "features": {
+        "translategemma-1": {
+          "output": "брюки"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kélnės"]
+        }
+      }
+    },
+    {
+      "input": "keltas",
+      "features": {
+        "translategemma-1": {
+          "output": "лифт"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "kel̃tas",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "kepsnys",
+      "features": {
+        "translategemma-1": {
+          "output": "жареное мясо."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kepsnỹs"]
+        }
+      }
+    },
+    {
+      "input": "kepurė",
+      "features": {
+        "translategemma-1": {
+          "output": "шапка"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kepùrė"]
+        }
+      }
+    },
+    {
+      "input": "ketvirtadienis",
+      "features": {
+        "translategemma-1": {
+          "output": "четверг"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["ketvirtãdienis"]
+        }
+      }
+    },
+    {
+      "input": "kėdė",
+      "features": {
+        "translategemma-1": {
+          "output": "стул."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kėdė̃"]
+        }
+      }
+    },
+    {
+      "input": "kiauliena",
+      "features": {
+        "translategemma-1": {
+          "output": "свинина."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kiaulíena"]
+        }
+      }
+    },
+    {
+      "input": "kiaušinienė",
+      "features": {
+        "translategemma-1": {
+          "output": "яичница."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kiaušiniẽnė"]
+        }
+      }
+    },
+    {
+      "input": "kibiras",
+      "features": {
+        "translategemma-1": {
+          "output": "ведро"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "kìbiras",
+              "accentType": "MULTIPLE_VARIANT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "kiekis",
+      "features": {
+        "translategemma-1": {
+          "output": "количество."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kiẽkis"]
+        }
+      }
+    },
+    {
+      "input": "kiemas",
+      "features": {
+        "translategemma-1": {
+          "output": "двор"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kiẽmas"]
+        }
+      }
+    },
+    {
+      "input": "kilimas",
+      "features": {
+        "translategemma-1": {
+          "output": "коврик"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "kilìmas",
+              "accentType": "MULTIPLE_VARIANT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "kilogramas",
+      "features": {
+        "translategemma-1": {
+          "output": "килограмм."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kilogrãmas"]
+        }
+      }
+    },
+    {
+      "input": "kioskas",
+      "features": {
+        "translategemma-1": {
+          "output": "киоск."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kiòskas"]
+        }
+      }
+    },
+    {
+      "input": "kirpėjas",
+      "features": {
+        "translategemma-1": {
+          "output": "парикмахер."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kirpė́jas"]
+        }
+      }
+    },
+    {
+      "input": "kirpykla",
+      "features": {
+        "translategemma-1": {
+          "output": "парикмахерская"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "kirpyklà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "klasė",
+      "features": {
+        "translategemma-1": {
+          "output": "класс."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["klãsė"]
+        }
+      }
+    },
+    {
+      "input": "klausytis",
+      "features": {
+        "translategemma-1": {
+          "output": "слушать"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["klausýtis"]
+        }
+      }
+    },
+    {
+      "input": "klinika",
+      "features": {
+        "translategemma-1": {
+          "output": "клиника"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["klìnika"]
+        }
+      }
+    },
+    {
+      "input": "knyga",
+      "features": {
+        "translategemma-1": {
+          "output": "книга."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "knygà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "koja",
+      "features": {
+        "translategemma-1": {
+          "output": "нога"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kója"]
+        }
+      }
+    },
+    {
+      "input": "kojinės",
+      "features": {
+        "translategemma-1": {
+          "output": "гетры."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kójinės"]
+        }
+      }
+    },
+    {
+      "input": "kokybė",
+      "features": {
+        "translategemma-1": {
+          "output": "качество."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kokýbė"]
+        }
+      }
+    },
+    {
+      "input": "koks",
+      "features": {
+        "translategemma-1": {
+          "output": "какой"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kóks"]
+        }
+      }
+    },
+    {
+      "input": "kolegija",
+      "features": {
+        "translategemma-1": {
+          "output": "коллегия."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kolègija"]
+        }
+      }
+    },
+    {
+      "input": "kombinezonas",
+      "features": {
+        "translategemma-1": {
+          "output": "комбинезон"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kombinezònas"]
+        }
+      }
+    },
+    {
+      "input": "kompiuteris",
+      "features": {
+        "translategemma-1": {
+          "output": "компьютер."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kompiùteris"]
+        }
+      }
+    },
+    {
+      "input": "koncertas",
+      "features": {
+        "translategemma-1": {
+          "output": "концерт."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "koncer̃tas",
+              "accentType": "MULTIPLE_VARIANT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "konkursas",
+      "features": {
+        "translategemma-1": {
+          "output": "конкурс."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["konkùrsas"]
+        }
+      }
+    },
+    {
+      "input": "konteineris",
+      "features": {
+        "translategemma-1": {
+          "output": "контейнер"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["konteĩneris"]
+        }
+      }
+    },
+    {
+      "input": "kopijuoti",
+      "features": {
+        "translategemma-1": {
+          "output": "копировать."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kopijúoti"]
+        }
+      }
+    },
+    {
+      "input": "kopūstas",
+      "features": {
+        "translategemma-1": {
+          "output": "капуста"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kopū̃stas"]
+        }
+      }
+    },
+    {
+      "input": "koridorius",
+      "features": {
+        "translategemma-1": {
+          "output": "коридор."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["korìdorius"]
+        }
+      }
+    },
+    {
+      "input": "kortelė",
+      "features": {
+        "translategemma-1": {
+          "output": "карточка"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kortẽlė"]
+        }
+      }
+    },
+    {
+      "input": "kosulys",
+      "features": {
+        "translategemma-1": {
+          "output": "кофта"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kosulỹs"]
+        }
+      }
+    },
+    {
+      "input": "košė",
+      "features": {
+        "translategemma-1": {
+          "output": "каша"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "kõšė",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "kovas",
+      "features": {
+        "translategemma-1": {
+          "output": "март"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "kovàs",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "kraujo tyrimai",
+      "features": {
+        "translategemma-1": {
+          "output": "анализы крови"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kraũjo", "tyrìmai"]
+        }
+      }
+    },
+    {
+      "input": "krepšelis",
+      "features": {
+        "translategemma-1": {
+          "output": "баскетбол."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["krepšẽlis"]
+        }
+      }
+    },
+    {
+      "input": "krepšinis",
+      "features": {
+        "translategemma-1": {
+          "output": "баскетбол."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["krepšìnis"]
+        }
+      }
+    },
+    {
+      "input": "krepšys",
+      "features": {
+        "translategemma-1": {
+          "output": "сумка."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["krepšỹs"]
+        }
+      }
+    },
+    {
+      "input": "kriaušė",
+      "features": {
+        "translategemma-1": {
+          "output": "груша"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kriáušė"]
+        }
+      }
+    },
+    {
+      "input": "kryptis",
+      "features": {
+        "translategemma-1": {
+          "output": "направление"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kryptìs"]
+        }
+      }
+    },
+    {
+      "input": "kuprinė",
+      "features": {
+        "translategemma-1": {
+          "output": "рюкзак"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kuprìnė"]
+        }
+      }
+    },
+    {
+      "input": "kur",
+      "features": {
+        "translategemma-1": {
+          "output": "где"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kur̃"]
+        }
+      }
+    },
+    {
+      "input": "kvalifikacija",
+      "features": {
+        "translategemma-1": {
+          "output": "квалификация"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["kvalifikãcija"]
+        }
+      }
+    },
+    {
+      "input": "labanakt",
+      "features": {
+        "translategemma-1": {
+          "output": "Спокойной ночи."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["labãnakt"]
+        }
+      }
+    },
+    {
+      "input": "labas rytas",
+      "features": {
+        "translategemma-1": {
+          "output": "Доброе утро."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "lãbas",
+              "accentType": "MULTIPLE_MEANING"
+            },
+            "rýtas"
+          ]
+        }
+      }
+    },
+    {
+      "input": "labas vakaras",
+      "features": {
+        "translategemma-1": {
+          "output": "Добрый вечер."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "lãbas",
+              "accentType": "MULTIPLE_MEANING"
+            },
+            "vãkaras"
+          ]
+        }
+      }
+    },
+    {
+      "input": "laba diena",
+      "features": {
+        "translategemma-1": {
+          "output": "Добрый день."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "labà",
+              "accentType": "MULTIPLE_MEANING"
+            },
+            {
+              "accented": "dienà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "labai",
+      "features": {
+        "translategemma-1": {
+          "output": "очень"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "labaĩ",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "labai sunku",
+      "features": {
+        "translategemma-1": {
+          "output": "очень сложно."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "labaĩ",
+              "accentType": "MULTIPLE_MEANING"
+            },
+            "sunkù"
+          ]
+        }
+      }
+    },
+    {
+      "input": "laboratorija",
+      "features": {
+        "translategemma-1": {
+          "output": "лаборатория"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["laboratòrija"]
+        }
+      }
+    },
+    {
+      "input": "laikyti egzaminą",
+      "features": {
+        "translategemma-1": {
+          "output": "сдать экзамен"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["laikýti", "egzãminą"]
+        }
+      }
+    },
+    {
+      "input": "laipsnis",
+      "features": {
+        "translategemma-1": {
+          "output": "степень"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["láipsnis"]
+        }
+      }
+    },
+    {
+      "input": "laiptai",
+      "features": {
+        "translategemma-1": {
+          "output": "лестница."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "láiptai",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "laisvalaikio prekės",
+      "features": {
+        "translategemma-1": {
+          "output": "товары для досуга."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["laisvãlaikio", "prẽkės"]
+        }
+      }
+    },
+    {
+      "input": "laisva diena",
+      "features": {
+        "translategemma-1": {
+          "output": "свободный день."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "laisvà",
+              "accentType": "MULTIPLE_MEANING"
+            },
+            {
+              "accented": "dienà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "laivas",
+      "features": {
+        "translategemma-1": {
+          "output": "корабль"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["laĩvas"]
+        }
+      }
+    },
+    {
+      "input": "langas",
+      "features": {
+        "translategemma-1": {
+          "output": "окно"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["lángas"]
+        }
+      }
+    },
+    {
+      "input": "lapkritis",
+      "features": {
+        "translategemma-1": {
+          "output": "осенний месяц"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["lãpkritis"]
+        }
+      }
+    },
+    {
+      "input": "lašai",
+      "features": {
+        "translategemma-1": {
+          "output": "капли"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["lašaĩ"]
+        }
+      }
+    },
+    {
+      "input": "lašiša",
+      "features": {
+        "translategemma-1": {
+          "output": "лосось"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "lašišà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "lauke",
+      "features": {
+        "translategemma-1": {
+          "output": "на улице"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "laukè",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "ledai",
+      "features": {
+        "translategemma-1": {
+          "output": "мороженое"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["ledaĩ"]
+        }
+      }
+    },
+    {
+      "input": "lempa",
+      "features": {
+        "translategemma-1": {
+          "output": "лампа"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "lémpa",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "lentyna",
+      "features": {
+        "translategemma-1": {
+          "output": "полка"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["lentýna"]
+        }
+      }
+    },
+    {
+      "input": "lėktuvas",
+      "features": {
+        "translategemma-1": {
+          "output": "самолет."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["lėktùvas"]
+        }
+      }
+    },
+    {
+      "input": "liepa",
+      "features": {
+        "translategemma-1": {
+          "output": "июль"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["líepa"]
+        }
+      }
+    },
+    {
+      "input": "lietuvių kalba",
+      "features": {
+        "translategemma-1": {
+          "output": "литовский язык."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            "lietùvių",
+            {
+              "accented": "kalbà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "liftas",
+      "features": {
+        "translategemma-1": {
+          "output": "лифт."
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["lìftas"]
+        }
+      }
+    },
+    {
+      "input": "žmona",
+      "features": {
+        "translategemma-1": {
+          "output": "жена"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": [
+            {
+              "accented": "žmonà",
+              "accentType": "MULTIPLE_MEANING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input": "žuvis",
+      "features": {
+        "translategemma-1": {
+          "output": "рыба"
+        },
+        "vdu-kirciuoklis-1": {
+          "output": ["žuvìs"]
+        }
       }
     }
   ]
