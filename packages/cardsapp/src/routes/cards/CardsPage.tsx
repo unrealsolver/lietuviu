@@ -3,7 +3,11 @@ import { db } from "../../db";
 import { AnimatedCard } from "./AnimatedCard";
 import classes from "./CardsPage.module.css";
 import type { WordStat } from "./util";
-import type { OutputBank, OutputBankItem } from "@ltk/processing";
+import {
+  OutputBankView,
+  type OutputBank,
+  type OutputBankItem,
+} from "@ltk/processing";
 import {
   ActionIcon,
   Center,
@@ -19,13 +23,9 @@ import { useEffect, useRef, useState } from "react";
 
 const _bank = await import("@ltk/databanks");
 const bank = _bank as OutputBank;
+const bankView = new OutputBankView(bank);
 
 type Word = string;
-
-const translationFeatureId =
-  bank.features.find((f) => f.type === "TRANSLATION")?.id ?? "";
-const phoneticsFeatureId =
-  bank.features.find((f) => f.type === "PHONETICS")?.id ?? "";
 const items: OutputBankItem[] = bank.data;
 
 const ALMOST_ONE = 0.999999;
@@ -204,8 +204,7 @@ export function CardsPage() {
           onSwipeRight={handleSwipeRight}
           word={currentWord}
           item={currentItem}
-          translationFeatureId={translationFeatureId}
-          phoneticsFeatureId={phoneticsFeatureId}
+          bankView={bankView}
           key={currentWord}
           stat={wordStat[currentWord]}
         />

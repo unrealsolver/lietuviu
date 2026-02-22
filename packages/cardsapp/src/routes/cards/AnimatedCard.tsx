@@ -1,11 +1,7 @@
 import cardClasses from "./Card.module.css";
 import { MyCard } from "./MyCard";
 import type { WordStat } from "./util";
-import type {
-  OutputBankItem,
-  PhoneticsOutput,
-  TranslationOutput,
-} from "@ltk/processing";
+import type { OutputBankItem, OutputBankView } from "@ltk/processing";
 import { Stack, Title } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useSpring, animated, to, config } from "@react-spring/web";
@@ -14,8 +10,7 @@ import { useDrag } from "@use-gesture/react";
 type AnimatedCardProps = {
   word: string;
   item: OutputBankItem;
-  translationFeatureId: string;
-  phoneticsFeatureId: string;
+  bankView: OutputBankView;
   onSwipeLeft: (word: string) => void;
   onSwipeRight: (word: string) => void;
   stat: WordStat;
@@ -24,15 +19,14 @@ type AnimatedCardProps = {
 export function AnimatedCard({
   word,
   item,
-  translationFeatureId,
-  phoneticsFeatureId,
+  bankView,
   onSwipeLeft,
   onSwipeRight,
   stat,
 }: AnimatedCardProps) {
   const [isFlipped, { toggle }] = useDisclosure(false);
-  const accent = readAccent(item, phoneticsFeatureId);
-  const translation = readTranslation(item, translationFeatureId);
+  const accent = readAccent(bankView, item);
+  const translation = readTranslation(bankView, item);
 
   const [{ opacity, rot, ...style }, api] = useSpring(() => ({
     from: { opacity: 0, scale: 0.5, y: 0, x: 0, rot: 0 },
@@ -150,13 +144,8 @@ export function AnimatedCard({
   );
 }
 
-function readAccent(item: OutputBankItem, featureId: string): string {
-  if (featureId === "") {
-    return item.input;
-  }
-  const output = item.features[featureId]?.output as
-    | PhoneticsOutput
-    | undefined;
+function readAccent(view: OutputBankView, item: OutputBankItem): string {
+  const output = view.resolveFeatureOutput(item, "PHONETICS");
   if (!Array.isArray(output) || output.length === 0) {
     return item.input;
   }
@@ -168,13 +157,8 @@ function readAccent(item: OutputBankItem, featureId: string): string {
   return pieces.length > 0 ? pieces.join(" ") : item.input;
 }
 
-function readTranslation(item: OutputBankItem, featureId: string): string {
-  if (featureId === "") {
-    return "";
-  }
-  const output = item.features[featureId]?.output as
-    | TranslationOutput
-    | undefined;
+function readTranslation(view: OutputBankView, item: OutputBankItem): string {
+  const output = view.resolveFeatureOutput(item, "TRANSLATION");
   if (typeof output === "string") {
     return output;
   }
