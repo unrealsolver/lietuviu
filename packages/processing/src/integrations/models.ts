@@ -6,8 +6,6 @@ export type FeatureConfig = {
   options: Record<string, unknown>;
 };
 
-export type FeatureType = "TRANSLATION" | "PHONETICS" | "MORPHOLOGY";
-
 // Canonical TRANSLATION output shape across providers.
 export type TranslationOutput =
   | string
@@ -28,6 +26,19 @@ export type PhoneticsPiece =
 // Canonical PHONETICS output shape across providers.
 export type PhoneticsOutput = PhoneticsPiece[];
 
+// Canonical MORPHOLOGY output shape placeholder until first morphology plugin lands.
+export type MorphologyOutput = Record<string, unknown>;
+
+export type FeatureOutputByType = {
+  TRANSLATION: TranslationOutput;
+  PHONETICS: PhoneticsOutput;
+  MORPHOLOGY: MorphologyOutput;
+};
+
+export type FeatureType = keyof FeatureOutputByType;
+
+export type AnyFeatureOutput = FeatureOutputByType[keyof FeatureOutputByType];
+
 export type InputBank = {
   schemaVersion: string;
   title: string;
@@ -43,12 +54,13 @@ type FeatureId = string;
 export type OutputBankFeature = {
   id: FeatureId;
   type: FeatureType | string;
+  group?: string;
   provider: string;
   version: string;
 };
 
 export type OutputBankItemFeatureValue = {
-  output: unknown;
+  output: AnyFeatureOutput;
 };
 
 export type OutputBankItem = {

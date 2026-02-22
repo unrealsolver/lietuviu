@@ -16,6 +16,7 @@
     {
       "id": "translategemma-pure",
       "provider": "translategemma",
+      "group": "experimental",
       "options": {
         "sourceLanguage": "lt-lt",
         "targetLanguage": "ru-ru"

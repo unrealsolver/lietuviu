@@ -4,25 +4,26 @@
   "description": "",
   "author": "System",
   "sourceLanguage": "lit",
-  "generatedAt": "2026-02-22T16:27:49.581Z",
+  "generatedAt": "2026-02-22T21:48:16.484Z",
   "features": [
     {
       "id": "translategemma-1",
       "type": "TRANSLATION",
       "provider": "translategemma",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "id": "translategemma-pure",
       "type": "TRANSLATION",
+      "group": "experimental",
       "provider": "translategemma",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "id": "vdu-kirciuoklis-1",
       "type": "PHONETICS",
       "provider": "vdu_kirciuoklis",
-      "version": "0.3.0"
+      "version": "0.3.1"
     }
   ],
   "data": [

@@ -179,6 +179,7 @@ function buildOutputBank(
     featureId: string;
     provider: string;
     kind: string;
+    group?: string;
     version: string;
     outputs: Array<{ input: string; output?: unknown; error?: string }>;
   }>,
@@ -189,6 +190,7 @@ function buildOutputBank(
     return {
       id: result.featureId,
       type: result.kind,
+      group: result.group,
       provider: result.provider,
       version: result.version,
       outputs: result.outputs,
@@ -218,6 +220,7 @@ function buildOutputBank(
     features: featureMeta.map((feature) => ({
       id: feature.id,
       type: feature.type,
+      group: feature.group,
       provider: feature.provider,
       version: feature.version,
     })),

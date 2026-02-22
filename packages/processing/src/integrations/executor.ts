@@ -14,6 +14,7 @@ export type FeatureRunResult = {
   featureId: string;
   provider: string;
   kind: Plugin["kind"];
+  group?: string;
   version: string;
   outputs: Array<{
     input: string;
@@ -324,6 +325,7 @@ async function executeFeatureGroup(params: {
       featureId: member.featureId,
       provider: member.plugin.provider,
       kind: member.plugin.kind,
+      group: normalizeFeatureGroup(member.feature.group),
       version: member.plugin.version,
       outputs,
     } satisfies FeatureRunResult;
@@ -370,9 +372,13 @@ function resolveCollapseGroupKey(
   kind: Plugin["kind"],
   groupOverride: string | undefined,
 ): string {
-  const rawGroup = groupOverride?.trim();
-  const group = rawGroup && rawGroup.length > 0 ? rawGroup : "default";
+  const group = normalizeFeatureGroup(groupOverride) ?? "default";
   return `${kind}:${group}`;
+}
+
+function normalizeFeatureGroup(group: string | undefined): string | undefined {
+  const rawGroup = group?.trim();
+  return rawGroup != null && rawGroup.length > 0 ? rawGroup : undefined;
 }
 
 async function callExternalWithReplay<TResponse>(params: {
