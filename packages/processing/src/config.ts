@@ -1,3 +1,4 @@
+import { lietuviuRusu } from "./integrations/lietuviuRusu";
 import { translategemma } from "./integrations/translategemma/";
 import { vduKirciuoklis } from "./integrations/vdu_kirciuoklis";
 import type { ProcessingRuntimeConfig } from "./runtime";
@@ -7,7 +8,7 @@ export const processingConfig: ProcessingRuntimeConfig = {
     inDir: "../databanks/sources",
     outDir: "../databanks/dist",
   },
-  plugins: [translategemma(), vduKirciuoklis()],
+  plugins: [lietuviuRusu(), translategemma(), vduKirciuoklis()],
   defaults: {
     replayPolicy: "REPLAY_THEN_LIVE",
     featureConcurrency: 4,

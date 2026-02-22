@@ -51,6 +51,7 @@ type ExternalHttpRequest = {
   body?: unknown;
   form?: Record<string, string>;
   timeoutMs?: number;
+  responseType?: "json" | "text";
 };
 
 type ExecutorOptions = {
@@ -500,6 +501,10 @@ async function performExternalCall<TResponse>(
     throw new Error(
       `External call failed: ${res.status} ${res.statusText} ${errBody}`.trim(),
     );
+  }
+
+  if ((request.responseType ?? "json") === "text") {
+    return (await res.text()) as TResponse;
   }
 
   return (await res.json()) as TResponse;

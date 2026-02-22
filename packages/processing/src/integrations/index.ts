@@ -4,4 +4,5 @@ export * from "./models";
 export * from "./plugin";
 
 export * as translategemma from "./translategemma";
+export * as lietuviuRusu from "./lietuviuRusu";
 export * as vdu_kirciuoklis from "./vdu_kirciuoklis";

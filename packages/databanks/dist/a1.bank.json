@@ -4,8 +4,14 @@
   "description": "",
   "author": "System",
   "sourceLanguage": "lit",
-  "generatedAt": "2026-02-22T21:48:16.484Z",
+  "generatedAt": "2026-02-22T22:29:02.761Z",
   "features": [
+    {
+      "id": "lietuviurusu-1",
+      "type": "TRANSLATION",
+      "provider": "lietuviuRusu",
+      "version": "0.1.0"
+    },
     {
       "id": "translategemma-1",
       "type": "TRANSLATION",
@@ -30,8 +36,8 @@
     {
       "input": "ačiū",
       "features": {
-        "translategemma-1": {
-          "output": "спасибо"
+        "lietuviurusu-1": {
+          "output": "спасибо, благодарю"
         },
         "translategemma-pure": {
           "output": "Спасибо"
@@ -58,7 +64,7 @@
     {
       "input": "agurkas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "огурец"
         },
         "translategemma-pure": {
@@ -72,7 +78,7 @@
     {
       "input": "aikštelė",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "площадка"
         },
         "translategemma-pure": {
@@ -86,8 +92,8 @@
     {
       "input": "aikštė",
       "features": {
-        "translategemma-1": {
-          "output": "площадь"
+        "lietuviurusu-1": {
+          "output": "площадь (город.); поляна; поле, площадка (спорт); išeiti, iškilti aikštėn - выходить наружу; обнаружиться; iškelti aikštėn - вскрывать; выявлять"
         },
         "translategemma-pure": {
           "output": "площадь"
@@ -105,8 +111,8 @@
     {
       "input": "aišku",
       "features": {
-        "translategemma-1": {
-          "output": "понятно"
+        "lietuviurusu-1": {
+          "output": "ясно; понятно"
         },
         "translategemma-pure": {
           "output": "Конечно., Понятно., Ясно., Хорошо., Окей"
@@ -119,7 +125,7 @@
     {
       "input": "akademija",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "академия"
         },
         "translategemma-pure": {
@@ -133,7 +139,7 @@
     {
       "input": "akcija",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "акция"
         },
         "translategemma-pure": {
@@ -147,8 +153,8 @@
     {
       "input": "akis",
       "features": {
-        "translategemma-1": {
-          "output": "глаз"
+        "lietuviurusu-1": {
+          "output": "глаз око; окно омут; ячейка; петля"
         },
         "translategemma-pure": {
           "output": "глаз"
@@ -180,8 +186,8 @@
     {
       "input": "alga",
       "features": {
-        "translategemma-1": {
-          "output": "зарплата"
+        "lietuviurusu-1": {
+          "output": "оклад; жалование, зарплата"
         },
         "translategemma-pure": {
           "output": "зарплата"
@@ -199,8 +205,8 @@
     {
       "input": "alkanas",
       "features": {
-        "translategemma-1": {
-          "output": "алкан"
+        "lietuviurusu-1": {
+          "output": "голодный"
         },
         "translategemma-pure": {
           "output": "алкан"
@@ -233,7 +239,7 @@
     {
       "input": "alus",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "пиво"
         },
         "translategemma-pure": {
@@ -267,7 +273,7 @@
     {
       "input": "anksti",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "рано"
         },
         "translategemma-pure": {
@@ -281,7 +287,7 @@
     {
       "input": "antradienis",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "вторник"
         },
         "translategemma-pure": {
@@ -295,7 +301,7 @@
     {
       "input": "apelsinas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "апельсин"
         },
         "translategemma-pure": {
@@ -309,8 +315,8 @@
     {
       "input": "aplankas",
       "features": {
-        "translategemma-1": {
-          "output": "папка"
+        "lietuviurusu-1": {
+          "output": "обложка; папка; папка; суперобложка; околыш (фуражки)"
         },
         "translategemma-pure": {
           "output": "папка"
@@ -337,8 +343,8 @@
     {
       "input": "apsipirkti",
       "features": {
-        "translategemma-1": {
-          "output": "покупать"
+        "lietuviurusu-1": {
+          "output": "сделать, делать необходимые покупки"
         },
         "translategemma-pure": {
           "output": "сходить за покупками; совершить покупки"
@@ -356,8 +362,8 @@
     {
       "input": "arbata",
       "features": {
-        "translategemma-1": {
-          "output": "работа"
+        "lietuviurusu-1": {
+          "output": "чай"
         },
         "translategemma-pure": {
           "output": "работа"
@@ -389,8 +395,8 @@
     {
       "input": "arti",
       "features": {
-        "translategemma-1": {
-          "output": "близко"
+        "lietuviurusu-1": {
+          "output": "близ возле подле; вблизи близко"
         },
         "translategemma-pure": {
           "output": "близко"
@@ -436,8 +442,8 @@
     {
       "input": "ateiti",
       "features": {
-        "translategemma-1": {
-          "output": "прийти"
+        "lietuviurusu-1": {
+          "output": "приходить;-наступить; настать"
         },
         "translategemma-pure": {
           "output": "прийти"
@@ -469,8 +475,8 @@
     {
       "input": "atidaryti",
       "features": {
-        "translategemma-1": {
-          "output": "открыть"
+        "lietuviurusu-1": {
+          "output": "открыть; открывать"
         },
         "translategemma-pure": {
           "output": "открыть"
@@ -483,8 +489,8 @@
     {
       "input": "atidėti",
       "features": {
-        "translategemma-1": {
-          "output": "отложить"
+        "lietuviurusu-1": {
+          "output": "откладывать, отсрочивать"
         },
         "translategemma-pure": {
           "output": "отложить, отсрочить"
@@ -523,8 +529,8 @@
     {
       "input": "atostogauti",
       "features": {
-        "translategemma-1": {
-          "output": "отдыхать, проводить отпуск"
+        "lietuviurusu-1": {
+          "output": "находиться в отпуске; проводить каникулы"
         },
         "translategemma-pure": {
           "output": "отдыхать, проводить отпуск"
@@ -537,8 +543,8 @@
     {
       "input": "atostogos",
       "features": {
-        "translategemma-1": {
-          "output": "отпуск"
+        "lietuviurusu-1": {
+          "output": "отпуск; каникулы"
         },
         "translategemma-pure": {
           "output": "отпуск"
@@ -551,8 +557,8 @@
     {
       "input": "atsikelti",
       "features": {
-        "translategemma-1": {
-          "output": "встать с постели"
+        "lietuviurusu-1": {
+          "output": "встать; вставать; подняться; переселяться"
         },
         "translategemma-pure": {
           "output": "встать, проснуться"
@@ -584,8 +590,8 @@
     {
       "input": "atvažiuoti",
       "features": {
-        "translategemma-1": {
-          "output": "приезжать"
+        "lietuviurusu-1": {
+          "output": "приезжать, доезжать"
         },
         "translategemma-pure": {
           "output": "приезжать"
@@ -598,8 +604,8 @@
     {
       "input": "atvykti",
       "features": {
-        "translategemma-1": {
-          "output": "прибыть"
+        "lietuviurusu-1": {
+          "output": "прибыть; прибывать; являться"
         },
         "translategemma-pure": {
           "output": "прибыть, приехать"
@@ -631,7 +637,7 @@
     {
       "input": "auksas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "золото"
         },
         "translategemma-pure": {
@@ -645,8 +651,8 @@
     {
       "input": "aukščiau",
       "features": {
-        "translategemma-1": {
-          "output": "выше"
+        "lietuviurusu-1": {
+          "output": "выше; над"
         },
         "translategemma-pure": {
           "output": "выше"
@@ -659,8 +665,8 @@
     {
       "input": "aukštas",
       "features": {
-        "translategemma-1": {
-          "output": "высокий"
+        "lietuviurusu-1": {
+          "output": "этаж; ярус; чердак; высокий"
         },
         "translategemma-pure": {
           "output": "высокий"
@@ -678,8 +684,8 @@
     {
       "input": "aukštyn",
       "features": {
-        "translategemma-1": {
-          "output": "вверх"
+        "lietuviurusu-1": {
+          "output": "вверх; кверху"
         },
         "translategemma-pure": {
           "output": "вверх"
@@ -692,8 +698,8 @@
     {
       "input": "ausinės",
       "features": {
-        "translategemma-1": {
-          "output": "Наушники"
+        "lietuviurusu-1": {
+          "output": "наушники"
         },
         "translategemma-pure": {
           "output": "Наушники"
@@ -706,8 +712,8 @@
     {
       "input": "ausis",
       "features": {
-        "translategemma-1": {
-          "output": "уши"
+        "lietuviurusu-1": {
+          "output": "ухо"
         },
         "translategemma-pure": {
           "output": "уши"
@@ -725,7 +731,7 @@
     {
       "input": "autobusas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "автобус"
         },
         "translategemma-pure": {
@@ -820,7 +826,7 @@
     {
       "input": "avalynė",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "обувь"
         },
         "translategemma-pure": {
@@ -867,8 +873,8 @@
     {
       "input": "baigti",
       "features": {
-        "translategemma-1": {
-          "output": "закончить"
+        "lietuviurusu-1": {
+          "output": "кончить; кончать; заканчивать; завершать"
         },
         "translategemma-pure": {
           "output": "закончить, завершить, окончить"
@@ -900,8 +906,8 @@
     {
       "input": "balandis",
       "features": {
-        "translategemma-1": {
-          "output": "апрель"
+        "lietuviurusu-1": {
+          "output": "апрель; голубь"
         },
         "translategemma-pure": {
           "output": "апрель"
@@ -928,8 +934,8 @@
     {
       "input": "baltas",
       "features": {
-        "translategemma-1": {
-          "output": "белый"
+        "lietuviurusu-1": {
+          "output": "белый, балтиец"
         },
         "translategemma-pure": {
           "output": "белый"
@@ -956,8 +962,8 @@
     {
       "input": "bandelė",
       "features": {
-        "translategemma-1": {
-          "output": "бант (для волос)"
+        "lietuviurusu-1": {
+          "output": "булочка, колобок, сайка"
         },
         "translategemma-pure": {
           "output": "бант (для волос)"
@@ -970,7 +976,7 @@
     {
       "input": "bankas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "банк"
         },
         "translategemma-pure": {
@@ -984,8 +990,8 @@
     {
       "input": "baras",
       "features": {
-        "translategemma-1": {
-          "output": "бар"
+        "lietuviurusu-1": {
+          "output": "бар; участок, сфера деятельности"
         },
         "translategemma-pure": {
           "output": "бар"
@@ -1096,7 +1102,7 @@
     {
       "input": "biblioteka",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "библиотека"
         },
         "translategemma-pure": {
@@ -1143,7 +1149,7 @@
     {
       "input": "birželis",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "июнь"
         },
         "translategemma-pure": {
@@ -1157,7 +1163,7 @@
     {
       "input": "biuras",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "офис"
         },
         "translategemma-pure": {
@@ -1199,7 +1205,7 @@
     {
       "input": "blogai",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "плохо"
         },
         "translategemma-pure": {
@@ -1218,8 +1224,8 @@
     {
       "input": "blogas",
       "features": {
-        "translategemma-1": {
-          "output": "плохо"
+        "lietuviurusu-1": {
+          "output": "плохой; дурной; слабый; худой"
         },
         "translategemma-pure": {
           "output": "плохо"
@@ -1270,7 +1276,7 @@
     {
       "input": "brolis",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "брат"
         },
         "translategemma-pure": {
@@ -1284,8 +1290,8 @@
     {
       "input": "bulvė",
       "features": {
-        "translategemma-1": {
-          "output": "картофель"
+        "lietuviurusu-1": {
+          "output": "картофелина"
         },
         "translategemma-pure": {
           "output": "картофель"
@@ -1312,7 +1318,7 @@
     {
       "input": "butas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "квартира"
         },
         "translategemma-pure": {
@@ -1326,7 +1332,7 @@
     {
       "input": "butelis",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "бутылка"
         },
         "translategemma-pure": {
@@ -1340,8 +1346,8 @@
     {
       "input": "būti",
       "features": {
-        "translategemma-1": {
-          "output": "быть"
+        "lietuviurusu-1": {
+          "output": "быть находиться являться состояться"
         },
         "translategemma-pure": {
           "output": "быть"
@@ -1415,7 +1421,7 @@
     {
       "input": "čekis",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "чек"
         },
         "translategemma-pure": {
@@ -1429,7 +1435,7 @@
     {
       "input": "česnakas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "чеснок"
         },
         "translategemma-pure": {
@@ -1443,8 +1449,8 @@
     {
       "input": "čia",
       "features": {
-        "translategemma-1": {
-          "output": "здесь"
+        "lietuviurusu-1": {
+          "output": "тут; здесь"
         },
         "translategemma-pure": {
           "output": "здесь"
@@ -1471,7 +1477,7 @@
     {
       "input": "dailininkas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "художник"
         },
         "translategemma-pure": {
@@ -1499,7 +1505,7 @@
     {
       "input": "dainuoti",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "петь"
         },
         "translategemma-pure": {
@@ -1513,8 +1519,8 @@
     {
       "input": "dantis",
       "features": {
-        "translategemma-1": {
-          "output": "зуб"
+        "lietuviurusu-1": {
+          "output": "зуб; зубец (техн.)"
         },
         "translategemma-pure": {
           "output": "зуб"
@@ -1527,8 +1533,8 @@
     {
       "input": "darbas",
       "features": {
-        "translategemma-1": {
-          "output": "работа"
+        "lietuviurusu-1": {
+          "output": "работа, труд; занятие, дело"
         },
         "translategemma-pure": {
           "output": "работа"
@@ -1541,8 +1547,8 @@
     {
       "input": "darbininkas",
       "features": {
-        "translategemma-1": {
-          "output": "рабочий"
+        "lietuviurusu-1": {
+          "output": "рабочий, работник"
         },
         "translategemma-pure": {
           "output": "рабочий"
@@ -1651,8 +1657,8 @@
     {
       "input": "dažai",
       "features": {
-        "translategemma-1": {
-          "output": "краски"
+        "lietuviurusu-1": {
+          "output": "краска"
         },
         "translategemma-pure": {
           "output": "краски"
@@ -1670,8 +1676,8 @@
     {
       "input": "dažyti",
       "features": {
-        "translategemma-1": {
-          "output": "красить"
+        "lietuviurusu-1": {
+          "output": "красить; окрашивать; макать"
         },
         "translategemma-pure": {
           "output": "красить, красить, окрашивать"
@@ -1684,7 +1690,7 @@
     {
       "input": "dažnai",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "часто"
         },
         "translategemma-pure": {
@@ -1703,8 +1709,8 @@
     {
       "input": "degtinė",
       "features": {
-        "translategemma-1": {
-          "output": "коньяк"
+        "lietuviurusu-1": {
+          "output": "водка"
         },
         "translategemma-pure": {
           "output": "бренди"
@@ -1731,8 +1737,8 @@
     {
       "input": "dešinė",
       "features": {
-        "translategemma-1": {
-          "output": "правый"
+        "lietuviurusu-1": {
+          "output": "правая рука; правая сторона"
         },
         "translategemma-pure": {
           "output": "правый бок; правая сторона; правый (о политических убеждениях)"
@@ -1778,7 +1784,7 @@
     {
       "input": "dėdė",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "дядя"
         },
         "translategemma-pure": {
@@ -1792,7 +1798,7 @@
     {
       "input": "dėstytojas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "преподаватель"
         },
         "translategemma-pure": {
@@ -1806,8 +1812,8 @@
     {
       "input": "dėžė",
       "features": {
-        "translategemma-1": {
-          "output": "коробка"
+        "lietuviurusu-1": {
+          "output": "ящик; коробка"
         },
         "translategemma-pure": {
           "output": "коробка"
@@ -1820,8 +1826,8 @@
     {
       "input": "dėžutė",
       "features": {
-        "translategemma-1": {
-          "output": "коробка"
+        "lietuviurusu-1": {
+          "output": "ящичек; коробочка; ларчик"
         },
         "translategemma-pure": {
           "output": "коробка"
@@ -1834,8 +1840,8 @@
     {
       "input": "didelis",
       "features": {
-        "translategemma-1": {
-          "output": "большой"
+        "lietuviurusu-1": {
+          "output": "большой, обширный; высокий (рост)"
         },
         "translategemma-pure": {
           "output": "большой"
@@ -1862,7 +1868,7 @@
     {
       "input": "diena",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "день"
         },
         "translategemma-pure": {
@@ -1918,8 +1924,8 @@
     {
       "input": "dirbti",
       "features": {
-        "translategemma-1": {
-          "output": "работать"
+        "lietuviurusu-1": {
+          "output": "работать; трудиться; делать; выделывать; обрабатывать"
         },
         "translategemma-pure": {
           "output": "работать"
@@ -1937,7 +1943,7 @@
     {
       "input": "direktorius",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "директор"
         },
         "translategemma-pure": {
@@ -1951,8 +1957,8 @@
     {
       "input": "dydis",
       "features": {
-        "translategemma-1": {
-          "output": "размер"
+        "lietuviurusu-1": {
+          "output": "величина; размер"
         },
         "translategemma-pure": {
           "output": "размер"
@@ -2021,8 +2027,8 @@
     {
       "input": "drabužinė",
       "features": {
-        "translategemma-1": {
-          "output": "гардеробная"
+        "lietuviurusu-1": {
+          "output": "гардероб"
         },
         "translategemma-pure": {
           "output": "гардеробная комната"
@@ -2035,8 +2041,8 @@
     {
       "input": "draudimas",
       "features": {
-        "translategemma-1": {
-          "output": "страховка"
+        "lietuviurusu-1": {
+          "output": "запрещение, запрет; страхование, страховка"
         },
         "translategemma-pure": {
           "output": "страхование"
@@ -2077,8 +2083,8 @@
     {
       "input": "duktė",
       "features": {
-        "translategemma-1": {
-          "output": "дыхание"
+        "lietuviurusu-1": {
+          "output": "дочь"
         },
         "translategemma-pure": {
           "output": "задуха, удушье"
@@ -2091,7 +2097,7 @@
     {
       "input": "dulkių siurblys",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "пылесос"
         },
         "translategemma-pure": {
@@ -2105,7 +2111,7 @@
     {
       "input": "duona",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "хлеб"
         },
         "translategemma-pure": {
@@ -2119,8 +2125,8 @@
     {
       "input": "duoti",
       "features": {
-        "translategemma-1": {
-          "output": "давать"
+        "lietuviurusu-1": {
+          "output": "дать; давать"
         },
         "translategemma-pure": {
           "output": "дать"
@@ -2138,8 +2144,8 @@
     {
       "input": "durys",
       "features": {
-        "translategemma-1": {
-          "output": "двери"
+        "lietuviurusu-1": {
+          "output": "дверь"
         },
         "translategemma-pure": {
           "output": "двери"
@@ -2166,7 +2172,7 @@
     {
       "input": "dviratis",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "велосипед"
         },
         "translategemma-pure": {
@@ -2213,7 +2219,7 @@
     {
       "input": "egzaminas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "экзамен"
         },
         "translategemma-pure": {
@@ -2227,8 +2233,8 @@
     {
       "input": "eilė",
       "features": {
-        "translategemma-1": {
-          "output": "очередь"
+        "lietuviurusu-1": {
+          "output": "ряд очередь порядок слой; стихотворение"
         },
         "translategemma-pure": {
           "output": "очередь"
@@ -2241,8 +2247,8 @@
     {
       "input": "eiti",
       "features": {
-        "translategemma-1": {
-          "output": "идти"
+        "lietuviurusu-1": {
+          "output": "идти; ходить; отправляться"
         },
         "translategemma-pure": {
           "output": "идти"
@@ -2327,8 +2333,8 @@
     {
       "input": "euras",
       "features": {
-        "translategemma-1": {
-          "output": "евро"
+        "lietuviurusu-1": {
+          "output": "eвро"
         },
         "translategemma-pure": {
           "output": "евро"
@@ -2341,7 +2347,7 @@
     {
       "input": "ežeras",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "озеро"
         },
         "translategemma-pure": {
@@ -2355,7 +2361,7 @@
     {
       "input": "filmas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "фильм"
         },
         "translategemma-pure": {
@@ -2397,7 +2403,7 @@
     {
       "input": "gabaliukas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "кусочек"
         },
         "translategemma-pure": {
@@ -2411,8 +2417,8 @@
     {
       "input": "gaila",
       "features": {
-        "translategemma-1": {
-          "output": "Жаль"
+        "lietuviurusu-1": {
+          "output": "жаль, жалко"
         },
         "translategemma-pure": {
           "output": "Жаль"
@@ -2425,7 +2431,7 @@
     {
       "input": "gaisras",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "пожар"
         },
         "translategemma-pure": {
@@ -2458,8 +2464,8 @@
     {
       "input": "gal",
       "features": {
-        "translategemma-1": {
-          "output": "возможно"
+        "lietuviurusu-1": {
+          "output": "может быть; может"
         },
         "translategemma-pure": {
           "output": "возможно"
@@ -2472,8 +2478,8 @@
     {
       "input": "galva",
       "features": {
-        "translategemma-1": {
-          "output": "голова"
+        "lietuviurusu-1": {
+          "output": "голова; глава; ум; разум; рассудок; жизнь"
         },
         "translategemma-pure": {
           "output": "голова"
@@ -2511,8 +2517,8 @@
     {
       "input": "gamykla",
       "features": {
-        "translategemma-1": {
-          "output": "фабрика"
+        "lietuviurusu-1": {
+          "output": "завод, фабрика"
         },
         "translategemma-pure": {
           "output": "фабрика, завод"
@@ -2530,8 +2536,8 @@
     {
       "input": "garantija",
       "features": {
-        "translategemma-1": {
-          "output": "гарантия"
+        "lietuviurusu-1": {
+          "output": "гарантия, ручательство"
         },
         "translategemma-pure": {
           "output": "гарантия"
@@ -2544,7 +2550,7 @@
     {
       "input": "garažas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "гараж"
         },
         "translategemma-pure": {
@@ -2558,7 +2564,7 @@
     {
       "input": "gatvė",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "улица"
         },
         "translategemma-pure": {
@@ -2572,8 +2578,8 @@
     {
       "input": "gauti",
       "features": {
-        "translategemma-1": {
-          "output": "получить"
+        "lietuviurusu-1": {
+          "output": "получать"
         },
         "translategemma-pure": {
           "output": "получить"
@@ -2605,8 +2611,8 @@
     {
       "input": "gegužė",
       "features": {
-        "translategemma-1": {
-          "output": "май"
+        "lietuviurusu-1": {
+          "output": "май; кукушка"
         },
         "translategemma-pure": {
           "output": "май"
@@ -2644,7 +2650,7 @@
     {
       "input": "geltonas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "желтый"
         },
         "translategemma-pure": {
@@ -2672,8 +2678,8 @@
     {
       "input": "gerai",
       "features": {
-        "translategemma-1": {
-          "output": "хорошо"
+        "lietuviurusu-1": {
+          "output": "хорошо; ладно"
         },
         "translategemma-pure": {
           "output": "хорошо"
@@ -2691,8 +2697,8 @@
     {
       "input": "gerklė",
       "features": {
-        "translategemma-1": {
-          "output": "горло"
+        "lietuviurusu-1": {
+          "output": "горло; глотка"
         },
         "translategemma-pure": {
           "output": "горло"
@@ -2705,8 +2711,8 @@
     {
       "input": "gerti",
       "features": {
-        "translategemma-1": {
-          "output": "пить"
+        "lietuviurusu-1": {
+          "output": "пить; впитывать; пьянствовать"
         },
         "translategemma-pure": {
           "output": "пить"
@@ -2724,7 +2730,7 @@
     {
       "input": "gėlė",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "цветок"
         },
         "translategemma-pure": {
@@ -2743,8 +2749,8 @@
     {
       "input": "gėlynas",
       "features": {
-        "translategemma-1": {
-          "output": "луг, поляна"
+        "lietuviurusu-1": {
+          "output": "цветник"
         },
         "translategemma-pure": {
           "output": "пойменный луг; низина, покрытая травой"
@@ -2776,8 +2782,8 @@
     {
       "input": "gėrimas",
       "features": {
-        "translategemma-1": {
-          "output": "напиток"
+        "lietuviurusu-1": {
+          "output": "напиток; питье"
         },
         "translategemma-pure": {
           "output": "напиток"
@@ -2795,7 +2801,7 @@
     {
       "input": "gimnazija",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "гимназия"
         },
         "translategemma-pure": {
@@ -2829,7 +2835,7 @@
     {
       "input": "gintaras",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "янтарь"
         },
         "translategemma-pure": {
@@ -2843,7 +2849,7 @@
     {
       "input": "gydytojas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "врач"
         },
         "translategemma-pure": {
@@ -2857,7 +2863,7 @@
     {
       "input": "gyventi",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "жить"
         },
         "translategemma-pure": {
@@ -2913,8 +2919,8 @@
     {
       "input": "grąža",
       "features": {
-        "translategemma-1": {
-          "output": "возврат"
+        "lietuviurusu-1": {
+          "output": "сдача"
         },
         "translategemma-pure": {
           "output": "возврат"
@@ -2946,8 +2952,8 @@
     {
       "input": "grėblys",
       "features": {
-        "translategemma-1": {
-          "output": "берег, откос"
+        "lietuviurusu-1": {
+          "output": "грабли"
         },
         "translategemma-pure": {
           "output": "берег, откос, склон"
@@ -2960,8 +2966,8 @@
     {
       "input": "grietinė",
       "features": {
-        "translategemma-1": {
-          "output": "сливки"
+        "lietuviurusu-1": {
+          "output": "сметана"
         },
         "translategemma-pure": {
           "output": "сливки"
@@ -2974,8 +2980,8 @@
     {
       "input": "grietinėlė",
       "features": {
-        "translategemma-1": {
-          "output": "сметана"
+        "lietuviurusu-1": {
+          "output": "сливки"
         },
         "translategemma-pure": {
           "output": "сметана"
@@ -2988,8 +2994,8 @@
     {
       "input": "gripas",
       "features": {
-        "translategemma-1": {
-          "output": "грипп"
+        "lietuviurusu-1": {
+          "output": "грипп (мед.)"
         },
         "translategemma-pure": {
           "output": "грипп"
@@ -3002,8 +3008,8 @@
     {
       "input": "grįžti",
       "features": {
-        "translategemma-1": {
-          "output": "возвращаться"
+        "lietuviurusu-1": {
+          "output": "вернуться; возвратиться"
         },
         "translategemma-pure": {
           "output": "вернуться"
@@ -3058,8 +3064,8 @@
     {
       "input": "groti",
       "features": {
-        "translategemma-1": {
-          "output": "играть"
+        "lietuviurusu-1": {
+          "output": "играть (муз.)"
         },
         "translategemma-pure": {
           "output": "играть"
@@ -3077,7 +3083,7 @@
     {
       "input": "gruodis",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "декабрь"
         },
         "translategemma-pure": {
@@ -3133,7 +3139,7 @@
     {
       "input": "iki",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "до"
         },
         "translategemma-pure": {
@@ -3152,8 +3158,8 @@
     {
       "input": "ilgai",
       "features": {
-        "translategemma-1": {
-          "output": "долго"
+        "lietuviurusu-1": {
+          "output": "с течением времени"
         },
         "translategemma-pure": {
           "output": "долго"
@@ -3171,8 +3177,8 @@
     {
       "input": "imti",
       "features": {
-        "translategemma-1": {
-          "output": "брать"
+        "lietuviurusu-1": {
+          "output": "брать; взять; убирать; взимать; начинать; стать"
         },
         "translategemma-pure": {
           "output": "брать"
@@ -3246,7 +3252,7 @@
     {
       "input": "internetas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "интернет"
         },
         "translategemma-pure": {
@@ -3288,8 +3294,8 @@
     {
       "input": "iš",
       "features": {
-        "translategemma-1": {
-          "output": "из"
+        "lietuviurusu-1": {
+          "output": "из; с; от; по; на; у"
         },
         "translategemma-pure": {
           "output": "из"
@@ -3330,8 +3336,8 @@
     {
       "input": "išjungti",
       "features": {
-        "translategemma-1": {
-          "output": "выключить"
+        "lietuviurusu-1": {
+          "output": "выключать, разъединять"
         },
         "translategemma-pure": {
           "output": "выключить"
@@ -3397,8 +3403,8 @@
     {
       "input": "išvykti",
       "features": {
-        "translategemma-1": {
-          "output": "уехать, отъехать"
+        "lietuviurusu-1": {
+          "output": "отбывать, выбывать, уезжать, отправляться"
         },
         "translategemma-pure": {
           "output": "уехать, отъехать, выехать"
@@ -3416,7 +3422,7 @@
     {
       "input": "įėjimas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "вход"
         },
         "translategemma-pure": {
@@ -3463,8 +3469,8 @@
     {
       "input": "įvertinimas",
       "features": {
-        "translategemma-1": {
-          "output": "оценка"
+        "lietuviurusu-1": {
+          "output": "оценка; оцененный"
         },
         "translategemma-pure": {
           "output": "оценка"
@@ -3477,7 +3483,7 @@
     {
       "input": "jautiena",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "говядина"
         },
         "translategemma-pure": {
@@ -3496,7 +3502,7 @@
     {
       "input": "jogurtas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "йогурт"
         },
         "translategemma-pure": {
@@ -3510,8 +3516,8 @@
     {
       "input": "juodas",
       "features": {
-        "translategemma-1": {
-          "output": "черный"
+        "lietuviurusu-1": {
+          "output": "чёрный"
         },
         "translategemma-pure": {
           "output": "черный"
@@ -3561,7 +3567,7 @@
     {
       "input": "kaina",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "цена"
         },
         "translategemma-pure": {
@@ -3575,8 +3581,8 @@
     {
       "input": "kaip",
       "features": {
-        "translategemma-1": {
-          "output": "как"
+        "lietuviurusu-1": {
+          "output": "как каким образом"
         },
         "translategemma-pure": {
           "output": "как"
@@ -3603,8 +3609,8 @@
     {
       "input": "kairė",
       "features": {
-        "translategemma-1": {
-          "output": "левый"
+        "lietuviurusu-1": {
+          "output": "левая рука (сторона)"
         },
         "translategemma-pure": {
           "output": "левый"
@@ -3617,8 +3623,8 @@
     {
       "input": "kairėje",
       "features": {
-        "translategemma-1": {
-          "output": "слева"
+        "lietuviurusu-1": {
+          "output": "налево, влево"
         },
         "translategemma-pure": {
           "output": "слева"
@@ -3631,7 +3637,7 @@
     {
       "input": "kalnas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "гора"
         },
         "translategemma-pure": {
@@ -3645,7 +3651,7 @@
     {
       "input": "kambarys",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "комната"
         },
         "translategemma-pure": {
@@ -3659,7 +3665,7 @@
     {
       "input": "karpis",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "карп"
         },
         "translategemma-pure": {
@@ -3673,8 +3679,8 @@
     {
       "input": "karštas",
       "features": {
-        "translategemma-1": {
-          "output": "горячий"
+        "lietuviurusu-1": {
+          "output": "горячий; жаркий; пылкий; страстный"
         },
         "translategemma-pure": {
           "output": "горячий"
@@ -3692,8 +3698,8 @@
     {
       "input": "kartais",
       "features": {
-        "translategemma-1": {
-          "output": "иногда"
+        "lietuviurusu-1": {
+          "output": "иногда; порой; подчас"
         },
         "translategemma-pure": {
           "output": "иногда"
@@ -3711,8 +3717,8 @@
     {
       "input": "kas",
       "features": {
-        "translategemma-1": {
-          "output": "что/кто"
+        "lietuviurusu-1": {
+          "output": "кто; что"
         },
         "translategemma-pure": {
           "output": "что"
@@ -3725,8 +3731,8 @@
     {
       "input": "kasa",
       "features": {
-        "translategemma-1": {
-          "output": "касса"
+        "lietuviurusu-1": {
+          "output": "коса (волосы); касса; поджелудочная железа"
         },
         "translategemma-pure": {
           "output": "касса"
@@ -3744,8 +3750,8 @@
     {
       "input": "kasdien",
       "features": {
-        "translategemma-1": {
-          "output": "ежедневно"
+        "lietuviurusu-1": {
+          "output": "ежедневно; каждодневно"
         },
         "translategemma-pure": {
           "output": "ежедневно"
@@ -3758,8 +3764,8 @@
     {
       "input": "kastuvas",
       "features": {
-        "translategemma-1": {
-          "output": "ящик"
+        "lietuviurusu-1": {
+          "output": "лопата; заступ"
         },
         "translategemma-pure": {
           "output": "костыль"
@@ -3786,7 +3792,7 @@
     {
       "input": "kava",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "кофе"
         },
         "translategemma-pure": {
@@ -3826,7 +3832,7 @@
     {
       "input": "kavinė",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "кафе"
         },
         "translategemma-pure": {
@@ -3854,8 +3860,8 @@
     {
       "input": "kelias",
       "features": {
-        "translategemma-1": {
-          "output": "путь, дорога"
+        "lietuviurusu-1": {
+          "output": "дорога путь; способ"
         },
         "translategemma-pure": {
           "output": "путь, дорога"
@@ -3873,8 +3879,8 @@
     {
       "input": "kelintas",
       "features": {
-        "translategemma-1": {
-          "output": "сколько"
+        "lietuviurusu-1": {
+          "output": "который"
         },
         "translategemma-pure": {
           "output": "сколько"
@@ -3892,8 +3898,8 @@
     {
       "input": "kelnės",
       "features": {
-        "translategemma-1": {
-          "output": "брюки"
+        "lietuviurusu-1": {
+          "output": "брюки, штаны"
         },
         "translategemma-pure": {
           "output": "брюки"
@@ -3906,8 +3912,8 @@
     {
       "input": "keltas",
       "features": {
-        "translategemma-1": {
-          "output": "лифт"
+        "lietuviurusu-1": {
+          "output": "паром"
         },
         "translategemma-pure": {
           "output": "поднятый, приподнятый; лифт (транспортное средство)"
@@ -3925,8 +3931,8 @@
     {
       "input": "kepsnys",
       "features": {
-        "translategemma-1": {
-          "output": "жареное мясо"
+        "lietuviurusu-1": {
+          "output": "жаркое; жареное (мясо)"
         },
         "translategemma-pure": {
           "output": "жареное мясо/мясной продукт, приготовленный на гриле или в духовке"
@@ -3939,8 +3945,8 @@
     {
       "input": "kepurė",
       "features": {
-        "translategemma-1": {
-          "output": "шапка"
+        "lietuviurusu-1": {
+          "output": "шапка; фуражка"
         },
         "translategemma-pure": {
           "output": "шапка"
@@ -3953,7 +3959,7 @@
     {
       "input": "ketvirtadienis",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "четверг"
         },
         "translategemma-pure": {
@@ -3967,7 +3973,7 @@
     {
       "input": "kėdė",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "стул"
         },
         "translategemma-pure": {
@@ -3981,7 +3987,7 @@
     {
       "input": "kiauliena",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "свинина"
         },
         "translategemma-pure": {
@@ -3995,7 +4001,7 @@
     {
       "input": "kiaušinienė",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "яичница"
         },
         "translategemma-pure": {
@@ -4009,7 +4015,7 @@
     {
       "input": "kibiras",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "ведро"
         },
         "translategemma-pure": {
@@ -4028,8 +4034,8 @@
     {
       "input": "kiekis",
       "features": {
-        "translategemma-1": {
-          "output": "количество"
+        "lietuviurusu-1": {
+          "output": "количество; численность"
         },
         "translategemma-pure": {
           "output": "количество"
@@ -4042,7 +4048,7 @@
     {
       "input": "kiemas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "двор"
         },
         "translategemma-pure": {
@@ -4056,8 +4062,8 @@
     {
       "input": "kilimas",
       "features": {
-        "translategemma-1": {
-          "output": "коврик"
+        "lietuviurusu-1": {
+          "output": "ковер; дорожка; повышение; возникновение; продвижение (по службе); происхождение"
         },
         "translategemma-pure": {
           "output": "коврик"
@@ -4103,7 +4109,7 @@
     {
       "input": "kirpėjas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "парикмахер"
         },
         "translategemma-pure": {
@@ -4117,7 +4123,7 @@
     {
       "input": "kirpykla",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "парикмахерская"
         },
         "translategemma-pure": {
@@ -4136,7 +4142,7 @@
     {
       "input": "klasė",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "класс"
         },
         "translategemma-pure": {
@@ -4178,7 +4184,7 @@
     {
       "input": "knyga",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "книга"
         },
         "translategemma-pure": {
@@ -4197,7 +4203,7 @@
     {
       "input": "koja",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "нога"
         },
         "translategemma-pure": {
@@ -4225,7 +4231,7 @@
     {
       "input": "kokybė",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "качество"
         },
         "translategemma-pure": {
@@ -4239,8 +4245,8 @@
     {
       "input": "koks",
       "features": {
-        "translategemma-1": {
-          "output": "какой"
+        "lietuviurusu-1": {
+          "output": "какой; каков; какой-нибудь; какой-либо"
         },
         "translategemma-pure": {
           "output": "какой"
@@ -4281,8 +4287,8 @@
     {
       "input": "kompiuteris",
       "features": {
-        "translategemma-1": {
-          "output": "компьютер"
+        "lietuviurusu-1": {
+          "output": "компьютер selas"
         },
         "translategemma-pure": {
           "output": "компьютер"
@@ -4295,7 +4301,7 @@
     {
       "input": "koncertas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "концерт"
         },
         "translategemma-pure": {
@@ -4384,7 +4390,7 @@
     {
       "input": "kortelė",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "карточка"
         },
         "translategemma-pure": {
@@ -4398,8 +4404,8 @@
     {
       "input": "kosulys",
       "features": {
-        "translategemma-1": {
-          "output": "кофта"
+        "lietuviurusu-1": {
+          "output": "кашель"
         },
         "translategemma-pure": {
           "output": "косуля"
@@ -4431,8 +4437,8 @@
     {
       "input": "kovas",
       "features": {
-        "translategemma-1": {
-          "output": "март"
+        "lietuviurusu-1": {
+          "output": "грач; март"
         },
         "translategemma-pure": {
           "output": "март"
@@ -4464,8 +4470,8 @@
     {
       "input": "krepšelis",
       "features": {
-        "translategemma-1": {
-          "output": "баскетбол"
+        "lietuviurusu-1": {
+          "output": "сумка"
         },
         "translategemma-pure": {
           "output": "баскетбол"
@@ -4478,7 +4484,7 @@
     {
       "input": "krepšinis",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "баскетбол"
         },
         "translategemma-pure": {
@@ -4492,8 +4498,8 @@
     {
       "input": "krepšys",
       "features": {
-        "translategemma-1": {
-          "output": "сумка"
+        "lietuviurusu-1": {
+          "output": "сумка; корзина"
         },
         "translategemma-pure": {
           "output": "сумка"
@@ -4506,7 +4512,7 @@
     {
       "input": "kriaušė",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "груша"
         },
         "translategemma-pure": {
@@ -4520,8 +4526,8 @@
     {
       "input": "kryptis",
       "features": {
-        "translategemma-1": {
-          "output": "направление"
+        "lietuviurusu-1": {
+          "output": "направление; уклон"
         },
         "translategemma-pure": {
           "output": "направление"
@@ -4534,8 +4540,8 @@
     {
       "input": "kuprinė",
       "features": {
-        "translategemma-1": {
-          "output": "рюкзак"
+        "lietuviurusu-1": {
+          "output": "ранец; рюкзак,"
         },
         "translategemma-pure": {
           "output": "рюкзак"
@@ -4548,8 +4554,8 @@
     {
       "input": "kur",
       "features": {
-        "translategemma-1": {
-          "output": "где"
+        "lietuviurusu-1": {
+          "output": "где; куда"
         },
         "translategemma-pure": {
           "output": "где"
@@ -4576,8 +4582,8 @@
     {
       "input": "labanakt",
       "features": {
-        "translategemma-1": {
-          "output": "Спокойной ночи"
+        "lietuviurusu-1": {
+          "output": "спокойной ночи"
         },
         "translategemma-pure": {
           "output": "Спокойной ночи"
@@ -4653,8 +4659,8 @@
     {
       "input": "labai",
       "features": {
-        "translategemma-1": {
-          "output": "очень"
+        "lietuviurusu-1": {
+          "output": "очень; весьма; крайне; сильно"
         },
         "translategemma-pure": {
           "output": "очень"
@@ -4720,8 +4726,8 @@
     {
       "input": "laipsnis",
       "features": {
-        "translategemma-1": {
-          "output": "степень"
+        "lietuviurusu-1": {
+          "output": "степень; градус; звание"
         },
         "translategemma-pure": {
           "output": "степень"
@@ -4734,7 +4740,7 @@
     {
       "input": "laiptai",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "лестница"
         },
         "translategemma-pure": {
@@ -4790,8 +4796,8 @@
     {
       "input": "laivas",
       "features": {
-        "translategemma-1": {
-          "output": "корабль"
+        "lietuviurusu-1": {
+          "output": "судно; корабль"
         },
         "translategemma-pure": {
           "output": "корабль"
@@ -4804,7 +4810,7 @@
     {
       "input": "langas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "окно"
         },
         "translategemma-pure": {
@@ -4818,8 +4824,8 @@
     {
       "input": "lapkritis",
       "features": {
-        "translategemma-1": {
-          "output": "осенний месяц"
+        "lietuviurusu-1": {
+          "output": "ноябрь; листопад"
         },
         "translategemma-pure": {
           "output": "осенний период, осень"
@@ -4846,8 +4852,8 @@
     {
       "input": "lašiša",
       "features": {
-        "translategemma-1": {
-          "output": "лосось"
+        "lietuviurusu-1": {
+          "output": "лосось; лососина"
         },
         "translategemma-pure": {
           "output": "лосось"
@@ -4884,8 +4890,8 @@
     {
       "input": "ledai",
       "features": {
-        "translategemma-1": {
-          "output": "мороженое"
+        "lietuviurusu-1": {
+          "output": "град; мороженое"
         },
         "translategemma-pure": {
           "output": "мороженое"
@@ -4898,7 +4904,7 @@
     {
       "input": "lempa",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "лампа"
         },
         "translategemma-pure": {
@@ -4917,7 +4923,7 @@
     {
       "input": "lentyna",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "полка"
         },
         "translategemma-pure": {
@@ -4931,7 +4937,7 @@
     {
       "input": "lėktuvas",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "самолет"
         },
         "translategemma-pure": {
@@ -4945,8 +4951,8 @@
     {
       "input": "liepa",
       "features": {
-        "translategemma-1": {
-          "output": "июль"
+        "lietuviurusu-1": {
+          "output": "липа; июль"
         },
         "translategemma-pure": {
           "output": "июль"
@@ -4993,7 +4999,7 @@
     {
       "input": "žmona",
       "features": {
-        "translategemma-1": {
+        "lietuviurusu-1": {
           "output": "жена"
         },
         "translategemma-pure": {

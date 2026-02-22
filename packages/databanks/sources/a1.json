@@ -6,6 +6,10 @@
   "sourceLanguage": "lit",
   "features": [
     {
+      "provider": "lietuviuRusu",
+      "options": {}
+    },
+    {
       "provider": "translategemma",
       "options": {
         "sourceLanguage": "lt-lt",
