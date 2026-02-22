@@ -153,6 +153,7 @@ function isInputBank(raw: unknown): raw is InputBank {
     bank.features.every((feature) => {
       const candidate = feature as {
         id?: unknown;
+        group?: unknown;
         provider?: unknown;
         options?: unknown;
       };
@@ -160,6 +161,8 @@ function isInputBank(raw: unknown): raw is InputBank {
         feature != null &&
         typeof feature === "object" &&
         (candidate.id === undefined || typeof candidate.id === "string") &&
+        (candidate.group === undefined ||
+          typeof candidate.group === "string") &&
         typeof candidate.provider === "string" &&
         typeof candidate.options === "object" &&
         candidate.options != null

@@ -260,6 +260,88 @@ describe("runtime output", () => {
     );
   });
 
+  test("accepts optional common feature group override", async () => {
+    const baseDir = await mkdtemp(join(tmpdir(), "ltk-runtime-group-"));
+    const inDir = join(baseDir, "sources");
+    const outDir = join(baseDir, "dist");
+    await mkdir(inDir, { recursive: true });
+
+    const bank = {
+      schemaVersion: "1.0.0",
+      title: "Group Bank",
+      sourceLanguage: "lit",
+      features: [
+        {
+          id: "translate-primary",
+          group: "user-custom",
+          provider: "stub-shape",
+          options: {},
+        },
+      ],
+      data: ["ačiū"],
+    };
+    await writeFile(join(inDir, "group.json"), JSON.stringify(bank, null, 2));
+
+    const plugin: Plugin = {
+      kind: "TRANSLATION",
+      provider: "stub-shape",
+      version: "1.0.0",
+      async run() {
+        return "ok";
+      },
+    };
+
+    await expect(
+      runProcessing({
+        paths: { inDir, outDir },
+        plugins: [plugin],
+      }),
+    ).resolves.toBe(0);
+  });
+
+  test("fails input schema when common feature group is not a string", async () => {
+    const baseDir = await mkdtemp(join(tmpdir(), "ltk-runtime-bad-group-"));
+    const inDir = join(baseDir, "sources");
+    const outDir = join(baseDir, "dist");
+    await mkdir(inDir, { recursive: true });
+
+    const bank = {
+      schemaVersion: "1.0.0",
+      title: "Bad Group Bank",
+      sourceLanguage: "lit",
+      features: [
+        {
+          provider: "stub-shape",
+          group: 123,
+          options: {},
+        },
+      ],
+      data: ["ačiū"],
+    };
+    await writeFile(
+      join(inDir, "bad-group.json"),
+      JSON.stringify(bank, null, 2),
+    );
+
+    const plugin: Plugin = {
+      kind: "TRANSLATION",
+      provider: "stub-shape",
+      version: "1.0.0",
+      async run() {
+        return "ok";
+      },
+    };
+
+    await expect(
+      runProcessing({
+        paths: { inDir, outDir },
+        plugins: [plugin],
+      }),
+    ).rejects.toThrow(
+      "Invalid bank schema in bad-group.json. Expected InputBank format.",
+    );
+  });
+
   test("fails on duplicate custom feature ids", async () => {
     const baseDir = await mkdtemp(join(tmpdir(), "ltk-runtime-dup-id-"));
     const inDir = join(baseDir, "sources");

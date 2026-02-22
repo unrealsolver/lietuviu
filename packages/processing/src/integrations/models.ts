@@ -1,5 +1,6 @@
 export type FeatureConfig = {
   id?: string;
+  group?: string;
   provider: string;
   maxRpm?: number;
   options: Record<string, unknown>;
