@@ -1,4 +1,4 @@
-import type { Plugin } from "./integrations";
+import { NoResultError, type Plugin } from "./integrations";
 import { runProcessing } from "./runtime";
 import { describe, expect, test } from "bun:test";
 import { createHash } from "node:crypto";
@@ -387,6 +387,93 @@ describe("runtime output", () => {
     ).rejects.toThrow('Duplicate feature id "same-id"');
 
     expect(runCalls).toBe(0);
+  });
+
+  test("collapses same-type default group with NO_RESULT fallback chain", async () => {
+    const baseDir = await mkdtemp(join(tmpdir(), "ltk-runtime-collapse-"));
+    const inDir = join(baseDir, "sources");
+    const outDir = join(baseDir, "dist");
+    await mkdir(inDir, { recursive: true });
+
+    const bank = {
+      schemaVersion: "1.0.0",
+      title: "Collapse Bank",
+      sourceLanguage: "lit",
+      features: [
+        {
+          id: "dict-1",
+          provider: "dict-plugin",
+          options: {},
+        },
+        {
+          id: "gemma-1",
+          provider: "gemma-plugin",
+          options: {},
+        },
+      ],
+      data: ["hit", "miss"],
+    };
+    await writeFile(
+      join(inDir, "collapse.json"),
+      JSON.stringify(bank, null, 2),
+    );
+
+    const calls = {
+      dict: [] as string[],
+      gemma: [] as string[],
+    };
+
+    const dictPlugin: Plugin = {
+      kind: "TRANSLATION",
+      provider: "dict-plugin",
+      version: "1.0.0",
+      async run(input: string) {
+        calls.dict.push(input);
+        if (input === "miss") {
+          throw new NoResultError("dictionary miss");
+        }
+        return `dict:${input}`;
+      },
+    };
+
+    const gemmaPlugin: Plugin = {
+      kind: "TRANSLATION",
+      provider: "gemma-plugin",
+      version: "1.0.0",
+      async run(input: string) {
+        calls.gemma.push(input);
+        return `gemma:${input}`;
+      },
+    };
+
+    await runProcessing({
+      paths: { inDir, outDir },
+      plugins: [dictPlugin, gemmaPlugin],
+      defaults: {
+        replayPolicy: "LIVE",
+      },
+    });
+
+    const out = JSON.parse(
+      await readFile(join(outDir, "collapse.bank.json"), "utf8"),
+    ) as {
+      data: Array<{
+        input: string;
+        features: Record<string, { output: unknown }>;
+      }>;
+    };
+
+    expect(calls.dict).toEqual(["hit", "miss"]);
+    expect(calls.gemma).toEqual(["miss"]);
+
+    const hit = out.data.find((d) => d.input === "hit");
+    const miss = out.data.find((d) => d.input === "miss");
+
+    expect(hit?.features["dict-1"]?.output).toBe("dict:hit");
+    expect(hit?.features["gemma-1"]).toBeUndefined();
+
+    expect(miss?.features["dict-1"]).toBeUndefined();
+    expect(miss?.features["gemma-1"]?.output).toBe("gemma:miss");
   });
 
   test("replay-only with fixed logs produces stable golden output", async () => {

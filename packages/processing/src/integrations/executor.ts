@@ -1,6 +1,11 @@
 import type { LogStore } from "./logstore";
 import type { FeatureConfig, InputBank } from "./models";
-import type { Plugin, ReplayPolicy, ExternalCallRequest } from "./plugin";
+import {
+  type Plugin,
+  type ReplayPolicy,
+  type ExternalCallRequest,
+  isNoResultError,
+} from "./plugin";
 import { createHash } from "node:crypto";
 
 // Executor runs bank features against registered plugins and owns replay/cache behavior
@@ -66,6 +71,19 @@ export type ItemProgressEvent = {
   outcome: "PASSED" | "REPLAYED" | "PARTIAL_REPLAY" | "SKIPPED" | "ERROR";
 };
 
+type ResolvedFeature = {
+  feature: FeatureConfig;
+  plugin: Plugin;
+  featureId: string;
+  featureIndex: number;
+  collapseGroupKey: string;
+};
+
+type FeatureGroup = {
+  key: string;
+  members: ResolvedFeature[];
+};
+
 export function createExecutor(
   deps: ExecutorDependencies,
   options: ExecutorOptions = {},
@@ -84,129 +102,57 @@ export function createExecutor(
         (featureParallelism ?? bank.features.length) || 1,
       );
       const featureIds = resolveFeatureIds(bank.features);
+      const resolvedFeatures = bank.features.map((feature, featureIndex) => {
+        const plugin = deps.plugins.find((candidate) => {
+          return candidate.provider === feature.provider;
+        });
+        if (plugin == null) {
+          throw new Error(
+            `No plugin registered for provider=${feature.provider}`,
+          );
+        }
+        const featureId = featureIds[featureIndex];
+        if (featureId == null) {
+          throw new Error(
+            `Unable to resolve feature id for provider=${feature.provider}`,
+          );
+        }
+        return {
+          feature,
+          plugin,
+          featureId,
+          featureIndex,
+          collapseGroupKey: resolveCollapseGroupKey(plugin.kind, feature.group),
+        } satisfies ResolvedFeature;
+      });
+      const groups = groupResolvedFeatures(resolvedFeatures);
 
-      // Execute all features concurrently by default; mapLimit preserves source order in results.
-      const featureResults = await mapLimit(
-        bank.features,
+      // Execute collapse groups concurrently by default. Within a group, plugins form a fallback chain.
+      const groupedResults = await mapLimit(
+        groups,
         resolvedFeatureParallelism,
-        async (feature, featureIndex) => {
-          const plugin = deps.plugins.find((candidate) => {
-            return candidate.provider === feature.provider;
+        async (group) => {
+          return executeFeatureGroup({
+            group,
+            bankData: bank.data,
+            replay: defaultReplayPolicy,
+            logStore: deps.logStore,
+            defaultItemConcurrency,
+            errorPolicy,
+            onItemProgress,
           });
-
-          if (plugin == null) {
-            throw new Error(
-              `No plugin registered for provider=${feature.provider}`,
-            );
-          }
-
-          const replay = defaultReplayPolicy;
-          const featureId = featureIds[featureIndex];
-          if (featureId == null) {
-            throw new Error(
-              `Unable to resolve feature id for provider=${feature.provider}`,
-            );
-          }
-          let done = 0;
-          const total = bank.data.length;
-          const itemConcurrency = Math.max(
-            1,
-            plugin.itemConcurrency ?? defaultItemConcurrency,
-          );
-
-          // Process inputs with plugin-specific concurrency (or global default).
-          const outputs = await mapLimit(
-            bank.data,
-            itemConcurrency,
-            async (input, index) => {
-              let replayHits = 0;
-              let liveCalls = 0;
-              try {
-                const output = await plugin.run(input, feature.options, {
-                  emitProgress: () => undefined,
-                  callExternal: async <TResponse = unknown>(
-                    request: ExternalCallRequest,
-                  ) => {
-                    const result = await callExternalWithReplay<TResponse>({
-                      request,
-                      replay,
-                      provider: plugin.provider,
-                      featureId,
-                      featureOptions: feature.options,
-                      logStore: deps.logStore,
-                    });
-                    if (result.source === "REPLAY") {
-                      replayHits += 1;
-                    } else {
-                      liveCalls += 1;
-                    }
-                    return result.response;
-                  },
-                });
-                done += 1;
-                const outcome =
-                  replayHits > 0 && liveCalls === 0
-                    ? "REPLAYED"
-                    : replayHits > 0 && liveCalls > 0
-                      ? "PARTIAL_REPLAY"
-                      : "PASSED";
-                onItemProgress?.({
-                  featureId,
-                  pluginName: plugin.provider,
-                  total,
-                  index,
-                  done,
-                  outcome,
-                });
-
-                return {
-                  input,
-                  output,
-                };
-              } catch (error) {
-                if (errorPolicy === "FAIL") {
-                  done += 1;
-                  onItemProgress?.({
-                    featureId,
-                    pluginName: plugin.provider,
-                    total,
-                    index,
-                    done,
-                    outcome: "ERROR",
-                  });
-                  throw new Error(
-                    `Feature "${featureId}" failed for input "${input}": ${
-                      error instanceof Error ? error.message : String(error)
-                    }`,
-                  );
-                }
-                done += 1;
-                onItemProgress?.({
-                  featureId,
-                  pluginName: plugin.provider,
-                  total,
-                  index,
-                  done,
-                  outcome: "SKIPPED",
-                });
-
-                return {
-                  input,
-                  error: error instanceof Error ? error.message : String(error),
-                };
-              }
-            },
-          );
-
-          return {
-            featureId,
-            provider: plugin.provider,
-            kind: plugin.kind,
-            version: plugin.version,
-            outputs,
-          } satisfies FeatureRunResult;
         },
       );
+
+      const featureResults = groupedResults.flat().sort((a, b) => {
+        const aIndex =
+          resolvedFeatures.find((f) => f.featureId === a.featureId)
+            ?.featureIndex ?? 0;
+        const bIndex =
+          resolvedFeatures.find((f) => f.featureId === b.featureId)
+            ?.featureIndex ?? 0;
+        return aIndex - bIndex;
+      });
 
       return {
         bankTitle: bank.title,
@@ -214,6 +160,219 @@ export function createExecutor(
       };
     },
   };
+}
+
+async function executeFeatureGroup(params: {
+  group: FeatureGroup;
+  bankData: string[];
+  replay: ReplayPolicy;
+  logStore: LogStore;
+  defaultItemConcurrency: number;
+  errorPolicy: "FAIL" | "SKIP_ITEM";
+  onItemProgress?: (event: ItemProgressEvent) => void;
+}): Promise<FeatureRunResult[]> {
+  const {
+    group,
+    bankData,
+    replay,
+    logStore,
+    defaultItemConcurrency,
+    errorPolicy,
+    onItemProgress,
+  } = params;
+
+  const outputsByFeatureId = new Map<
+    string,
+    Array<{ input: string; output?: unknown; error?: string }>
+  >(
+    group.members.map((member) => [
+      member.featureId,
+      new Array(bankData.length) as Array<{
+        input: string;
+        output?: unknown;
+        error?: string;
+      }>,
+    ]),
+  );
+  const doneByFeatureId = new Map<string, number>(
+    group.members.map((member) => [member.featureId, 0]),
+  );
+  const groupItemConcurrency = Math.max(
+    1,
+    ...group.members.map((member) => {
+      return member.plugin.itemConcurrency ?? defaultItemConcurrency;
+    }),
+  );
+
+  await mapLimit(bankData, groupItemConcurrency, async (input, index) => {
+    let chainResolved = false;
+    let chainErrored = false;
+
+    for (const member of group.members) {
+      const target = outputsByFeatureId.get(member.featureId);
+      if (target == null) {
+        throw new Error(
+          `Missing feature output buffer for ${member.featureId}`,
+        );
+      }
+
+      if (chainResolved || chainErrored) {
+        target[index] = { input };
+        emitProgressForFeature(
+          member,
+          doneByFeatureId,
+          bankData.length,
+          index,
+          "SKIPPED",
+          onItemProgress,
+        );
+        continue;
+      }
+
+      let replayHits = 0;
+      let liveCalls = 0;
+      try {
+        const output = await member.plugin.run(input, member.feature.options, {
+          emitProgress: () => undefined,
+          callExternal: async <TResponse = unknown>(
+            request: ExternalCallRequest,
+          ) => {
+            const result = await callExternalWithReplay<TResponse>({
+              request,
+              replay,
+              provider: member.plugin.provider,
+              featureId: member.featureId,
+              featureOptions: member.feature.options,
+              logStore,
+            });
+            if (result.source === "REPLAY") {
+              replayHits += 1;
+            } else {
+              liveCalls += 1;
+            }
+            return result.response;
+          },
+        });
+
+        target[index] = { input, output };
+        chainResolved = true;
+        emitProgressForFeature(
+          member,
+          doneByFeatureId,
+          bankData.length,
+          index,
+          replayHits > 0 && liveCalls === 0
+            ? "REPLAYED"
+            : replayHits > 0 && liveCalls > 0
+              ? "PARTIAL_REPLAY"
+              : "PASSED",
+          onItemProgress,
+        );
+      } catch (error) {
+        if (isNoResultError(error)) {
+          target[index] = { input };
+          emitProgressForFeature(
+            member,
+            doneByFeatureId,
+            bankData.length,
+            index,
+            "SKIPPED",
+            onItemProgress,
+          );
+          continue;
+        }
+
+        if (errorPolicy === "FAIL") {
+          emitProgressForFeature(
+            member,
+            doneByFeatureId,
+            bankData.length,
+            index,
+            "ERROR",
+            onItemProgress,
+          );
+          throw new Error(
+            `Feature "${member.featureId}" failed for input "${input}": ${
+              error instanceof Error ? error.message : String(error)
+            }`,
+          );
+        }
+
+        target[index] = {
+          input,
+          error: error instanceof Error ? error.message : String(error),
+        };
+        chainErrored = true;
+        emitProgressForFeature(
+          member,
+          doneByFeatureId,
+          bankData.length,
+          index,
+          "SKIPPED",
+          onItemProgress,
+        );
+      }
+    }
+  });
+
+  return group.members.map((member) => {
+    const outputs = outputsByFeatureId.get(member.featureId);
+    if (outputs == null) {
+      throw new Error(`Missing feature outputs for ${member.featureId}`);
+    }
+    return {
+      featureId: member.featureId,
+      provider: member.plugin.provider,
+      kind: member.plugin.kind,
+      version: member.plugin.version,
+      outputs,
+    } satisfies FeatureRunResult;
+  });
+}
+
+function emitProgressForFeature(
+  member: ResolvedFeature,
+  doneByFeatureId: Map<string, number>,
+  total: number,
+  index: number,
+  outcome: ItemProgressEvent["outcome"],
+  onItemProgress?: (event: ItemProgressEvent) => void,
+): void {
+  const done = (doneByFeatureId.get(member.featureId) ?? 0) + 1;
+  doneByFeatureId.set(member.featureId, done);
+  onItemProgress?.({
+    featureId: member.featureId,
+    pluginName: member.plugin.provider,
+    total,
+    index,
+    done,
+    outcome,
+  });
+}
+
+function groupResolvedFeatures(features: ResolvedFeature[]): FeatureGroup[] {
+  const groups = new Map<string, FeatureGroup>();
+  for (const feature of features) {
+    const existing = groups.get(feature.collapseGroupKey);
+    if (existing == null) {
+      groups.set(feature.collapseGroupKey, {
+        key: feature.collapseGroupKey,
+        members: [feature],
+      });
+      continue;
+    }
+    existing.members.push(feature);
+  }
+  return [...groups.values()];
+}
+
+function resolveCollapseGroupKey(
+  kind: Plugin["kind"],
+  groupOverride: string | undefined,
+): string {
+  const rawGroup = groupOverride?.trim();
+  const group = rawGroup && rawGroup.length > 0 ? rawGroup : "default";
+  return `${kind}:${group}`;
 }
 
 async function callExternalWithReplay<TResponse>(params: {

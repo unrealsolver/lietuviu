@@ -33,3 +33,22 @@ export type PluginCtx = {
     request: ExternalCallRequest,
   ) => Promise<TResponse>;
 };
+
+export class NoResultError extends Error {
+  readonly code = "NO_RESULT";
+
+  constructor(message = "No result") {
+    super(message);
+    this.name = "NoResultError";
+  }
+}
+
+export function isNoResultError(error: unknown): error is NoResultError {
+  return (
+    error instanceof NoResultError ||
+    (error != null &&
+      typeof error === "object" &&
+      "code" in error &&
+      (error as { code?: unknown }).code === "NO_RESULT")
+  );
+}
