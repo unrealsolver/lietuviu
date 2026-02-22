@@ -2,7 +2,7 @@ import type { ItemProgressEvent } from "./integrations";
 import { clearScreenDown, moveCursor } from "node:readline";
 
 type RowState = {
-  pluginName: string;
+  label: string;
   total: number;
   done: number;
   // 0=empty, 1=passed, 2=replayed, 3=partial replay, 4=skipped, 5=error
@@ -45,10 +45,11 @@ export class ProgressRenderer {
     if (!this.enabled) {
       return;
     }
-    const width = this.resolveBarWidth(event.pluginName, event.total);
+    const label = event.featureId || event.pluginName;
+    const width = this.resolveBarWidth(label, event.total);
     const existing = this.rows.get(event.featureId);
     const row: RowState = existing ?? {
-      pluginName: event.pluginName,
+      label,
       total: event.total,
       done: 0,
       buckets: new Array(width).fill(0),
@@ -130,12 +131,12 @@ export class ProgressRenderer {
     const pct =
       row.total === 0 ? 100 : Math.floor((row.done / row.total) * 100);
     const bar = this.renderBar(this.resizeBuckets(row.buckets, 30), 30);
-    this.write(`${row.pluginName} ${bar} ${row.done}/${row.total} ${pct}%\n`);
+    this.write(`${row.label} ${bar} ${row.done}/${row.total} ${pct}%\n`);
     this.plainLogStepByFeature.set(featureId, step);
   }
 
   private renderRow(row: RowState): string {
-    const left = this.fitLeft(row.pluginName);
+    const left = this.fitLeft(row.label);
     const pct =
       row.total === 0 ? 100 : Math.floor((row.done / row.total) * 100);
     const right = `${row.done}/${row.total} ${pct}%`;
