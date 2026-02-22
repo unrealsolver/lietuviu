@@ -4,10 +4,16 @@
   "description": "",
   "author": "System",
   "sourceLanguage": "lit",
-  "generatedAt": "2026-02-21T22:38:01.925Z",
+  "generatedAt": "2026-02-22T16:27:49.581Z",
   "features": [
     {
       "id": "translategemma-1",
+      "type": "TRANSLATION",
+      "provider": "translategemma",
+      "version": "0.1.0"
+    },
+    {
+      "id": "translategemma-pure",
       "type": "TRANSLATION",
       "provider": "translategemma",
       "version": "0.1.0"
@@ -26,6 +32,9 @@
         "translategemma-1": {
           "output": "спасибо"
         },
+        "translategemma-pure": {
+          "output": "Спасибо"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["ãčiū"]
         }
@@ -35,6 +44,9 @@
       "input": "administratorius",
       "features": {
         "translategemma-1": {
+          "output": "администратор"
+        },
+        "translategemma-pure": {
           "output": "администратор"
         },
         "vdu-kirciuoklis-1": {
@@ -48,6 +60,9 @@
         "translategemma-1": {
           "output": "огурец"
         },
+        "translategemma-pure": {
+          "output": "огурец"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["agur̃kas"]
         }
@@ -57,7 +72,10 @@
       "input": "aikštelė",
       "features": {
         "translategemma-1": {
-          "output": "площадка."
+          "output": "площадка"
+        },
+        "translategemma-pure": {
+          "output": "площадка"
         },
         "vdu-kirciuoklis-1": {
           "output": ["aikštẽlė"]
@@ -68,7 +86,10 @@
       "input": "aikštė",
       "features": {
         "translategemma-1": {
-          "output": "площадь."
+          "output": "площадь"
+        },
+        "translategemma-pure": {
+          "output": "площадь"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -84,7 +105,10 @@
       "input": "aišku",
       "features": {
         "translategemma-1": {
-          "output": "понятно."
+          "output": "понятно"
+        },
+        "translategemma-pure": {
+          "output": "Конечно., Понятно., Ясно., Хорошо., Окей"
         },
         "vdu-kirciuoklis-1": {
           "output": ["áišku"]
@@ -95,7 +119,10 @@
       "input": "akademija",
       "features": {
         "translategemma-1": {
-          "output": "академия."
+          "output": "академия"
+        },
+        "translategemma-pure": {
+          "output": "академия"
         },
         "vdu-kirciuoklis-1": {
           "output": ["akadèmija"]
@@ -106,6 +133,9 @@
       "input": "akcija",
       "features": {
         "translategemma-1": {
+          "output": "акция"
+        },
+        "translategemma-pure": {
           "output": "акция"
         },
         "vdu-kirciuoklis-1": {
@@ -119,6 +149,9 @@
         "translategemma-1": {
           "output": "глаз"
         },
+        "translategemma-pure": {
+          "output": "глаз"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["akìs"]
         }
@@ -128,6 +161,9 @@
       "input": "alergija",
       "features": {
         "translategemma-1": {
+          "output": "аллергия"
+        },
+        "translategemma-pure": {
           "output": "аллергия"
         },
         "vdu-kirciuoklis-1": {
@@ -146,6 +182,9 @@
         "translategemma-1": {
           "output": "зарплата"
         },
+        "translategemma-pure": {
+          "output": "зарплата"
+        },
         "vdu-kirciuoklis-1": {
           "output": [
             {
@@ -160,7 +199,10 @@
       "input": "alkanas",
       "features": {
         "translategemma-1": {
-          "output": "алкан."
+          "output": "алкан"
+        },
+        "translategemma-pure": {
+          "output": "алкан"
         },
         "vdu-kirciuoklis-1": {
           "output": ["álkanas"]
@@ -171,7 +213,10 @@
       "input": "alkoholiniai gėrimai",
       "features": {
         "translategemma-1": {
-          "output": "алкогольные напитки."
+          "output": "алкогольные напитки"
+        },
+        "translategemma-pure": {
+          "output": "алкогольные напитки"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -190,6 +235,9 @@
         "translategemma-1": {
           "output": "пиво"
         },
+        "translategemma-pure": {
+          "output": "пиво"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["alùs"]
         }
@@ -199,7 +247,10 @@
       "input": "anglų kalba",
       "features": {
         "translategemma-1": {
-          "output": "английский язык."
+          "output": "английский язык"
+        },
+        "translategemma-pure": {
+          "output": "английский язык"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -218,6 +269,9 @@
         "translategemma-1": {
           "output": "рано"
         },
+        "translategemma-pure": {
+          "output": "рано"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["ankstì"]
         }
@@ -229,6 +283,9 @@
         "translategemma-1": {
           "output": "вторник"
         },
+        "translategemma-pure": {
+          "output": "вторник"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["antrãdienis"]
         }
@@ -238,7 +295,10 @@
       "input": "apelsinas",
       "features": {
         "translategemma-1": {
-          "output": "апельсин."
+          "output": "апельсин"
+        },
+        "translategemma-pure": {
+          "output": "апельсин"
         },
         "vdu-kirciuoklis-1": {
           "output": ["apelsìnas"]
@@ -251,6 +311,9 @@
         "translategemma-1": {
           "output": "папка"
         },
+        "translategemma-pure": {
+          "output": "папка"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["ãplankas"]
         }
@@ -260,7 +323,10 @@
       "input": "apsauginiai akiniai",
       "features": {
         "translategemma-1": {
-          "output": "защитные очки."
+          "output": "защитные очки"
+        },
+        "translategemma-pure": {
+          "output": "защитные очки"
         },
         "vdu-kirciuoklis-1": {
           "output": ["apsaugìniai", "akiniaĩ"]
@@ -271,7 +337,10 @@
       "input": "apsipirkti",
       "features": {
         "translategemma-1": {
-          "output": "покупать."
+          "output": "покупать"
+        },
+        "translategemma-pure": {
+          "output": "сходить за покупками; совершить покупки"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -289,6 +358,9 @@
         "translategemma-1": {
           "output": "работа"
         },
+        "translategemma-pure": {
+          "output": "работа"
+        },
         "vdu-kirciuoklis-1": {
           "output": [
             {
@@ -303,7 +375,10 @@
       "input": "arbatpinigiai",
       "features": {
         "translategemma-1": {
-          "output": "чайные ложки."
+          "output": "чайные ложки"
+        },
+        "translategemma-pure": {
+          "output": "чайные деньги"
         },
         "vdu-kirciuoklis-1": {
           "output": ["arbãtpinigiai"]
@@ -314,6 +389,9 @@
       "input": "arti",
       "features": {
         "translategemma-1": {
+          "output": "близко"
+        },
+        "translategemma-pure": {
           "output": "близко"
         },
         "vdu-kirciuoklis-1": {
@@ -330,7 +408,10 @@
       "input": "asmens tapatybės kortelė",
       "features": {
         "translategemma-1": {
-          "output": "удостоверение личности."
+          "output": "удостоверение личности"
+        },
+        "translategemma-pure": {
+          "output": "удостоверение личности"
         },
         "vdu-kirciuoklis-1": {
           "output": ["asmeñs", "tapatýbės", "kortẽlė"]
@@ -343,6 +424,9 @@
         "translategemma-1": {
           "output": "острый"
         },
+        "translategemma-pure": {
+          "output": "острый"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["aštrùs"]
         }
@@ -352,6 +436,9 @@
       "input": "ateiti",
       "features": {
         "translategemma-1": {
+          "output": "прийти"
+        },
+        "translategemma-pure": {
           "output": "прийти"
         },
         "vdu-kirciuoklis-1": {
@@ -368,7 +455,10 @@
       "input": "atidaryta",
       "features": {
         "translategemma-1": {
-          "output": "открыто."
+          "output": "открыто"
+        },
+        "translategemma-pure": {
+          "output": "открыто"
         },
         "vdu-kirciuoklis-1": {
           "output": ["atidarýta"]
@@ -379,7 +469,10 @@
       "input": "atidaryti",
       "features": {
         "translategemma-1": {
-          "output": "открыть."
+          "output": "открыть"
+        },
+        "translategemma-pure": {
+          "output": "открыть"
         },
         "vdu-kirciuoklis-1": {
           "output": ["atidarýti"]
@@ -390,7 +483,10 @@
       "input": "atidėti",
       "features": {
         "translategemma-1": {
-          "output": "отложить."
+          "output": "отложить"
+        },
+        "translategemma-pure": {
+          "output": "отложить, отсрочить"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -406,6 +502,9 @@
       "input": "atleisti iš darbo",
       "features": {
         "translategemma-1": {
+          "output": "уволить с работы"
+        },
+        "translategemma-pure": {
           "output": "уволить с работы"
         },
         "vdu-kirciuoklis-1": {
@@ -424,7 +523,10 @@
       "input": "atostogauti",
       "features": {
         "translategemma-1": {
-          "output": "отдыхать, проводить отпуск."
+          "output": "отдыхать, проводить отпуск"
+        },
+        "translategemma-pure": {
+          "output": "отдыхать, проводить отпуск"
         },
         "vdu-kirciuoklis-1": {
           "output": ["atostogáuti"]
@@ -437,6 +539,9 @@
         "translategemma-1": {
           "output": "отпуск"
         },
+        "translategemma-pure": {
+          "output": "отпуск"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["atóstogos"]
         }
@@ -446,7 +551,10 @@
       "input": "atsikelti",
       "features": {
         "translategemma-1": {
-          "output": "встать с постели."
+          "output": "встать с постели"
+        },
+        "translategemma-pure": {
+          "output": "встать, проснуться"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -462,7 +570,10 @@
       "input": "atsiprašau",
       "features": {
         "translategemma-1": {
-          "output": "извините."
+          "output": "извините"
+        },
+        "translategemma-pure": {
+          "output": "Извините"
         },
         "vdu-kirciuoklis-1": {
           "output": ["atsiprašaũ"]
@@ -473,7 +584,10 @@
       "input": "atvažiuoti",
       "features": {
         "translategemma-1": {
-          "output": "приезжать."
+          "output": "приезжать"
+        },
+        "translategemma-pure": {
+          "output": "приезжать"
         },
         "vdu-kirciuoklis-1": {
           "output": ["atvažiúoti"]
@@ -484,7 +598,10 @@
       "input": "atvykti",
       "features": {
         "translategemma-1": {
-          "output": "прибыть."
+          "output": "прибыть"
+        },
+        "translategemma-pure": {
+          "output": "прибыть, приехать"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -500,7 +617,10 @@
       "input": "auditorija",
       "features": {
         "translategemma-1": {
-          "output": "аудитория."
+          "output": "аудитория"
+        },
+        "translategemma-pure": {
+          "output": "аудитория"
         },
         "vdu-kirciuoklis-1": {
           "output": ["auditòrija"]
@@ -511,7 +631,10 @@
       "input": "auksas",
       "features": {
         "translategemma-1": {
-          "output": "золото."
+          "output": "золото"
+        },
+        "translategemma-pure": {
+          "output": "золото"
         },
         "vdu-kirciuoklis-1": {
           "output": ["áuksas"]
@@ -522,7 +645,10 @@
       "input": "aukščiau",
       "features": {
         "translategemma-1": {
-          "output": "выше."
+          "output": "выше"
+        },
+        "translategemma-pure": {
+          "output": "выше"
         },
         "vdu-kirciuoklis-1": {
           "output": ["aukščiaũ"]
@@ -533,6 +659,9 @@
       "input": "aukštas",
       "features": {
         "translategemma-1": {
+          "output": "высокий"
+        },
+        "translategemma-pure": {
           "output": "высокий"
         },
         "vdu-kirciuoklis-1": {
@@ -551,6 +680,9 @@
         "translategemma-1": {
           "output": "вверх"
         },
+        "translategemma-pure": {
+          "output": "вверх"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["aukštỹn"]
         }
@@ -560,7 +692,10 @@
       "input": "ausinės",
       "features": {
         "translategemma-1": {
-          "output": "Наушники."
+          "output": "Наушники"
+        },
+        "translategemma-pure": {
+          "output": "Наушники"
         },
         "vdu-kirciuoklis-1": {
           "output": ["ausìnės"]
@@ -571,6 +706,9 @@
       "input": "ausis",
       "features": {
         "translategemma-1": {
+          "output": "уши"
+        },
+        "translategemma-pure": {
           "output": "уши"
         },
         "vdu-kirciuoklis-1": {
@@ -587,7 +725,10 @@
       "input": "autobusas",
       "features": {
         "translategemma-1": {
-          "output": "автобус."
+          "output": "автобус"
+        },
+        "translategemma-pure": {
+          "output": "автобус"
         },
         "vdu-kirciuoklis-1": {
           "output": ["autobùsas"]
@@ -600,6 +741,9 @@
         "translategemma-1": {
           "output": "автобусная остановка"
         },
+        "translategemma-pure": {
+          "output": "Автобусная остановка"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["autobùsų", "stotẽlė"]
         }
@@ -609,7 +753,10 @@
       "input": "autobusų stotis",
       "features": {
         "translategemma-1": {
-          "output": "Автовокзал."
+          "output": "Автовокзал"
+        },
+        "translategemma-pure": {
+          "output": "Автовокзал"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -628,6 +775,9 @@
         "translategemma-1": {
           "output": "автомобиль"
         },
+        "translategemma-pure": {
+          "output": "автомобиль"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["automobìlis"]
         }
@@ -637,7 +787,10 @@
       "input": "automobilių stovėjimo aikštelė",
       "features": {
         "translategemma-1": {
-          "output": "автомобильная парковка."
+          "output": "автомобильная парковка"
+        },
+        "translategemma-pure": {
+          "output": "автомобильная парковка"
         },
         "vdu-kirciuoklis-1": {
           "output": ["automobìlių", "stovė́jimo", "aikštẽlė"]
@@ -648,7 +801,10 @@
       "input": "autoservisas",
       "features": {
         "translategemma-1": {
-          "output": "автосервис."
+          "output": "автосервис"
+        },
+        "translategemma-pure": {
+          "output": "автосервис"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -666,6 +822,9 @@
         "translategemma-1": {
           "output": "обувь"
         },
+        "translategemma-pure": {
+          "output": "обувь (в разговорной речи: обувная коллекция)"
+        },
         "vdu-kirciuoklis-1": {
           "output": [
             {
@@ -682,6 +841,9 @@
         "translategemma-1": {
           "output": "авария"
         },
+        "translategemma-pure": {
+          "output": "авария"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["avãrija"]
         }
@@ -691,7 +853,10 @@
       "input": "avarinis išėjimas",
       "features": {
         "translategemma-1": {
-          "output": "аварийный выход."
+          "output": "аварийный выход"
+        },
+        "translategemma-pure": {
+          "output": "аварийный выход"
         },
         "vdu-kirciuoklis-1": {
           "output": ["avãrinis", "išėjìmas"]
@@ -702,7 +867,10 @@
       "input": "baigti",
       "features": {
         "translategemma-1": {
-          "output": "закончить."
+          "output": "закончить"
+        },
+        "translategemma-pure": {
+          "output": "закончить, завершить, окончить"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -718,7 +886,10 @@
       "input": "balandėliai",
       "features": {
         "translategemma-1": {
-          "output": "журавлики."
+          "output": "журавлики"
+        },
+        "translategemma-pure": {
+          "output": "жаворонки"
         },
         "vdu-kirciuoklis-1": {
           "output": ["balandė̃liai"]
@@ -729,6 +900,9 @@
       "input": "balandis",
       "features": {
         "translategemma-1": {
+          "output": "апрель"
+        },
+        "translategemma-pure": {
           "output": "апрель"
         },
         "vdu-kirciuoklis-1": {
@@ -742,6 +916,9 @@
         "translategemma-1": {
           "output": "балкон"
         },
+        "translategemma-pure": {
+          "output": "балкон"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["balkònas"]
         }
@@ -751,6 +928,9 @@
       "input": "baltas",
       "features": {
         "translategemma-1": {
+          "output": "белый"
+        },
+        "translategemma-pure": {
           "output": "белый"
         },
         "vdu-kirciuoklis-1": {
@@ -764,6 +944,9 @@
         "translategemma-1": {
           "output": "бананы"
         },
+        "translategemma-pure": {
+          "output": "бананы"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["banãnas"]
         }
@@ -775,6 +958,9 @@
         "translategemma-1": {
           "output": "бант (для волос)"
         },
+        "translategemma-pure": {
+          "output": "бант (для волос)"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["bandẽlė"]
         }
@@ -784,7 +970,10 @@
       "input": "bankas",
       "features": {
         "translategemma-1": {
-          "output": "банк."
+          "output": "банк"
+        },
+        "translategemma-pure": {
+          "output": "банк"
         },
         "vdu-kirciuoklis-1": {
           "output": ["bánkas"]
@@ -795,6 +984,9 @@
       "input": "baras",
       "features": {
         "translategemma-1": {
+          "output": "бар"
+        },
+        "translategemma-pure": {
           "output": "бар"
         },
         "vdu-kirciuoklis-1": {
@@ -808,6 +1000,9 @@
         "translategemma-1": {
           "output": "бассейн"
         },
+        "translategemma-pure": {
+          "output": "бассейн"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["baseĩnas"]
         }
@@ -819,6 +1014,9 @@
         "translategemma-1": {
           "output": "тапочки"
         },
+        "translategemma-pure": {
+          "output": "баскетбольные кроссовки"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["basùtės"]
         }
@@ -828,7 +1026,10 @@
       "input": "batai",
       "features": {
         "translategemma-1": {
-          "output": "обувь."
+          "output": "обувь"
+        },
+        "translategemma-pure": {
+          "output": "обувь"
         },
         "vdu-kirciuoklis-1": {
           "output": ["bãtai"]
@@ -839,7 +1040,10 @@
       "input": "batonas",
       "features": {
         "translategemma-1": {
-          "output": "батон."
+          "output": "батон"
+        },
+        "translategemma-pure": {
+          "output": "батон"
         },
         "vdu-kirciuoklis-1": {
           "output": ["batònas"]
@@ -852,6 +1056,9 @@
         "translategemma-1": {
           "output": "безработный"
         },
+        "translategemma-pure": {
+          "output": "безработный"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["bedar̃bis"]
         }
@@ -861,7 +1068,10 @@
       "input": "belaidis internetas",
       "features": {
         "translategemma-1": {
-          "output": "беспроводной интернет."
+          "output": "беспроводной интернет"
+        },
+        "translategemma-pure": {
+          "output": "беспроводной интернет"
         },
         "vdu-kirciuoklis-1": {
           "output": ["belaĩdis", "internètas"]
@@ -874,6 +1084,9 @@
         "translategemma-1": {
           "output": "бегать"
         },
+        "translategemma-pure": {
+          "output": "бегать, заниматься бегом"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["bėgióti"]
         }
@@ -883,6 +1096,9 @@
       "input": "biblioteka",
       "features": {
         "translategemma-1": {
+          "output": "библиотека"
+        },
+        "translategemma-pure": {
           "output": "библиотека"
         },
         "vdu-kirciuoklis-1": {
@@ -899,7 +1115,10 @@
       "input": "bilietas",
       "features": {
         "translategemma-1": {
-          "output": "билет."
+          "output": "билет"
+        },
+        "translategemma-pure": {
+          "output": "билет"
         },
         "vdu-kirciuoklis-1": {
           "output": ["bìlietas"]
@@ -910,7 +1129,10 @@
       "input": "biologija",
       "features": {
         "translategemma-1": {
-          "output": "биология."
+          "output": "биология"
+        },
+        "translategemma-pure": {
+          "output": "биология"
         },
         "vdu-kirciuoklis-1": {
           "output": ["biològija"]
@@ -923,6 +1145,9 @@
         "translategemma-1": {
           "output": "июнь"
         },
+        "translategemma-pure": {
+          "output": "июнь"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["biržẽlis"]
         }
@@ -932,7 +1157,10 @@
       "input": "biuras",
       "features": {
         "translategemma-1": {
-          "output": "офис."
+          "output": "офис"
+        },
+        "translategemma-pure": {
+          "output": "офис"
         },
         "vdu-kirciuoklis-1": {
           "output": ["biùras"]
@@ -945,6 +1173,9 @@
         "translategemma-1": {
           "output": "блины"
         },
+        "translategemma-pure": {
+          "output": "блины"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["blỹnai"]
         }
@@ -954,7 +1185,10 @@
       "input": "blyneliai",
       "features": {
         "translategemma-1": {
-          "output": "блины."
+          "output": "блины"
+        },
+        "translategemma-pure": {
+          "output": "блины"
         },
         "vdu-kirciuoklis-1": {
           "output": ["blynẽliai"]
@@ -965,6 +1199,9 @@
       "input": "blogai",
       "features": {
         "translategemma-1": {
+          "output": "плохо"
+        },
+        "translategemma-pure": {
           "output": "плохо"
         },
         "vdu-kirciuoklis-1": {
@@ -983,6 +1220,9 @@
         "translategemma-1": {
           "output": "плохо"
         },
+        "translategemma-pure": {
+          "output": "плохо"
+        },
         "vdu-kirciuoklis-1": {
           "output": [
             {
@@ -999,6 +1239,9 @@
         "translategemma-1": {
           "output": "клубника"
         },
+        "translategemma-pure": {
+          "output": "клубника"
+        },
         "vdu-kirciuoklis-1": {
           "output": [
             {
@@ -1013,7 +1256,10 @@
       "input": "brendis",
       "features": {
         "translategemma-1": {
-          "output": "виски."
+          "output": "виски"
+        },
+        "translategemma-pure": {
+          "output": "виски (шотландский односолодовый виски)"
         },
         "vdu-kirciuoklis-1": {
           "output": ["breñdis"]
@@ -1024,6 +1270,9 @@
       "input": "brolis",
       "features": {
         "translategemma-1": {
+          "output": "брат"
+        },
+        "translategemma-pure": {
           "output": "брат"
         },
         "vdu-kirciuoklis-1": {
@@ -1037,6 +1286,9 @@
         "translategemma-1": {
           "output": "картофель"
         },
+        "translategemma-pure": {
+          "output": "картофель"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["bùlvė"]
         }
@@ -1046,7 +1298,10 @@
       "input": "burokėlis",
       "features": {
         "translategemma-1": {
-          "output": "маленькая свекла."
+          "output": "маленькая свекла"
+        },
+        "translategemma-pure": {
+          "output": "свекла (маленькая), или, маленькая свекла, или, молодая свекла"
         },
         "vdu-kirciuoklis-1": {
           "output": ["burokė̃lis"]
@@ -1057,6 +1312,9 @@
       "input": "butas",
       "features": {
         "translategemma-1": {
+          "output": "квартира"
+        },
+        "translategemma-pure": {
           "output": "квартира"
         },
         "vdu-kirciuoklis-1": {
@@ -1070,6 +1328,9 @@
         "translategemma-1": {
           "output": "бутылка"
         },
+        "translategemma-pure": {
+          "output": "бутылка"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["bùtelis"]
         }
@@ -1079,6 +1340,9 @@
       "input": "būti",
       "features": {
         "translategemma-1": {
+          "output": "быть"
+        },
+        "translategemma-pure": {
           "output": "быть"
         },
         "vdu-kirciuoklis-1": {
@@ -1097,6 +1361,9 @@
         "translategemma-1": {
           "output": "цент"
         },
+        "translategemma-pure": {
+          "output": "центы"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["ceñtas"]
         }
@@ -1108,6 +1375,9 @@
         "translategemma-1": {
           "output": "центр"
         },
+        "translategemma-pure": {
+          "output": "центр"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["ceñtras"]
         }
@@ -1117,7 +1387,10 @@
       "input": "cepelinai",
       "features": {
         "translategemma-1": {
-          "output": "цеппелины."
+          "output": "цеппелины"
+        },
+        "translategemma-pure": {
+          "output": "цеппелины"
         },
         "vdu-kirciuoklis-1": {
           "output": ["cepelìnai"]
@@ -1128,6 +1401,9 @@
       "input": "chemija",
       "features": {
         "translategemma-1": {
+          "output": "химия"
+        },
+        "translategemma-pure": {
           "output": "химия"
         },
         "vdu-kirciuoklis-1": {
@@ -1141,6 +1417,9 @@
         "translategemma-1": {
           "output": "чек"
         },
+        "translategemma-pure": {
+          "output": "чек"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["čèkis"]
         }
@@ -1150,7 +1429,10 @@
       "input": "česnakas",
       "features": {
         "translategemma-1": {
-          "output": "чеснок."
+          "output": "чеснок"
+        },
+        "translategemma-pure": {
+          "output": "чеснок"
         },
         "vdu-kirciuoklis-1": {
           "output": ["česnãkas"]
@@ -1163,6 +1445,9 @@
         "translategemma-1": {
           "output": "здесь"
         },
+        "translategemma-pure": {
+          "output": "здесь"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["čià"]
         }
@@ -1172,7 +1457,10 @@
       "input": "čiuožinėti",
       "features": {
         "translategemma-1": {
-          "output": "кататься на лыжах/санках."
+          "output": "кататься на лыжах/санках"
+        },
+        "translategemma-pure": {
+          "output": "кататься на лыжах; кататься на санках; скользить"
         },
         "vdu-kirciuoklis-1": {
           "output": ["čiuožinė́ti"]
@@ -1183,7 +1471,10 @@
       "input": "dailininkas",
       "features": {
         "translategemma-1": {
-          "output": "художник."
+          "output": "художник"
+        },
+        "translategemma-pure": {
+          "output": "художник"
         },
         "vdu-kirciuoklis-1": {
           "output": ["daĩlininkas"]
@@ -1194,7 +1485,10 @@
       "input": "dainininkas",
       "features": {
         "translategemma-1": {
-          "output": "певец."
+          "output": "певец"
+        },
+        "translategemma-pure": {
+          "output": "певец/певица"
         },
         "vdu-kirciuoklis-1": {
           "output": ["daininiñkas"]
@@ -1205,7 +1499,10 @@
       "input": "dainuoti",
       "features": {
         "translategemma-1": {
-          "output": "петь."
+          "output": "петь"
+        },
+        "translategemma-pure": {
+          "output": "петь, исполнять песни"
         },
         "vdu-kirciuoklis-1": {
           "output": ["dainúoti"]
@@ -1218,6 +1515,9 @@
         "translategemma-1": {
           "output": "зуб"
         },
+        "translategemma-pure": {
+          "output": "зуб"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["dantìs"]
         }
@@ -1227,7 +1527,10 @@
       "input": "darbas",
       "features": {
         "translategemma-1": {
-          "output": "работа."
+          "output": "работа"
+        },
+        "translategemma-pure": {
+          "output": "работа"
         },
         "vdu-kirciuoklis-1": {
           "output": ["dárbas"]
@@ -1240,6 +1543,9 @@
         "translategemma-1": {
           "output": "рабочий"
         },
+        "translategemma-pure": {
+          "output": "рабочий"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["darbiniñkas"]
         }
@@ -1249,7 +1555,10 @@
       "input": "darbo drabužiai",
       "features": {
         "translategemma-1": {
-          "output": "рабочая одежда."
+          "output": "рабочая одежда"
+        },
+        "translategemma-pure": {
+          "output": "спецодежда"
         },
         "vdu-kirciuoklis-1": {
           "output": ["dárbo", "drabùžiai"]
@@ -1261,6 +1570,9 @@
       "features": {
         "translategemma-1": {
           "output": "часы работы"
+        },
+        "translategemma-pure": {
+          "output": "рабочее время"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -1277,7 +1589,10 @@
       "input": "darbo vieta",
       "features": {
         "translategemma-1": {
-          "output": "место работы."
+          "output": "место работы"
+        },
+        "translategemma-pure": {
+          "output": "рабочее место, или, место работы, или, рабочее пространство, (в зависимости от контекста)"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -1296,6 +1611,9 @@
         "translategemma-1": {
           "output": "сотрудники"
         },
+        "translategemma-pure": {
+          "output": "сотрудники"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["darbúotojai"]
         }
@@ -1307,6 +1625,9 @@
         "translategemma-1": {
           "output": "овощи"
         },
+        "translategemma-pure": {
+          "output": "овощи"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["daržóvės"]
         }
@@ -1316,7 +1637,10 @@
       "input": "daugiabutis",
       "features": {
         "translategemma-1": {
-          "output": "многоквартирный дом."
+          "output": "многоквартирный дом"
+        },
+        "translategemma-pure": {
+          "output": "многоквартирный дом"
         },
         "vdu-kirciuoklis-1": {
           "output": ["daugiabùtis"]
@@ -1327,6 +1651,9 @@
       "input": "dažai",
       "features": {
         "translategemma-1": {
+          "output": "краски"
+        },
+        "translategemma-pure": {
           "output": "краски"
         },
         "vdu-kirciuoklis-1": {
@@ -1345,6 +1672,9 @@
         "translategemma-1": {
           "output": "красить"
         },
+        "translategemma-pure": {
+          "output": "красить, красить, окрашивать"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["dažýti"]
         }
@@ -1354,6 +1684,9 @@
       "input": "dažnai",
       "features": {
         "translategemma-1": {
+          "output": "часто"
+        },
+        "translategemma-pure": {
           "output": "часто"
         },
         "vdu-kirciuoklis-1": {
@@ -1372,6 +1705,9 @@
         "translategemma-1": {
           "output": "коньяк"
         },
+        "translategemma-pure": {
+          "output": "бренди"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["degtìnė"]
         }
@@ -1381,7 +1717,10 @@
       "input": "dekanas",
       "features": {
         "translategemma-1": {
-          "output": "декан."
+          "output": "декан"
+        },
+        "translategemma-pure": {
+          "output": "декан"
         },
         "vdu-kirciuoklis-1": {
           "output": ["dekãnas"]
@@ -1392,7 +1731,10 @@
       "input": "dešinė",
       "features": {
         "translategemma-1": {
-          "output": "правый."
+          "output": "правый"
+        },
+        "translategemma-pure": {
+          "output": "правый бок; правая сторона; правый (о политических убеждениях)"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -1408,7 +1750,10 @@
       "input": "dešinėje",
       "features": {
         "translategemma-1": {
-          "output": "справа."
+          "output": "справа"
+        },
+        "translategemma-pure": {
+          "output": "справа"
         },
         "vdu-kirciuoklis-1": {
           "output": ["dešinėjè"]
@@ -1421,6 +1766,9 @@
         "translategemma-1": {
           "output": "колбаски"
         },
+        "translategemma-pure": {
+          "output": "колбаски"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["dešrẽlės"]
         }
@@ -1430,7 +1778,10 @@
       "input": "dėdė",
       "features": {
         "translategemma-1": {
-          "output": "дядя."
+          "output": "дядя"
+        },
+        "translategemma-pure": {
+          "output": "дядя"
         },
         "vdu-kirciuoklis-1": {
           "output": ["dė̃dė"]
@@ -1441,7 +1792,10 @@
       "input": "dėstytojas",
       "features": {
         "translategemma-1": {
-          "output": "преподаватель."
+          "output": "преподаватель"
+        },
+        "translategemma-pure": {
+          "output": "преподаватель"
         },
         "vdu-kirciuoklis-1": {
           "output": ["dė́stytojas"]
@@ -1454,6 +1808,9 @@
         "translategemma-1": {
           "output": "коробка"
         },
+        "translategemma-pure": {
+          "output": "коробка"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["dėžė̃"]
         }
@@ -1463,7 +1820,10 @@
       "input": "dėžutė",
       "features": {
         "translategemma-1": {
-          "output": "коробка."
+          "output": "коробка"
+        },
+        "translategemma-pure": {
+          "output": "коробка"
         },
         "vdu-kirciuoklis-1": {
           "output": ["dėžùtė"]
@@ -1476,6 +1836,9 @@
         "translategemma-1": {
           "output": "большой"
         },
+        "translategemma-pure": {
+          "output": "большой"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["dìdelis"]
         }
@@ -1485,7 +1848,10 @@
       "input": "didžkukuliai",
       "features": {
         "translategemma-1": {
-          "output": "большие печеньки."
+          "output": "большие печеньки"
+        },
+        "translategemma-pure": {
+          "output": "большие ракушки"
         },
         "vdu-kirciuoklis-1": {
           "output": ["dìdžkukuliai"]
@@ -1496,7 +1862,10 @@
       "input": "diena",
       "features": {
         "translategemma-1": {
-          "output": "день."
+          "output": "день"
+        },
+        "translategemma-pure": {
+          "output": "день"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -1512,7 +1881,10 @@
       "input": "dingo elektra",
       "features": {
         "translategemma-1": {
-          "output": "выключили электричество."
+          "output": "выключили электричество"
+        },
+        "translategemma-pure": {
+          "output": "Отключилось электричество"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -1534,6 +1906,9 @@
         "translategemma-1": {
           "output": "дипломы"
         },
+        "translategemma-pure": {
+          "output": "дипломы"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["diplòmas"]
         }
@@ -1543,6 +1918,9 @@
       "input": "dirbti",
       "features": {
         "translategemma-1": {
+          "output": "работать"
+        },
+        "translategemma-pure": {
           "output": "работать"
         },
         "vdu-kirciuoklis-1": {
@@ -1559,7 +1937,10 @@
       "input": "direktorius",
       "features": {
         "translategemma-1": {
-          "output": "директор."
+          "output": "директор"
+        },
+        "translategemma-pure": {
+          "output": "директор"
         },
         "vdu-kirciuoklis-1": {
           "output": ["dirèktorius"]
@@ -1570,6 +1951,9 @@
       "input": "dydis",
       "features": {
         "translategemma-1": {
+          "output": "размер"
+        },
+        "translategemma-pure": {
           "output": "размер"
         },
         "vdu-kirciuoklis-1": {
@@ -1583,6 +1967,9 @@
         "translategemma-1": {
           "output": "документы"
         },
+        "translategemma-pure": {
+          "output": "документы"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["dokumeñtai"]
         }
@@ -1592,7 +1979,10 @@
       "input": "drabužiai moterims",
       "features": {
         "translategemma-1": {
-          "output": "одежда для женщин."
+          "output": "одежда для женщин"
+        },
+        "translategemma-pure": {
+          "output": "женская одежда"
         },
         "vdu-kirciuoklis-1": {
           "output": ["drabùžiai", "móterims"]
@@ -1603,7 +1993,10 @@
       "input": "drabužiai vaikams",
       "features": {
         "translategemma-1": {
-          "output": "одежда для детей."
+          "output": "одежда для детей"
+        },
+        "translategemma-pure": {
+          "output": "одежда для детей"
         },
         "vdu-kirciuoklis-1": {
           "output": ["drabùžiai", "vaikáms"]
@@ -1614,7 +2007,10 @@
       "input": "drabužiai vyrams",
       "features": {
         "translategemma-1": {
-          "output": "одежда для мужчин."
+          "output": "одежда для мужчин"
+        },
+        "translategemma-pure": {
+          "output": "одежда для мужчин"
         },
         "vdu-kirciuoklis-1": {
           "output": ["drabùžiai", "výrams"]
@@ -1625,7 +2021,10 @@
       "input": "drabužinė",
       "features": {
         "translategemma-1": {
-          "output": "гардеробная."
+          "output": "гардеробная"
+        },
+        "translategemma-pure": {
+          "output": "гардеробная комната"
         },
         "vdu-kirciuoklis-1": {
           "output": ["drabužìnė"]
@@ -1638,6 +2037,9 @@
         "translategemma-1": {
           "output": "страховка"
         },
+        "translategemma-pure": {
+          "output": "страхование"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["draudìmas"]
         }
@@ -1649,6 +2051,9 @@
         "translategemma-1": {
           "output": "дразнилка"
         },
+        "translategemma-pure": {
+          "output": "дрожжук (уменьшительно-ласкательное от \"дрожжи\")"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["drožtùkas"]
         }
@@ -1658,7 +2063,10 @@
       "input": "dujokaukė",
       "features": {
         "translategemma-1": {
-          "output": "газовый респиратор."
+          "output": "газовый респиратор"
+        },
+        "translategemma-pure": {
+          "output": "газоулавливающая маска"
         },
         "vdu-kirciuoklis-1": {
           "output": ["dujókaukė"]
@@ -1671,6 +2079,9 @@
         "translategemma-1": {
           "output": "дыхание"
         },
+        "translategemma-pure": {
+          "output": "задуха, удушье"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["duktė̃"]
         }
@@ -1680,6 +2091,9 @@
       "input": "dulkių siurblys",
       "features": {
         "translategemma-1": {
+          "output": "пылесос"
+        },
+        "translategemma-pure": {
           "output": "пылесос"
         },
         "vdu-kirciuoklis-1": {
@@ -1693,6 +2107,9 @@
         "translategemma-1": {
           "output": "хлеб"
         },
+        "translategemma-pure": {
+          "output": "хлеб"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["dúona"]
         }
@@ -1703,6 +2120,9 @@
       "features": {
         "translategemma-1": {
           "output": "давать"
+        },
+        "translategemma-pure": {
+          "output": "дать"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -1720,6 +2140,9 @@
         "translategemma-1": {
           "output": "двери"
         },
+        "translategemma-pure": {
+          "output": "двери"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["dùrys"]
         }
@@ -1729,7 +2152,10 @@
       "input": "dušas",
       "features": {
         "translategemma-1": {
-          "output": "душ."
+          "output": "душ"
+        },
+        "translategemma-pure": {
+          "output": "душ"
         },
         "vdu-kirciuoklis-1": {
           "output": ["dùšas"]
@@ -1740,6 +2166,9 @@
       "input": "dviratis",
       "features": {
         "translategemma-1": {
+          "output": "велосипед"
+        },
+        "translategemma-pure": {
           "output": "велосипед"
         },
         "vdu-kirciuoklis-1": {
@@ -1758,6 +2187,9 @@
         "translategemma-1": {
           "output": "джинсы"
         },
+        "translategemma-pure": {
+          "output": "джинсы"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["džìnsai"]
         }
@@ -1767,6 +2199,9 @@
       "input": "džiovyklė",
       "features": {
         "translategemma-1": {
+          "output": "сушилка"
+        },
+        "translategemma-pure": {
           "output": "сушилка"
         },
         "vdu-kirciuoklis-1": {
@@ -1780,6 +2215,9 @@
         "translategemma-1": {
           "output": "экзамен"
         },
+        "translategemma-pure": {
+          "output": "экзамен"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["egzãminas"]
         }
@@ -1791,6 +2229,9 @@
         "translategemma-1": {
           "output": "очередь"
         },
+        "translategemma-pure": {
+          "output": "очередь"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["eilė̃"]
         }
@@ -1800,6 +2241,9 @@
       "input": "eiti",
       "features": {
         "translategemma-1": {
+          "output": "идти"
+        },
+        "translategemma-pure": {
           "output": "идти"
         },
         "vdu-kirciuoklis-1": {
@@ -1816,7 +2260,10 @@
       "input": "eiti miegoti",
       "features": {
         "translategemma-1": {
-          "output": "Ложиться спать."
+          "output": "Ложиться спать"
+        },
+        "translategemma-pure": {
+          "output": "ложиться спать"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -1833,7 +2280,10 @@
       "input": "elektra",
       "features": {
         "translategemma-1": {
-          "output": "электричество."
+          "output": "электричество"
+        },
+        "translategemma-pure": {
+          "output": "электричество"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -1851,6 +2301,9 @@
         "translategemma-1": {
           "output": "электрик"
         },
+        "translategemma-pure": {
+          "output": "электрик"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["elèktrikas"]
         }
@@ -1860,7 +2313,10 @@
       "input": "elektroninis receptas",
       "features": {
         "translategemma-1": {
-          "output": "электронный рецепт."
+          "output": "электронный рецепт"
+        },
+        "translategemma-pure": {
+          "output": "электронный рецепт"
         },
         "vdu-kirciuoklis-1": {
           "output": ["elektròninis", "recèptas"]
@@ -1871,7 +2327,10 @@
       "input": "euras",
       "features": {
         "translategemma-1": {
-          "output": "евро."
+          "output": "евро"
+        },
+        "translategemma-pure": {
+          "output": "евро"
         },
         "vdu-kirciuoklis-1": {
           "output": ["eũras"]
@@ -1884,6 +2343,9 @@
         "translategemma-1": {
           "output": "озеро"
         },
+        "translategemma-pure": {
+          "output": "озеро"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["ẽžeras"]
         }
@@ -1893,7 +2355,10 @@
       "input": "filmas",
       "features": {
         "translategemma-1": {
-          "output": "фильм."
+          "output": "фильм"
+        },
+        "translategemma-pure": {
+          "output": "фильм"
         },
         "vdu-kirciuoklis-1": {
           "output": ["fìlmas"]
@@ -1904,6 +2369,9 @@
       "input": "fizika",
       "features": {
         "translategemma-1": {
+          "output": "физика"
+        },
+        "translategemma-pure": {
           "output": "физика"
         },
         "vdu-kirciuoklis-1": {
@@ -1917,6 +2385,9 @@
         "translategemma-1": {
           "output": "футбол"
         },
+        "translategemma-pure": {
+          "output": "футбол"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["fùtbolas"]
         }
@@ -1926,7 +2397,10 @@
       "input": "gabaliukas",
       "features": {
         "translategemma-1": {
-          "output": "кусочек."
+          "output": "кусочек"
+        },
+        "translategemma-pure": {
+          "output": "кусочек, фрагмент, отрывок"
         },
         "vdu-kirciuoklis-1": {
           "output": ["gabaliùkas"]
@@ -1937,7 +2411,10 @@
       "input": "gaila",
       "features": {
         "translategemma-1": {
-          "output": "Жаль."
+          "output": "Жаль"
+        },
+        "translategemma-pure": {
+          "output": "Жаль"
         },
         "vdu-kirciuoklis-1": {
           "output": ["gaĩla"]
@@ -1950,6 +2427,9 @@
         "translategemma-1": {
           "output": "пожар"
         },
+        "translategemma-pure": {
+          "output": "пожар"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["gaĩsras"]
         }
@@ -1959,7 +2439,10 @@
       "input": "gaisrinė",
       "features": {
         "translategemma-1": {
-          "output": "пожарная станция."
+          "output": "пожарная станция"
+        },
+        "translategemma-pure": {
+          "output": "пожарная часть"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -1975,7 +2458,10 @@
       "input": "gal",
       "features": {
         "translategemma-1": {
-          "output": "возможно."
+          "output": "возможно"
+        },
+        "translategemma-pure": {
+          "output": "возможно"
         },
         "vdu-kirciuoklis-1": {
           "output": ["gál"]
@@ -1986,6 +2472,9 @@
       "input": "galva",
       "features": {
         "translategemma-1": {
+          "output": "голова"
+        },
+        "translategemma-pure": {
           "output": "голова"
         },
         "vdu-kirciuoklis-1": {
@@ -2004,6 +2493,9 @@
         "translategemma-1": {
           "output": "головная боль"
         },
+        "translategemma-pure": {
+          "output": "головная боль"
+        },
         "vdu-kirciuoklis-1": {
           "output": [
             {
@@ -2019,7 +2511,10 @@
       "input": "gamykla",
       "features": {
         "translategemma-1": {
-          "output": "фабрика."
+          "output": "фабрика"
+        },
+        "translategemma-pure": {
+          "output": "фабрика, завод"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -2037,6 +2532,9 @@
         "translategemma-1": {
           "output": "гарантия"
         },
+        "translategemma-pure": {
+          "output": "гарантия"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["garántija"]
         }
@@ -2046,6 +2544,9 @@
       "input": "garažas",
       "features": {
         "translategemma-1": {
+          "output": "гараж"
+        },
+        "translategemma-pure": {
           "output": "гараж"
         },
         "vdu-kirciuoklis-1": {
@@ -2059,6 +2560,9 @@
         "translategemma-1": {
           "output": "улица"
         },
+        "translategemma-pure": {
+          "output": "улица"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["gãtvė"]
         }
@@ -2068,6 +2572,9 @@
       "input": "gauti",
       "features": {
         "translategemma-1": {
+          "output": "получить"
+        },
+        "translategemma-pure": {
           "output": "получить"
         },
         "vdu-kirciuoklis-1": {
@@ -2084,7 +2591,10 @@
       "input": "gazuotas vanduo",
       "features": {
         "translategemma-1": {
-          "output": "газированная вода."
+          "output": "газированная вода"
+        },
+        "translategemma-pure": {
+          "output": "газированная вода"
         },
         "vdu-kirciuoklis-1": {
           "output": ["gazúotas", "vanduõ"]
@@ -2095,7 +2605,10 @@
       "input": "gegužė",
       "features": {
         "translategemma-1": {
-          "output": "май."
+          "output": "май"
+        },
+        "translategemma-pure": {
+          "output": "май"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -2111,7 +2624,10 @@
       "input": "geležinkelio stotis",
       "features": {
         "translategemma-1": {
-          "output": "железнодорожный вокзал."
+          "output": "железнодорожный вокзал"
+        },
+        "translategemma-pure": {
+          "output": "железнодорожный вокзал"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -2130,6 +2646,9 @@
         "translategemma-1": {
           "output": "желтый"
         },
+        "translategemma-pure": {
+          "output": "желтый"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["geltónas"]
         }
@@ -2141,6 +2660,9 @@
         "translategemma-1": {
           "output": "Помогите!"
         },
+        "translategemma-pure": {
+          "output": "помогите!"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["gélbėkit"]
         }
@@ -2150,6 +2672,9 @@
       "input": "gerai",
       "features": {
         "translategemma-1": {
+          "output": "хорошо"
+        },
+        "translategemma-pure": {
           "output": "хорошо"
         },
         "vdu-kirciuoklis-1": {
@@ -2168,6 +2693,9 @@
         "translategemma-1": {
           "output": "горло"
         },
+        "translategemma-pure": {
+          "output": "горло"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["gerklė̃"]
         }
@@ -2177,7 +2705,10 @@
       "input": "gerti",
       "features": {
         "translategemma-1": {
-          "output": "пить."
+          "output": "пить"
+        },
+        "translategemma-pure": {
+          "output": "пить"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -2195,6 +2726,9 @@
         "translategemma-1": {
           "output": "цветок"
         },
+        "translategemma-pure": {
+          "output": "цветок"
+        },
         "vdu-kirciuoklis-1": {
           "output": [
             {
@@ -2209,7 +2743,10 @@
       "input": "gėlynas",
       "features": {
         "translategemma-1": {
-          "output": "луг, поляна."
+          "output": "луг, поляна"
+        },
+        "translategemma-pure": {
+          "output": "пойменный луг; низина, покрытая травой"
         },
         "vdu-kirciuoklis-1": {
           "output": ["gėlýnas"]
@@ -2220,6 +2757,9 @@
       "input": "gėrimai",
       "features": {
         "translategemma-1": {
+          "output": "напитки"
+        },
+        "translategemma-pure": {
           "output": "напитки"
         },
         "vdu-kirciuoklis-1": {
@@ -2238,6 +2778,9 @@
         "translategemma-1": {
           "output": "напиток"
         },
+        "translategemma-pure": {
+          "output": "напиток"
+        },
         "vdu-kirciuoklis-1": {
           "output": [
             {
@@ -2252,7 +2795,10 @@
       "input": "gimnazija",
       "features": {
         "translategemma-1": {
-          "output": "гимназия."
+          "output": "гимназия"
+        },
+        "translategemma-pure": {
+          "output": "гимназия"
         },
         "vdu-kirciuoklis-1": {
           "output": ["gimnãzija"]
@@ -2263,7 +2809,10 @@
       "input": "gimtoji kalba",
       "features": {
         "translategemma-1": {
-          "output": "родной язык."
+          "output": "родной язык"
+        },
+        "translategemma-pure": {
+          "output": "родной язык"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -2280,7 +2829,10 @@
       "input": "gintaras",
       "features": {
         "translategemma-1": {
-          "output": "янтарь."
+          "output": "янтарь"
+        },
+        "translategemma-pure": {
+          "output": "янтарь"
         },
         "vdu-kirciuoklis-1": {
           "output": ["giñtaras"]
@@ -2293,6 +2845,9 @@
         "translategemma-1": {
           "output": "врач"
         },
+        "translategemma-pure": {
+          "output": "врач"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["gýdytojas"]
         }
@@ -2302,7 +2857,10 @@
       "input": "gyventi",
       "features": {
         "translategemma-1": {
-          "output": "жить."
+          "output": "жить"
+        },
+        "translategemma-pure": {
+          "output": "жить"
         },
         "vdu-kirciuoklis-1": {
           "output": ["gyvénti"]
@@ -2313,7 +2871,10 @@
       "input": "gyvenimo aprašymas",
       "features": {
         "translategemma-1": {
-          "output": "резюме."
+          "output": "резюме"
+        },
+        "translategemma-pure": {
+          "output": "резюме, или, свидетельство о трудовой деятельности, или, биография (в зависимости от контекста)"
         },
         "vdu-kirciuoklis-1": {
           "output": ["gyvẽnimo", "aprãšymas"]
@@ -2326,6 +2887,9 @@
         "translategemma-1": {
           "output": "гольф"
         },
+        "translategemma-pure": {
+          "output": "гольф"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["gòlfas"]
         }
@@ -2335,7 +2899,10 @@
       "input": "gramas",
       "features": {
         "translategemma-1": {
-          "output": "граммы."
+          "output": "граммы"
+        },
+        "translategemma-pure": {
+          "output": "граммы"
         },
         "vdu-kirciuoklis-1": {
           "output": ["grãmas"]
@@ -2346,6 +2913,9 @@
       "input": "grąža",
       "features": {
         "translategemma-1": {
+          "output": "возврат"
+        },
+        "translategemma-pure": {
           "output": "возврат"
         },
         "vdu-kirciuoklis-1": {
@@ -2364,6 +2934,9 @@
         "translategemma-1": {
           "output": "скорая помощь"
         },
+        "translategemma-pure": {
+          "output": "скорая помощь"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["greitóji", "pagálba"]
         }
@@ -2373,7 +2946,10 @@
       "input": "grėblys",
       "features": {
         "translategemma-1": {
-          "output": "берег, откос."
+          "output": "берег, откос"
+        },
+        "translategemma-pure": {
+          "output": "берег, откос, склон"
         },
         "vdu-kirciuoklis-1": {
           "output": ["grėblỹs"]
@@ -2384,6 +2960,9 @@
       "input": "grietinė",
       "features": {
         "translategemma-1": {
+          "output": "сливки"
+        },
+        "translategemma-pure": {
           "output": "сливки"
         },
         "vdu-kirciuoklis-1": {
@@ -2397,6 +2976,9 @@
         "translategemma-1": {
           "output": "сметана"
         },
+        "translategemma-pure": {
+          "output": "сметана"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["grietinė̃lė"]
         }
@@ -2406,6 +2988,9 @@
       "input": "gripas",
       "features": {
         "translategemma-1": {
+          "output": "грипп"
+        },
+        "translategemma-pure": {
           "output": "грипп"
         },
         "vdu-kirciuoklis-1": {
@@ -2418,6 +3003,9 @@
       "features": {
         "translategemma-1": {
           "output": "возвращаться"
+        },
+        "translategemma-pure": {
+          "output": "вернуться"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -2433,6 +3021,9 @@
       "input": "grįžti namo",
       "features": {
         "translategemma-1": {
+          "output": "вернуться домой"
+        },
+        "translategemma-pure": {
           "output": "вернуться домой"
         },
         "vdu-kirciuoklis-1": {
@@ -2453,7 +3044,10 @@
       "input": "grynieji pinigai",
       "features": {
         "translategemma-1": {
-          "output": "наличные деньги."
+          "output": "наличные деньги"
+        },
+        "translategemma-pure": {
+          "output": "наличные деньги"
         },
         "vdu-kirciuoklis-1": {
           "output": ["gryníeji", "pinigaĩ"]
@@ -2464,7 +3058,10 @@
       "input": "groti",
       "features": {
         "translategemma-1": {
-          "output": "играть."
+          "output": "играть"
+        },
+        "translategemma-pure": {
+          "output": "играть"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -2480,7 +3077,10 @@
       "input": "gruodis",
       "features": {
         "translategemma-1": {
-          "output": "декабрь."
+          "output": "декабрь"
+        },
+        "translategemma-pure": {
+          "output": "декабрь"
         },
         "vdu-kirciuoklis-1": {
           "output": ["grúodis"]
@@ -2491,7 +3091,10 @@
       "input": "gulėti ligoninėje",
       "features": {
         "translategemma-1": {
-          "output": "лежать в больнице."
+          "output": "лежать в больнице"
+        },
+        "translategemma-pure": {
+          "output": "лежать в больнице"
         },
         "vdu-kirciuoklis-1": {
           "output": ["gulė́ti", "ligóninėje"]
@@ -2502,7 +3105,10 @@
       "input": "gultis",
       "features": {
         "translategemma-1": {
-          "output": "лежать."
+          "output": "лежать"
+        },
+        "translategemma-pure": {
+          "output": "ложиться, лежать"
         },
         "vdu-kirciuoklis-1": {
           "output": ["gul̃tis"]
@@ -2513,7 +3119,10 @@
       "input": "gultis į ligoninę",
       "features": {
         "translategemma-1": {
-          "output": "ложиться в больницу."
+          "output": "ложиться в больницу"
+        },
+        "translategemma-pure": {
+          "output": "поступить в больницу"
         },
         "vdu-kirciuoklis-1": {
           "output": ["gul̃tis", "į̃", "ligóninę"]
@@ -2524,7 +3133,10 @@
       "input": "iki",
       "features": {
         "translategemma-1": {
-          "output": "до."
+          "output": "до"
+        },
+        "translategemma-pure": {
+          "output": "до"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -2540,7 +3152,10 @@
       "input": "ilgai",
       "features": {
         "translategemma-1": {
-          "output": "долго."
+          "output": "долго"
+        },
+        "translategemma-pure": {
+          "output": "долго"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -2556,7 +3171,10 @@
       "input": "imti",
       "features": {
         "translategemma-1": {
-          "output": "брать."
+          "output": "брать"
+        },
+        "translategemma-pure": {
+          "output": "брать"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -2574,6 +3192,9 @@
         "translategemma-1": {
           "output": "посудомоечная машина"
         },
+        "translategemma-pure": {
+          "output": "посудомоечная машина"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["indãplovė"]
         }
@@ -2585,6 +3206,9 @@
         "translategemma-1": {
           "output": "вставка"
         },
+        "translategemma-pure": {
+          "output": "вставка, вкладыш"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["indẽlis"]
         }
@@ -2594,7 +3218,10 @@
       "input": "injekcija",
       "features": {
         "translategemma-1": {
-          "output": "инъекция."
+          "output": "инъекция"
+        },
+        "translategemma-pure": {
+          "output": "инъекция"
         },
         "vdu-kirciuoklis-1": {
           "output": ["injèkcija"]
@@ -2605,7 +3232,10 @@
       "input": "institutas",
       "features": {
         "translategemma-1": {
-          "output": "институт."
+          "output": "институт"
+        },
+        "translategemma-pure": {
+          "output": "институт"
         },
         "vdu-kirciuoklis-1": {
           "output": ["institùtas"]
@@ -2618,6 +3248,9 @@
         "translategemma-1": {
           "output": "интернет"
         },
+        "translategemma-pure": {
+          "output": "интернет"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["internètas"]
         }
@@ -2627,7 +3260,10 @@
       "input": "interneto svetainė",
       "features": {
         "translategemma-1": {
-          "output": "веб-сайт."
+          "output": "веб-сайт"
+        },
+        "translategemma-pure": {
+          "output": "веб-сайт, или, интернет-сайт"
         },
         "vdu-kirciuoklis-1": {
           "output": ["internèto", "svetaĩnė"]
@@ -2638,6 +3274,9 @@
       "input": "istorija",
       "features": {
         "translategemma-1": {
+          "output": "история"
+        },
+        "translategemma-pure": {
           "output": "история"
         },
         "vdu-kirciuoklis-1": {
@@ -2651,6 +3290,9 @@
         "translategemma-1": {
           "output": "из"
         },
+        "translategemma-pure": {
+          "output": "из"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["ìš"]
         }
@@ -2660,7 +3302,10 @@
       "input": "išėjimas",
       "features": {
         "translategemma-1": {
-          "output": "выход."
+          "output": "выход"
+        },
+        "translategemma-pure": {
+          "output": "выход, уход, отъезд"
         },
         "vdu-kirciuoklis-1": {
           "output": ["išėjìmas"]
@@ -2671,7 +3316,10 @@
       "input": "išjungtas",
       "features": {
         "translategemma-1": {
-          "output": "выключен."
+          "output": "выключен"
+        },
+        "translategemma-pure": {
+          "output": "выключен"
         },
         "vdu-kirciuoklis-1": {
           "output": ["išjùngtas"]
@@ -2682,7 +3330,10 @@
       "input": "išjungti",
       "features": {
         "translategemma-1": {
-          "output": "выключить."
+          "output": "выключить"
+        },
+        "translategemma-pure": {
+          "output": "выключить"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -2700,6 +3351,9 @@
         "translategemma-1": {
           "output": "умный телефон"
         },
+        "translategemma-pure": {
+          "output": "смартфон"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["išmanùsis", "telefònas"]
         }
@@ -2709,7 +3363,10 @@
       "input": "išrašyti",
       "features": {
         "translategemma-1": {
-          "output": "выписать."
+          "output": "выписать"
+        },
+        "translategemma-pure": {
+          "output": "выписать; выдать (лекарство, документ)"
         },
         "vdu-kirciuoklis-1": {
           "output": ["išrašýti"]
@@ -2720,7 +3377,10 @@
       "input": "išvežti šiukšles",
       "features": {
         "translategemma-1": {
-          "output": "вывезти мусор."
+          "output": "вывезти мусор"
+        },
+        "translategemma-pure": {
+          "output": "вывезти мусор"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -2737,7 +3397,10 @@
       "input": "išvykti",
       "features": {
         "translategemma-1": {
-          "output": "уехать, отъехать."
+          "output": "уехать, отъехать"
+        },
+        "translategemma-pure": {
+          "output": "уехать, отъехать, выехать"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -2753,7 +3416,10 @@
       "input": "įėjimas",
       "features": {
         "translategemma-1": {
-          "output": "вход."
+          "output": "вход"
+        },
+        "translategemma-pure": {
+          "output": "вход"
         },
         "vdu-kirciuoklis-1": {
           "output": ["įėjìmas"]
@@ -2764,7 +3430,10 @@
       "input": "įjungtas",
       "features": {
         "translategemma-1": {
-          "output": "включен."
+          "output": "включен"
+        },
+        "translategemma-pure": {
+          "output": "включен"
         },
         "vdu-kirciuoklis-1": {
           "output": ["įjùngtas"]
@@ -2775,6 +3444,9 @@
       "input": "įjungti",
       "features": {
         "translategemma-1": {
+          "output": "включить"
+        },
+        "translategemma-pure": {
           "output": "включить"
         },
         "vdu-kirciuoklis-1": {
@@ -2791,7 +3463,10 @@
       "input": "įvertinimas",
       "features": {
         "translategemma-1": {
-          "output": "оценка."
+          "output": "оценка"
+        },
+        "translategemma-pure": {
+          "output": "оценка"
         },
         "vdu-kirciuoklis-1": {
           "output": ["įvértinimas"]
@@ -2802,6 +3477,9 @@
       "input": "jautiena",
       "features": {
         "translategemma-1": {
+          "output": "говядина"
+        },
+        "translategemma-pure": {
           "output": "говядина"
         },
         "vdu-kirciuoklis-1": {
@@ -2818,7 +3496,10 @@
       "input": "jogurtas",
       "features": {
         "translategemma-1": {
-          "output": "йогурт."
+          "output": "йогурт"
+        },
+        "translategemma-pure": {
+          "output": "йогурт"
         },
         "vdu-kirciuoklis-1": {
           "output": ["jogùrtas"]
@@ -2831,6 +3512,9 @@
         "translategemma-1": {
           "output": "черный"
         },
+        "translategemma-pure": {
+          "output": "черный"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["júodas"]
         }
@@ -2840,7 +3524,10 @@
       "input": "juoda kava",
       "features": {
         "translategemma-1": {
-          "output": "черный кофе."
+          "output": "черный кофе"
+        },
+        "translategemma-pure": {
+          "output": "черный кофе"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -2860,7 +3547,10 @@
       "input": "kabinetas",
       "features": {
         "translategemma-1": {
-          "output": "кабинет."
+          "output": "кабинет"
+        },
+        "translategemma-pure": {
+          "output": "кабинет"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kabinètas"]
@@ -2871,6 +3561,9 @@
       "input": "kaina",
       "features": {
         "translategemma-1": {
+          "output": "цена"
+        },
+        "translategemma-pure": {
           "output": "цена"
         },
         "vdu-kirciuoklis-1": {
@@ -2884,6 +3577,9 @@
         "translategemma-1": {
           "output": "как"
         },
+        "translategemma-pure": {
+          "output": "как"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kaĩp"]
         }
@@ -2895,6 +3591,9 @@
         "translategemma-1": {
           "output": "Как дела?"
         },
+        "translategemma-pure": {
+          "output": "Как дела?"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kaĩp", "sẽkasi"]
         }
@@ -2904,7 +3603,10 @@
       "input": "kairė",
       "features": {
         "translategemma-1": {
-          "output": "левый."
+          "output": "левый"
+        },
+        "translategemma-pure": {
+          "output": "левый"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kairė̃"]
@@ -2917,6 +3619,9 @@
         "translategemma-1": {
           "output": "слева"
         },
+        "translategemma-pure": {
+          "output": "слева"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kairėjè"]
         }
@@ -2926,7 +3631,10 @@
       "input": "kalnas",
       "features": {
         "translategemma-1": {
-          "output": "гора."
+          "output": "гора"
+        },
+        "translategemma-pure": {
+          "output": "гора"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kálnas"]
@@ -2939,6 +3647,9 @@
         "translategemma-1": {
           "output": "комната"
         },
+        "translategemma-pure": {
+          "output": "комната"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kambarỹs"]
         }
@@ -2948,7 +3659,10 @@
       "input": "karpis",
       "features": {
         "translategemma-1": {
-          "output": "карп."
+          "output": "карп"
+        },
+        "translategemma-pure": {
+          "output": "карп (рыба)"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kárpis"]
@@ -2959,6 +3673,9 @@
       "input": "karštas",
       "features": {
         "translategemma-1": {
+          "output": "горячий"
+        },
+        "translategemma-pure": {
           "output": "горячий"
         },
         "vdu-kirciuoklis-1": {
@@ -2977,6 +3694,9 @@
         "translategemma-1": {
           "output": "иногда"
         },
+        "translategemma-pure": {
+          "output": "иногда"
+        },
         "vdu-kirciuoklis-1": {
           "output": [
             {
@@ -2993,6 +3713,9 @@
         "translategemma-1": {
           "output": "что/кто"
         },
+        "translategemma-pure": {
+          "output": "что"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kàs"]
         }
@@ -3002,7 +3725,10 @@
       "input": "kasa",
       "features": {
         "translategemma-1": {
-          "output": "касса."
+          "output": "касса"
+        },
+        "translategemma-pure": {
+          "output": "касса"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -3018,7 +3744,10 @@
       "input": "kasdien",
       "features": {
         "translategemma-1": {
-          "output": "ежедневно."
+          "output": "ежедневно"
+        },
+        "translategemma-pure": {
+          "output": "ежедневно"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kasdiẽn"]
@@ -3031,6 +3760,9 @@
         "translategemma-1": {
           "output": "ящик"
         },
+        "translategemma-pure": {
+          "output": "костыль"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kastùvas"]
         }
@@ -3040,7 +3772,10 @@
       "input": "katedra",
       "features": {
         "translategemma-1": {
-          "output": "кафедра."
+          "output": "кафедра"
+        },
+        "translategemma-pure": {
+          "output": "кафедра"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kãtedra"]
@@ -3051,6 +3786,9 @@
       "input": "kava",
       "features": {
         "translategemma-1": {
+          "output": "кофе"
+        },
+        "translategemma-pure": {
           "output": "кофе"
         },
         "vdu-kirciuoklis-1": {
@@ -3067,7 +3805,10 @@
       "input": "kava su pienu",
       "features": {
         "translategemma-1": {
-          "output": "Кофе с молоком."
+          "output": "Кофе с молоком"
+        },
+        "translategemma-pure": {
+          "output": "Кофе с молоком"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -3085,7 +3826,10 @@
       "input": "kavinė",
       "features": {
         "translategemma-1": {
-          "output": "кафе."
+          "output": "кафе"
+        },
+        "translategemma-pure": {
+          "output": "кафе"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kavìnė"]
@@ -3098,6 +3842,9 @@
         "translategemma-1": {
           "output": "кефир"
         },
+        "translategemma-pure": {
+          "output": "кефир"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kefỹras"]
         }
@@ -3107,6 +3854,9 @@
       "input": "kelias",
       "features": {
         "translategemma-1": {
+          "output": "путь, дорога"
+        },
+        "translategemma-pure": {
           "output": "путь, дорога"
         },
         "vdu-kirciuoklis-1": {
@@ -3123,7 +3873,10 @@
       "input": "kelintas",
       "features": {
         "translategemma-1": {
-          "output": "сколько."
+          "output": "сколько"
+        },
+        "translategemma-pure": {
+          "output": "сколько"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -3141,6 +3894,9 @@
         "translategemma-1": {
           "output": "брюки"
         },
+        "translategemma-pure": {
+          "output": "брюки"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kélnės"]
         }
@@ -3151,6 +3907,9 @@
       "features": {
         "translategemma-1": {
           "output": "лифт"
+        },
+        "translategemma-pure": {
+          "output": "поднятый, приподнятый; лифт (транспортное средство)"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -3166,7 +3925,10 @@
       "input": "kepsnys",
       "features": {
         "translategemma-1": {
-          "output": "жареное мясо."
+          "output": "жареное мясо"
+        },
+        "translategemma-pure": {
+          "output": "жареное мясо/мясной продукт, приготовленный на гриле или в духовке"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kepsnỹs"]
@@ -3177,6 +3939,9 @@
       "input": "kepurė",
       "features": {
         "translategemma-1": {
+          "output": "шапка"
+        },
+        "translategemma-pure": {
           "output": "шапка"
         },
         "vdu-kirciuoklis-1": {
@@ -3190,6 +3955,9 @@
         "translategemma-1": {
           "output": "четверг"
         },
+        "translategemma-pure": {
+          "output": "четверг"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["ketvirtãdienis"]
         }
@@ -3199,7 +3967,10 @@
       "input": "kėdė",
       "features": {
         "translategemma-1": {
-          "output": "стул."
+          "output": "стул"
+        },
+        "translategemma-pure": {
+          "output": "стул"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kėdė̃"]
@@ -3210,7 +3981,10 @@
       "input": "kiauliena",
       "features": {
         "translategemma-1": {
-          "output": "свинина."
+          "output": "свинина"
+        },
+        "translategemma-pure": {
+          "output": "свинина"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kiaulíena"]
@@ -3221,7 +3995,10 @@
       "input": "kiaušinienė",
       "features": {
         "translategemma-1": {
-          "output": "яичница."
+          "output": "яичница"
+        },
+        "translategemma-pure": {
+          "output": "яичница"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kiaušiniẽnė"]
@@ -3232,6 +4009,9 @@
       "input": "kibiras",
       "features": {
         "translategemma-1": {
+          "output": "ведро"
+        },
+        "translategemma-pure": {
           "output": "ведро"
         },
         "vdu-kirciuoklis-1": {
@@ -3248,7 +4028,10 @@
       "input": "kiekis",
       "features": {
         "translategemma-1": {
-          "output": "количество."
+          "output": "количество"
+        },
+        "translategemma-pure": {
+          "output": "количество"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kiẽkis"]
@@ -3261,6 +4044,9 @@
         "translategemma-1": {
           "output": "двор"
         },
+        "translategemma-pure": {
+          "output": "двор"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kiẽmas"]
         }
@@ -3270,6 +4056,9 @@
       "input": "kilimas",
       "features": {
         "translategemma-1": {
+          "output": "коврик"
+        },
+        "translategemma-pure": {
           "output": "коврик"
         },
         "vdu-kirciuoklis-1": {
@@ -3286,7 +4075,10 @@
       "input": "kilogramas",
       "features": {
         "translategemma-1": {
-          "output": "килограмм."
+          "output": "килограмм"
+        },
+        "translategemma-pure": {
+          "output": "килограмм"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kilogrãmas"]
@@ -3297,7 +4089,10 @@
       "input": "kioskas",
       "features": {
         "translategemma-1": {
-          "output": "киоск."
+          "output": "киоск"
+        },
+        "translategemma-pure": {
+          "output": "киоск"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kiòskas"]
@@ -3308,7 +4103,10 @@
       "input": "kirpėjas",
       "features": {
         "translategemma-1": {
-          "output": "парикмахер."
+          "output": "парикмахер"
+        },
+        "translategemma-pure": {
+          "output": "парикмахер"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kirpė́jas"]
@@ -3319,6 +4117,9 @@
       "input": "kirpykla",
       "features": {
         "translategemma-1": {
+          "output": "парикмахерская"
+        },
+        "translategemma-pure": {
           "output": "парикмахерская"
         },
         "vdu-kirciuoklis-1": {
@@ -3335,7 +4136,10 @@
       "input": "klasė",
       "features": {
         "translategemma-1": {
-          "output": "класс."
+          "output": "класс"
+        },
+        "translategemma-pure": {
+          "output": "класс"
         },
         "vdu-kirciuoklis-1": {
           "output": ["klãsė"]
@@ -3346,6 +4150,9 @@
       "input": "klausytis",
       "features": {
         "translategemma-1": {
+          "output": "слушать"
+        },
+        "translategemma-pure": {
           "output": "слушать"
         },
         "vdu-kirciuoklis-1": {
@@ -3359,6 +4166,9 @@
         "translategemma-1": {
           "output": "клиника"
         },
+        "translategemma-pure": {
+          "output": "клиника"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["klìnika"]
         }
@@ -3368,7 +4178,10 @@
       "input": "knyga",
       "features": {
         "translategemma-1": {
-          "output": "книга."
+          "output": "книга"
+        },
+        "translategemma-pure": {
+          "output": "книга"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -3386,6 +4199,9 @@
         "translategemma-1": {
           "output": "нога"
         },
+        "translategemma-pure": {
+          "output": "нога"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kója"]
         }
@@ -3395,7 +4211,10 @@
       "input": "kojinės",
       "features": {
         "translategemma-1": {
-          "output": "гетры."
+          "output": "гетры"
+        },
+        "translategemma-pure": {
+          "output": "гетры"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kójinės"]
@@ -3406,7 +4225,10 @@
       "input": "kokybė",
       "features": {
         "translategemma-1": {
-          "output": "качество."
+          "output": "качество"
+        },
+        "translategemma-pure": {
+          "output": "качество"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kokýbė"]
@@ -3419,6 +4241,9 @@
         "translategemma-1": {
           "output": "какой"
         },
+        "translategemma-pure": {
+          "output": "какой"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kóks"]
         }
@@ -3428,7 +4253,10 @@
       "input": "kolegija",
       "features": {
         "translategemma-1": {
-          "output": "коллегия."
+          "output": "коллегия"
+        },
+        "translategemma-pure": {
+          "output": "коллегия"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kolègija"]
@@ -3441,6 +4269,9 @@
         "translategemma-1": {
           "output": "комбинезон"
         },
+        "translategemma-pure": {
+          "output": "комбинезон"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kombinezònas"]
         }
@@ -3450,7 +4281,10 @@
       "input": "kompiuteris",
       "features": {
         "translategemma-1": {
-          "output": "компьютер."
+          "output": "компьютер"
+        },
+        "translategemma-pure": {
+          "output": "компьютер"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kompiùteris"]
@@ -3461,7 +4295,10 @@
       "input": "koncertas",
       "features": {
         "translategemma-1": {
-          "output": "концерт."
+          "output": "концерт"
+        },
+        "translategemma-pure": {
+          "output": "концерт"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -3477,7 +4314,10 @@
       "input": "konkursas",
       "features": {
         "translategemma-1": {
-          "output": "конкурс."
+          "output": "конкурс"
+        },
+        "translategemma-pure": {
+          "output": "конкурс"
         },
         "vdu-kirciuoklis-1": {
           "output": ["konkùrsas"]
@@ -3490,6 +4330,9 @@
         "translategemma-1": {
           "output": "контейнер"
         },
+        "translategemma-pure": {
+          "output": "контейнер"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["konteĩneris"]
         }
@@ -3499,7 +4342,10 @@
       "input": "kopijuoti",
       "features": {
         "translategemma-1": {
-          "output": "копировать."
+          "output": "копировать"
+        },
+        "translategemma-pure": {
+          "output": "копировать"
         },
         "vdu-kirciuoklis-1": {
           "output": ["kopijúoti"]
@@ -3512,6 +4358,9 @@
         "translategemma-1": {
           "output": "капуста"
         },
+        "translategemma-pure": {
+          "output": "капуста"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kopū̃stas"]
         }
@@ -3521,7 +4370,10 @@
       "input": "koridorius",
       "features": {
         "translategemma-1": {
-          "output": "коридор."
+          "output": "коридор"
+        },
+        "translategemma-pure": {
+          "output": "коридор"
         },
         "vdu-kirciuoklis-1": {
           "output": ["korìdorius"]
@@ -3532,6 +4384,9 @@
       "input": "kortelė",
       "features": {
         "translategemma-1": {
+          "output": "карточка"
+        },
+        "translategemma-pure": {
           "output": "карточка"
         },
         "vdu-kirciuoklis-1": {
@@ -3545,6 +4400,9 @@
         "translategemma-1": {
           "output": "кофта"
         },
+        "translategemma-pure": {
+          "output": "косуля"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kosulỹs"]
         }
@@ -3554,6 +4412,9 @@
       "input": "košė",
       "features": {
         "translategemma-1": {
+          "output": "каша"
+        },
+        "translategemma-pure": {
           "output": "каша"
         },
         "vdu-kirciuoklis-1": {
@@ -3572,6 +4433,9 @@
         "translategemma-1": {
           "output": "март"
         },
+        "translategemma-pure": {
+          "output": "март"
+        },
         "vdu-kirciuoklis-1": {
           "output": [
             {
@@ -3588,6 +4452,9 @@
         "translategemma-1": {
           "output": "анализы крови"
         },
+        "translategemma-pure": {
+          "output": "анализы крови"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kraũjo", "tyrìmai"]
         }
@@ -3597,7 +4464,10 @@
       "input": "krepšelis",
       "features": {
         "translategemma-1": {
-          "output": "баскетбол."
+          "output": "баскетбол"
+        },
+        "translategemma-pure": {
+          "output": "баскетбол"
         },
         "vdu-kirciuoklis-1": {
           "output": ["krepšẽlis"]
@@ -3608,7 +4478,10 @@
       "input": "krepšinis",
       "features": {
         "translategemma-1": {
-          "output": "баскетбол."
+          "output": "баскетбол"
+        },
+        "translategemma-pure": {
+          "output": "баскетбол"
         },
         "vdu-kirciuoklis-1": {
           "output": ["krepšìnis"]
@@ -3619,7 +4492,10 @@
       "input": "krepšys",
       "features": {
         "translategemma-1": {
-          "output": "сумка."
+          "output": "сумка"
+        },
+        "translategemma-pure": {
+          "output": "сумка"
         },
         "vdu-kirciuoklis-1": {
           "output": ["krepšỹs"]
@@ -3630,6 +4506,9 @@
       "input": "kriaušė",
       "features": {
         "translategemma-1": {
+          "output": "груша"
+        },
+        "translategemma-pure": {
           "output": "груша"
         },
         "vdu-kirciuoklis-1": {
@@ -3643,6 +4522,9 @@
         "translategemma-1": {
           "output": "направление"
         },
+        "translategemma-pure": {
+          "output": "направление"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kryptìs"]
         }
@@ -3652,6 +4534,9 @@
       "input": "kuprinė",
       "features": {
         "translategemma-1": {
+          "output": "рюкзак"
+        },
+        "translategemma-pure": {
           "output": "рюкзак"
         },
         "vdu-kirciuoklis-1": {
@@ -3665,6 +4550,9 @@
         "translategemma-1": {
           "output": "где"
         },
+        "translategemma-pure": {
+          "output": "где"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kur̃"]
         }
@@ -3676,6 +4564,9 @@
         "translategemma-1": {
           "output": "квалификация"
         },
+        "translategemma-pure": {
+          "output": "квалификация"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["kvalifikãcija"]
         }
@@ -3685,7 +4576,10 @@
       "input": "labanakt",
       "features": {
         "translategemma-1": {
-          "output": "Спокойной ночи."
+          "output": "Спокойной ночи"
+        },
+        "translategemma-pure": {
+          "output": "Спокойной ночи"
         },
         "vdu-kirciuoklis-1": {
           "output": ["labãnakt"]
@@ -3696,7 +4590,10 @@
       "input": "labas rytas",
       "features": {
         "translategemma-1": {
-          "output": "Доброе утро."
+          "output": "Доброе утро"
+        },
+        "translategemma-pure": {
+          "output": "Доброе утро"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -3713,7 +4610,10 @@
       "input": "labas vakaras",
       "features": {
         "translategemma-1": {
-          "output": "Добрый вечер."
+          "output": "Добрый вечер"
+        },
+        "translategemma-pure": {
+          "output": "Добрый вечер"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -3730,7 +4630,10 @@
       "input": "laba diena",
       "features": {
         "translategemma-1": {
-          "output": "Добрый день."
+          "output": "Добрый день"
+        },
+        "translategemma-pure": {
+          "output": "Добрый день"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -3752,6 +4655,9 @@
         "translategemma-1": {
           "output": "очень"
         },
+        "translategemma-pure": {
+          "output": "очень"
+        },
         "vdu-kirciuoklis-1": {
           "output": [
             {
@@ -3766,7 +4672,10 @@
       "input": "labai sunku",
       "features": {
         "translategemma-1": {
-          "output": "очень сложно."
+          "output": "очень сложно"
+        },
+        "translategemma-pure": {
+          "output": "Очень сложно"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -3785,6 +4694,9 @@
         "translategemma-1": {
           "output": "лаборатория"
         },
+        "translategemma-pure": {
+          "output": "лаборатория"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["laboratòrija"]
         }
@@ -3794,6 +4706,9 @@
       "input": "laikyti egzaminą",
       "features": {
         "translategemma-1": {
+          "output": "сдать экзамен"
+        },
+        "translategemma-pure": {
           "output": "сдать экзамен"
         },
         "vdu-kirciuoklis-1": {
@@ -3807,6 +4722,9 @@
         "translategemma-1": {
           "output": "степень"
         },
+        "translategemma-pure": {
+          "output": "степень"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["láipsnis"]
         }
@@ -3816,7 +4734,10 @@
       "input": "laiptai",
       "features": {
         "translategemma-1": {
-          "output": "лестница."
+          "output": "лестница"
+        },
+        "translategemma-pure": {
+          "output": "лестницы"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -3832,7 +4753,10 @@
       "input": "laisvalaikio prekės",
       "features": {
         "translategemma-1": {
-          "output": "товары для досуга."
+          "output": "товары для досуга"
+        },
+        "translategemma-pure": {
+          "output": "товары для досуга"
         },
         "vdu-kirciuoklis-1": {
           "output": ["laisvãlaikio", "prẽkės"]
@@ -3843,7 +4767,10 @@
       "input": "laisva diena",
       "features": {
         "translategemma-1": {
-          "output": "свободный день."
+          "output": "свободный день"
+        },
+        "translategemma-pure": {
+          "output": "свободный день"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -3865,6 +4792,9 @@
         "translategemma-1": {
           "output": "корабль"
         },
+        "translategemma-pure": {
+          "output": "корабль"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["laĩvas"]
         }
@@ -3874,6 +4804,9 @@
       "input": "langas",
       "features": {
         "translategemma-1": {
+          "output": "окно"
+        },
+        "translategemma-pure": {
           "output": "окно"
         },
         "vdu-kirciuoklis-1": {
@@ -3887,6 +4820,9 @@
         "translategemma-1": {
           "output": "осенний месяц"
         },
+        "translategemma-pure": {
+          "output": "осенний период, осень"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["lãpkritis"]
         }
@@ -3898,6 +4834,9 @@
         "translategemma-1": {
           "output": "капли"
         },
+        "translategemma-pure": {
+          "output": "капли"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["lašaĩ"]
         }
@@ -3907,6 +4846,9 @@
       "input": "lašiša",
       "features": {
         "translategemma-1": {
+          "output": "лосось"
+        },
+        "translategemma-pure": {
           "output": "лосось"
         },
         "vdu-kirciuoklis-1": {
@@ -3925,6 +4867,9 @@
         "translategemma-1": {
           "output": "на улице"
         },
+        "translategemma-pure": {
+          "output": "на улице; на открытом воздухе"
+        },
         "vdu-kirciuoklis-1": {
           "output": [
             {
@@ -3941,6 +4886,9 @@
         "translategemma-1": {
           "output": "мороженое"
         },
+        "translategemma-pure": {
+          "output": "мороженое"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["ledaĩ"]
         }
@@ -3950,6 +4898,9 @@
       "input": "lempa",
       "features": {
         "translategemma-1": {
+          "output": "лампа"
+        },
+        "translategemma-pure": {
           "output": "лампа"
         },
         "vdu-kirciuoklis-1": {
@@ -3968,6 +4919,9 @@
         "translategemma-1": {
           "output": "полка"
         },
+        "translategemma-pure": {
+          "output": "полка"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["lentýna"]
         }
@@ -3977,7 +4931,10 @@
       "input": "lėktuvas",
       "features": {
         "translategemma-1": {
-          "output": "самолет."
+          "output": "самолет"
+        },
+        "translategemma-pure": {
+          "output": "самолет"
         },
         "vdu-kirciuoklis-1": {
           "output": ["lėktùvas"]
@@ -3990,6 +4947,9 @@
         "translategemma-1": {
           "output": "июль"
         },
+        "translategemma-pure": {
+          "output": "июль"
+        },
         "vdu-kirciuoklis-1": {
           "output": ["líepa"]
         }
@@ -3999,7 +4959,10 @@
       "input": "lietuvių kalba",
       "features": {
         "translategemma-1": {
-          "output": "литовский язык."
+          "output": "литовский язык"
+        },
+        "translategemma-pure": {
+          "output": "литовский язык"
         },
         "vdu-kirciuoklis-1": {
           "output": [
@@ -4016,7 +4979,10 @@
       "input": "liftas",
       "features": {
         "translategemma-1": {
-          "output": "лифт."
+          "output": "лифт"
+        },
+        "translategemma-pure": {
+          "output": "лифт"
         },
         "vdu-kirciuoklis-1": {
           "output": ["lìftas"]
@@ -4027,6 +4993,9 @@
       "input": "žmona",
       "features": {
         "translategemma-1": {
+          "output": "жена"
+        },
+        "translategemma-pure": {
           "output": "жена"
         },
         "vdu-kirciuoklis-1": {
@@ -4043,6 +5012,9 @@
       "input": "žuvis",
       "features": {
         "translategemma-1": {
+          "output": "рыба"
+        },
+        "translategemma-pure": {
           "output": "рыба"
         },
         "vdu-kirciuoklis-1": {

@@ -151,10 +151,15 @@ function isInputBank(raw: unknown): raw is InputBank {
     typeof bank.sourceLanguage === "string" &&
     Array.isArray(bank.features) &&
     bank.features.every((feature) => {
-      const candidate = feature as { provider?: unknown; options?: unknown };
+      const candidate = feature as {
+        id?: unknown;
+        provider?: unknown;
+        options?: unknown;
+      };
       return (
         feature != null &&
         typeof feature === "object" &&
+        (candidate.id === undefined || typeof candidate.id === "string") &&
         typeof candidate.provider === "string" &&
         typeof candidate.options === "object" &&
         candidate.options != null

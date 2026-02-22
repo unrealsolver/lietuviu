@@ -205,6 +205,108 @@ describe("runtime output", () => {
     expect(JSON.stringify(out)).not.toContain('"error"');
   });
 
+  test("uses custom feature id override in output bank", async () => {
+    const baseDir = await mkdtemp(join(tmpdir(), "ltk-runtime-custom-id-"));
+    const inDir = join(baseDir, "sources");
+    const outDir = join(baseDir, "dist");
+    await mkdir(inDir, { recursive: true });
+
+    const bank = {
+      schemaVersion: "1.0.0",
+      title: "Custom Id Bank",
+      sourceLanguage: "lit",
+      features: [
+        {
+          id: "translate-lit-rus-manual",
+          provider: "stub-shape",
+          options: {},
+        },
+      ],
+      data: ["ačiū"],
+    };
+    await writeFile(
+      join(inDir, "custom-id.json"),
+      JSON.stringify(bank, null, 2),
+    );
+
+    const plugin: Plugin = {
+      kind: "TRANSLATION",
+      provider: "stub-shape",
+      version: "1.0.0",
+      async run(input: string) {
+        return input.toUpperCase();
+      },
+    };
+
+    await runProcessing({
+      paths: { inDir, outDir },
+      plugins: [plugin],
+      defaults: { replayPolicy: "LIVE" },
+    });
+
+    const out = JSON.parse(
+      await readFile(join(outDir, "custom-id.bank.json"), "utf8"),
+    ) as {
+      features: Array<{ id: string }>;
+      data: Array<{
+        input: string;
+        features: Record<string, { output: unknown }>;
+      }>;
+    };
+
+    expect(out.features[0]?.id).toBe("translate-lit-rus-manual");
+    expect(out.data[0]?.features["translate-lit-rus-manual"]?.output).toBe(
+      "AČIŪ",
+    );
+  });
+
+  test("fails on duplicate custom feature ids", async () => {
+    const baseDir = await mkdtemp(join(tmpdir(), "ltk-runtime-dup-id-"));
+    const inDir = join(baseDir, "sources");
+    const outDir = join(baseDir, "dist");
+    await mkdir(inDir, { recursive: true });
+
+    const bank = {
+      schemaVersion: "1.0.0",
+      title: "Duplicate Id Bank",
+      sourceLanguage: "lit",
+      features: [
+        {
+          id: "same-id",
+          provider: "stub-shape",
+          options: {},
+        },
+        {
+          id: "same-id",
+          provider: "stub-shape",
+          options: {},
+        },
+      ],
+      data: ["ačiū"],
+    };
+    await writeFile(join(inDir, "dup-id.json"), JSON.stringify(bank, null, 2));
+
+    let runCalls = 0;
+    const plugin: Plugin = {
+      kind: "TRANSLATION",
+      provider: "stub-shape",
+      version: "1.0.0",
+      async run() {
+        runCalls += 1;
+        return "x";
+      },
+    };
+
+    await expect(
+      runProcessing({
+        paths: { inDir, outDir },
+        plugins: [plugin],
+      }),
+    ).rejects.toThrow('Duplicate feature id "same-id"');
+
+    expect(runCalls).toBe(0);
+  });
+
   test("replay-only with fixed logs produces stable golden output", async () => {
     const baseDir = await mkdtemp(join(tmpdir(), "ltk-runtime-golden-"));
     const inDir = join(baseDir, "sources");

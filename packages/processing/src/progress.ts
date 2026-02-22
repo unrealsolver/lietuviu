@@ -180,7 +180,7 @@ export class ProgressRenderer {
   }
 
   private fitLeft(name: string): string {
-    const maxLeft = 18;
+    const maxLeft = 20;
     if (name.length <= maxLeft) {
       return name.padEnd(maxLeft, " ");
     }

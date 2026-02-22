@@ -106,6 +106,48 @@ describe("translategemma plugin", () => {
     });
   });
 
+  test("normalizes trailing period in translation output", async () => {
+    const plugin = translategemma({
+      model: "translategemma:12b",
+    });
+
+    const out = await plugin.run(
+      "ačiū",
+      {
+        sourceLanguage: "lt-lt",
+        targetLanguage: "ru-ru",
+      },
+      {
+        callExternal: async () => {
+          return { response: " спасибо. " };
+        },
+      },
+    );
+
+    expect(out).toBe("спасибо");
+  });
+
+  test("normalizes newlines to comma separators and trims edge newlines", async () => {
+    const plugin = translategemma({
+      model: "translategemma:12b",
+    });
+
+    const out = await plugin.run(
+      "ačiū",
+      {
+        sourceLanguage: "lt-lt",
+        targetLanguage: "ru-ru",
+      },
+      {
+        callExternal: async () => {
+          return { response: "\n спасибо\nблагодарю \n" };
+        },
+      },
+    );
+
+    expect(out).toBe("спасибо, благодарю");
+  });
+
   test("throws on empty translation response", async () => {
     const plugin = translategemma();
 
@@ -144,5 +186,19 @@ describe("translategemma plugin", () => {
     );
 
     expect(out).toBe("спасибо");
+  });
+
+  test("rejects unknown options", () => {
+    const plugin = translategemma();
+
+    expect(() =>
+      plugin.validateOptions?.({
+        sourceLanguage: "lt-lt",
+        targetLanguage: "ru-ru",
+        unknownFlag: true,
+      } as unknown as Parameters<
+        NonNullable<typeof plugin.validateOptions>
+      >[0]),
+    ).toThrow();
   });
 });

@@ -350,11 +350,26 @@ function toFormData(form: Record<string, string>): FormData {
 
 function resolveFeatureIds(features: FeatureConfig[]): string[] {
   const counters = new Map<string, number>();
-  return features.map((feature) => {
-    const prefix = toIdPrefix(feature.provider);
-    const n = (counters.get(prefix) ?? 0) + 1;
-    counters.set(prefix, n);
-    return `${prefix}-${n}`;
+  const used = new Set<string>();
+  return features.map((feature, index) => {
+    const customId = feature.id?.trim();
+    const nextId =
+      customId && customId.length > 0
+        ? customId
+        : (() => {
+            const prefix = toIdPrefix(feature.provider);
+            const n = (counters.get(prefix) ?? 0) + 1;
+            counters.set(prefix, n);
+            return `${prefix}-${n}`;
+          })();
+
+    if (used.has(nextId)) {
+      throw new Error(
+        `Duplicate feature id "${nextId}" at feature index ${index}`,
+      );
+    }
+    used.add(nextId);
+    return nextId;
   });
 }
 

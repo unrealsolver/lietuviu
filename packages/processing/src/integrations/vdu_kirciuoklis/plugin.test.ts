@@ -104,4 +104,17 @@ describe("vdu_kirciuoklis plugin", () => {
       ),
     ).rejects.toThrow('VDU API error: unsupported accentType "SOMETHING_NEW"');
   });
+
+  test("rejects unknown options", () => {
+    const plugin = vduKirciuoklis();
+
+    expect(() =>
+      plugin.validateOptions?.({
+        mode: "auto",
+        unknownFlag: true,
+      } as unknown as Parameters<
+        NonNullable<typeof plugin.validateOptions>
+      >[0]),
+    ).toThrow();
+  });
 });

@@ -1,9 +1,6 @@
 import type { PhoneticsOutput } from "../models";
 import type { Plugin } from "../plugin";
-
-export type VduKirciuoklisOptions = {
-  mode?: "text" | "auto" | "word";
-};
+import { z } from "zod";
 
 export type AccentType = "ONE" | "MULTIPLE_MEANING" | "MULTIPLE_VARIANT";
 
@@ -38,6 +35,13 @@ type RawTextAccents = {
 
 const DEFAULT_ENDPOINT = "https://kalbu.vdu.lt/ajax-call";
 const DEFAULT_NONCE = "880129de2d";
+export const VduKirciuoklisOptionsSchema = z
+  .object({
+    mode: z.enum(["text", "auto", "word"]).optional(),
+  })
+  .strict();
+
+export type VduKirciuoklisOptions = z.infer<typeof VduKirciuoklisOptionsSchema>;
 
 export function vduKirciuoklis(
   config: VduKirciuoklisPluginConfig = {},
@@ -48,8 +52,11 @@ export function vduKirciuoklis(
   return {
     kind: "PHONETICS",
     provider: "vdu_kirciuoklis",
-    version: "0.3.0",
+    version: "0.3.1",
     itemConcurrency: config.itemConcurrency,
+    validateOptions(options: VduKirciuoklisOptions): void {
+      VduKirciuoklisOptionsSchema.parse(options);
+    },
     async run(
       input: string,
       _options: VduKirciuoklisOptions,

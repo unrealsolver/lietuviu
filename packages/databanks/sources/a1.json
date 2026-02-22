@@ -14,6 +14,14 @@
       }
     },
     {
+      "id": "translategemma-pure",
+      "provider": "translategemma",
+      "options": {
+        "sourceLanguage": "lt-lt",
+        "targetLanguage": "ru-ru"
+      }
+    },
+    {
       "provider": "vdu_kirciuoklis",
       "options": {
         "mode": "auto"
