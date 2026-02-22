@@ -8,6 +8,7 @@ import type {
 } from "./integrations/models";
 
 export class OutputBankView {
+  private readonly bank: OutputBank;
   private readonly featureById = new Map<string, OutputBankFeature>();
   private readonly featureTypes: FeatureType[] = [];
   private readonly groupsByType = new Map<FeatureType, string[]>();
@@ -16,7 +17,8 @@ export class OutputBankView {
     OutputBankFeature[]
   >();
 
-  constructor(private readonly bank: OutputBank) {
+  constructor(bank: OutputBank) {
+    this.bank = bank;
     const seenFeatureTypes = new Set<FeatureType>();
     const groupsByTypeSet = new Map<FeatureType, Set<string>>();
 
