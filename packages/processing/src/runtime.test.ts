@@ -338,7 +338,50 @@ describe("runtime output", () => {
         plugins: [plugin],
       }),
     ).rejects.toThrow(
-      "Invalid bank schema in bad-group.json. Expected InputBank format.",
+      "Invalid bank schema in bad-group.json: features[0].group must be a string when provided",
+    );
+  });
+
+  test("reports readable schema error when feature options are missing", async () => {
+    const baseDir = await mkdtemp(
+      join(tmpdir(), "ltk-runtime-missing-options-"),
+    );
+    const inDir = join(baseDir, "sources");
+    const outDir = join(baseDir, "dist");
+    await mkdir(inDir, { recursive: true });
+
+    const bank = {
+      schemaVersion: "1.0.0",
+      title: "Missing Options Bank",
+      sourceLanguage: "lit",
+      features: [
+        {
+          provider: "stub-shape",
+        },
+      ],
+      data: ["ačiū"],
+    };
+    await writeFile(
+      join(inDir, "missing-options.json"),
+      JSON.stringify(bank, null, 2),
+    );
+
+    const plugin: Plugin = {
+      kind: "TRANSLATION",
+      provider: "stub-shape",
+      version: "1.0.0",
+      async run() {
+        return "ok";
+      },
+    };
+
+    await expect(
+      runProcessing({
+        paths: { inDir, outDir },
+        plugins: [plugin],
+      }),
+    ).rejects.toThrow(
+      "Invalid bank schema in missing-options.json: features[0].options must be an object",
     );
   });
 

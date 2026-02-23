@@ -70,9 +70,10 @@ async function processBankFile(
 ): Promise<void> {
   const sourcePath = join(config.paths.inDir, sourceFile);
   const raw = JSON.parse(await readFile(sourcePath, "utf8")) as unknown;
-  if (!isInputBank(raw)) {
+  const bankValidationError = getInputBankValidationError(raw);
+  if (bankValidationError != null) {
     throw new Error(
-      `Invalid bank schema in ${sourceFile}. Expected InputBank format.`,
+      `Invalid bank schema in ${sourceFile}: ${bankValidationError}`,
     );
   }
   const bank = raw;
@@ -166,38 +167,57 @@ function ensureProvidersAvailable(bank: InputBank, plugins: Plugin[]): void {
   }
 }
 
-function isInputBank(raw: unknown): raw is InputBank {
+function getInputBankValidationError(raw: unknown): string | null {
   if (raw == null || typeof raw !== "object") {
-    return false;
+    return "root must be an object";
   }
 
-  const bank = raw as InputBank;
-  return (
-    typeof bank.schemaVersion === "string" &&
-    typeof bank.title === "string" &&
-    typeof bank.sourceLanguage === "string" &&
-    Array.isArray(bank.features) &&
-    bank.features.every((feature) => {
-      const candidate = feature as {
-        id?: unknown;
-        group?: unknown;
-        provider?: unknown;
-        options?: unknown;
-      };
-      return (
-        feature != null &&
-        typeof feature === "object" &&
-        (candidate.id === undefined || typeof candidate.id === "string") &&
-        (candidate.group === undefined ||
-          typeof candidate.group === "string") &&
-        typeof candidate.provider === "string" &&
-        typeof candidate.options === "object" &&
-        candidate.options != null
-      );
-    }) &&
-    Array.isArray(bank.data) &&
-    bank.data.every((item) => typeof item === "string")
-  );
+  const bank = raw as Record<string, unknown>;
+  if (typeof bank.schemaVersion !== "string") {
+    return "schemaVersion must be a string";
+  }
+  if (typeof bank.title !== "string") {
+    return "title must be a string";
+  }
+  if (typeof bank.sourceLanguage !== "string") {
+    return "sourceLanguage must be a string";
+  }
+  if (!Array.isArray(bank.features)) {
+    return "features must be an array";
+  }
+  for (let i = 0; i < bank.features.length; i += 1) {
+    const feature = bank.features[i];
+    if (feature == null || typeof feature !== "object") {
+      return `features[${i}] must be an object`;
+    }
+    const candidate = feature as {
+      id?: unknown;
+      group?: unknown;
+      provider?: unknown;
+      options?: unknown;
+    };
+    if (candidate.id !== undefined && typeof candidate.id !== "string") {
+      return `features[${i}].id must be a string when provided`;
+    }
+    if (candidate.group !== undefined && typeof candidate.group !== "string") {
+      return `features[${i}].group must be a string when provided`;
+    }
+    if (typeof candidate.provider !== "string") {
+      return `features[${i}].provider must be a string`;
+    }
+    if (candidate.options == null || typeof candidate.options !== "object") {
+      return `features[${i}].options must be an object`;
+    }
+  }
+  if (!Array.isArray(bank.data)) {
+    return "data must be an array";
+  }
+  for (let i = 0; i < bank.data.length; i += 1) {
+    if (typeof bank.data[i] !== "string") {
+      return `data[${i}] must be a string`;
+    }
+  }
+  return null;
 }
 
 function buildOutputBank(
