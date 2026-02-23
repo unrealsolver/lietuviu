@@ -123,10 +123,13 @@ function initializeProgressRows(
     bankReader.getResolvedFeatures().map((feature) => {
       const plugin = pluginByProvider.get(feature.provider);
       const kind = plugin?.kind ?? "?";
+      const sectionLabel = `${kind} (${feature.group})`;
       return {
         featureId: feature.featureId,
         featureOrder: feature.featureOrder,
-        label: `${feature.featureId} [${kind}/${feature.group}]`,
+        label: feature.featureId,
+        sectionKey: `${kind}:${feature.group}`,
+        sectionLabel,
         total,
       };
     }),

@@ -133,13 +133,17 @@ describe("progress renderer", () => {
       {
         featureId: "feature-b",
         featureOrder: 1,
-        label: "feature-b [TRANSLATION/default]",
+        label: "feature-b",
+        sectionKey: "TRANSLATION:default",
+        sectionLabel: "TRANSLATION (default)",
         total: 10,
       },
       {
         featureId: "feature-a",
         featureOrder: 0,
-        label: "feature-a [PHONETICS/default]",
+        label: "feature-a",
+        sectionKey: "PHONETICS:default",
+        sectionLabel: "PHONETICS (default)",
         total: 10,
       },
     ]);
@@ -149,7 +153,53 @@ describe("progress renderer", () => {
       rows: Map<string, { label: string; total: number }>;
     };
     expect(state.order).toEqual(["feature-a", "feature-b"]);
-    expect(state.rows.get("feature-a")?.label).toContain("[PHONETICS/default]");
+    expect(state.rows.get("feature-a")?.label).toBe("feature-a");
     expect(state.rows.get("feature-b")?.total).toBe(10);
+  });
+
+  test("renders section headers above grouped rows in interactive mode", () => {
+    let nowMs = 0;
+    const out: string[] = [];
+    const renderer = new ProgressRenderer({
+      interactive: true,
+      enabled: true,
+      useColors: false,
+      minRenderIntervalMs: 0,
+      now: () => nowMs,
+      write: (text) => {
+        out.push(text);
+      },
+    });
+
+    renderer.initialize([
+      {
+        featureId: "a-1",
+        featureOrder: 0,
+        label: "a-1",
+        sectionKey: "TRANSLATION:default",
+        sectionLabel: "TRANSLATION (default)",
+        total: 2,
+      },
+      {
+        featureId: "b-1",
+        featureOrder: 1,
+        label: "b-1",
+        sectionKey: "PHONETICS:default",
+        sectionLabel: "PHONETICS (default)",
+        total: 2,
+      },
+    ]);
+
+    renderer.update(
+      event({ featureId: "b-1", featureOrder: 1, pluginName: "b", total: 2 }),
+    );
+    nowMs = 1;
+    renderer.update(
+      event({ featureId: "a-1", featureOrder: 0, pluginName: "a", total: 2 }),
+    );
+
+    const rendered = out.join("");
+    expect(rendered).toContain("TRANSLATION (default)");
+    expect(rendered).toContain("PHONETICS (default)");
   });
 });

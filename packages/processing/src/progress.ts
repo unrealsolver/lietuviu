@@ -3,6 +3,8 @@ import { clearScreenDown, moveCursor } from "node:readline";
 
 type RowState = {
   label: string;
+  sectionKey?: string;
+  sectionLabel?: string;
   featureOrder: number;
   total: number;
   done: number;
@@ -23,6 +25,8 @@ export type ProgressRowInit = {
   featureId: string;
   featureOrder: number;
   label?: string;
+  sectionKey?: string;
+  sectionLabel?: string;
   total: number;
 };
 
@@ -62,6 +66,8 @@ export class ProgressRenderer {
       const width = this.resolveBarWidth(label, rowInit.total);
       this.rows.set(rowInit.featureId, {
         label,
+        sectionKey: rowInit.sectionKey,
+        sectionLabel: rowInit.sectionLabel,
         featureOrder: rowInit.featureOrder,
         total: rowInit.total,
         done: 0,
@@ -142,10 +148,22 @@ export class ProgressRenderer {
   }
 
   private render(): void {
-    const lines = this.order
+    const rows = this.order
       .map((id) => this.rows.get(id))
-      .filter((row): row is RowState => row != null)
-      .map((row) => this.renderRow(row));
+      .filter((row): row is RowState => row != null);
+    const lines: string[] = [];
+    let currentSectionKey: string | undefined;
+    for (const row of rows) {
+      if (
+        row.sectionLabel != null &&
+        row.sectionKey != null &&
+        row.sectionKey !== currentSectionKey
+      ) {
+        lines.push(this.renderSectionHeader(row.sectionLabel));
+        currentSectionKey = row.sectionKey;
+      }
+      lines.push(this.renderRow(row));
+    }
 
     if (this.lastLineCount > 0) {
       moveCursor(process.stdout, 0, -this.lastLineCount);
@@ -187,6 +205,10 @@ export class ProgressRenderer {
     return `${left} ${bar} ${right}`;
   }
 
+  private renderSectionHeader(label: string): string {
+    return this.useColors ? `\u001b[1m${label}\u001b[0m` : label;
+  }
+
   private renderBar(sourceBuckets: number[], width: number): string {
     const buckets =
       sourceBuckets.length === width
@@ -204,7 +226,7 @@ export class ProgressRenderer {
           return this.colorize("▞", "cyan");
         }
         if (state === 2) {
-          return this.colorize("▞", "blue");
+          return this.colorize("█", "blue");
         }
         if (state === 1) {
           return this.colorize("█", "green");
