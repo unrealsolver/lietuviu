@@ -4,7 +4,7 @@ import { AnimatedCard } from "./AnimatedCard";
 import classes from "./CardsPage.module.css";
 import type { WordStat } from "./util";
 import {
-  OutputBankView,
+  OutputBankReader,
   type OutputBank,
   type OutputBankItem,
 } from "@ltk/processing";
@@ -22,8 +22,8 @@ import { IconSun, IconMoon } from "@tabler/icons-react";
 import { useEffect, useRef, useState } from "react";
 
 const _bank = await import("@ltk/databanks");
-const bank = _bank as OutputBank;
-const bankView = new OutputBankView(bank);
+const bank = _bank as unknown as OutputBank;
+const bankView = new OutputBankReader(bank);
 
 type Word = string;
 const items: OutputBankItem[] = bank.data;

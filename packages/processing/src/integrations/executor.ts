@@ -66,6 +66,7 @@ const DEFAULT_FEATURE_CONCURRENCY = 4;
 
 export type ItemProgressEvent = {
   featureId: string;
+  featureOrder: number;
   pluginName: string;
   total: number;
   index: number;
@@ -345,6 +346,7 @@ function emitProgressForFeature(
   doneByFeatureId.set(member.featureId, done);
   onItemProgress?.({
     featureId: member.featureId,
+    featureOrder: member.featureIndex,
     pluginName: member.plugin.provider,
     total,
     index,
@@ -518,7 +520,7 @@ function toFormData(form: Record<string, string>): FormData {
   return data;
 }
 
-function resolveFeatureIds(features: FeatureConfig[]): string[] {
+export function resolveFeatureIds(features: FeatureConfig[]): string[] {
   const counters = new Map<string, number>();
   const used = new Set<string>();
   return features.map((feature, index) => {

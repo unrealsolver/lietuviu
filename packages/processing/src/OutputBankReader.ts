@@ -7,7 +7,7 @@ import type {
   OutputBankItemFeatureValue,
 } from "./integrations/models";
 
-export class OutputBankView {
+export class OutputBankReader {
   private readonly bank: OutputBank;
   private readonly featureById = new Map<string, OutputBankFeature>();
   private readonly featureTypes: FeatureType[] = [];

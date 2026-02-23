@@ -3,6 +3,7 @@ import { clearScreenDown, moveCursor } from "node:readline";
 
 type RowState = {
   label: string;
+  featureOrder: number;
   total: number;
   done: number;
   // 0=empty, 1=passed, 2=replayed, 3=partial replay, 4=skipped, 5=error
@@ -16,6 +17,13 @@ type ProgressRendererOptions = {
   minRenderIntervalMs?: number;
   now?: () => number;
   write?: (text: string) => void;
+};
+
+export type ProgressRowInit = {
+  featureId: string;
+  featureOrder: number;
+  label?: string;
+  total: number;
 };
 
 export class ProgressRenderer {
@@ -41,6 +49,34 @@ export class ProgressRenderer {
     this.write = options.write ?? ((text) => process.stdout.write(text));
   }
 
+  initialize(rows: ProgressRowInit[]): void {
+    if (!this.enabled) {
+      return;
+    }
+
+    for (const rowInit of rows) {
+      if (this.rows.has(rowInit.featureId)) {
+        continue;
+      }
+      const label = rowInit.label ?? rowInit.featureId;
+      const width = this.resolveBarWidth(label, rowInit.total);
+      this.rows.set(rowInit.featureId, {
+        label,
+        featureOrder: rowInit.featureOrder,
+        total: rowInit.total,
+        done: 0,
+        buckets: new Array(width).fill(0),
+      });
+      this.order.push(rowInit.featureId);
+    }
+
+    this.order.sort((a, b) => {
+      const rowA = this.rows.get(a);
+      const rowB = this.rows.get(b);
+      return (rowA?.featureOrder ?? 0) - (rowB?.featureOrder ?? 0);
+    });
+  }
+
   update(event: ItemProgressEvent): void {
     if (!this.enabled) {
       return;
@@ -50,6 +86,7 @@ export class ProgressRenderer {
     const existing = this.rows.get(event.featureId);
     const row: RowState = existing ?? {
       label,
+      featureOrder: event.featureOrder,
       total: event.total,
       done: 0,
       buckets: new Array(width).fill(0),
@@ -66,6 +103,11 @@ export class ProgressRenderer {
     if (existing == null) {
       this.rows.set(event.featureId, row);
       this.order.push(event.featureId);
+      this.order.sort((a, b) => {
+        const rowA = this.rows.get(a);
+        const rowB = this.rows.get(b);
+        return (rowA?.featureOrder ?? 0) - (rowB?.featureOrder ?? 0);
+      });
     }
 
     const forceRender = event.done >= event.total;

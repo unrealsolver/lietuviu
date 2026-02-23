@@ -1,7 +1,7 @@
 import cardClasses from "./Card.module.css";
 import { MyCard } from "./MyCard";
 import type { WordStat } from "./util";
-import type { OutputBankItem, OutputBankView } from "@ltk/processing";
+import type { OutputBankItem, OutputBankReader } from "@ltk/processing";
 import { Stack, Title } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useSpring, animated, to, config } from "@react-spring/web";
@@ -10,7 +10,7 @@ import { useDrag } from "@use-gesture/react";
 type AnimatedCardProps = {
   word: string;
   item: OutputBankItem;
-  bankView: OutputBankView;
+  bankView: OutputBankReader;
   onSwipeLeft: (word: string) => void;
   onSwipeRight: (word: string) => void;
   stat: WordStat;
@@ -144,7 +144,7 @@ export function AnimatedCard({
   );
 }
 
-function readAccent(view: OutputBankView, item: OutputBankItem): string {
+function readAccent(view: OutputBankReader, item: OutputBankItem): string {
   const output = view.resolveFeatureOutput(item, "PHONETICS");
   if (!Array.isArray(output) || output.length === 0) {
     return item.input;
@@ -157,7 +157,7 @@ function readAccent(view: OutputBankView, item: OutputBankItem): string {
   return pieces.length > 0 ? pieces.join(" ") : item.input;
 }
 
-function readTranslation(view: OutputBankView, item: OutputBankItem): string {
+function readTranslation(view: OutputBankReader, item: OutputBankItem): string {
   const output = view.resolveFeatureOutput(item, "TRANSLATION");
   if (typeof output === "string") {
     return output;

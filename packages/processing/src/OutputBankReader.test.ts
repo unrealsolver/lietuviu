@@ -1,8 +1,8 @@
-import { OutputBankView } from "./OutputBankView";
+import { OutputBankReader } from "./OutputBankReader";
 import type { OutputBank } from "./integrations";
 import { describe, expect, test } from "bun:test";
 
-describe("OutputBankView", () => {
+describe("OutputBankReader", () => {
   const bank: OutputBank = {
     schemaVersion: "1.0.0",
     title: "Test",
@@ -61,7 +61,7 @@ describe("OutputBankView", () => {
   };
 
   test("reports present feature types and groups", () => {
-    const view = new OutputBankView(bank);
+    const view = new OutputBankReader(bank);
 
     expect(view.getFeatureTypes()).toEqual(["TRANSLATION", "PHONETICS"]);
     expect(view.getGroupsForType("TRANSLATION")).toEqual([
@@ -75,7 +75,7 @@ describe("OutputBankView", () => {
   });
 
   test("resolves output by type with implicit default group", () => {
-    const view = new OutputBankView(bank);
+    const view = new OutputBankReader(bank);
     const hit = bank.data.find((item) => item.input === "hit")!;
     const miss = bank.data.find((item) => item.input === "miss")!;
 
@@ -85,7 +85,7 @@ describe("OutputBankView", () => {
   });
 
   test("requires explicit group for non-default group lookups", () => {
-    const view = new OutputBankView(bank);
+    const view = new OutputBankReader(bank);
     const miss = bank.data.find((item) => item.input === "miss")!;
 
     expect(view.resolveFeatureOutput(miss, "TRANSLATION", "experimental")).toBe(
@@ -94,7 +94,7 @@ describe("OutputBankView", () => {
   });
 
   test("resolves which feature actually won", () => {
-    const view = new OutputBankView(bank);
+    const view = new OutputBankReader(bank);
     const hit = bank.data.find((item) => item.input === "hit")!;
     const miss = bank.data.find((item) => item.input === "miss")!;
 
@@ -117,7 +117,7 @@ describe("OutputBankView", () => {
   });
 
   test("returns null on missing or ambiguous resolution", () => {
-    const view = new OutputBankView(bank);
+    const view = new OutputBankReader(bank);
     const hit = bank.data.find((item) => item.input === "hit")!;
     const ambiguous = bank.data.find((item) => item.input === "ambiguous")!;
 

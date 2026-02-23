@@ -1,6 +1,7 @@
 import {
   createBankLogStore,
   createExecutor,
+  resolveFeatureIds,
   type InputBank,
   type Plugin,
   type ReplayPolicy,
@@ -77,6 +78,7 @@ async function processBankFile(
   const bank = raw;
   const bankId = basename(sourceFile, extname(sourceFile));
   ensureProvidersAvailable(bank, config.plugins);
+  initializeProgressRows(bank, config.plugins, progress);
 
   // Each bank gets its own log namespace, enabling replay/continue per bank.
   const logStore = await createBankLogStore(
@@ -103,6 +105,34 @@ async function processBankFile(
   const outputPath = join(config.paths.outDir, `${bankId}.bank.json`);
   await writeFile(outputPath, JSON.stringify(output, null, 2));
   info(`[${bankId}] Done: ${outputPath}`);
+}
+
+function initializeProgressRows(
+  bank: InputBank,
+  plugins: Plugin[],
+  progress: ProgressRenderer,
+): void {
+  const pluginByProvider = new Map(
+    plugins.map((plugin) => [plugin.provider, plugin]),
+  );
+  const featureIds = resolveFeatureIds(bank.features);
+  const total = bank.data.length;
+
+  progress.initialize(
+    bank.features.map((feature, featureOrder) => {
+      const featureId =
+        featureIds[featureOrder] ?? `feature-${featureOrder + 1}`;
+      const plugin = pluginByProvider.get(feature.provider);
+      const kind = plugin?.kind ?? "?";
+      const group = normalizeFeatureGroup(feature.group) ?? "default";
+      return {
+        featureId,
+        featureOrder,
+        label: `${featureId} [${kind}/${group}]`,
+        total,
+      };
+    }),
+  );
 }
 
 function ensureProvidersAvailable(bank: InputBank, plugins: Plugin[]): void {
@@ -229,4 +259,9 @@ function buildOutputBank(
       features: itemIndex.get(input) ?? {},
     })),
   };
+}
+
+function normalizeFeatureGroup(group: string | undefined): string | undefined {
+  const raw = group?.trim();
+  return raw != null && raw.length > 0 ? raw : undefined;
 }
