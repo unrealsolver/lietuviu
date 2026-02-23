@@ -1,7 +1,7 @@
+import { InputBankReader } from "./InputBankReader";
 import {
   createBankLogStore,
   createExecutor,
-  resolveFeatureIds,
   type InputBank,
   type Plugin,
   type ReplayPolicy,
@@ -112,23 +112,20 @@ function initializeProgressRows(
   plugins: Plugin[],
   progress: ProgressRenderer,
 ): void {
+  const bankReader = new InputBankReader(bank);
   const pluginByProvider = new Map(
     plugins.map((plugin) => [plugin.provider, plugin]),
   );
-  const featureIds = resolveFeatureIds(bank.features);
-  const total = bank.data.length;
+  const total = bankReader.getItemCount();
 
   progress.initialize(
-    bank.features.map((feature, featureOrder) => {
-      const featureId =
-        featureIds[featureOrder] ?? `feature-${featureOrder + 1}`;
+    bankReader.getResolvedFeatures().map((feature) => {
       const plugin = pluginByProvider.get(feature.provider);
       const kind = plugin?.kind ?? "?";
-      const group = normalizeFeatureGroup(feature.group) ?? "default";
       return {
-        featureId,
-        featureOrder,
-        label: `${featureId} [${kind}/${group}]`,
+        featureId: feature.featureId,
+        featureOrder: feature.featureOrder,
+        label: `${feature.featureId} [${kind}/${feature.group}]`,
         total,
       };
     }),
@@ -259,9 +256,4 @@ function buildOutputBank(
       features: itemIndex.get(input) ?? {},
     })),
   };
-}
-
-function normalizeFeatureGroup(group: string | undefined): string | undefined {
-  const raw = group?.trim();
-  return raw != null && raw.length > 0 ? raw : undefined;
 }

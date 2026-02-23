@@ -1,3 +1,4 @@
+import { FeatureGroupIndex, normalizeFeatureGroup } from "./BankFeatures";
 import type {
   FeatureOutputByType,
   FeatureType,
@@ -9,7 +10,7 @@ import type {
 
 export class OutputBankReader {
   private readonly bank: OutputBank;
-  private readonly featureById = new Map<string, OutputBankFeature>();
+  private readonly featureIndex: FeatureGroupIndex<OutputBankFeature>;
   private readonly featureTypes: FeatureType[] = [];
   private readonly groupsByType = new Map<FeatureType, string[]>();
   private readonly featuresByTypeGroupKey = new Map<
@@ -19,12 +20,11 @@ export class OutputBankReader {
 
   constructor(bank: OutputBank) {
     this.bank = bank;
+    this.featureIndex = new FeatureGroupIndex(bank.features);
     const seenFeatureTypes = new Set<FeatureType>();
     const groupsByTypeSet = new Map<FeatureType, Set<string>>();
 
     for (const feature of bank.features) {
-      this.featureById.set(feature.id, feature);
-
       const type = feature.type as FeatureType;
       if (!seenFeatureTypes.has(type)) {
         seenFeatureTypes.add(type);
@@ -68,11 +68,7 @@ export class OutputBankReader {
 
   /** Resolves the normalized group of a feature id, or `null` when missing. */
   getGroupForFeature(featureId: string): string | null {
-    const feature = this.featureById.get(featureId);
-    if (feature == null) {
-      return null;
-    }
-    return this.normalizeGroup(feature.group);
+    return this.featureIndex.getGroupForFeature(featureId);
   }
 
   /** Lists normalized groups that exist for a given feature kind. */
@@ -147,8 +143,7 @@ export class OutputBankReader {
   }
 
   private normalizeGroup(group: string | undefined): string {
-    const raw = group?.trim();
-    return raw != null && raw.length > 0 ? raw : "default";
+    return normalizeFeatureGroup(group);
   }
 
   private typeGroupKey(type: FeatureType, group: string): string {

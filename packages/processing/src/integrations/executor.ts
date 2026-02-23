@@ -1,3 +1,8 @@
+import {
+  normalizeFeatureGroup,
+  normalizeOptionalFeatureGroup,
+  resolveFeatureIds,
+} from "../BankFeatures";
 import type { LogStore } from "./logstore";
 import type { FeatureConfig, InputBank } from "./models";
 import {
@@ -327,7 +332,7 @@ async function executeFeatureGroup(params: {
       featureId: member.featureId,
       provider: member.plugin.provider,
       kind: member.plugin.kind,
-      group: normalizeFeatureGroup(member.feature.group),
+      group: normalizeOptionalFeatureGroup(member.feature.group),
       version: member.plugin.version,
       outputs,
     } satisfies FeatureRunResult;
@@ -375,13 +380,8 @@ function resolveCollapseGroupKey(
   kind: Plugin["kind"],
   groupOverride: string | undefined,
 ): string {
-  const group = normalizeFeatureGroup(groupOverride) ?? "default";
+  const group = normalizeFeatureGroup(groupOverride);
   return `${kind}:${group}`;
-}
-
-function normalizeFeatureGroup(group: string | undefined): string | undefined {
-  const rawGroup = group?.trim();
-  return rawGroup != null && rawGroup.length > 0 ? rawGroup : undefined;
 }
 
 async function callExternalWithReplay<TResponse>(params: {
@@ -518,38 +518,6 @@ function toFormData(form: Record<string, string>): FormData {
     data.append(key, value);
   }
   return data;
-}
-
-export function resolveFeatureIds(features: FeatureConfig[]): string[] {
-  const counters = new Map<string, number>();
-  const used = new Set<string>();
-  return features.map((feature, index) => {
-    const customId = feature.id?.trim();
-    const nextId =
-      customId && customId.length > 0
-        ? customId
-        : (() => {
-            const prefix = toIdPrefix(feature.provider);
-            const n = (counters.get(prefix) ?? 0) + 1;
-            counters.set(prefix, n);
-            return `${prefix}-${n}`;
-          })();
-
-    if (used.has(nextId)) {
-      throw new Error(
-        `Duplicate feature id "${nextId}" at feature index ${index}`,
-      );
-    }
-    used.add(nextId);
-    return nextId;
-  });
-}
-
-function toIdPrefix(provider: string): string {
-  return provider
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
 }
 
 function computeLegacyLogKey(params: {
