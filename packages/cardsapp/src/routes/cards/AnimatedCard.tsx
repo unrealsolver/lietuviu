@@ -130,11 +130,13 @@ export function AnimatedCard({
       >
         <MyCard>
           <Stack align="center">
-            <Title order={1} ff="serif">
+            <Title order={1} ta="center" ff="serif">
               {accent}
             </Title>
-            <Title order={2}>{translation}</Title>
-            <Title order={1}>
+            <Title order={2} ta="center">
+              {translation}
+            </Title>
+            <Title order={1} ta="center">
               {stat.accepts} / {stat.rejects}
             </Title>
           </Stack>
