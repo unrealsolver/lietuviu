@@ -4,7 +4,7 @@
   "description": "",
   "author": "System",
   "sourceLanguage": "lit",
-  "generatedAt": "2026-02-22T22:29:02.761Z",
+  "generatedAt": "2026-02-27T00:44:51.076Z",
   "features": [
     {
       "id": "lietuviurusu-1",
@@ -43,7 +43,9 @@
           "output": "Спасибо"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["ãčiū"]
+          "output": [
+            "ãčiū"
+          ]
         }
       }
     },
@@ -57,7 +59,9 @@
           "output": "администратор"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["administrãtorius"]
+          "output": [
+            "administrãtorius"
+          ]
         }
       }
     },
@@ -71,7 +75,9 @@
           "output": "огурец"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["agur̃kas"]
+          "output": [
+            "agur̃kas"
+          ]
         }
       }
     },
@@ -85,7 +91,9 @@
           "output": "площадка"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["aikštẽlė"]
+          "output": [
+            "aikštẽlė"
+          ]
         }
       }
     },
@@ -118,7 +126,9 @@
           "output": "Конечно., Понятно., Ясно., Хорошо., Окей"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["áišku"]
+          "output": [
+            "áišku"
+          ]
         }
       }
     },
@@ -132,7 +142,9 @@
           "output": "академия"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["akadèmija"]
+          "output": [
+            "akadèmija"
+          ]
         }
       }
     },
@@ -146,7 +158,9 @@
           "output": "акция"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["ãkcija"]
+          "output": [
+            "ãkcija"
+          ]
         }
       }
     },
@@ -160,7 +174,9 @@
           "output": "глаз"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["akìs"]
+          "output": [
+            "akìs"
+          ]
         }
       }
     },
@@ -212,7 +228,9 @@
           "output": "алкан"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["álkanas"]
+          "output": [
+            "álkanas"
+          ]
         }
       }
     },
@@ -246,7 +264,9 @@
           "output": "пиво"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["alùs"]
+          "output": [
+            "alùs"
+          ]
         }
       }
     },
@@ -280,7 +300,9 @@
           "output": "рано"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["ankstì"]
+          "output": [
+            "ankstì"
+          ]
         }
       }
     },
@@ -294,7 +316,9 @@
           "output": "вторник"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["antrãdienis"]
+          "output": [
+            "antrãdienis"
+          ]
         }
       }
     },
@@ -308,7 +332,9 @@
           "output": "апельсин"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["apelsìnas"]
+          "output": [
+            "apelsìnas"
+          ]
         }
       }
     },
@@ -322,7 +348,9 @@
           "output": "папка"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["ãplankas"]
+          "output": [
+            "ãplankas"
+          ]
         }
       }
     },
@@ -336,7 +364,10 @@
           "output": "защитные очки"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["apsaugìniai", "akiniaĩ"]
+          "output": [
+            "apsaugìniai",
+            "akiniaĩ"
+          ]
         }
       }
     },
@@ -388,7 +419,9 @@
           "output": "чайные деньги"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["arbãtpinigiai"]
+          "output": [
+            "arbãtpinigiai"
+          ]
         }
       }
     },
@@ -421,7 +454,11 @@
           "output": "удостоверение личности"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["asmeñs", "tapatýbės", "kortẽlė"]
+          "output": [
+            "asmeñs",
+            "tapatýbės",
+            "kortẽlė"
+          ]
         }
       }
     },
@@ -435,7 +472,9 @@
           "output": "острый"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["aštrùs"]
+          "output": [
+            "aštrùs"
+          ]
         }
       }
     },
@@ -468,7 +507,9 @@
           "output": "открыто"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["atidarýta"]
+          "output": [
+            "atidarýta"
+          ]
         }
       }
     },
@@ -482,7 +523,9 @@
           "output": "открыть"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["atidarýti"]
+          "output": [
+            "atidarýti"
+          ]
         }
       }
     },
@@ -536,7 +579,9 @@
           "output": "отдыхать, проводить отпуск"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["atostogáuti"]
+          "output": [
+            "atostogáuti"
+          ]
         }
       }
     },
@@ -550,7 +595,9 @@
           "output": "отпуск"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["atóstogos"]
+          "output": [
+            "atóstogos"
+          ]
         }
       }
     },
@@ -583,7 +630,9 @@
           "output": "Извините"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["atsiprašaũ"]
+          "output": [
+            "atsiprašaũ"
+          ]
         }
       }
     },
@@ -597,7 +646,9 @@
           "output": "приезжать"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["atvažiúoti"]
+          "output": [
+            "atvažiúoti"
+          ]
         }
       }
     },
@@ -630,7 +681,9 @@
           "output": "аудитория"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["auditòrija"]
+          "output": [
+            "auditòrija"
+          ]
         }
       }
     },
@@ -644,7 +697,9 @@
           "output": "золото"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["áuksas"]
+          "output": [
+            "áuksas"
+          ]
         }
       }
     },
@@ -658,7 +713,9 @@
           "output": "выше"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["aukščiaũ"]
+          "output": [
+            "aukščiaũ"
+          ]
         }
       }
     },
@@ -691,7 +748,9 @@
           "output": "вверх"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["aukštỹn"]
+          "output": [
+            "aukštỹn"
+          ]
         }
       }
     },
@@ -705,7 +764,9 @@
           "output": "Наушники"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["ausìnės"]
+          "output": [
+            "ausìnės"
+          ]
         }
       }
     },
@@ -738,7 +799,9 @@
           "output": "автобус"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["autobùsas"]
+          "output": [
+            "autobùsas"
+          ]
         }
       }
     },
@@ -752,7 +815,10 @@
           "output": "Автобусная остановка"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["autobùsų", "stotẽlė"]
+          "output": [
+            "autobùsų",
+            "stotẽlė"
+          ]
         }
       }
     },
@@ -786,7 +852,9 @@
           "output": "автомобиль"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["automobìlis"]
+          "output": [
+            "automobìlis"
+          ]
         }
       }
     },
@@ -800,7 +868,11 @@
           "output": "автомобильная парковка"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["automobìlių", "stovė́jimo", "aikštẽlė"]
+          "output": [
+            "automobìlių",
+            "stovė́jimo",
+            "aikštẽlė"
+          ]
         }
       }
     },
@@ -852,7 +924,9 @@
           "output": "авария"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["avãrija"]
+          "output": [
+            "avãrija"
+          ]
         }
       }
     },
@@ -866,7 +940,10 @@
           "output": "аварийный выход"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["avãrinis", "išėjìmas"]
+          "output": [
+            "avãrinis",
+            "išėjìmas"
+          ]
         }
       }
     },
@@ -899,7 +976,9 @@
           "output": "жаворонки"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["balandė̃liai"]
+          "output": [
+            "balandė̃liai"
+          ]
         }
       }
     },
@@ -913,7 +992,9 @@
           "output": "апрель"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["balañdis"]
+          "output": [
+            "balañdis"
+          ]
         }
       }
     },
@@ -927,7 +1008,9 @@
           "output": "балкон"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["balkònas"]
+          "output": [
+            "balkònas"
+          ]
         }
       }
     },
@@ -941,7 +1024,9 @@
           "output": "белый"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["báltas"]
+          "output": [
+            "báltas"
+          ]
         }
       }
     },
@@ -955,7 +1040,9 @@
           "output": "бананы"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["banãnas"]
+          "output": [
+            "banãnas"
+          ]
         }
       }
     },
@@ -969,7 +1056,9 @@
           "output": "бант (для волос)"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["bandẽlė"]
+          "output": [
+            "bandẽlė"
+          ]
         }
       }
     },
@@ -983,7 +1072,9 @@
           "output": "банк"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["bánkas"]
+          "output": [
+            "bánkas"
+          ]
         }
       }
     },
@@ -997,7 +1088,9 @@
           "output": "бар"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["bãras"]
+          "output": [
+            "bãras"
+          ]
         }
       }
     },
@@ -1011,7 +1104,9 @@
           "output": "бассейн"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["baseĩnas"]
+          "output": [
+            "baseĩnas"
+          ]
         }
       }
     },
@@ -1025,7 +1120,9 @@
           "output": "баскетбольные кроссовки"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["basùtės"]
+          "output": [
+            "basùtės"
+          ]
         }
       }
     },
@@ -1039,7 +1136,9 @@
           "output": "обувь"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["bãtai"]
+          "output": [
+            "bãtai"
+          ]
         }
       }
     },
@@ -1053,7 +1152,9 @@
           "output": "батон"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["batònas"]
+          "output": [
+            "batònas"
+          ]
         }
       }
     },
@@ -1067,7 +1168,9 @@
           "output": "безработный"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["bedar̃bis"]
+          "output": [
+            "bedar̃bis"
+          ]
         }
       }
     },
@@ -1081,7 +1184,10 @@
           "output": "беспроводной интернет"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["belaĩdis", "internètas"]
+          "output": [
+            "belaĩdis",
+            "internètas"
+          ]
         }
       }
     },
@@ -1095,7 +1201,9 @@
           "output": "бегать, заниматься бегом"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["bėgióti"]
+          "output": [
+            "bėgióti"
+          ]
         }
       }
     },
@@ -1128,7 +1236,9 @@
           "output": "билет"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["bìlietas"]
+          "output": [
+            "bìlietas"
+          ]
         }
       }
     },
@@ -1142,7 +1252,9 @@
           "output": "биология"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["biològija"]
+          "output": [
+            "biològija"
+          ]
         }
       }
     },
@@ -1156,7 +1268,9 @@
           "output": "июнь"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["biržẽlis"]
+          "output": [
+            "biržẽlis"
+          ]
         }
       }
     },
@@ -1170,7 +1284,9 @@
           "output": "офис"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["biùras"]
+          "output": [
+            "biùras"
+          ]
         }
       }
     },
@@ -1184,7 +1300,9 @@
           "output": "блины"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["blỹnai"]
+          "output": [
+            "blỹnai"
+          ]
         }
       }
     },
@@ -1198,7 +1316,9 @@
           "output": "блины"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["blynẽliai"]
+          "output": [
+            "blynẽliai"
+          ]
         }
       }
     },
@@ -1269,7 +1389,9 @@
           "output": "виски (шотландский односолодовый виски)"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["breñdis"]
+          "output": [
+            "breñdis"
+          ]
         }
       }
     },
@@ -1283,7 +1405,9 @@
           "output": "брат"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["brólis"]
+          "output": [
+            "brólis"
+          ]
         }
       }
     },
@@ -1297,7 +1421,9 @@
           "output": "картофель"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["bùlvė"]
+          "output": [
+            "bùlvė"
+          ]
         }
       }
     },
@@ -1311,7 +1437,9 @@
           "output": "свекла (маленькая), или, маленькая свекла, или, молодая свекла"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["burokė̃lis"]
+          "output": [
+            "burokė̃lis"
+          ]
         }
       }
     },
@@ -1325,7 +1453,9 @@
           "output": "квартира"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["bùtas"]
+          "output": [
+            "bùtas"
+          ]
         }
       }
     },
@@ -1339,7 +1469,9 @@
           "output": "бутылка"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["bùtelis"]
+          "output": [
+            "bùtelis"
+          ]
         }
       }
     },
@@ -1372,7 +1504,9 @@
           "output": "центы"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["ceñtas"]
+          "output": [
+            "ceñtas"
+          ]
         }
       }
     },
@@ -1386,7 +1520,9 @@
           "output": "центр"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["ceñtras"]
+          "output": [
+            "ceñtras"
+          ]
         }
       }
     },
@@ -1400,7 +1536,9 @@
           "output": "цеппелины"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["cepelìnai"]
+          "output": [
+            "cepelìnai"
+          ]
         }
       }
     },
@@ -1414,7 +1552,9 @@
           "output": "химия"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["chèmija"]
+          "output": [
+            "chèmija"
+          ]
         }
       }
     },
@@ -1428,7 +1568,9 @@
           "output": "чек"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["čèkis"]
+          "output": [
+            "čèkis"
+          ]
         }
       }
     },
@@ -1442,7 +1584,9 @@
           "output": "чеснок"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["česnãkas"]
+          "output": [
+            "česnãkas"
+          ]
         }
       }
     },
@@ -1456,7 +1600,9 @@
           "output": "здесь"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["čià"]
+          "output": [
+            "čià"
+          ]
         }
       }
     },
@@ -1470,7 +1616,9 @@
           "output": "кататься на лыжах; кататься на санках; скользить"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["čiuožinė́ti"]
+          "output": [
+            "čiuožinė́ti"
+          ]
         }
       }
     },
@@ -1484,7 +1632,9 @@
           "output": "художник"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["daĩlininkas"]
+          "output": [
+            "daĩlininkas"
+          ]
         }
       }
     },
@@ -1498,7 +1648,9 @@
           "output": "певец/певица"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["daininiñkas"]
+          "output": [
+            "daininiñkas"
+          ]
         }
       }
     },
@@ -1512,7 +1664,9 @@
           "output": "петь, исполнять песни"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dainúoti"]
+          "output": [
+            "dainúoti"
+          ]
         }
       }
     },
@@ -1526,7 +1680,9 @@
           "output": "зуб"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dantìs"]
+          "output": [
+            "dantìs"
+          ]
         }
       }
     },
@@ -1540,7 +1696,9 @@
           "output": "работа"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dárbas"]
+          "output": [
+            "dárbas"
+          ]
         }
       }
     },
@@ -1554,7 +1712,9 @@
           "output": "рабочий"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["darbiniñkas"]
+          "output": [
+            "darbiniñkas"
+          ]
         }
       }
     },
@@ -1568,7 +1728,10 @@
           "output": "спецодежда"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dárbo", "drabùžiai"]
+          "output": [
+            "dárbo",
+            "drabùžiai"
+          ]
         }
       }
     },
@@ -1622,7 +1785,9 @@
           "output": "сотрудники"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["darbúotojai"]
+          "output": [
+            "darbúotojai"
+          ]
         }
       }
     },
@@ -1636,7 +1801,9 @@
           "output": "овощи"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["daržóvės"]
+          "output": [
+            "daržóvės"
+          ]
         }
       }
     },
@@ -1650,7 +1817,9 @@
           "output": "многоквартирный дом"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["daugiabùtis"]
+          "output": [
+            "daugiabùtis"
+          ]
         }
       }
     },
@@ -1683,7 +1852,9 @@
           "output": "красить, красить, окрашивать"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dažýti"]
+          "output": [
+            "dažýti"
+          ]
         }
       }
     },
@@ -1716,7 +1887,9 @@
           "output": "бренди"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["degtìnė"]
+          "output": [
+            "degtìnė"
+          ]
         }
       }
     },
@@ -1730,7 +1903,9 @@
           "output": "декан"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dekãnas"]
+          "output": [
+            "dekãnas"
+          ]
         }
       }
     },
@@ -1763,7 +1938,9 @@
           "output": "справа"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dešinėjè"]
+          "output": [
+            "dešinėjè"
+          ]
         }
       }
     },
@@ -1777,7 +1954,9 @@
           "output": "колбаски"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dešrẽlės"]
+          "output": [
+            "dešrẽlės"
+          ]
         }
       }
     },
@@ -1791,7 +1970,9 @@
           "output": "дядя"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dė̃dė"]
+          "output": [
+            "dė̃dė"
+          ]
         }
       }
     },
@@ -1805,7 +1986,9 @@
           "output": "преподаватель"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dė́stytojas"]
+          "output": [
+            "dė́stytojas"
+          ]
         }
       }
     },
@@ -1819,7 +2002,9 @@
           "output": "коробка"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dėžė̃"]
+          "output": [
+            "dėžė̃"
+          ]
         }
       }
     },
@@ -1833,7 +2018,9 @@
           "output": "коробка"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dėžùtė"]
+          "output": [
+            "dėžùtė"
+          ]
         }
       }
     },
@@ -1847,7 +2034,9 @@
           "output": "большой"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dìdelis"]
+          "output": [
+            "dìdelis"
+          ]
         }
       }
     },
@@ -1861,7 +2050,9 @@
           "output": "большие ракушки"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dìdžkukuliai"]
+          "output": [
+            "dìdžkukuliai"
+          ]
         }
       }
     },
@@ -1917,7 +2108,9 @@
           "output": "дипломы"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["diplòmas"]
+          "output": [
+            "diplòmas"
+          ]
         }
       }
     },
@@ -1950,7 +2143,9 @@
           "output": "директор"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dirèktorius"]
+          "output": [
+            "dirèktorius"
+          ]
         }
       }
     },
@@ -1964,7 +2159,9 @@
           "output": "размер"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dỹdis"]
+          "output": [
+            "dỹdis"
+          ]
         }
       }
     },
@@ -1978,7 +2175,9 @@
           "output": "документы"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dokumeñtai"]
+          "output": [
+            "dokumeñtai"
+          ]
         }
       }
     },
@@ -1992,7 +2191,10 @@
           "output": "женская одежда"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["drabùžiai", "móterims"]
+          "output": [
+            "drabùžiai",
+            "móterims"
+          ]
         }
       }
     },
@@ -2006,7 +2208,10 @@
           "output": "одежда для детей"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["drabùžiai", "vaikáms"]
+          "output": [
+            "drabùžiai",
+            "vaikáms"
+          ]
         }
       }
     },
@@ -2020,7 +2225,10 @@
           "output": "одежда для мужчин"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["drabùžiai", "výrams"]
+          "output": [
+            "drabùžiai",
+            "výrams"
+          ]
         }
       }
     },
@@ -2034,7 +2242,9 @@
           "output": "гардеробная комната"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["drabužìnė"]
+          "output": [
+            "drabužìnė"
+          ]
         }
       }
     },
@@ -2048,7 +2258,9 @@
           "output": "страхование"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["draudìmas"]
+          "output": [
+            "draudìmas"
+          ]
         }
       }
     },
@@ -2062,7 +2274,9 @@
           "output": "дрожжук (уменьшительно-ласкательное от \"дрожжи\")"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["drožtùkas"]
+          "output": [
+            "drožtùkas"
+          ]
         }
       }
     },
@@ -2076,7 +2290,9 @@
           "output": "газоулавливающая маска"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dujókaukė"]
+          "output": [
+            "dujókaukė"
+          ]
         }
       }
     },
@@ -2090,7 +2306,9 @@
           "output": "задуха, удушье"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["duktė̃"]
+          "output": [
+            "duktė̃"
+          ]
         }
       }
     },
@@ -2104,7 +2322,10 @@
           "output": "пылесос"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dùlkių", "siurblỹs"]
+          "output": [
+            "dùlkių",
+            "siurblỹs"
+          ]
         }
       }
     },
@@ -2118,7 +2339,9 @@
           "output": "хлеб"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dúona"]
+          "output": [
+            "dúona"
+          ]
         }
       }
     },
@@ -2151,7 +2374,9 @@
           "output": "двери"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dùrys"]
+          "output": [
+            "dùrys"
+          ]
         }
       }
     },
@@ -2165,7 +2390,9 @@
           "output": "душ"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["dùšas"]
+          "output": [
+            "dùšas"
+          ]
         }
       }
     },
@@ -2198,7 +2425,9 @@
           "output": "джинсы"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["džìnsai"]
+          "output": [
+            "džìnsai"
+          ]
         }
       }
     },
@@ -2212,7 +2441,9 @@
           "output": "сушилка"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["džiovỹklė"]
+          "output": [
+            "džiovỹklė"
+          ]
         }
       }
     },
@@ -2226,7 +2457,9 @@
           "output": "экзамен"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["egzãminas"]
+          "output": [
+            "egzãminas"
+          ]
         }
       }
     },
@@ -2240,7 +2473,9 @@
           "output": "очередь"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["eilė̃"]
+          "output": [
+            "eilė̃"
+          ]
         }
       }
     },
@@ -2312,7 +2547,9 @@
           "output": "электрик"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["elèktrikas"]
+          "output": [
+            "elèktrikas"
+          ]
         }
       }
     },
@@ -2326,7 +2563,10 @@
           "output": "электронный рецепт"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["elektròninis", "recèptas"]
+          "output": [
+            "elektròninis",
+            "recèptas"
+          ]
         }
       }
     },
@@ -2340,7 +2580,9 @@
           "output": "евро"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["eũras"]
+          "output": [
+            "eũras"
+          ]
         }
       }
     },
@@ -2354,7 +2596,9 @@
           "output": "озеро"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["ẽžeras"]
+          "output": [
+            "ẽžeras"
+          ]
         }
       }
     },
@@ -2368,7 +2612,9 @@
           "output": "фильм"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["fìlmas"]
+          "output": [
+            "fìlmas"
+          ]
         }
       }
     },
@@ -2382,7 +2628,9 @@
           "output": "физика"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["fìzika"]
+          "output": [
+            "fìzika"
+          ]
         }
       }
     },
@@ -2396,7 +2644,9 @@
           "output": "футбол"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["fùtbolas"]
+          "output": [
+            "fùtbolas"
+          ]
         }
       }
     },
@@ -2410,7 +2660,9 @@
           "output": "кусочек, фрагмент, отрывок"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gabaliùkas"]
+          "output": [
+            "gabaliùkas"
+          ]
         }
       }
     },
@@ -2424,7 +2676,9 @@
           "output": "Жаль"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gaĩla"]
+          "output": [
+            "gaĩla"
+          ]
         }
       }
     },
@@ -2438,7 +2692,9 @@
           "output": "пожар"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gaĩsras"]
+          "output": [
+            "gaĩsras"
+          ]
         }
       }
     },
@@ -2471,7 +2727,9 @@
           "output": "возможно"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gál"]
+          "output": [
+            "gál"
+          ]
         }
       }
     },
@@ -2543,7 +2801,9 @@
           "output": "гарантия"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["garántija"]
+          "output": [
+            "garántija"
+          ]
         }
       }
     },
@@ -2557,7 +2817,9 @@
           "output": "гараж"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["garãžas"]
+          "output": [
+            "garãžas"
+          ]
         }
       }
     },
@@ -2571,7 +2833,9 @@
           "output": "улица"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gãtvė"]
+          "output": [
+            "gãtvė"
+          ]
         }
       }
     },
@@ -2604,7 +2868,10 @@
           "output": "газированная вода"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gazúotas", "vanduõ"]
+          "output": [
+            "gazúotas",
+            "vanduõ"
+          ]
         }
       }
     },
@@ -2657,7 +2924,9 @@
           "output": "желтый"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["geltónas"]
+          "output": [
+            "geltónas"
+          ]
         }
       }
     },
@@ -2671,7 +2940,9 @@
           "output": "помогите!"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gélbėkit"]
+          "output": [
+            "gélbėkit"
+          ]
         }
       }
     },
@@ -2704,7 +2975,9 @@
           "output": "горло"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gerklė̃"]
+          "output": [
+            "gerklė̃"
+          ]
         }
       }
     },
@@ -2756,7 +3029,9 @@
           "output": "пойменный луг; низина, покрытая травой"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gėlýnas"]
+          "output": [
+            "gėlýnas"
+          ]
         }
       }
     },
@@ -2808,7 +3083,9 @@
           "output": "гимназия"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gimnãzija"]
+          "output": [
+            "gimnãzija"
+          ]
         }
       }
     },
@@ -2842,7 +3119,9 @@
           "output": "янтарь"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["giñtaras"]
+          "output": [
+            "giñtaras"
+          ]
         }
       }
     },
@@ -2856,7 +3135,9 @@
           "output": "врач"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gýdytojas"]
+          "output": [
+            "gýdytojas"
+          ]
         }
       }
     },
@@ -2870,7 +3151,9 @@
           "output": "жить"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gyvénti"]
+          "output": [
+            "gyvénti"
+          ]
         }
       }
     },
@@ -2884,7 +3167,10 @@
           "output": "резюме, или, свидетельство о трудовой деятельности, или, биография (в зависимости от контекста)"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gyvẽnimo", "aprãšymas"]
+          "output": [
+            "gyvẽnimo",
+            "aprãšymas"
+          ]
         }
       }
     },
@@ -2898,7 +3184,9 @@
           "output": "гольф"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gòlfas"]
+          "output": [
+            "gòlfas"
+          ]
         }
       }
     },
@@ -2912,7 +3200,9 @@
           "output": "граммы"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["grãmas"]
+          "output": [
+            "grãmas"
+          ]
         }
       }
     },
@@ -2945,7 +3235,10 @@
           "output": "скорая помощь"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["greitóji", "pagálba"]
+          "output": [
+            "greitóji",
+            "pagálba"
+          ]
         }
       }
     },
@@ -2959,7 +3252,9 @@
           "output": "берег, откос, склон"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["grėblỹs"]
+          "output": [
+            "grėblỹs"
+          ]
         }
       }
     },
@@ -2973,7 +3268,9 @@
           "output": "сливки"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["grietìnė"]
+          "output": [
+            "grietìnė"
+          ]
         }
       }
     },
@@ -2987,7 +3284,9 @@
           "output": "сметана"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["grietinė̃lė"]
+          "output": [
+            "grietinė̃lė"
+          ]
         }
       }
     },
@@ -3001,7 +3300,9 @@
           "output": "грипп"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["grìpas"]
+          "output": [
+            "grìpas"
+          ]
         }
       }
     },
@@ -3057,7 +3358,10 @@
           "output": "наличные деньги"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gryníeji", "pinigaĩ"]
+          "output": [
+            "gryníeji",
+            "pinigaĩ"
+          ]
         }
       }
     },
@@ -3090,7 +3394,9 @@
           "output": "декабрь"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["grúodis"]
+          "output": [
+            "grúodis"
+          ]
         }
       }
     },
@@ -3104,7 +3410,10 @@
           "output": "лежать в больнице"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gulė́ti", "ligóninėje"]
+          "output": [
+            "gulė́ti",
+            "ligóninėje"
+          ]
         }
       }
     },
@@ -3118,7 +3427,9 @@
           "output": "ложиться, лежать"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gul̃tis"]
+          "output": [
+            "gul̃tis"
+          ]
         }
       }
     },
@@ -3132,7 +3443,11 @@
           "output": "поступить в больницу"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["gul̃tis", "į̃", "ligóninę"]
+          "output": [
+            "gul̃tis",
+            "į̃",
+            "ligóninę"
+          ]
         }
       }
     },
@@ -3203,7 +3518,9 @@
           "output": "посудомоечная машина"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["indãplovė"]
+          "output": [
+            "indãplovė"
+          ]
         }
       }
     },
@@ -3217,7 +3534,9 @@
           "output": "вставка, вкладыш"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["indẽlis"]
+          "output": [
+            "indẽlis"
+          ]
         }
       }
     },
@@ -3231,7 +3550,9 @@
           "output": "инъекция"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["injèkcija"]
+          "output": [
+            "injèkcija"
+          ]
         }
       }
     },
@@ -3245,7 +3566,9 @@
           "output": "институт"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["institùtas"]
+          "output": [
+            "institùtas"
+          ]
         }
       }
     },
@@ -3259,7 +3582,9 @@
           "output": "интернет"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["internètas"]
+          "output": [
+            "internètas"
+          ]
         }
       }
     },
@@ -3273,7 +3598,10 @@
           "output": "веб-сайт, или, интернет-сайт"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["internèto", "svetaĩnė"]
+          "output": [
+            "internèto",
+            "svetaĩnė"
+          ]
         }
       }
     },
@@ -3287,7 +3615,9 @@
           "output": "история"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["istòrija"]
+          "output": [
+            "istòrija"
+          ]
         }
       }
     },
@@ -3301,7 +3631,9 @@
           "output": "из"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["ìš"]
+          "output": [
+            "ìš"
+          ]
         }
       }
     },
@@ -3315,7 +3647,9 @@
           "output": "выход, уход, отъезд"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["išėjìmas"]
+          "output": [
+            "išėjìmas"
+          ]
         }
       }
     },
@@ -3329,7 +3663,9 @@
           "output": "выключен"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["išjùngtas"]
+          "output": [
+            "išjùngtas"
+          ]
         }
       }
     },
@@ -3362,7 +3698,10 @@
           "output": "смартфон"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["išmanùsis", "telefònas"]
+          "output": [
+            "išmanùsis",
+            "telefònas"
+          ]
         }
       }
     },
@@ -3376,7 +3715,9 @@
           "output": "выписать; выдать (лекарство, документ)"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["išrašýti"]
+          "output": [
+            "išrašýti"
+          ]
         }
       }
     },
@@ -3429,7 +3770,9 @@
           "output": "вход"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["įėjìmas"]
+          "output": [
+            "įėjìmas"
+          ]
         }
       }
     },
@@ -3443,7 +3786,9 @@
           "output": "включен"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["įjùngtas"]
+          "output": [
+            "įjùngtas"
+          ]
         }
       }
     },
@@ -3476,7 +3821,9 @@
           "output": "оценка"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["įvértinimas"]
+          "output": [
+            "įvértinimas"
+          ]
         }
       }
     },
@@ -3509,7 +3856,9 @@
           "output": "йогурт"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["jogùrtas"]
+          "output": [
+            "jogùrtas"
+          ]
         }
       }
     },
@@ -3523,7 +3872,9 @@
           "output": "черный"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["júodas"]
+          "output": [
+            "júodas"
+          ]
         }
       }
     },
@@ -3560,7 +3911,9 @@
           "output": "кабинет"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kabinètas"]
+          "output": [
+            "kabinètas"
+          ]
         }
       }
     },
@@ -3574,7 +3927,9 @@
           "output": "цена"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["káina"]
+          "output": [
+            "káina"
+          ]
         }
       }
     },
@@ -3588,7 +3943,9 @@
           "output": "как"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kaĩp"]
+          "output": [
+            "kaĩp"
+          ]
         }
       }
     },
@@ -3602,7 +3959,10 @@
           "output": "Как дела?"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kaĩp", "sẽkasi"]
+          "output": [
+            "kaĩp",
+            "sẽkasi"
+          ]
         }
       }
     },
@@ -3616,7 +3976,9 @@
           "output": "левый"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kairė̃"]
+          "output": [
+            "kairė̃"
+          ]
         }
       }
     },
@@ -3630,7 +3992,9 @@
           "output": "слева"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kairėjè"]
+          "output": [
+            "kairėjè"
+          ]
         }
       }
     },
@@ -3644,7 +4008,9 @@
           "output": "гора"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kálnas"]
+          "output": [
+            "kálnas"
+          ]
         }
       }
     },
@@ -3658,7 +4024,9 @@
           "output": "комната"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kambarỹs"]
+          "output": [
+            "kambarỹs"
+          ]
         }
       }
     },
@@ -3672,7 +4040,9 @@
           "output": "карп (рыба)"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kárpis"]
+          "output": [
+            "kárpis"
+          ]
         }
       }
     },
@@ -3724,7 +4094,9 @@
           "output": "что"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kàs"]
+          "output": [
+            "kàs"
+          ]
         }
       }
     },
@@ -3757,7 +4129,9 @@
           "output": "ежедневно"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kasdiẽn"]
+          "output": [
+            "kasdiẽn"
+          ]
         }
       }
     },
@@ -3771,7 +4145,9 @@
           "output": "костыль"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kastùvas"]
+          "output": [
+            "kastùvas"
+          ]
         }
       }
     },
@@ -3785,7 +4161,9 @@
           "output": "кафедра"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kãtedra"]
+          "output": [
+            "kãtedra"
+          ]
         }
       }
     },
@@ -3839,7 +4217,9 @@
           "output": "кафе"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kavìnė"]
+          "output": [
+            "kavìnė"
+          ]
         }
       }
     },
@@ -3853,7 +4233,9 @@
           "output": "кефир"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kefỹras"]
+          "output": [
+            "kefỹras"
+          ]
         }
       }
     },
@@ -3905,7 +4287,9 @@
           "output": "брюки"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kélnės"]
+          "output": [
+            "kélnės"
+          ]
         }
       }
     },
@@ -3938,7 +4322,9 @@
           "output": "жареное мясо/мясной продукт, приготовленный на гриле или в духовке"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kepsnỹs"]
+          "output": [
+            "kepsnỹs"
+          ]
         }
       }
     },
@@ -3952,7 +4338,9 @@
           "output": "шапка"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kepùrė"]
+          "output": [
+            "kepùrė"
+          ]
         }
       }
     },
@@ -3966,7 +4354,9 @@
           "output": "четверг"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["ketvirtãdienis"]
+          "output": [
+            "ketvirtãdienis"
+          ]
         }
       }
     },
@@ -3980,7 +4370,9 @@
           "output": "стул"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kėdė̃"]
+          "output": [
+            "kėdė̃"
+          ]
         }
       }
     },
@@ -3994,7 +4386,9 @@
           "output": "свинина"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kiaulíena"]
+          "output": [
+            "kiaulíena"
+          ]
         }
       }
     },
@@ -4008,7 +4402,9 @@
           "output": "яичница"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kiaušiniẽnė"]
+          "output": [
+            "kiaušiniẽnė"
+          ]
         }
       }
     },
@@ -4041,7 +4437,9 @@
           "output": "количество"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kiẽkis"]
+          "output": [
+            "kiẽkis"
+          ]
         }
       }
     },
@@ -4055,7 +4453,9 @@
           "output": "двор"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kiẽmas"]
+          "output": [
+            "kiẽmas"
+          ]
         }
       }
     },
@@ -4088,7 +4488,9 @@
           "output": "килограмм"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kilogrãmas"]
+          "output": [
+            "kilogrãmas"
+          ]
         }
       }
     },
@@ -4102,7 +4504,9 @@
           "output": "киоск"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kiòskas"]
+          "output": [
+            "kiòskas"
+          ]
         }
       }
     },
@@ -4116,7 +4520,9 @@
           "output": "парикмахер"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kirpė́jas"]
+          "output": [
+            "kirpė́jas"
+          ]
         }
       }
     },
@@ -4149,7 +4555,9 @@
           "output": "класс"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["klãsė"]
+          "output": [
+            "klãsė"
+          ]
         }
       }
     },
@@ -4163,7 +4571,9 @@
           "output": "слушать"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["klausýtis"]
+          "output": [
+            "klausýtis"
+          ]
         }
       }
     },
@@ -4177,7 +4587,9 @@
           "output": "клиника"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["klìnika"]
+          "output": [
+            "klìnika"
+          ]
         }
       }
     },
@@ -4210,7 +4622,9 @@
           "output": "нога"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kója"]
+          "output": [
+            "kója"
+          ]
         }
       }
     },
@@ -4224,7 +4638,9 @@
           "output": "гетры"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kójinės"]
+          "output": [
+            "kójinės"
+          ]
         }
       }
     },
@@ -4238,7 +4654,9 @@
           "output": "качество"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kokýbė"]
+          "output": [
+            "kokýbė"
+          ]
         }
       }
     },
@@ -4252,7 +4670,9 @@
           "output": "какой"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kóks"]
+          "output": [
+            "kóks"
+          ]
         }
       }
     },
@@ -4266,7 +4686,9 @@
           "output": "коллегия"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kolègija"]
+          "output": [
+            "kolègija"
+          ]
         }
       }
     },
@@ -4280,7 +4702,9 @@
           "output": "комбинезон"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kombinezònas"]
+          "output": [
+            "kombinezònas"
+          ]
         }
       }
     },
@@ -4294,7 +4718,9 @@
           "output": "компьютер"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kompiùteris"]
+          "output": [
+            "kompiùteris"
+          ]
         }
       }
     },
@@ -4327,7 +4753,9 @@
           "output": "конкурс"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["konkùrsas"]
+          "output": [
+            "konkùrsas"
+          ]
         }
       }
     },
@@ -4341,7 +4769,9 @@
           "output": "контейнер"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["konteĩneris"]
+          "output": [
+            "konteĩneris"
+          ]
         }
       }
     },
@@ -4355,7 +4785,9 @@
           "output": "копировать"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kopijúoti"]
+          "output": [
+            "kopijúoti"
+          ]
         }
       }
     },
@@ -4369,7 +4801,9 @@
           "output": "капуста"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kopū̃stas"]
+          "output": [
+            "kopū̃stas"
+          ]
         }
       }
     },
@@ -4383,7 +4817,9 @@
           "output": "коридор"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["korìdorius"]
+          "output": [
+            "korìdorius"
+          ]
         }
       }
     },
@@ -4397,7 +4833,9 @@
           "output": "карточка"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kortẽlė"]
+          "output": [
+            "kortẽlė"
+          ]
         }
       }
     },
@@ -4411,7 +4849,9 @@
           "output": "косуля"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kosulỹs"]
+          "output": [
+            "kosulỹs"
+          ]
         }
       }
     },
@@ -4463,7 +4903,10 @@
           "output": "анализы крови"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kraũjo", "tyrìmai"]
+          "output": [
+            "kraũjo",
+            "tyrìmai"
+          ]
         }
       }
     },
@@ -4477,7 +4920,9 @@
           "output": "баскетбол"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["krepšẽlis"]
+          "output": [
+            "krepšẽlis"
+          ]
         }
       }
     },
@@ -4491,7 +4936,9 @@
           "output": "баскетбол"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["krepšìnis"]
+          "output": [
+            "krepšìnis"
+          ]
         }
       }
     },
@@ -4505,7 +4952,9 @@
           "output": "сумка"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["krepšỹs"]
+          "output": [
+            "krepšỹs"
+          ]
         }
       }
     },
@@ -4519,7 +4968,9 @@
           "output": "груша"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kriáušė"]
+          "output": [
+            "kriáušė"
+          ]
         }
       }
     },
@@ -4533,7 +4984,9 @@
           "output": "направление"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kryptìs"]
+          "output": [
+            "kryptìs"
+          ]
         }
       }
     },
@@ -4547,7 +5000,9 @@
           "output": "рюкзак"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kuprìnė"]
+          "output": [
+            "kuprìnė"
+          ]
         }
       }
     },
@@ -4561,7 +5016,9 @@
           "output": "где"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kur̃"]
+          "output": [
+            "kur̃"
+          ]
         }
       }
     },
@@ -4575,7 +5032,9 @@
           "output": "квалификация"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["kvalifikãcija"]
+          "output": [
+            "kvalifikãcija"
+          ]
         }
       }
     },
@@ -4589,7 +5048,9 @@
           "output": "Спокойной ночи"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["labãnakt"]
+          "output": [
+            "labãnakt"
+          ]
         }
       }
     },
@@ -4705,7 +5166,9 @@
           "output": "лаборатория"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["laboratòrija"]
+          "output": [
+            "laboratòrija"
+          ]
         }
       }
     },
@@ -4719,7 +5182,10 @@
           "output": "сдать экзамен"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["laikýti", "egzãminą"]
+          "output": [
+            "laikýti",
+            "egzãminą"
+          ]
         }
       }
     },
@@ -4733,7 +5199,9 @@
           "output": "степень"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["láipsnis"]
+          "output": [
+            "láipsnis"
+          ]
         }
       }
     },
@@ -4766,7 +5234,10 @@
           "output": "товары для досуга"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["laisvãlaikio", "prẽkės"]
+          "output": [
+            "laisvãlaikio",
+            "prẽkės"
+          ]
         }
       }
     },
@@ -4803,7 +5274,9 @@
           "output": "корабль"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["laĩvas"]
+          "output": [
+            "laĩvas"
+          ]
         }
       }
     },
@@ -4817,7 +5290,9 @@
           "output": "окно"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["lángas"]
+          "output": [
+            "lángas"
+          ]
         }
       }
     },
@@ -4831,7 +5306,9 @@
           "output": "осенний период, осень"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["lãpkritis"]
+          "output": [
+            "lãpkritis"
+          ]
         }
       }
     },
@@ -4845,7 +5322,9 @@
           "output": "капли"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["lašaĩ"]
+          "output": [
+            "lašaĩ"
+          ]
         }
       }
     },
@@ -4897,7 +5376,9 @@
           "output": "мороженое"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["ledaĩ"]
+          "output": [
+            "ledaĩ"
+          ]
         }
       }
     },
@@ -4930,7 +5411,9 @@
           "output": "полка"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["lentýna"]
+          "output": [
+            "lentýna"
+          ]
         }
       }
     },
@@ -4944,7 +5427,9 @@
           "output": "самолет"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["lėktùvas"]
+          "output": [
+            "lėktùvas"
+          ]
         }
       }
     },
@@ -4958,7 +5443,9 @@
           "output": "июль"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["líepa"]
+          "output": [
+            "líepa"
+          ]
         }
       }
     },
@@ -4992,7 +5479,9 @@
           "output": "лифт"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["lìftas"]
+          "output": [
+            "lìftas"
+          ]
         }
       }
     },
@@ -5025,7 +5514,9 @@
           "output": "рыба"
         },
         "vdu-kirciuoklis-1": {
-          "output": ["žuvìs"]
+          "output": [
+            "žuvìs"
+          ]
         }
       }
     }
