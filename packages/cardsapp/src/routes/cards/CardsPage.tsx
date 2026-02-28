@@ -24,6 +24,8 @@ import { useEffect, useRef, useState } from "react";
 const _bank = await import("@ltk/databanks");
 const bank = _bank as unknown as OutputBank;
 const bankView = new OutputBankReader(bank);
+const bankId = bank.id ?? "unknown";
+const bankVer = bank.version ?? "0.0.0";
 
 type Word = string;
 const items: OutputBankItem[] = bank.data;
@@ -121,18 +123,58 @@ export function CardsPage() {
   });
 
   const lock = useRef(false);
+  const [statsLoaded, setStatsLoaded] = useState(false);
+
+  async function persistSwipe(input: string, direction: "left" | "right") {
+    await db.transaction("rw", db.swipeStats, async () => {
+      const key: [string, string, string] = [bankId, bankVer, input];
+      const current = await db.swipeStats.get(key);
+      const next = {
+        bankId,
+        bankVer,
+        input,
+        left: current?.left ?? 0,
+        right: current?.right ?? 0,
+      };
+      if (direction === "left") {
+        next.left += 1;
+      } else {
+        next.right += 1;
+      }
+      await db.swipeStats.put(next);
+    });
+  }
 
   useEffect(() => {
     if (lock.current === true) return;
     async function setUpDb() {
-      console.log("hook");
       lock.current = true;
-      if ((await db.system.count()) > 0) return;
-      await db.system.add({ isInit: true });
-      console.log(await db.system.toArray());
+      if ((await db.system.count()) === 0) {
+        await db.system.add({ isInit: true });
+      }
+
+      const stats = await db.swipeStats
+        .where("[bankId+bankVer]")
+        .equals([bankId, bankVer])
+        .toArray();
+
+      for (const row of stats) {
+        const current = wordStat[row.input];
+        if (current == null) {
+          continue;
+        }
+        current.rejects = row.left;
+        current.accepts = row.right;
+      }
+
+      setCurrentWord(getWord(wordStat));
+      setStatsLoaded(true);
     }
 
-    setUpDb();
+    setUpDb().catch((error) => {
+      console.error("Failed to initialize swipe stats", error);
+      setStatsLoaded(true);
+    });
   }, []);
 
   const [currentWord, setCurrentWord] = useState(() => getWord(wordStat));
@@ -141,12 +183,22 @@ export function CardsPage() {
 
   const handleSwipeLeft = (word: string) => {
     wordStat[word].rejects += 1;
+    void persistSwipe(word, "left");
     setCurrentWord(getWord(wordStat));
   };
   const handleSwipeRight = (word: string) => {
     wordStat[word].accepts += 1;
+    void persistSwipe(word, "right");
     setCurrentWord(getWord(wordStat));
   };
+
+  if (!statsLoaded) {
+    return (
+      <Stack p="sm" pb="4px" h="100vh" style={{ overflow: "hidden" }}>
+        <Center flex={1}>Loading...</Center>
+      </Stack>
+    );
+  }
 
   const globalStat = items.reduce(
     (m, d) => {
