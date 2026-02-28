@@ -31,9 +31,12 @@ export class InputBankReader {
   private readonly featureIndex: FeatureGroupIndex<IndexedInputFeature>;
 
   constructor(bank: InputBank) {
-    this.bank = bank;
-    const featureIds = resolveFeatureIds(bank.features);
-    const indexedFeatures: IndexedInputFeature[] = bank.features.map(
+    this.bank = {
+      ...bank,
+      version: bank.version ?? "0.0.0",
+    };
+    const featureIds = resolveFeatureIds(this.bank.features);
+    const indexedFeatures: IndexedInputFeature[] = this.bank.features.map(
       (feature, featureOrder) => ({
         id: featureIds[featureOrder] ?? `feature-${featureOrder + 1}`,
         group: feature.group,

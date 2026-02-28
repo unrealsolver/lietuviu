@@ -68,6 +68,11 @@ async function processBankFile(
   info: (message: string) => void,
   progress: ProgressRenderer,
 ): Promise<void> {
+  type RawInputBank = Omit<InputBank, "id" | "version"> & {
+    id?: string;
+    version?: string;
+  };
+
   const sourcePath = join(config.paths.inDir, sourceFile);
   const raw = JSON.parse(await readFile(sourcePath, "utf8")) as unknown;
   const bankValidationError = getInputBankValidationError(raw);
@@ -76,8 +81,13 @@ async function processBankFile(
       `Invalid bank schema in ${sourceFile}: ${bankValidationError}`,
     );
   }
-  const bank = raw;
+  const parsedBank = raw as RawInputBank;
   const bankId = basename(sourceFile, extname(sourceFile));
+  const bank: InputBank = {
+    ...parsedBank,
+    id: parsedBank.id ?? bankId,
+    version: parsedBank.version ?? "0.0.0",
+  };
   ensureProvidersAvailable(bank, config.plugins);
   initializeProgressRows(bank, config.plugins, progress);
 
@@ -179,6 +189,12 @@ function getInputBankValidationError(raw: unknown): string | null {
   if (typeof bank.schemaVersion !== "string") {
     return "schemaVersion must be a string";
   }
+  if (bank.id !== undefined && typeof bank.id !== "string") {
+    return "id must be a string when provided";
+  }
+  if (bank.version !== undefined && typeof bank.version !== "string") {
+    return "version must be a string when provided";
+  }
   if (typeof bank.title !== "string") {
     return "title must be a string";
   }
@@ -261,6 +277,8 @@ function buildOutputBank(
   }
 
   return {
+    id: bank.id,
+    version: bank.version,
     schemaVersion: bank.schemaVersion,
     title: bank.title,
     description: bank.description,

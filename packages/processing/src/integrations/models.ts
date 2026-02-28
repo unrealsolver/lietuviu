@@ -40,6 +40,8 @@ export type FeatureType = keyof FeatureOutputByType;
 export type AnyFeatureOutput = FeatureOutputByType[keyof FeatureOutputByType];
 
 export type InputBank = {
+  id?: string;
+  version?: string;
   schemaVersion: string;
   title: string;
   description?: string;
@@ -69,6 +71,8 @@ export type OutputBankItem = {
 };
 
 export type OutputBank = {
+  id: string;
+  version: string;
   schemaVersion: string;
   title: string;
   description?: string;

@@ -1,4 +1,6 @@
 {
+  "id": "golden",
+  "version": "0.0.0",
   "schemaVersion": "1.0.0",
   "title": "Golden Bank",
   "sourceLanguage": "lit",

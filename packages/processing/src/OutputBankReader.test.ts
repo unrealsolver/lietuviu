@@ -4,6 +4,8 @@ import { describe, expect, test } from "bun:test";
 
 describe("OutputBankReader", () => {
   const bank: OutputBank = {
+    id: "test-output-bank",
+    version: "1.0.0",
     schemaVersion: "1.0.0",
     title: "Test",
     sourceLanguage: "lit",

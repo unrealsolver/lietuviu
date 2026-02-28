@@ -54,4 +54,10 @@ describe("InputBankReader", () => {
     expect(reader.getFeatureById("gemma-main")?.group).toBe("default");
     expect(reader.getFeatureById("unknown")).toBeNull();
   });
+
+  test("defaults missing bank version to 0.0.0", () => {
+    const reader = new InputBankReader(bank);
+
+    expect(reader.getBank().version).toBe("0.0.0");
+  });
 });

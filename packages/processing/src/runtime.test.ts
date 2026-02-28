@@ -137,6 +137,7 @@ describe("runtime output", () => {
 
     const bank = {
       schemaVersion: "1.0.0",
+      version: "2.1.0",
       title: "Test Bank",
       sourceLanguage: "lit",
       features: [
@@ -176,6 +177,8 @@ describe("runtime output", () => {
     const out = JSON.parse(
       await readFile(join(outDir, "shape.bank.json"), "utf8"),
     ) as {
+      id: string;
+      version: string;
       features: Array<{
         id: string;
         type: string;
@@ -188,6 +191,8 @@ describe("runtime output", () => {
       }>;
     };
 
+    expect(out.id).toBe("shape");
+    expect(out.version).toBe("2.1.0");
     expect(out.features).toHaveLength(1);
     expect(out.features[0].type).toBe("TRANSLATION");
     expect(out.features[0].provider).toBe("stub-shape");
@@ -212,6 +217,8 @@ describe("runtime output", () => {
     await mkdir(inDir, { recursive: true });
 
     const bank = {
+      id: "custom-id-source",
+      version: "1.2.3",
       schemaVersion: "1.0.0",
       title: "Custom Id Bank",
       sourceLanguage: "lit",
@@ -247,6 +254,8 @@ describe("runtime output", () => {
     const out = JSON.parse(
       await readFile(join(outDir, "custom-id.bank.json"), "utf8"),
     ) as {
+      id: string;
+      version: string;
       features: Array<{ id: string }>;
       data: Array<{
         input: string;
@@ -254,6 +263,8 @@ describe("runtime output", () => {
       }>;
     };
 
+    expect(out.id).toBe("custom-id-source");
+    expect(out.version).toBe("1.2.3");
     expect(out.features[0]?.id).toBe("translate-lit-rus-manual");
     expect(out.data[0]?.features["translate-lit-rus-manual"]?.output).toBe(
       "AČIŪ",
@@ -500,6 +511,7 @@ describe("runtime output", () => {
     const out = JSON.parse(
       await readFile(join(outDir, "collapse.bank.json"), "utf8"),
     ) as {
+      version: string;
       data: Array<{
         input: string;
         features: Record<string, { output: unknown }>;
@@ -508,6 +520,7 @@ describe("runtime output", () => {
 
     expect(calls.dict).toEqual(["hit", "miss"]);
     expect(calls.gemma).toEqual(["miss"]);
+    expect(out.version).toBe("0.0.0");
 
     const hit = out.data.find((d) => d.input === "hit");
     const miss = out.data.find((d) => d.input === "miss");
