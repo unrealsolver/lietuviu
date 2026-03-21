@@ -1,8 +1,9 @@
 import { version, homepage } from "../../../package.json";
-import { db } from "../../db";
+import { db, type Databank } from "../../db";
 import { AnimatedCard } from "./AnimatedCard";
 import classes from "./CardsPage.module.css";
 import type { WordStat } from "./util";
+import externalBank from "@ltk/databanks/a1.bank.json";
 import {
   OutputBankReader,
   type OutputBank,
@@ -19,29 +20,24 @@ import {
   Anchor,
 } from "@mantine/core";
 import { IconSun, IconMoon } from "@tabler/icons-react";
-import { useEffect, useRef, useState } from "react";
-
-const _bank = await import("@ltk/databanks");
-const bank = _bank as unknown as OutputBank;
-const bankView = new OutputBankReader(bank);
-const bankId = bank.id ?? "unknown";
-const bankVer = bank.version ?? "0.0.0";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type Word = string;
-const items: OutputBankItem[] = bank.data;
 
 const ALMOST_ONE = 0.999999;
 
-const wordStat = items.reduce(
-  (m, d) => {
-    m[d.input] = {
-      accepts: 0,
-      rejects: 0,
-    };
-    return m;
-  },
-  {} as Record<Word, WordStat>,
-);
+function createWordStat(items: OutputBankItem[]): Record<Word, WordStat> {
+  return items.reduce(
+    (m, d) => {
+      m[d.input] = {
+        accepts: 0,
+        rejects: 0,
+      };
+      return m;
+    },
+    {} as Record<Word, WordStat>,
+  );
+}
 
 //type WordBank = {
 //  name: string;
@@ -123,15 +119,21 @@ export function CardsPage() {
   });
 
   const lock = useRef(false);
+  const wordStatRef = useRef<Record<Word, WordStat>>({});
+  const [bankEntry, setBankEntry] = useState<Databank | null>(null);
+  const [currentWord, setCurrentWord] = useState<string | null>(null);
   const [statsLoaded, setStatsLoaded] = useState(false);
 
-  async function persistSwipe(input: string, direction: "left" | "right") {
+  async function persistSwipe(
+    bankId: string,
+    input: string,
+    direction: "left" | "right",
+  ) {
     await db.transaction("rw", db.swipeStats, async () => {
-      const key: [string, string, string] = [bankId, bankVer, input];
+      const key: [string, string] = [bankId, input];
       const current = await db.swipeStats.get(key);
       const next = {
         bankId,
-        bankVer,
         input,
         left: current?.left ?? 0,
         right: current?.right ?? 0,
@@ -149,17 +151,35 @@ export function CardsPage() {
     if (lock.current === true) return;
     async function setUpDb() {
       lock.current = true;
-      if ((await db.system.count()) === 0) {
-        await db.system.add({ isInit: true });
-      }
 
+      const resolvedBank = externalBank as OutputBank;
+      const resolvedBankId = resolvedBank.id;
+      const resolvedBankVersion = resolvedBank.version;
+      const resolvedBankName = resolvedBank.title;
+      await db.databanks.put({
+        name: resolvedBankName,
+        id: resolvedBankId,
+        version: resolvedBankVersion,
+        data: resolvedBank,
+      });
+
+      const activeBank = await db.databanks
+        .where("[id+version]")
+        .equals([resolvedBankId, resolvedBankVersion])
+        .first();
+      if (activeBank == null) {
+        throw new Error("Failed to load databank from IndexedDB");
+      }
+      setBankEntry(activeBank);
+
+      const wordStat = createWordStat(activeBank.data.data);
       const stats = await db.swipeStats
-        .where("[bankId+bankVer]")
-        .equals([bankId, bankVer])
+        .where("bankId")
+        .equals(activeBank.id)
         .toArray();
 
       for (const row of stats) {
-        const current = wordStat[row.input];
+        const current = wordStat[row.input as Word];
         if (current == null) {
           continue;
         }
@@ -167,6 +187,7 @@ export function CardsPage() {
         current.accepts = row.right;
       }
 
+      wordStatRef.current = wordStat;
       setCurrentWord(getWord(wordStat));
       setStatsLoaded(true);
     }
@@ -177,22 +198,53 @@ export function CardsPage() {
     });
   }, []);
 
-  const [currentWord, setCurrentWord] = useState(() => getWord(wordStat));
+  const items = bankEntry?.data.data ?? [];
+  const bankView = useMemo(() => {
+    if (bankEntry == null) {
+      return null;
+    }
+    return new OutputBankReader(bankEntry.data);
+  }, [bankEntry]);
 
-  const currentItem = items.find((d) => d.input === currentWord)!;
+  const currentItem = useMemo(() => {
+    if (currentWord == null) {
+      return null;
+    }
+    return items.find((d) => d.input === currentWord) ?? null;
+  }, [currentWord, items]);
 
   const handleSwipeLeft = (word: string) => {
-    wordStat[word].rejects += 1;
-    void persistSwipe(word, "left");
-    setCurrentWord(getWord(wordStat));
+    if (bankEntry == null) {
+      return;
+    }
+    const stat = wordStatRef.current[word];
+    if (stat == null) {
+      return;
+    }
+    stat.rejects += 1;
+    void persistSwipe(bankEntry.id, word, "left");
+    setCurrentWord(getWord(wordStatRef.current));
   };
   const handleSwipeRight = (word: string) => {
-    wordStat[word].accepts += 1;
-    void persistSwipe(word, "right");
-    setCurrentWord(getWord(wordStat));
+    if (bankEntry == null) {
+      return;
+    }
+    const stat = wordStatRef.current[word];
+    if (stat == null) {
+      return;
+    }
+    stat.accepts += 1;
+    void persistSwipe(bankEntry.id, word, "right");
+    setCurrentWord(getWord(wordStatRef.current));
   };
 
-  if (!statsLoaded) {
+  if (
+    !statsLoaded ||
+    bankEntry == null ||
+    bankView == null ||
+    currentWord == null ||
+    currentItem == null
+  ) {
     return (
       <Stack p="sm" pb="4px" h="100vh" style={{ overflow: "hidden" }}>
         <Center flex={1}>Loading...</Center>
@@ -202,7 +254,7 @@ export function CardsPage() {
 
   const globalStat = items.reduce(
     (m, d) => {
-      const stat = wordStat[d.input];
+      const stat = wordStatRef.current[d.input];
       const rate = getRate(stat);
 
       if (stat.accepts + stat.rejects >= 3) {
@@ -258,7 +310,7 @@ export function CardsPage() {
           item={currentItem}
           bankView={bankView}
           key={currentWord}
-          stat={wordStat[currentWord]}
+          stat={wordStatRef.current[currentWord]}
         />
       </Center>
       <Center>
