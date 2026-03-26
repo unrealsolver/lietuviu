@@ -1,5 +1,5 @@
 import { AppLayout } from "./Layout";
-import { CardsPage, TablesPage } from "./routes";
+import { CardsPage, TablesPage, TutorialCardsPage } from "./routes";
 import { HashRouter, Route, Routes, Navigate } from "react-router";
 
 export default function App() {
@@ -9,6 +9,7 @@ export default function App() {
         <Route element={<AppLayout />}>
           <Route index element={<Navigate to="/cards/" />} />
           <Route path="/cards" element={<CardsPage />} />
+          <Route path="/cards/tutorial" element={<TutorialCardsPage />} />
           <Route path="/table" element={<TablesPage />} />
         </Route>
       </Routes>

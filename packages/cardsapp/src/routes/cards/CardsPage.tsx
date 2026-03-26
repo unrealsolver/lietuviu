@@ -1,124 +1,24 @@
 import { version, homepage } from "../../../package.json";
 import { db, type Databank } from "../../db";
-import { AnimatedCard } from "./AnimatedCard";
-import classes from "./CardsPage.module.css";
+import { CardsScaffold } from "./CardsScaffold";
+import { WordCard } from "./WordCard";
+import {
+  hydrateWordStats,
+  pickNextWord,
+  recordSwipe,
+  summarizeDeckProgress,
+} from "./deck";
 import type { WordStat } from "./util";
 import externalBank from "@ltk/databanks/a1.bank.json";
-import {
-  OutputBankReader,
-  type OutputBank,
-  type OutputBankItem,
-} from "@ltk/processing";
-import {
-  ActionIcon,
-  Center,
-  Group,
-  Progress,
-  Stack,
-  useComputedColorScheme,
-  useMantineColorScheme,
-  Anchor,
-} from "@mantine/core";
-import { IconSun, IconMoon } from "@tabler/icons-react";
+import { OutputBankReader, type OutputBank } from "@ltk/processing";
+import { Anchor, Center, Group, Progress } from "@mantine/core";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { Link } from "react-router";
 
 type Word = string;
 
-const ALMOST_ONE = 0.999999;
-
-function createWordStat(items: OutputBankItem[]): Record<Word, WordStat> {
-  return items.reduce(
-    (m, d) => {
-      m[d.input] = {
-        accepts: 0,
-        rejects: 0,
-      };
-      return m;
-    },
-    {} as Record<Word, WordStat>,
-  );
-}
-
-//type WordBank = {
-//  name: string;
-//  version: string;
-//  words: Word[];
-//};
-//
-//type WordInfo = {
-//  name: string;
-//  stressed: string;
-//  translations: Array<{
-//    locale: string;
-//    content: string;
-//  }>;
-//};
-
-function getRate(stat: WordStat) {
-  return stat.rejects > 0
-    ? stat.accepts / (stat.accepts + stat.rejects)
-    : stat.accepts > 0
-      ? 1
-      : 0;
-}
-
-function rebuildGroups(wordStat: Record<string, WordStat>): Array<Set<Word>> {
-  const groups = [...Array(10)].map(() => new Set<Word>());
-
-  Object.entries(wordStat).map(([word, stat]) => {
-    // success rate of 0.0..1.0
-    const rawRate = getRate(stat);
-
-    // We need >=0 and < 1.0 range for proper 0-9 categories mapping
-    const normRate = rawRate * ALMOST_ONE;
-
-    const groupIdx = Math.floor(normRate * 10);
-
-    groups[groupIdx].add(word);
-  });
-
-  //groups.map((d, idx) => {
-  //  console.debug(`${idx}: ${d.size}`);
-  //});
-
-  return groups;
-}
-
-function getWord(wordStat: Record<string, WordStat>): Word {
-  console.time("next word");
-  const groups = rebuildGroups(wordStat);
-  const rndIdx = Math.floor(Math.random() * ALMOST_ONE * 10);
-  let group: Set<Word> | null = null;
-  for (let i = rndIdx; i >= 0; i--) {
-    if (groups[i].size > 0) {
-      group = groups[i];
-    }
-  }
-
-  if (group == null) {
-    for (let i = rndIdx; i <= 10; i++) {
-      if (groups[i].size > 0) {
-        group = groups[i];
-      }
-    }
-  }
-
-  if (group == null) throw new Error("impossible");
-
-  const groupWords = Array.from(group);
-  const wrdIndex = Math.floor(Math.random() * group.size * ALMOST_ONE);
-  const rndWord = groupWords[wrdIndex];
-  console.timeEnd("next word");
-  return rndWord;
-}
-
 export function CardsPage() {
-  const { setColorScheme } = useMantineColorScheme();
-  const computedColorScheme = useComputedColorScheme("light", {
-    getInitialValueInEffect: true,
-  });
-
-  const lock = useRef(false);
+  const isInitializingRef = useRef(false);
   const wordStatRef = useRef<Record<Word, WordStat>>({});
   const [bankEntry, setBankEntry] = useState<Databank | null>(null);
   const [currentWord, setCurrentWord] = useState<string | null>(null);
@@ -148,9 +48,12 @@ export function CardsPage() {
   }
 
   useEffect(() => {
-    if (lock.current === true) return;
+    if (isInitializingRef.current) {
+      return;
+    }
+
     async function setUpDb() {
-      lock.current = true;
+      isInitializingRef.current = true;
 
       const resolvedBank = externalBank as OutputBank;
       const resolvedBankId = resolvedBank.id;
@@ -172,23 +75,13 @@ export function CardsPage() {
       }
       setBankEntry(activeBank);
 
-      const wordStat = createWordStat(activeBank.data.data);
       const stats = await db.swipeStats
         .where("bankId")
         .equals(activeBank.id)
         .toArray();
-
-      for (const row of stats) {
-        const current = wordStat[row.input as Word];
-        if (current == null) {
-          continue;
-        }
-        current.rejects = row.left;
-        current.accepts = row.right;
-      }
-
+      const wordStat = hydrateWordStats(activeBank.data.data, stats);
       wordStatRef.current = wordStat;
-      setCurrentWord(getWord(wordStat));
+      setCurrentWord(pickNextWord(wordStat));
       setStatsLoaded(true);
     }
 
@@ -198,7 +91,7 @@ export function CardsPage() {
     });
   }, []);
 
-  const items = bankEntry?.data.data ?? [];
+  const items = useMemo(() => bankEntry?.data.data ?? [], [bankEntry]);
   const bankView = useMemo(() => {
     if (bankEntry == null) {
       return null;
@@ -217,25 +110,22 @@ export function CardsPage() {
     if (bankEntry == null) {
       return;
     }
-    const stat = wordStatRef.current[word];
-    if (stat == null) {
+    if (!recordSwipe(wordStatRef.current, word, "left")) {
       return;
     }
-    stat.rejects += 1;
     void persistSwipe(bankEntry.id, word, "left");
-    setCurrentWord(getWord(wordStatRef.current));
+    setCurrentWord(pickNextWord(wordStatRef.current));
   };
+
   const handleSwipeRight = (word: string) => {
     if (bankEntry == null) {
       return;
     }
-    const stat = wordStatRef.current[word];
-    if (stat == null) {
+    if (!recordSwipe(wordStatRef.current, word, "right")) {
       return;
     }
-    stat.accepts += 1;
     void persistSwipe(bankEntry.id, word, "right");
-    setCurrentWord(getWord(wordStatRef.current));
+    setCurrentWord(pickNextWord(wordStatRef.current));
   };
 
   if (
@@ -246,82 +136,61 @@ export function CardsPage() {
     currentItem == null
   ) {
     return (
-      <Stack p="sm" pb="4px" h="100vh" style={{ overflow: "hidden" }}>
+      <CardsScaffold>
         <Center flex={1}>Loading...</Center>
-      </Stack>
+      </CardsScaffold>
     );
   }
 
-  const globalStat = items.reduce(
-    (m, d) => {
-      const stat = wordStatRef.current[d.input];
-      const rate = getRate(stat);
-
-      if (stat.accepts + stat.rejects >= 3) {
-        if (rate > 0.8) {
-          m.good += 1;
-        } else {
-          m.bad += 1;
-        }
-      } else if (stat.accepts + stat.rejects != 0) {
-        m.seen += 1;
-      }
-
-      return m;
-    },
-    { good: 0, bad: 0, seen: 0 },
-  );
+  const deckProgress = summarizeDeckProgress(items, wordStatRef.current);
 
   return (
-    <Stack p="sm" pb="4px" h="100vh" style={{ overflow: "hidden" }}>
-      <Group gap={0}>
+    <CardsScaffold
+      header={
         <Progress.Root size="xl" flex={1}>
           <Progress.Section
-            value={(100 * globalStat.seen) / items.length}
+            value={(100 * deckProgress.seen) / items.length}
             color="blue"
-          ></Progress.Section>
+          />
           <Progress.Section
-            value={(100 * globalStat.good) / items.length}
+            value={(100 * deckProgress.good) / items.length}
             color="green"
-          ></Progress.Section>
+          />
           <Progress.Section
-            value={(100 * globalStat.bad) / items.length}
+            value={(100 * deckProgress.bad) / items.length}
             color="red"
-          ></Progress.Section>
+          />
         </Progress.Root>
-        <ActionIcon
-          ml="auto"
-          size="xl"
-          aria-aria-label="Toggle color scheme"
-          variant="transparent"
-          onClick={() =>
-            setColorScheme(computedColorScheme === "light" ? "dark" : "light")
-          }
-        >
-          <IconSun className={classes.light} />
-          <IconMoon className={classes.dark} />
-        </ActionIcon>
-      </Group>
-      <Center flex={1} pos="relative">
-        <AnimatedCard
-          onSwipeLeft={handleSwipeLeft}
-          onSwipeRight={handleSwipeRight}
-          word={currentWord}
-          item={currentItem}
-          bankView={bankView}
-          key={currentWord}
-          stat={wordStatRef.current[currentWord]}
-        />
-      </Center>
-      <Center>
-        <Anchor
-          size="sm"
-          underline="not-hover"
-          href={`${homepage}/deployments`}
-        >
-          v{version}
-        </Anchor>
-      </Center>
-    </Stack>
+      }
+      footer={
+        <Group gap="xs">
+          <Anchor
+            size="sm"
+            underline="not-hover"
+            component={Link}
+            to="/cards/tutorial"
+          >
+            Interactive guide
+          </Anchor>
+          <Anchor
+            size="sm"
+            underline="not-hover"
+            href={`${homepage}/deployments`}
+          >
+            v{version}
+          </Anchor>
+        </Group>
+      }
+    >
+      <WordCard
+        onSwipeLeft={handleSwipeLeft}
+        onSwipeRight={handleSwipeRight}
+        word={currentWord}
+        item={currentItem}
+        bankView={bankView}
+        key={currentWord}
+        stat={wordStatRef.current[currentWord]}
+      />
+    </CardsScaffold>
   );
 }
