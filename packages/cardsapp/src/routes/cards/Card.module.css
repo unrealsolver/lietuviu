@@ -1,6 +1,7 @@
 .frame {
-  width: 90%;
-  height: 70%;
+  width: min(90%, 24rem);
+  max-height: 70%;
+  aspect-ratio: 0.6 / 1;
   position: relative;
 }
 

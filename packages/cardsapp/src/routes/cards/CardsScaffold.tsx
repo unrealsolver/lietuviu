@@ -27,7 +27,7 @@ export function CardsScaffold({
   });
 
   return (
-    <Stack p="sm" pb="4px" h="100vh" style={{ overflow: "hidden" }}>
+    <Stack p="sm" pb="xs" h="100vh" style={{ overflow: "hidden" }}>
       <Group gap={0}>
         <div
           className={classes.headerSlot}
@@ -49,8 +49,8 @@ export function CardsScaffold({
           <IconMoon className={classes.dark} />
         </ActionIcon>
       </Group>
-      <Center flex={1} pos="relative">
-        {children}
+      <Center flex={1} className={classes.contentArea}>
+        <div className={classes.contentColumn}>{children}</div>
       </Center>
       {footer != null ? <Center>{footer}</Center> : null}
     </Stack>
