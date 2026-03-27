@@ -27,7 +27,7 @@ export function CardsScaffold({
   });
 
   return (
-    <Stack p="sm" pb="xs" h="100vh" style={{ overflow: "hidden" }}>
+    <Stack p="sm" pb={0} className={classes.scaffold}>
       <Group gap={0}>
         <div
           className={classes.headerSlot}

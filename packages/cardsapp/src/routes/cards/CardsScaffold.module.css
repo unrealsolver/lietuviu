@@ -1,3 +1,16 @@
+.scaffold {
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: calc(var(--mantine-spacing-xs) + env(safe-area-inset-bottom));
+}
+
+@supports (height: 100svh) {
+  .scaffold {
+    height: 100svh;
+  }
+}
+
 .dark {
   @mixin dark {
     display: none;
