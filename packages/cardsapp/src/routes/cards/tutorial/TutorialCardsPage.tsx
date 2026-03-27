@@ -173,6 +173,7 @@ export function TutorialCardsPage() {
 
     if (
       introStepId === "welcome" ||
+      introStepId === "return-front" ||
       introStepId === "swipe-left" ||
       introStepId === "swipe-right"
     ) {
