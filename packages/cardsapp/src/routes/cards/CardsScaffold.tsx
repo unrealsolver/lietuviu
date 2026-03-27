@@ -27,7 +27,7 @@ export function CardsScaffold({
   });
 
   return (
-    <Stack p="sm" pb={0} className={classes.scaffold}>
+    <Stack p="sm" pb="xs" className={classes.scaffold}>
       <Group gap={0}>
         <div
           className={classes.headerSlot}
