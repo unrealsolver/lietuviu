@@ -21,6 +21,8 @@ export function CardsPage() {
   const isInitializingRef = useRef(false);
   const wordStatRef = useRef<Record<Word, WordStat>>({});
   const [bankEntry, setBankEntry] = useState<Databank | null>(null);
+  // Force a fresh card instance after each swipe even when the same word repeats.
+  const [cardUniqueIdx, setCardUniqueIdx] = useState(0);
   const [currentWord, setCurrentWord] = useState<string | null>(null);
   const [statsLoaded, setStatsLoaded] = useState(false);
 
@@ -115,6 +117,7 @@ export function CardsPage() {
     }
     void persistSwipe(bankEntry.id, word, "left");
     setCurrentWord(pickNextWord(wordStatRef.current));
+    setCardUniqueIdx((value) => value + 1);
   };
 
   const handleSwipeRight = (word: string) => {
@@ -126,6 +129,7 @@ export function CardsPage() {
     }
     void persistSwipe(bankEntry.id, word, "right");
     setCurrentWord(pickNextWord(wordStatRef.current));
+    setCardUniqueIdx((value) => value + 1);
   };
 
   if (
@@ -188,7 +192,7 @@ export function CardsPage() {
         word={currentWord}
         item={currentItem}
         bankView={bankView}
-        key={currentWord}
+        key={`${currentWord}-${cardUniqueIdx}`}
         stat={wordStatRef.current[currentWord]}
       />
     </CardsScaffold>
