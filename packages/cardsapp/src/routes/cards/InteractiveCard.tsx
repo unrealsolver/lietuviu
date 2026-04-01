@@ -12,7 +12,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 
 type SwipeDirection = "left" | "right";
 // Determines swipe animation completeness state. Higher value - longer delay
-const SWIPE_COMPLETE_DISTANCE_RATIO = 0.82;
+const SWIPE_COMPLETE_DISTANCE_RATIO = 0.8;
 
 type InteractiveCardProps = {
   front: ReactNode;
@@ -53,10 +53,15 @@ export function InteractiveCard({
   }));
 
   // x axis drag before threshold, -1..<0>..+1
-  const xDrag = to(style.x, (val) => Math.max(-1, Math.min(1, val / 200)));
+  const screenProportionality = Math.max(
+    100,
+    Math.min(300, window.innerWidth * 0.25),
+  );
+  const xDrag = to(style.x, (val) =>
+    Math.max(-1, Math.min(1, val / screenProportionality)),
+  );
   const rightDragStrength = to(xDrag, (val) => Math.max(val, 0));
   const leftDragStrength = to(xDrag, (val) => Math.max(-val, 0));
-  const xDragStrength = to(xDrag, (val) => Math.abs(val));
 
   const { rotateY } = useSpring({
     rotateY: Number(isFlipped) * 180,
@@ -139,7 +144,8 @@ export function InteractiveCard({
         let didTriggerSwipe = false;
         api.start({
           // coefficient controls speed
-          x: targetDirection * window.innerWidth * 1.5,
+          x:
+            (targetDirection * window.innerWidth * 300) / screenProportionality,
           y: 0,
           opacity: 0,
           rot: dx * vx * 10,
