@@ -2,7 +2,8 @@ import { CardFace } from "./CardFace";
 import { InteractiveCard } from "./InteractiveCard";
 import type { WordStat } from "./util";
 import type { OutputBankItem, OutputBankReader } from "@ltk/processing";
-import { Stack, Title } from "@mantine/core";
+import { Stack, ThemeIcon, Title } from "@mantine/core";
+import { IconThumbDown, IconThumbUp } from "@tabler/icons-react";
 
 type WordCardProps = {
   word: string;
@@ -43,7 +44,14 @@ export function WordCard({
               {translation}
             </Title>
             <Title order={1} ta="center">
-              {stat.accepts} / {stat.rejects}
+              <ThemeIcon size="xl" variant="transparent">
+                <IconThumbUp style={{ width: "70%", height: "70%" }} />
+              </ThemeIcon>
+              {stat.accepts} /
+              <ThemeIcon size="xl" variant="transparent">
+                <IconThumbDown style={{ width: "70%", height: "70%" }} />
+              </ThemeIcon>
+              {stat.rejects}
             </Title>
           </Stack>
         </CardFace>

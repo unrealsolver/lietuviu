@@ -1,11 +1,17 @@
 import cardClasses from "./Card.module.css";
-import { RingProgress, ThemeIcon } from "@mantine/core";
+import { SwipeIndicator } from "./SwipeIndicator";
+import { Box, RingProgress, ThemeIcon } from "@mantine/core";
 import { useSpring, animated, config, to } from "@react-spring/web";
-import { IconLock } from "@tabler/icons-react";
+import {
+  IconLock,
+  IconThumbDownFilled,
+  IconThumbUpFilled,
+} from "@tabler/icons-react";
 import { useDrag } from "@use-gesture/react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
 type SwipeDirection = "left" | "right";
+// Determines swipe animation completeness state. Higher value - longer delay
 const SWIPE_COMPLETE_DISTANCE_RATIO = 0.82;
 const DEFAULT_SWIPE_COMPLETE_DELAY_MS = 100;
 
@@ -58,6 +64,12 @@ export function InteractiveCard({
     to: { opacity: 1, scale: 1 },
     config: config.default,
   }));
+
+  // x axis drag before threshold, -1..<0>..+1
+  const xDrag = to(style.x, (val) => Math.max(-1, Math.min(1, val / 200)));
+  const rightDragStrength = to(xDrag, (val) => Math.max(val, 0));
+  const leftDragStrength = to(xDrag, (val) => Math.max(-val, 0));
+  const xDragStrength = to(xDrag, (val) => Math.abs(val));
 
   const { rotateY } = useSpring({
     rotateY: Number(isFlipped) * 180,
@@ -146,7 +158,8 @@ export function InteractiveCard({
         const targetDirection = swipeDirection === "right" ? 1 : -1;
         let didTriggerSwipe = false;
         api.start({
-          x: targetDirection * window.innerWidth * 2,
+          // coefficient controls speed
+          x: targetDirection * window.innerWidth * 1.5,
           y: 0,
           opacity: 0,
           rot: dx * vx * 10,
@@ -210,6 +223,28 @@ export function InteractiveCard({
     </div>
   ) : null;
 
+  const rightSwipeIndicator = (
+    <SwipeIndicator
+      color="green"
+      icon={<IconThumbUpFilled size="100%" />}
+      anchor="left"
+      strength={rightDragStrength}
+      top={(value) => `${75 - value * 100}px`}
+      rotate={(value) => `rotateZ(${-value * 10}deg)`}
+    />
+  );
+
+  const leftSwipeIndicator = (
+    <SwipeIndicator
+      color="red"
+      icon={<IconThumbDownFilled size="100%" />}
+      anchor="right"
+      strength={leftDragStrength}
+      top={(value) => `${value * 50}px`}
+      rotate={(value) => `rotateZ(${value * 10}deg)`}
+    />
+  );
+
   return (
     <div className={cardClasses.frame}>
       <animated.div
@@ -218,6 +253,8 @@ export function InteractiveCard({
         className={cardClasses.card}
       >
         {lockIndicator}
+        {rightSwipeIndicator}
+        {leftSwipeIndicator}
         {front}
       </animated.div>
       <animated.div

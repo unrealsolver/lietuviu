@@ -28,3 +28,9 @@
   text-align: center;
   pointer-events: none;
 }
+
+.swipeIndicator {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+}
