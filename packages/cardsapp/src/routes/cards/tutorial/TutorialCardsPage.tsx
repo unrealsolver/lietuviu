@@ -240,7 +240,6 @@ export function TutorialCardsPage() {
           allowPullDown={introStep.allowedGestures.includes("down")}
           lockKey={introStepId}
           lockDurationMs={TUTORIAL_LOCK_MS}
-          swipeCompleteDelayMs={0}
         />
       ) : null}
       {mode === "practice" && practiceWord != null ? (
@@ -261,7 +260,6 @@ export function TutorialCardsPage() {
           }
           onSwipeLeft={() => handlePracticeSwipe("left")}
           onSwipeRight={() => handlePracticeSwipe("right")}
-          swipeCompleteDelayMs={0}
         />
       ) : null}
       {mode === "complete" ? (
@@ -272,7 +270,6 @@ export function TutorialCardsPage() {
           allowSwipeLeft={false}
           allowSwipeRight={false}
           allowPullDown={false}
-          swipeCompleteDelayMs={0}
         />
       ) : null}
     </CardsScaffold>

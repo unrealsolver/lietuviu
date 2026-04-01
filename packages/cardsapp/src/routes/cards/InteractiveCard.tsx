@@ -13,7 +13,6 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 type SwipeDirection = "left" | "right";
 // Determines swipe animation completeness state. Higher value - longer delay
 const SWIPE_COMPLETE_DISTANCE_RATIO = 0.82;
-const DEFAULT_SWIPE_COMPLETE_DELAY_MS = 100;
 
 type InteractiveCardProps = {
   front: ReactNode;
@@ -26,7 +25,6 @@ type InteractiveCardProps = {
   allowPullDown?: boolean;
   lockKey?: string | number;
   lockDurationMs?: number;
-  swipeCompleteDelayMs?: number;
 };
 
 export function InteractiveCard({
@@ -40,24 +38,13 @@ export function InteractiveCard({
   allowPullDown = true,
   lockKey,
   lockDurationMs = 0,
-  swipeCompleteDelayMs = DEFAULT_SWIPE_COMPLETE_DELAY_MS,
 }: InteractiveCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
   const { isLocked, lockProgress } = useInteractionLock(
     lockKey,
     lockDurationMs,
   );
-  const swipeTimeoutRef = useRef<number | null>(null);
   const pendingPullDownRef = useRef<boolean | null>(null);
-
-  useEffect(() => {
-    return () => {
-      if (swipeTimeoutRef.current != null) {
-        window.clearTimeout(swipeTimeoutRef.current);
-        swipeTimeoutRef.current = null;
-      }
-    };
-  }, []);
 
   const [{ opacity, rot, ...style }, api] = useSpring(() => ({
     from: { opacity: 0, scale: 0.5, y: 0, x: 0, rot: 0 },
@@ -112,18 +99,11 @@ export function InteractiveCard({
   }
 
   function completeSwipe(direction: SwipeDirection) {
-    if (swipeTimeoutRef.current != null) {
-      window.clearTimeout(swipeTimeoutRef.current);
+    if (direction === "right") {
+      onSwipeRight?.();
+    } else {
+      onSwipeLeft?.();
     }
-
-    swipeTimeoutRef.current = window.setTimeout(() => {
-      swipeTimeoutRef.current = null;
-      if (direction === "right") {
-        onSwipeRight?.();
-      } else {
-        onSwipeLeft?.();
-      }
-    }, swipeCompleteDelayMs);
   }
 
   const bind = useDrag(
