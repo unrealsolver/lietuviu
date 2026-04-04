@@ -1,6 +1,6 @@
 import cardClasses from "./Card.module.css";
 import { SwipeIndicator } from "./SwipeIndicator";
-import { Box, RingProgress, ThemeIcon } from "@mantine/core";
+import { RingProgress, ThemeIcon } from "@mantine/core";
 import { useSpring, animated, config, to } from "@react-spring/web";
 import {
   IconLock,

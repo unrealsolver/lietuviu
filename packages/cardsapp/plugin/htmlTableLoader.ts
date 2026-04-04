@@ -5,7 +5,6 @@ import type { Plugin } from "vite";
 // Define aliases for clarity
 type NodeT = DefaultTreeAdapterMap["node"];
 type ElementT = DefaultTreeAdapterMap["element"];
-type TextNodeT = DefaultTreeAdapterMap["textNode"];
 type DocumentFragmentT = DefaultTreeAdapterMap["documentFragment"];
 
 export type GridCell = {
@@ -126,11 +125,6 @@ function clampInt(value: string | null, min: number): number {
 // Type guard for Elements
 function isElement(n: NodeT): n is ElementT {
   return "tagName" in n;
-}
-
-// Type guard for TextNodes (if you need n.value)
-function isTextNode(n: NodeT): n is TextNodeT {
-  return "value" in n;
 }
 
 function getAttr(el: ElementT, name: string): string | null {
