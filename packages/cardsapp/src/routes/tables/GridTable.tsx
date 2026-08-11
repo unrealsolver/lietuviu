@@ -1,4 +1,4 @@
-import classes from "./TablesPage.module.css";
+import classes from "./GridTable.module.css";
 import { Box } from "@mantine/core";
 import cx from "clsx";
 
@@ -13,22 +13,22 @@ export type GridCell = {
 
 export function GridTable({ cells }: { cells: GridCell[] }) {
   return (
-    <Box p="xs" display="grid" className={classes.tableContainer}>
-      {cells.map((cell) => (
-        <div
-          className={cx({
-            [classes.cell]: true,
-            [classes.stickyCell]: cell.colStart === 1,
-          })}
-          key={cell.key}
-          style={{
-            gridRow: `${cell.rowStart} / ${cell.rowEnd}`,
-            gridColumn: `${cell.colStart} / ${cell.colEnd}`,
-          }}
-        >
-          {cell.content}
-        </div>
-      ))}
+    <Box className={classes.tableFrame}>
+      <Box display="grid" className={classes.tableContainer}>
+        {cells.map((cell) => (
+          <div
+            className={cx(classes.cell, {
+              [classes.stickyCell]: cell.colStart === 1,
+            })}
+            key={cell.key}
+            style={{
+              gridRow: `${cell.rowStart} / ${cell.rowEnd}`,
+              gridColumn: `${cell.colStart} / ${cell.colEnd}`,
+            }}
+            dangerouslySetInnerHTML={{ __html: cell.content }}
+          />
+        ))}
+      </Box>
     </Box>
   );
 }

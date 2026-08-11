@@ -1,0 +1,33 @@
+.tableFrame {
+  max-width: 100%;
+  border: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  border-radius: var(--mantine-radius-sm);
+  background: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+  overflow: hidden;
+}
+
+.tableContainer {
+  max-width: 100%;
+  overflow-x: auto;
+  isolation: isolate;
+}
+
+.cell {
+  min-width: rem(64px);
+  border-right: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  background: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+  color: var(--mantine-color-text);
+  padding: var(--mantine-spacing-xs);
+  font-size: var(--mantine-font-size-sm);
+  line-height: var(--mantine-line-height-sm);
+  text-align: center;
+}
+
+.stickyCell {
+  position: sticky;
+  left: 0;
+  z-index: 20;
+  border-right-color: light-dark(var(--mantine-color-gray-4), var(--mantine-color-dark-3));
+  background: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-8));
+}
