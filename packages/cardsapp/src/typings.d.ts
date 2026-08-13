@@ -1,11 +1,23 @@
 declare module "*.html?grid" {
+  export type GridContentNode =
+    | {
+        type: "html";
+        html: string;
+      }
+    | {
+        type: "component";
+        name: string;
+        props: Record<string, string>;
+        children: GridContentNode[];
+      };
+
   export type GridCell = {
     key: string;
     rowStart: number;
     rowEnd: number;
     colStart: number;
     colEnd: number;
-    content: string;
+    content: GridContentNode[];
   };
 
   const model: {

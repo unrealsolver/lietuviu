@@ -1,4 +1,4 @@
-import { parseFragment, serialize } from "parse5";
+import { parseFragment, serializeOuter } from "parse5";
 import type { DefaultTreeAdapterMap } from "parse5";
 import type { Plugin } from "vite";
 
@@ -13,8 +13,20 @@ export type GridCell = {
   rowEnd: number;
   colStart: number;
   colEnd: number;
-  content: string;
+  content: GridContentNode[];
 };
+
+export type GridContentNode =
+  | {
+      type: "html";
+      html: string;
+    }
+  | {
+      type: "component";
+      name: string;
+      props: Record<string, string>;
+      children: GridContentNode[];
+    };
 
 export type GridModel = {
   rowCount: number;
@@ -44,9 +56,10 @@ export function htmlTableToGridPlugin(): Plugin {
 }
 
 function tableHtmlToGridModel(html: string): GridModel {
-  const wrapped = /<\s*table[\s>]/i.test(html)
-    ? html
-    : `<table><tbody>${html}</tbody></table>`;
+  const normalizedHtml = expandSelfClosingComponents(html);
+  const wrapped = /<\s*table[\s>]/i.test(normalizedHtml)
+    ? normalizedHtml
+    : `<table><tbody>${normalizedHtml}</tbody></table>`;
 
   // Explicitly cast the result of parseFragment
   const fragment = parseFragment(wrapped) as DocumentFragmentT;
@@ -95,8 +108,7 @@ function tableHtmlToGridModel(html: string): GridModel {
       const id = getAttr(el, "id");
       const key = id || `r${rowStart}c${colStart}`;
 
-      // FIX: Passing the element to serialize() returns its inner HTML.
-      const content = serialize(el);
+      const content = gridContentFromChildren(el, key);
 
       cells.push({
         key,
@@ -135,8 +147,91 @@ function getAttr(el: ElementT, name: string): string | null {
   return found?.value ?? null;
 }
 
+function getAttrs(el: ElementT): Record<string, string> {
+  return Object.fromEntries(el.attrs.map(({ name, value }) => [name, value]));
+}
+
 function getChildNodes(n: NodeT): NodeT[] {
   return "childNodes" in n ? n.childNodes : [];
+}
+
+function expandSelfClosingComponents(html: string): string {
+  return html.replace(
+    /<component\b((?:[^>"']|"[^"]*"|'[^']*')*?)\/\s*>/gi,
+    "<component$1></component>",
+  );
+}
+
+function gridContentFromChildren(
+  parent: ElementT,
+  cellKey: string,
+): GridContentNode[] {
+  return coalesceHtmlNodes(
+    getChildNodes(parent).map((child) => gridContentFromNode(child, cellKey)),
+  );
+}
+
+function gridContentFromNode(node: NodeT, cellKey: string): GridContentNode {
+  if (isElement(node) && node.tagName.toLowerCase() === "component") {
+    return gridComponentFromElement(node, cellKey);
+  }
+
+  const nestedComponent = findFirstElement(node, "component");
+  if (nestedComponent) {
+    throw new Error(
+      `<component> in table cell "${cellKey}" must be a direct child of the cell or another <component>.`,
+    );
+  }
+
+  return { type: "html", html: serializeOuter(node) };
+}
+
+function gridComponentFromElement(
+  el: ElementT,
+  cellKey: string,
+): GridContentNode {
+  const dataComponent = getAttr(el, "data-component");
+  const legacyName = getAttr(el, "_name");
+
+  if (dataComponent && legacyName) {
+    throw new Error(
+      `<component> in table cell "${cellKey}" must use either data-component or _name, not both.`,
+    );
+  }
+
+  const name = dataComponent ?? legacyName;
+  if (!name) {
+    throw new Error(
+      `<component> in table cell "${cellKey}" is missing required data-component attribute.`,
+    );
+  }
+
+  const props = getAttrs(el);
+  delete props["data-component"];
+  delete props["_name"];
+
+  return {
+    type: "component",
+    name,
+    props,
+    children: gridContentFromChildren(el, cellKey),
+  };
+}
+
+function coalesceHtmlNodes(nodes: GridContentNode[]): GridContentNode[] {
+  const out: GridContentNode[] = [];
+
+  for (const node of nodes) {
+    const previous = out[out.length - 1];
+    if (node.type === "html" && previous?.type === "html") {
+      previous.html += node.html;
+      continue;
+    }
+
+    out.push(node);
+  }
+
+  return out;
 }
 
 function findFirstElement(root: NodeT, tagName: string): ElementT | null {

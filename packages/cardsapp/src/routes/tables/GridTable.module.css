@@ -34,12 +34,12 @@
   background: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-8));
 }
 
-.cell :global(case-name) {
+.caseName {
   display: block;
   white-space: nowrap;
 }
 
-.cell :global(case-question) {
+.caseQuestion {
   display: block;
   color: var(--mantine-color-dimmed);
   font-size: var(--mantine-font-size-xs);
